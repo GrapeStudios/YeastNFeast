@@ -19,11 +19,11 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     // Fruits & Berries
     public static final RegistryObject<Item> ELDERBERRIES = ITEMS.register("elderberries",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.ELDERBERRIES)));
     public static final RegistryObject<Item> HAWTHORN_BERRIES = ITEMS.register("hawthorn_berries",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.HAWTHORN_BERRIES)));
     public static final RegistryObject<Item> ROSE_HIPS = ITEMS.register("rose_hips",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.ROSE_HIPS)));
     // Herbs & Spices
     public static final RegistryObject<Item> MINT = ITEMS.register("mint",
             () -> new Item(new Item.Properties()));
