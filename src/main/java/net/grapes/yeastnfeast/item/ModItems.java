@@ -36,6 +36,23 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RYE = ITEMS.register("rye",
             () -> new Item(new Item.Properties()));
+    // Mead
+    public static final RegistryObject<Item> TANKARD = ITEMS.register("tankard",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MEAD = ITEMS.register("mead",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ELDERBERRY_MEAD = ITEMS.register("elderberry_mead",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> HAWTHORN_MEAD = ITEMS.register("hawthorn_mead",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROSE_HIPS_MEAD = ITEMS.register("rose_hips_mead",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SPICED_MEAD = ITEMS.register("spiced_mead",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MOLASSES_MEAD = ITEMS.register("molasses_mead",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MAPLE_MEAD = ITEMS.register("maple_mead",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

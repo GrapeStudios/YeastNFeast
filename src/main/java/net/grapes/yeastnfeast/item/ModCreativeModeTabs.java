@@ -13,7 +13,7 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, YeastNFeastMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> YEASTNFEAST_TAB = CREATIVE_MODE_TABS.register("yeastnfeast_tab",
-            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.YEAST.get())).title(Component.translatable("creative_tab.yeastnfeast")).displayItems((displayParameters, output) -> {
+            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.TANKARD.get())).title(Component.translatable("creative_tab.yeastnfeast")).displayItems((displayParameters, output) -> {
                 output.accept(ModItems.YEAST.get());
                 output.accept(ModItems.MAPLE_SYRUP.get());
                 output.accept(ModItems.MOLASSES.get());
@@ -25,6 +25,14 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.VANILLA.get());
                 output.accept(ModItems.BARLEY.get());
                 output.accept(ModItems.RYE.get());
+                output.accept(ModItems.TANKARD.get());
+                output.accept(ModItems.MEAD.get());
+                output.accept(ModItems.ELDERBERRY_MEAD.get());
+                output.accept(ModItems.HAWTHORN_MEAD.get());
+                output.accept(ModItems.ROSE_HIPS_MEAD.get());
+                output.accept(ModItems.SPICED_MEAD.get());
+                output.accept(ModItems.MOLASSES_MEAD.get());
+                output.accept(ModItems.MAPLE_MEAD.get());
             }).build());
 
     public static void register(IEventBus eventBus) {

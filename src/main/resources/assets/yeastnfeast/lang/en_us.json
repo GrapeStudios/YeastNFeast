@@ -10,5 +10,14 @@
   "item.yeastnfeast.ginger": "Ginger",
   "item.yeastnfeast.vanilla": "Vanilla",
   "item.yeastnfeast.barley": "Barley",
-  "item.yeastnfeast.rye": "Rye"
+  "item.yeastnfeast.rye": "Rye",
+
+  "item.yeastnfeast.tankard": "Tankard",
+  "item.yeastnfeast.mead": "Mead",
+  "item.yeastnfeast.elderberry_mead": "Elderberry Mead",
+  "item.yeastnfeast.hawthorn_mead": "Hawthorn Mead",
+  "item.yeastnfeast.rose_hips_mead": "Rose Hips Mead",
+  "item.yeastnfeast.spiced_mead": "Spiced Mead",
+  "item.yeastnfeast.molasses_mead": "Molasses Mead",
+  "item.yeastnfeast.maple_mead": "Maple Mead"
 }
