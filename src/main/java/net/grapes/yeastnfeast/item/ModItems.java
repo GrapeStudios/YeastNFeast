@@ -53,6 +53,19 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MAPLE_MEAD = ITEMS.register("maple_mead",
             () -> new Item(new Item.Properties()));
+    // Baked Goods
+    public static final RegistryObject<Item> BARLEY_BREAD = ITEMS.register("barley_bread",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RYE_BREAD = ITEMS.register("rye_bread",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CHOCOLATE_BUN = ITEMS.register("chocolate_bun",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BERRY_ROLL = ITEMS.register("berry_roll",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROSE_HIPS_PIE = ITEMS.register("rose_hips_pie",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ELDERBERRY_PIE = ITEMS.register("elderberry_pie",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

@@ -35,6 +35,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.HAWTHORN_MEAD);
         simpleItem(ModItems.MOLASSES_MEAD);
         simpleItem(ModItems.MAPLE_MEAD);
+        simpleItem(ModItems.ROSE_HIPS_PIE);
+        simpleItem(ModItems.ELDERBERRY_PIE);
+        simpleItem(ModItems.RYE_BREAD);
+        simpleItem(ModItems.BARLEY_BREAD);
+        simpleItem(ModItems.CHOCOLATE_BUN);
+        simpleItem(ModItems.BERRY_ROLL);
     }
 
     private void simpleItem(RegistryObject<Item> item) {

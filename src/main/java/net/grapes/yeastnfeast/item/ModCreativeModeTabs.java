@@ -33,6 +33,12 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.SPICED_MEAD.get());
                 output.accept(ModItems.MOLASSES_MEAD.get());
                 output.accept(ModItems.MAPLE_MEAD.get());
+                output.accept(ModItems.RYE_BREAD.get());
+                output.accept(ModItems.BARLEY_BREAD.get());
+                output.accept(ModItems.ROSE_HIPS_PIE.get());
+                output.accept(ModItems.ELDERBERRY_PIE.get());
+                output.accept(ModItems.CHOCOLATE_BUN.get());
+                output.accept(ModItems.BERRY_ROLL.get());
             }).build());
 
     public static void register(IEventBus eventBus) {
