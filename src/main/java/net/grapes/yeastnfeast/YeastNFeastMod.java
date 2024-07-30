@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.grapes.yeastnfeast.block.ModBlocks;
 import net.grapes.yeastnfeast.item.ModCreativeModeTabs;
 import net.grapes.yeastnfeast.item.ModItems;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -33,7 +34,17 @@ public class YeastNFeastMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.ELDERBERRIES.get(), 0.30f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HAWTHORN_BERRIES.get(), 0.30f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.ROSE_HIPS.get(), 0.30f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.MINT.get(), 0.30f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.GINGER.get(), 0.30f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.VANILLA.get(), 0.30f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.BARLEY.get(), 0.30f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.RYE.get(), 0.30f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.BARLEY_SEEDS.get(), 0.20f);
+        });
     }
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
