@@ -39,6 +39,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.ELDERBERRY_PIE.get());
                 output.accept(ModItems.CHOCOLATE_BUN.get());
                 output.accept(ModItems.BERRY_ROLL.get());
+                output.accept(ModItems.BARLEY_SEEDS.get());
             }).build());
 
     public static void register(IEventBus eventBus) {

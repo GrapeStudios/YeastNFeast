@@ -1,7 +1,9 @@
 package net.grapes.yeastnfeast.item;
 
 import net.grapes.yeastnfeast.YeastNFeastMod;
+import net.grapes.yeastnfeast.block.ModBlocks;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -34,6 +36,8 @@ public class ModItems {
     // Grain
     public static final RegistryObject<Item> BARLEY = ITEMS.register("barley",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BARLEY_SEEDS = ITEMS.register("barley_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.BARLEY_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> RYE = ITEMS.register("rye",
             () -> new Item(new Item.Properties()));
     // Mead
