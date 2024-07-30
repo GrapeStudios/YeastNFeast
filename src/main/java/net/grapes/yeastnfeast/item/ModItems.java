@@ -66,7 +66,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BERRY_ROLL = ITEMS.register("berry_roll",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ROSE_HIPS_PIE = ITEMS.register("rose_hips_pie",
+    public static final RegistryObject<Item> ROSE_PIE = ITEMS.register("rose_pie",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ELDERBERRY_PIE = ITEMS.register("elderberry_pie",
             () -> new Item(new Item.Properties()));
