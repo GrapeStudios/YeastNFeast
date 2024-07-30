@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "yeastnfeast:item/rose_hips_pie"
+    "layer0": "yeastnfeast:item/apple_pie"
   }
 }
