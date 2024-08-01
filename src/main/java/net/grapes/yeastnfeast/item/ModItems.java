@@ -40,6 +40,8 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.BARLEY_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> RYE = ITEMS.register("rye",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RYE_SEEDS = ITEMS.register("rye_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.RYE_CROP.get(), new Item.Properties()));
     // Mead
     public static final RegistryObject<Item> TANKARD = ITEMS.register("tankard",
             () -> new Item(new Item.Properties()));

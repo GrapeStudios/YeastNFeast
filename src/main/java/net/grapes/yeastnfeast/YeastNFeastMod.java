@@ -44,6 +44,7 @@ public class YeastNFeastMod {
             ComposterBlock.COMPOSTABLES.put(ModItems.BARLEY.get(), 0.30f);
             ComposterBlock.COMPOSTABLES.put(ModItems.RYE.get(), 0.30f);
             ComposterBlock.COMPOSTABLES.put(ModItems.BARLEY_SEEDS.get(), 0.20f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.RYE_SEEDS.get(), 0.20f);
         });
     }
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

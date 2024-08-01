@@ -2,6 +2,7 @@ package net.grapes.yeastnfeast.block;
 
 import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.grapes.yeastnfeast.block.custom.BarleyCropBlock;
+import net.grapes.yeastnfeast.block.custom.RyeCropBlock;
 import net.grapes.yeastnfeast.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -21,6 +22,8 @@ public class ModBlocks {
     // Crop Blocks
     public static final RegistryObject<Block> BARLEY_CROP = BLOCKS.register("barley_crop",
             () -> new BarleyCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> RYE_CROP = BLOCKS.register("rye_crop",
+            () -> new RyeCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
