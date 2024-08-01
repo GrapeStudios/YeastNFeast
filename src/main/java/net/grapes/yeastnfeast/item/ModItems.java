@@ -30,9 +30,11 @@ public class ModItems {
     public static final RegistryObject<Item> MINT = ITEMS.register("mint",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> GINGER = ITEMS.register("ginger",
-            () -> new Item(new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.GINGER_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> VANILLA = ITEMS.register("vanilla",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> VANILLA_SEEDS = ITEMS.register("vanilla_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.VANILLA_CROP.get(), new Item.Properties()));
     // Grain
     public static final RegistryObject<Item> BARLEY = ITEMS.register("barley",
             () -> new Item(new Item.Properties()));

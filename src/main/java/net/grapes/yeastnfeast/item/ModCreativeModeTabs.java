@@ -42,6 +42,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.BERRY_ROLL.get());
                 output.accept(ModItems.BARLEY_SEEDS.get());
                 output.accept(ModItems.RYE_SEEDS.get());
+                output.accept(ModItems.VANILLA_SEEDS.get());
             }).build());
 
     public static void register(IEventBus eventBus) {
