@@ -16,7 +16,7 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "block": "yeastnfeast:rye_crop",
+                  "block": "yeastnfeast:vanilla_crop",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "age": "3"
@@ -38,7 +38,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "yeastnfeast:rye_crop",
+          "block": "yeastnfeast:vanilla_crop",
           "condition": "minecraft:block_state_property",
           "properties": {
             "age": "3"
