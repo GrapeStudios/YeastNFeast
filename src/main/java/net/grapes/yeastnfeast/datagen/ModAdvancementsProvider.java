@@ -23,7 +23,7 @@ public class ModAdvancementsProvider implements ForgeAdvancementProvider.Advance
                 .display(new DisplayInfo(new ItemStack(ModItems.YEAST.get()),
                         Component.translatable("advancements.yeastnfeast.root.title"),
                         Component.translatable("advancements.yeastnfeast.root.desc"),
-                        new ResourceLocation("textures/block/spruce_planks"), FrameType.TASK,
+                        new ResourceLocation("block/spruce_planks"), FrameType.TASK,
                         true,true, false))
                 .addCriterion("has_yeast", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.YEAST.get()))
                 .save(saver, new ResourceLocation(YeastNFeastMod.MOD_ID, "root"), existingFileHelper);
