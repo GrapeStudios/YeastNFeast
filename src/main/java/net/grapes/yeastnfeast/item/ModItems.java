@@ -63,21 +63,21 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     // Baked Goods
     public static final RegistryObject<Item> BARLEY_BREAD = ITEMS.register("barley_bread",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.BARLEY_BREAD)));
     public static final RegistryObject<Item> RYE_BREAD = ITEMS.register("rye_bread",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.RYE_BREAD)));
     public static final RegistryObject<Item> CHOCOLATE_BUN = ITEMS.register("chocolate_bun",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.CHOCOLATE_BUN)));
     public static final RegistryObject<Item> BERRY_ROLL = ITEMS.register("berry_roll",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.BERRY_ROLL)));
     public static final RegistryObject<Item> ROSE_PIE = ITEMS.register("rose_pie",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.ROSE_PIE)));
     public static final RegistryObject<Item> ELDERBERRY_PIE = ITEMS.register("elderberry_pie",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.ELDERBERRY_PIE)));
     public static final RegistryObject<Item> APPLE_PIE = ITEMS.register("apple_pie",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.APPLE_PIE)));
     public static final RegistryObject<Item> CHEESECAKE = ITEMS.register("cheesecake",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.CHEESECAKE)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
