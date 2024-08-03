@@ -19,7 +19,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
         // Shaped Recipes for Food Items ' '
-
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.TANKARD.get())
                 .pattern("S S")
                 .pattern("PSP")
