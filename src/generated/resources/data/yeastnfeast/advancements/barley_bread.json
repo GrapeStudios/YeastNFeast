@@ -1,0 +1,36 @@
+{
+  "parent": "yeastnfeast:root",
+  "criteria": {
+    "consumed_barley_bread": {
+      "conditions": {
+        "item": {
+          "items": [
+            "yeastnfeast:barley_bread"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.yeastnfeast.barley_bread.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "yeastnfeast:barley_bread"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.yeastnfeast.barley_bread.title"
+    }
+  },
+  "requirements": [
+    [
+      "consumed_barley_bread"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

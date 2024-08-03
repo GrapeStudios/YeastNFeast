@@ -32,5 +32,12 @@
 
   "item.yeastnfeast.barley_seeds": "Barley Seeds",
   "item.yeastnfeast.rye_seeds": "Rye Seeds",
-  "item.yeastnfeast.vanilla_seeds": "Vanilla Seeds"
+  "item.yeastnfeast.vanilla_seeds": "Vanilla Seeds",
+
+  "advancements.yeastnfeast.root.title": "Yeast & Feast",
+  "advancements.yeastnfeast.root.desc": "Thank you for downloading our mod!",
+  "advancements.yeastnfeast.tankard.title": "Multipurpose Cup",
+  "advancements.yeastnfeast.tankard.desc": "Craft a Tankard.",
+  "advancements.yeastnfeast.barley_bread.title": "Joshua's Grandma' Bread",
+  "advancements.yeastnfeast.barley_bread.desc": "The hardest bread in existence"
 }

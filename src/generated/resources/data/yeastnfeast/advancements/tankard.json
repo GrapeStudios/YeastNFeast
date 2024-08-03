@@ -1,0 +1,38 @@
+{
+  "parent": "yeastnfeast:root",
+  "criteria": {
+    "has_tankard": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:tankard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.yeastnfeast.tankard.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "yeastnfeast:tankard"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.yeastnfeast.tankard.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_tankard"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

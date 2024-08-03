@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_yeast": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:yeast"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/spruce_planks",
+    "description": {
+      "translate": "advancements.yeastnfeast.root.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "yeastnfeast:yeast"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.yeastnfeast.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_yeast"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
