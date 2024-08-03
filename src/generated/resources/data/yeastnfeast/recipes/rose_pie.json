@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "yeastnfeast:rose_hips"
+    }
+  ],
+  "result": {
+    "item": "yeastnfeast:rose_pie"
+  }
+}

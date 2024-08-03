@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "yeastnfeast:yeast"
+    },
+    {
+      "item": "yeastnfeast:hawthorn_berries"
+    }
+  ],
+  "result": {
+    "item": "yeastnfeast:berry_roll"
+  }
+}

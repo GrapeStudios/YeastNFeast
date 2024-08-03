@@ -15,7 +15,7 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:textures/block/spruce_planks",
+    "background": "minecraft:block/spruce_planks",
     "description": {
       "translate": "advancements.yeastnfeast.root.desc"
     },
