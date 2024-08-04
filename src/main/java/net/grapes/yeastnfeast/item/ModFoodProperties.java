@@ -1,5 +1,8 @@
 package net.grapes.yeastnfeast.item;
 
+import net.grapes.yeastnfeast.effect.ModEffects;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
 
 public class ModFoodProperties {
@@ -11,7 +14,8 @@ public class ModFoodProperties {
     public static FoodProperties RYE_BREAD = new FoodProperties.Builder().nutrition(6).saturationMod(0.7f).build();
     public static FoodProperties CHOCOLATE_BUN = new FoodProperties.Builder().nutrition(6).saturationMod(0.7f).build();
     public static FoodProperties BERRY_ROLL = new FoodProperties.Builder().nutrition(4).saturationMod(0.5f).build();
-    public static FoodProperties ROSE_PIE = new FoodProperties.Builder().nutrition(7).saturationMod(0.4f).build();
+    public static FoodProperties ROSE_PIE = new FoodProperties.Builder().nutrition(6).saturationMod(0.4f)
+            .effect(() -> new MobEffectInstance(ModEffects.STUFFED_EFFECT.get(), 600), 1f).build();
     public static FoodProperties ELDERBERRY_PIE = new FoodProperties.Builder().nutrition(8).saturationMod(0.6f).build();
     public static FoodProperties APPLE_PIE = new FoodProperties.Builder().nutrition(8).saturationMod(0.6f).build();
     public static FoodProperties CHEESECAKE = new FoodProperties.Builder().nutrition(7).saturationMod(0.4f).build();

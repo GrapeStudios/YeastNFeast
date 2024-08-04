@@ -2,6 +2,7 @@ package net.grapes.yeastnfeast;
 
 import com.mojang.logging.LogUtils;
 import net.grapes.yeastnfeast.block.ModBlocks;
+import net.grapes.yeastnfeast.effect.ModEffects;
 import net.grapes.yeastnfeast.item.ModCreativeModeTabs;
 import net.grapes.yeastnfeast.item.ModItems;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -31,6 +32,7 @@ public class YeastNFeastMod {
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEffects.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
