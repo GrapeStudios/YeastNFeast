@@ -47,6 +47,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.SUGAR)
                 .requires(Items.EGG)
                 .requires(Items.APPLE)
+                .requires(Items.WHEAT)
                 .unlockedBy("has_apple", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.APPLE).build()))
                 .save(pWriter);
