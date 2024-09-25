@@ -1,4 +1,4 @@
-package net.grapes.yeastnfeast.effect;
+package net.grapes.yeastnfeast.effect.custom;
 
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -7,8 +7,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodData;
 import net.minecraft.world.level.GameRules;
 
-public class StuffedEffect extends MobEffect {
-    protected StuffedEffect(MobEffectCategory pCategory, int pColor) {
+public class OverfedEffect extends MobEffect {
+    public OverfedEffect(MobEffectCategory pCategory, int pColor) {
         super(pCategory, pColor);
     }
 

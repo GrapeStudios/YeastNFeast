@@ -1,6 +1,7 @@
 package net.grapes.yeastnfeast.effect;
 
 import net.grapes.yeastnfeast.YeastNFeastMod;
+import net.grapes.yeastnfeast.effect.custom.OverfedEffect;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -12,8 +13,8 @@ public class ModEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS =
             DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, YeastNFeastMod.MOD_ID);
 
-    public static final RegistryObject<MobEffect> STUFFED_EFFECT = MOB_EFFECTS.register("stuffed",
-            () -> new StuffedEffect(MobEffectCategory.BENEFICIAL, 0xDCD789));
+    public static final RegistryObject<MobEffect> STUFFED_EFFECT = MOB_EFFECTS.register("overfed",
+            () -> new OverfedEffect(MobEffectCategory.BENEFICIAL, 0xDCD789));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);
