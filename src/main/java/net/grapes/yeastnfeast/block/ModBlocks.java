@@ -18,6 +18,10 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, YeastNFeastMod.MOD_ID);
 
+    // Functional Blocks
+    public static final RegistryObject<Block> MEAD_KEG = registerBlock("mead_keg",
+            () -> new MeadKegBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
+
     // Crop Blocks
     public static final RegistryObject<Block> BARLEY_CROP = BLOCKS.register("barley_crop",
             () -> new BarleyCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));

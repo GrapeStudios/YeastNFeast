@@ -36,7 +36,7 @@ public class ModItems {
     public static final RegistryObject<Item> BARLEY = ITEMS.register("barley",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BARLEY_SEEDS = ITEMS.register("barley_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.BARLEY_CROP.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.MEAD_KEG.get(), new Item.Properties()));
     public static final RegistryObject<Item> RYE = ITEMS.register("rye",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RYE_SEEDS = ITEMS.register("rye_seeds",

@@ -6,7 +6,6 @@ import net.grapes.yeastnfeast.effect.ModEffects;
 import net.grapes.yeastnfeast.item.ModCreativeModeTabs;
 import net.grapes.yeastnfeast.item.ModItems;
 import net.grapes.yeastnfeast.util.ModRegistries;
-import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;

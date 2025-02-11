@@ -42,6 +42,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 createSingleItemTable(ModItems.GINGER.get()));
         this.add(ModBlocks.ROSE_HIPS_BUSH.get(),
                 createSingleAgeCropBlock(ModBlocks.ROSE_HIPS_BUSH.get(), ModItems.ROSE_HIPS.get()));
+        this.dropSelf(ModBlocks.MEAD_KEG.get());
 
         // Drops for Crop Blocks
         LootItemCondition.Builder lootitemcondition$builder1 = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.BARLEY_CROP.get())

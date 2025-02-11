@@ -47,6 +47,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModBlocks.WILD_BARLEY.get());
                 output.accept(ModBlocks.WILD_RYE.get());
                 output.accept(ModBlocks.WILD_GINGER.get());
+                output.accept(ModBlocks.MEAD_KEG.get());
             }).build());
 
     public static void register(IEventBus eventBus) {

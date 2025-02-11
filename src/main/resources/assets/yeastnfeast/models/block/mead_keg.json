@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "minecraft:block/mead_keg_bottom",
+    "side": "minecraft:block/mead_keg_side",
+    "top": "minecraft:block/mead_keg_top"
+  }
+}
