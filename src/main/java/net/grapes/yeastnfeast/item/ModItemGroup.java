@@ -1,0 +1,65 @@
+package net.grapes.yeastnfeast.item;
+
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.grapes.yeastnfeast.YeastNFeastMod;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+
+public class ModItemGroup {
+    public static final ItemGroup YEAST_N_FEAST_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(YeastNFeastMod.MOD_ID, "yeast_n_feast_group"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.yeastnfeast"))
+                    .icon(() -> new ItemStack(ModItems.TANKARD)).entries((displayContext, entries) -> {
+
+                        // Resources
+                        entries.add(ModItems.YEAST);
+                        entries.add(ModItems.MAPLE_SYRUP);
+                        entries.add(ModItems.MOLASSES);
+
+                        // Seeds
+                        entries.add(ModItems.BARLEY_SEEDS);
+                        entries.add(ModItems.RYE_SEEDS);
+
+                        // Food Resources
+                        entries.add(ModItems.ELDERBERRIES);
+                        entries.add(ModItems.HAWTHORN_BERRIES);
+                        entries.add(ModItems.ROSE_HIPS);
+                        entries.add(ModItems.MINT);
+                        entries.add(ModItems.GINGER);
+                        entries.add(ModItems.BARLEY);
+                        entries.add(ModItems.RYE);
+
+                        // Food
+                        entries.add(ModItems.BARLEY_BREAD);
+                        entries.add(ModItems.RYE_BREAD);
+                        entries.add(ModItems.CHOCOLATE_BUN);
+                        entries.add(ModItems.BERRY_ROLL);
+                        entries.add(ModItems.ROSE_PIE);
+                        entries.add(ModItems.ELDERBERRY_PIE);
+                        entries.add(ModItems.APPLE_PIE);
+
+                        // Mead
+                        entries.add(ModItems.TANKARD);
+                        entries.add(ModItems.HONEY_MEAD);
+                        entries.add(ModItems.MOLASSES_MEAD);
+                        entries.add(ModItems.SOUR_MEAD);
+                        entries.add(ModItems.THORNBERRY_MEAD);
+                        entries.add(ModItems.BLOSSOM_MEAD);
+                        entries.add(ModItems.AMBER_MEAD);
+
+                        // Functional Blocks
+
+                        // Decorative Blocks
+
+                        // Wood-Related Items
+
+                    }).build());
+
+    public static void registerItemGroups() {
+
+    }
+}

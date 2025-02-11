@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "yeastnfeast:barley_crop",
+    "yeastnfeast:rye_crop",
+    "yeastnfeast:ginger_crop"
+  ]
+}
