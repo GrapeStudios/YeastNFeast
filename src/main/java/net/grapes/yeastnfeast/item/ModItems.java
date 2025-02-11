@@ -2,6 +2,7 @@ package net.grapes.yeastnfeast.item;
 
 import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.grapes.yeastnfeast.block.ModBlocks;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,16 +26,12 @@ public class ModItems {
     public static final RegistryObject<Item> HAWTHORN_BERRIES = ITEMS.register("hawthorn_berries",
             () -> new Item(new Item.Properties().food(ModFoodProperties.HAWTHORN_BERRIES)));
     public static final RegistryObject<Item> ROSE_HIPS = ITEMS.register("rose_hips",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.ROSE_HIPS)));
+            () -> new BlockItem(ModBlocks.ROSE_HIPS_BUSH.get(), new Item.Properties().food(ModFoodProperties.ROSE_HIPS)));
     // Herbs & Spices
     public static final RegistryObject<Item> MINT = ITEMS.register("mint",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> GINGER = ITEMS.register("ginger",
             () -> new ItemNameBlockItem(ModBlocks.GINGER_CROP.get(), new Item.Properties()));
-    public static final RegistryObject<Item> VANILLA = ITEMS.register("vanilla",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> VANILLA_SEEDS = ITEMS.register("vanilla_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.VANILLA_CROP.get(), new Item.Properties()));
     // Grain
     public static final RegistryObject<Item> BARLEY = ITEMS.register("barley",
             () -> new Item(new Item.Properties()));

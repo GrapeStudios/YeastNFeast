@@ -93,11 +93,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_rye", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.RYE.get()).build()))
                 .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.VANILLA_SEEDS.get())
-                .requires(ModItems.VANILLA.get())
-                .unlockedBy("has_vanilla", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(ModItems.VANILLA.get()).build()))
-                .save(pWriter);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BARLEY_SEEDS.get())
                 .requires(ModItems.BARLEY.get())
                 .unlockedBy("has_barley", inventoryTrigger(ItemPredicate.Builder.item()

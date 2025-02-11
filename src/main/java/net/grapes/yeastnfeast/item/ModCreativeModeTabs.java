@@ -1,6 +1,7 @@
 package net.grapes.yeastnfeast.item;
 
 import net.grapes.yeastnfeast.YeastNFeastMod;
+import net.grapes.yeastnfeast.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -22,7 +23,6 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.ROSE_HIPS.get());
                 output.accept(ModItems.MINT.get());
                 output.accept(ModItems.GINGER.get());
-                output.accept(ModItems.VANILLA.get());
                 output.accept(ModItems.BARLEY.get());
                 output.accept(ModItems.RYE.get());
                 output.accept(ModItems.TANKARD.get());
@@ -43,7 +43,10 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.BERRY_ROLL.get());
                 output.accept(ModItems.BARLEY_SEEDS.get());
                 output.accept(ModItems.RYE_SEEDS.get());
-                output.accept(ModItems.VANILLA_SEEDS.get());
+
+                output.accept(ModBlocks.WILD_BARLEY.get());
+                output.accept(ModBlocks.WILD_RYE.get());
+                output.accept(ModBlocks.WILD_GINGER.get());
             }).build());
 
     public static void register(IEventBus eventBus) {

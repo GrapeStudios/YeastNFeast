@@ -1,15 +1,12 @@
 package net.grapes.yeastnfeast.block;
 
 import net.grapes.yeastnfeast.YeastNFeastMod;
-import net.grapes.yeastnfeast.block.custom.BarleyCropBlock;
-import net.grapes.yeastnfeast.block.custom.GingerCropBlock;
-import net.grapes.yeastnfeast.block.custom.RyeCropBlock;
-import net.grapes.yeastnfeast.block.custom.VanillaCropBlock;
+import net.grapes.yeastnfeast.block.custom.*;
 import net.grapes.yeastnfeast.item.ModItems;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,8 +25,16 @@ public class ModBlocks {
             () -> new RyeCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
     public static final RegistryObject<Block> GINGER_CROP = BLOCKS.register("ginger_crop",
             () -> new GingerCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
-    public static final RegistryObject<Block> VANILLA_CROP = BLOCKS.register("vanilla_crop",
-            () -> new VanillaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    // Wild Crop Blocks
+    public static final RegistryObject<Block> WILD_BARLEY = registerBlock("wild_barley",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 6, BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
+    public static final RegistryObject<Block> WILD_RYE = registerBlock("wild_rye",
+            () -> new FlowerBlock(() -> MobEffects.DAMAGE_BOOST, 6, BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
+    public static final RegistryObject<Block> WILD_GINGER = registerBlock("wild_ginger",
+            () -> new FlowerBlock(() -> MobEffects.MOVEMENT_SPEED, 6, BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
+    public static final RegistryObject<Block> ROSE_HIPS_BUSH = registerBlock("rose_hips_bush",
+            () -> new RoseHipsBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
