@@ -26,9 +26,10 @@ public class ModBiomeModifiers {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
         Optional<Holder.Reference<Biome>> taigaBiome = biomes.get(Biomes.TAIGA);
+        Optional<Holder.Reference<Biome>> forestBiome = biomes.get(Biomes.FOREST);
 
         context.register(ADD_WILD_BARLEY, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
+                HolderSet.direct(forestBiome.get()),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_BARLEY_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 

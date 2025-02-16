@@ -27,25 +27,5 @@ public class ModAdvancementsProvider implements ForgeAdvancementProvider.Advance
                         true,true, false))
                 .addCriterion("has_yeast", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.YEAST.get()))
                 .save(saver, new ResourceLocation(YeastNFeastMod.MOD_ID, "root"), existingFileHelper);
-
-        Advancement tankard = Advancement.Builder.advancement()
-                .display(new DisplayInfo(new ItemStack(ModItems.TANKARD.get()),
-                        Component.translatable("advancements.yeastnfeast.tankard.title"),
-                        Component.translatable("advancements.yeastnfeast.tankard.desc"),
-                        null, FrameType.TASK,
-                        true, true, false))
-                .parent(rootAdvancement)
-                .addCriterion("has_tankard", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.TANKARD.get()))
-                .save(saver, new ResourceLocation(YeastNFeastMod.MOD_ID, "tankard"), existingFileHelper);
-
-        Advancement barleyBread = Advancement.Builder.advancement()
-                .display(new DisplayInfo(new ItemStack(ModItems.BARLEY_BREAD.get()),
-                        Component.translatable("advancements.yeastnfeast.barley_bread.title"),
-                        Component.translatable("advancements.yeastnfeast.barley_bread.desc"),
-                        null, FrameType.TASK,
-                        true, true, false))
-                .parent(rootAdvancement)
-                .addCriterion("consumed_barley_bread", ConsumeItemTrigger.TriggerInstance.usedItem(ModItems.BARLEY_BREAD.get()))
-                .save(saver, new ResourceLocation(YeastNFeastMod.MOD_ID, "barley_bread"), existingFileHelper);
     }
 }

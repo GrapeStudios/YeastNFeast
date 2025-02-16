@@ -22,29 +22,41 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        // Tags
         this.tag(ItemTags.FOX_FOOD)
                 .add(ModItems.ELDERBERRIES.get()).add(ModItems.HAWTHORN_BERRIES.get())
                 .add(ModItems.ROSE_HIPS.get());
 
         this.tag(ItemTags.VILLAGER_PLANTABLE_SEEDS)
-                .add(ModItems.BARLEY_SEEDS.get(), ModItems.RYE_SEEDS.get());
+                .add(ModItems.BARLEY_SEEDS.get(), ModItems.RYE_SEEDS.get(),
+                        ModItems.MINT_SEEDS.get());
 
-        // Custom Tags
-        this.tag(ModTags.Items.GRAIN)
-                .add(ModItems.BARLEY.get(), ModItems.RYE.get())
-                .add(Items.WHEAT);
+        // Conventional Tags
+        this.tag(ModTags.Items.BREAD)
+                .add(Items.BREAD);
 
-        // Custom Tags
         this.tag(ModTags.Items.BERRIES)
                 .add(ModItems.ELDERBERRIES.get()).add(ModItems.HAWTHORN_BERRIES.get())
                 .add(ModItems.ROSE_HIPS.get());
 
         this.tag(ModTags.Items.SEEDS)
-                .add(ModItems.BARLEY_SEEDS.get(), ModItems.RYE_SEEDS.get());
+                .add(ModItems.BARLEY_SEEDS.get(), ModItems.RYE_SEEDS.get(),
+                        ModItems.MINT_SEEDS.get());
 
         this.tag(ModTags.Items.CROPS)
-                .add(ModItems.BARLEY_SEEDS.get(), ModItems.RYE_SEEDS.get())
-                .add(ModItems.BARLEY.get(), ModItems.RYE.get());
+                .add(ModItems.GINGER.get(), ModItems.GARLIC.get());
+
+        this.tag(ModTags.Items.VEGETABLES)
+                .add(ModItems.GARLIC.get());
+
+        this.tag(ModTags.Items.GRAIN)
+                .add(ModItems.RYE.get(), ModItems.BARLEY.get());
+
+        this.tag(ModTags.Items.MILK)
+                .add(ModItems.MILK_BOTTLE.get());
+
+        this.tag(ModTags.Items.MILK_BOTTLE)
+                .add(ModItems.MILK_BOTTLE.get());
     }
 
     @Override

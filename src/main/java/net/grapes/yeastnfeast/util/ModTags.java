@@ -10,23 +10,33 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags {
     public static class Items {
-        // Custom Item Tags
-        public static final TagKey<Item> GRAIN = tag("grain");
 
-        // Common Item Tags
-        public static final TagKey<Item> BERRIES = forgeTag("berries");
-        public static final TagKey<Item> SEEDS = forgeTag("seeds");
-        public static final TagKey<Item> CROPS = forgeTag("crops");
+        // Conventional Item Tags
+        public static final TagKey<Item> BREAD = forgeItemTag("bread");
+
+        public static final TagKey<Item> CROPS = forgeItemTag("crops");
+
+        public static final TagKey<Item> VEGETABLES = forgeItemTag("vegetables");
+
+        public static final TagKey<Item> BERRIES = forgeItemTag("berries");
+
+        public static final TagKey<Item> SEEDS = forgeItemTag("seeds");
+
+        public static final TagKey<Item> GRAIN = forgeItemTag("grain");
+
+        public static final TagKey<Item> MILK = forgeItemTag("milk");
+        public static final TagKey<Item> MILK_BOTTLE = forgeItemTag("milk/milk_bottle");
     }
 
     private static TagKey<Item> tag(String name){
         return ItemTags.create(new ResourceLocation(YeastNFeastMod.MOD_ID, name));
     }
-    private static TagKey<Item> forgeTag(String name){
+    private static TagKey<Item> forgeItemTag(String name){
         return ItemTags.create(new ResourceLocation("forge", name));
     }
 
     public static class Blocks {
+
         // Custom Block Tags
 
         // Common Block Tags

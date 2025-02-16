@@ -28,63 +28,33 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.IRON_NUGGET).build()))
                 .save(pWriter);
 
-        // Shapeless Recipes for Food Items
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.ROSE_PIE.get())
-                .requires(Items.SUGAR)
-                .requires(Items.EGG)
-                .requires(ModItems.ROSE_HIPS.get())
-                .unlockedBy("has_rose_hips", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(ModItems.ROSE_HIPS.get()).build()))
+
+        // Shapeless Recipes
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.YEAST.get())
+                .requires(Tags.Items.MUSHROOMS)
+                .requires(Tags.Items.MUSHROOMS)
+                .unlockedBy("has_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Tags.Items.MUSHROOMS).build()))
                 .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.ELDERBERRY_PIE.get())
-                .requires(Items.SUGAR)
-                .requires(Items.EGG)
-                .requires(ModItems.ELDERBERRIES.get())
-                .unlockedBy("has_elderberries", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(ModItems.ELDERBERRIES.get()).build()))
-                .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.APPLE_PIE.get())
-                .requires(Items.SUGAR)
-                .requires(Items.EGG)
-                .requires(Items.APPLE)
-                .requires(Items.WHEAT)
-                .unlockedBy("has_apple", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.APPLE).build()))
-                .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CHEESECAKE.get())
-                .requires(Items.SUGAR)
-                .requires(Items.EGG)
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MILK_BOTTLE.get(), 4)
                 .requires(Items.MILK_BUCKET)
+                .requires(Items.GLASS_BOTTLE)
+                .requires(Items.GLASS_BOTTLE)
+                .requires(Items.GLASS_BOTTLE)
+                .requires(Items.GLASS_BOTTLE)
                 .unlockedBy("has_milk_bucket", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.MILK_BUCKET).build()))
                 .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CHOCOLATE_BUN.get())
-                .requires(Items.EGG)
-                .requires(ModItems.YEAST.get())
-                .requires(Items.COCOA_BEANS)
-                .unlockedBy("has_cocoa_beans", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.COCOA_BEANS).build()))
-                .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BERRY_ROLL.get())
-                .requires(Items.EGG)
-                .requires(ModItems.YEAST.get())
-                .requires(ModItems.HAWTHORN_BERRIES.get())
-                .unlockedBy("has_hawthorn_berries", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(ModItems.HAWTHORN_BERRIES.get()).build()))
-                .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.RYE_BREAD.get())
-                .requires(ModItems.RYE.get())
-                .requires(ModItems.RYE.get())
-                .requires(ModItems.YEAST.get())
-                .unlockedBy("has_rye", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(ModItems.RYE.get()).build()))
-                .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BARLEY_BREAD.get())
-                .requires(ModItems.BARLEY.get())
-                .requires(ModItems.BARLEY.get())
-                .requires(ModItems.YEAST.get())
-                .unlockedBy("has_rye", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(ModItems.BARLEY.get()).build()))
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.MILK_BUCKET)
+                .requires(Items.BUCKET)
+                .requires(ModItems.MILK_BOTTLE.get())
+                .requires(ModItems.MILK_BOTTLE.get())
+                .requires(ModItems.MILK_BOTTLE.get())
+                .requires(ModItems.MILK_BOTTLE.get())
+                .unlockedBy("has_milk_bottle", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.MILK_BOTTLE.get()).build()))
                 .save(pWriter);
 
         // Shapeless Recipes for Seeds
@@ -93,18 +63,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_rye", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.RYE.get()).build()))
                 .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BARLEY_SEEDS.get())
                 .requires(ModItems.BARLEY.get())
                 .unlockedBy("has_barley", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.BARLEY.get()).build()))
-                .save(pWriter);
-
-        // Shapeless Misc Recipes
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.YEAST.get())
-                .requires(Tags.Items.MUSHROOMS)
-                .requires(Tags.Items.MUSHROOMS)
-                .unlockedBy("has_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Tags.Items.MUSHROOMS).build()))
                 .save(pWriter);
     }
 }

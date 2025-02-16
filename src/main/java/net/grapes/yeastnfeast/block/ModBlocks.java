@@ -18,27 +18,34 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, YeastNFeastMod.MOD_ID);
 
-    // Functional Blocks
-    public static final RegistryObject<Block> MEAD_KEG = registerBlock("mead_keg",
-            () -> new MeadKegBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
 
     // Crop Blocks
     public static final RegistryObject<Block> BARLEY_CROP = BLOCKS.register("barley_crop",
-            () -> new BarleyCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+            () -> new BarleyCropBlock(BlockBehaviour.Properties.copy(Blocks.POTATOES)));
     public static final RegistryObject<Block> RYE_CROP = BLOCKS.register("rye_crop",
-            () -> new RyeCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+            () -> new RyeCropBlock(BlockBehaviour.Properties.copy(Blocks.POTATOES)));
     public static final RegistryObject<Block> GINGER_CROP = BLOCKS.register("ginger_crop",
-            () -> new GingerCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+            () -> new GingerCropBlock(BlockBehaviour.Properties.copy(Blocks.POTATOES)));
+    public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic_crop",
+            () -> new GarlicCropBlock(BlockBehaviour.Properties.copy(Blocks.POTATOES)));
+    public static final RegistryObject<Block> MINT_CROP = BLOCKS.register("mint_crop",
+            () -> new MintCropBlock(BlockBehaviour.Properties.copy(Blocks.POTATOES)));
+    public static final RegistryObject<Block> ROSE_HIPS_BUSH = registerBlock("rose_hips_bush",
+            () -> new RoseHipsBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+    public static final RegistryObject<Block> ELDERBERRY_BUSH = registerBlock("elderberry_bush",
+            () -> new ElderberryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
 
     // Wild Crop Blocks
     public static final RegistryObject<Block> WILD_BARLEY = registerBlock("wild_barley",
             () -> new FlowerBlock(() -> MobEffects.LUCK, 6, BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
     public static final RegistryObject<Block> WILD_RYE = registerBlock("wild_rye",
-            () -> new FlowerBlock(() -> MobEffects.DAMAGE_BOOST, 6, BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 6, BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
     public static final RegistryObject<Block> WILD_GINGER = registerBlock("wild_ginger",
-            () -> new FlowerBlock(() -> MobEffects.MOVEMENT_SPEED, 6, BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
-    public static final RegistryObject<Block> ROSE_HIPS_BUSH = registerBlock("rose_hips_bush",
-            () -> new RoseHipsBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 6, BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
+
+    // Functional Blocks
+    public static final RegistryObject<Block> MEAD_KEG = registerBlock("mead_keg",
+            () -> new MeadKegBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -19,44 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleItem(ModItems.YEAST);
-        simpleItem(ModItems.MAPLE_SYRUP);
-        simpleItem(ModItems.MOLASSES);
-
-        simpleItem(ModItems.ELDERBERRIES);
-        simpleItem(ModItems.HAWTHORN_BERRIES);
-        simpleItem(ModItems.ROSE_HIPS);
-
-        simpleItem(ModItems.MINT);
-        simpleItem(ModItems.GINGER);
-
-        simpleItem(ModItems.RYE);
-        simpleItem(ModItems.RYE_SEEDS);
-        simpleItem(ModItems.BARLEY);
-        simpleItem(ModItems.BARLEY_SEEDS);
-
-        simpleItem(ModItems.TANKARD);
-        simpleItem(ModItems.MEAD);
-        simpleItem(ModItems.ELDERBERRY_MEAD);
-        simpleItem(ModItems.ROSE_HIPS_MEAD);
-        simpleItem(ModItems.SPICED_MEAD);
-        simpleItem(ModItems.HAWTHORN_MEAD);
-        simpleItem(ModItems.MOLASSES_MEAD);
-        simpleItem(ModItems.MAPLE_MEAD);
-
-        simpleItem(ModItems.BARLEY_BREAD);
-        simpleItem(ModItems.RYE_BREAD);
-        simpleItem(ModItems.BERRY_ROLL);
-        simpleItem(ModItems.ROSE_PIE);
-        simpleItem(ModItems.CHOCOLATE_BUN);
-        simpleItem(ModItems.ELDERBERRY_PIE);
-        simpleItem(ModItems.APPLE_PIE);
-        simpleItem(ModItems.CHEESECAKE);
-
-        // Wild Crops
-        simpleBlockItem(ModBlocks.WILD_BARLEY);
-        simpleBlockItem(ModBlocks.WILD_RYE);
-        simpleBlockItem(ModBlocks.WILD_GINGER);
+        // Placeholder
     }
 
     private void simpleItem(RegistryObject<Item> item) {

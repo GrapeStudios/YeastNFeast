@@ -15,39 +15,47 @@ public class ModCreativeModeTabs {
 
     public static final RegistryObject<CreativeModeTab> YEASTNFEAST_TAB = CREATIVE_MODE_TABS.register("yeastnfeast_tab",
             () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.TANKARD.get())).title(Component.translatable("creative_tab.yeastnfeast")).displayItems((displayParameters, output) -> {
+
+                // Resources
                 output.accept(ModItems.YEAST.get());
                 output.accept(ModItems.MAPLE_SYRUP.get());
                 output.accept(ModItems.MOLASSES.get());
+                output.accept(ModItems.MILK_BOTTLE.get());
+
+                // Seeds
+                output.accept(ModItems.BARLEY_SEEDS.get());
+                output.accept(ModItems.RYE_SEEDS.get());
+                output.accept(ModItems.MINT_SEEDS.get());
+
+                // Food Resources
                 output.accept(ModItems.ELDERBERRIES.get());
                 output.accept(ModItems.HAWTHORN_BERRIES.get());
                 output.accept(ModItems.ROSE_HIPS.get());
                 output.accept(ModItems.MINT.get());
+                output.accept(ModItems.LEMON.get());
                 output.accept(ModItems.GINGER.get());
+                output.accept(ModItems.GARLIC.get());
                 output.accept(ModItems.BARLEY.get());
                 output.accept(ModItems.RYE.get());
-                output.accept(ModItems.TANKARD.get());
-                output.accept(ModItems.MEAD.get());
-                output.accept(ModItems.ELDERBERRY_MEAD.get());
-                output.accept(ModItems.HAWTHORN_MEAD.get());
-                output.accept(ModItems.ROSE_HIPS_MEAD.get());
-                output.accept(ModItems.SPICED_MEAD.get());
-                output.accept(ModItems.MOLASSES_MEAD.get());
-                output.accept(ModItems.MAPLE_MEAD.get());
+
+                // Food
                 output.accept(ModItems.BARLEY_BREAD.get());
                 output.accept(ModItems.RYE_BREAD.get());
-                output.accept(ModItems.ROSE_PIE.get());
+                output.accept(ModItems.MOLASSES_BREAD.get());
+                output.accept(ModItems.BERRY_ROLL.get());
+                output.accept(ModItems.ROSE_TART.get());
                 output.accept(ModItems.ELDERBERRY_PIE.get());
                 output.accept(ModItems.APPLE_PIE.get());
-                output.accept(ModItems.CHEESECAKE.get());
-                output.accept(ModItems.CHOCOLATE_BUN.get());
-                output.accept(ModItems.BERRY_ROLL.get());
-                output.accept(ModItems.BARLEY_SEEDS.get());
-                output.accept(ModItems.RYE_SEEDS.get());
 
-                output.accept(ModBlocks.WILD_BARLEY.get());
-                output.accept(ModBlocks.WILD_RYE.get());
-                output.accept(ModBlocks.WILD_GINGER.get());
-                output.accept(ModBlocks.MEAD_KEG.get());
+                // Mead
+                output.accept(ModItems.TANKARD.get());
+                output.accept(ModItems.HONEY_MEAD.get());
+                output.accept(ModItems.MOLASSES_MEAD.get());
+                output.accept(ModItems.SOUR_MEAD.get());
+                output.accept(ModItems.THORNBERRY_MEAD.get());
+                output.accept(ModItems.BLOSSOM_MEAD.get());
+                output.accept(ModItems.AMBER_MEAD.get());
+
             }).build());
 
     public static void register(IEventBus eventBus) {
