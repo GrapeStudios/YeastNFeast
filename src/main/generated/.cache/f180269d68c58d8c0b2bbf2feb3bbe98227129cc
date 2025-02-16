@@ -1,5 +1,13 @@
-// 1.20.1	2025-02-11T17:06:43.2640443	Yeast 'N Feast/Tags for minecraft:item
+// 1.20.1	2025-02-16T09:36:15.8281035	Yeast 'N Feast/Tags for minecraft:item
+13580401148858ae14088491753a15e045e6fbef data\c\tags\items\milks\milk_bottles.json
 d0f625feba76042923fbd03250b1c680cbff2873 data\c\tags\items\berries.json
-efe26f742ef3996c92e4319c6c81b25af0cf67a7 data\minecraft\tags\items\villager_plantable_seeds.json
+51cfcd6b6d68addfcc32807ea436ae56405cd71f data\c\tags\items\foods\breads.json
+d0f625feba76042923fbd03250b1c680cbff2873 data\c\tags\items\foods\berries.json
+2479dc868198982d1374678622923ed92be86fcb data\c\tags\items\foods.json
+43580562ab2d077c7aed610efae2776fcb96a5a8 data\c\tags\items\foods\vegetables.json
+c7f775072f5c4e1922f37527b3c7607e8c0372b7 data\minecraft\tags\items\villager_plantable_seeds.json
 d0f625feba76042923fbd03250b1c680cbff2873 data\minecraft\tags\items\fox_food.json
-efe26f742ef3996c92e4319c6c81b25af0cf67a7 data\c\tags\items\seeds.json
+43cdc3cff38c66db2c0f4dcc7d2853703101fbc9 data\c\tags\items\grains.json
+c7f775072f5c4e1922f37527b3c7607e8c0372b7 data\c\tags\items\seeds.json
+d8099df77a527ed57fe3597c097be282ffdf90b0 data\c\tags\items\crops.json
+13580401148858ae14088491753a15e045e6fbef data\c\tags\items\milks.json

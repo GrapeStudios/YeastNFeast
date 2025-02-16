@@ -3,10 +3,7 @@ package net.grapes.yeastnfeast.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.grapes.yeastnfeast.YeastNFeastMod;
-import net.grapes.yeastnfeast.block.custom.BarleyCropBlock;
-import net.grapes.yeastnfeast.block.custom.GingerCropBlock;
-import net.grapes.yeastnfeast.block.custom.RoseHipsBushBlock;
-import net.grapes.yeastnfeast.block.custom.RyeCropBlock;
+import net.grapes.yeastnfeast.block.custom.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FlowerBlock;
@@ -25,8 +22,14 @@ public class ModBlocks {
             new RyeCropBlock(FabricBlockSettings.copyOf(Blocks.POTATOES)));
     public static final Block GINGER_CROP = registerBlockWithoutBlockItem("ginger_crop",
             new GingerCropBlock(FabricBlockSettings.copyOf(Blocks.POTATOES)));
+    public static final Block GARLIC_CROP = registerBlockWithoutBlockItem("garlic_crop",
+            new GarlicCropBlock(FabricBlockSettings.copyOf(Blocks.POTATOES)));
+    public static final Block MINT_CROP = registerBlockWithoutBlockItem("mint_crop",
+            new MintCropBlock(FabricBlockSettings.copyOf(Blocks.POTATOES)));
     public static final Block ROSE_HIPS_BUSH = registerBlockWithoutBlockItem("rose_hips_bush",
             new RoseHipsBushBlock(FabricBlockSettings.copyOf(Blocks.SWEET_BERRY_BUSH)));
+    public static final Block ELDERBERRY_BUSH = registerBlockWithoutBlockItem("elderberry_bush",
+            new ElderberryBushBlock(FabricBlockSettings.copyOf(Blocks.SWEET_BERRY_BUSH)));
 
     // Wild Crop Blocks
     public static final Block WILD_BARLEY = registerBlock("wild_barley",

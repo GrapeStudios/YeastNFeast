@@ -38,6 +38,24 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_mushroom", conditionsFromTag(ModTags.Items.MUSHROOMS))
                 .offerTo(exporter);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MILK_BOTTLE, 4)
+                .input(Items.MILK_BUCKET)
+                .input(Items.GLASS_BOTTLE)
+                .input(Items.GLASS_BOTTLE)
+                .input(Items.GLASS_BOTTLE)
+                .input(Items.GLASS_BOTTLE)
+                .criterion("has_milk_bucket", conditionsFromItem(Items.MILK_BUCKET))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.MILK_BUCKET)
+                .input(Items.BUCKET)
+                .input(ModItems.MILK_BOTTLE)
+                .input(ModItems.MILK_BOTTLE)
+                .input(ModItems.MILK_BOTTLE)
+                .input(ModItems.MILK_BOTTLE)
+                .criterion("has_milk_bottle", conditionsFromItem(Items.BUCKET))
+                .offerTo(exporter);
+
         // Shapeless Recipes for Seeds
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BARLEY_SEEDS)
                 .input(ModItems.BARLEY)

@@ -19,26 +19,30 @@ public class ModItemGroup {
                         entries.add(ModItems.YEAST);
                         entries.add(ModItems.MAPLE_SYRUP);
                         entries.add(ModItems.MOLASSES);
+                        entries.add(ModItems.MILK_BOTTLE);
 
                         // Seeds
                         entries.add(ModItems.BARLEY_SEEDS);
                         entries.add(ModItems.RYE_SEEDS);
+                        entries.add(ModItems.MINT_SEEDS);
 
                         // Food Resources
                         entries.add(ModItems.ELDERBERRIES);
                         entries.add(ModItems.HAWTHORN_BERRIES);
                         entries.add(ModItems.ROSE_HIPS);
                         entries.add(ModItems.MINT);
+                        entries.add(ModItems.LEMON);
                         entries.add(ModItems.GINGER);
+                        entries.add(ModItems.GARLIC);
                         entries.add(ModItems.BARLEY);
                         entries.add(ModItems.RYE);
 
                         // Food
                         entries.add(ModItems.BARLEY_BREAD);
                         entries.add(ModItems.RYE_BREAD);
-                        entries.add(ModItems.CHOCOLATE_BUN);
+                        entries.add(ModItems.MOLASSES_BREAD);
                         entries.add(ModItems.BERRY_ROLL);
-                        entries.add(ModItems.ROSE_PIE);
+                        entries.add(ModItems.ROSE_TART);
                         entries.add(ModItems.ELDERBERRY_PIE);
                         entries.add(ModItems.APPLE_PIE);
 

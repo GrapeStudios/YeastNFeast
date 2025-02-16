@@ -13,6 +13,17 @@ public class ModTags {
         // Custom Item Tags
 
         // Common Item Tags
+        public static final TagKey<Item> FOODS = createCommonItemTag("foods");
+
+        public static final TagKey<Item> FOODS_BREADS = createCommonItemTag("foods/breads");
+        public static final TagKey<Item> CROPS = createCommonItemTag("crops");
+        public static final TagKey<Item> FOODS_BERRIES = createCommonItemTag("foods/berries");
+        public static final TagKey<Item> FOODS_VEGETABLES = createCommonItemTag("foods/vegetables");
+        public static final TagKey<Item> GRAINS = createCommonItemTag("grains");
+
+        public static final TagKey<Item> MILKS = createCommonItemTag("milks");
+        public static final TagKey<Item> MILK_BOTTLE = createCommonItemTag("milks/milk_bottles");
+
         public static final TagKey<Item> BERRIES = createCommonItemTag("berries");
         public static final TagKey<Item> SEEDS = createCommonItemTag("seeds");
         public static final TagKey<Item> MUSHROOMS = createCommonItemTag("mushrooms");

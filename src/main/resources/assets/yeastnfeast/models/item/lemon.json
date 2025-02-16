@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "yeastnfeast:item/chocolate_bun"
+    "layer0": "yeastnfeast:item/lemon"
   }
 }

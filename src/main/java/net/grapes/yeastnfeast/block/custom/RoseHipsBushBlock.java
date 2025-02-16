@@ -1,10 +1,7 @@
 package net.grapes.yeastnfeast.block.custom;
 
 import net.grapes.yeastnfeast.item.ModItems;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Fertilizable;
-import net.minecraft.block.PlantBlock;
+import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -40,7 +37,8 @@ public class RoseHipsBushBlock extends PlantBlock implements Fertilizable {
         return new ItemStack(ModItems.ROSE_HIPS);
     }
 
-    public static VoxelShape getSHAPE() {
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
 

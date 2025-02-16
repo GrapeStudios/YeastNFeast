@@ -1,9 +1,13 @@
-// 1.20.1	2025-02-11T17:06:43.265098	Yeast 'N Feast/Recipes
+// 1.20.1	2025-02-16T09:36:15.8291081	Yeast 'N Feast/Recipes
 fa4d240c5cd3cdfdfa6368dc5befd697c89cfbab data\yeastnfeast\recipes\yeast.json
 c58335139e617d7f9d5407c58f0bcb6ac7f5c96e data\yeastnfeast\advancements\recipes\misc\tankard.json
 0abe877be8f17f605f9e41f9a9c96684005d1a7a data\yeastnfeast\recipes\tankard.json
 7f0ae958727f4b19da81adb9c352107e9a1f9d2f data\yeastnfeast\advancements\recipes\misc\barley_seeds.json
 54834fca6d6d50aebb7912dcadd5b287e46def1c data\yeastnfeast\advancements\recipes\misc\yeast.json
 3a921cf4b1ecebb37bb797ca6034e70c7b15ebb8 data\yeastnfeast\advancements\recipes\misc\rye_seeds.json
+beb241398379e4b3cba0a723c43e5f8192d52f5a data\yeastnfeast\advancements\recipes\misc\milk_bucket.json
+bacd2ef773ead2f5b995b51421fabcd76e3818d2 data\yeastnfeast\advancements\recipes\misc\milk_bottle.json
+d0625009468bbe0b6fe12417ec28842ed7156845 data\yeastnfeast\recipes\milk_bottle.json
 2799f5d3140f32cdd3b086459a3264bf10c41cc0 data\yeastnfeast\recipes\barley_seeds.json
 b13edeb7ba9757bd89b3f8d52dc42a3747ba8e97 data\yeastnfeast\recipes\rye_seeds.json
+a5438635f22e8f484a9a5b172c9155fb6c8d64ea data\yeastnfeast\recipes\milk_bucket.json

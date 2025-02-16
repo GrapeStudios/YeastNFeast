@@ -17,6 +17,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.CROPS)
                 .add(ModBlocks.BARLEY_CROP).add(ModBlocks.RYE_CROP)
-                .add(ModBlocks.GINGER_CROP);
+                .add(ModBlocks.GINGER_CROP).add(ModBlocks.GARLIC_CROP)
+                .add(ModBlocks.MINT_CROP);
+
+        getOrCreateTagBuilder(BlockTags.BEE_GROWABLES)
+                .add(ModBlocks.BARLEY_CROP).add(ModBlocks.RYE_CROP)
+                .add(ModBlocks.GINGER_CROP).add(ModBlocks.GARLIC_CROP)
+                .add(ModBlocks.MINT_CROP);
     }
 }
