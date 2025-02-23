@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "yeastnfeast:molasses"
+    },
+    {
+      "tag": "c:milks"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "tag": "c:foods/berries"
+    }
+  ],
+  "result": {
+    "item": "yeastnfeast:sweet_porridge"
+  }
+}

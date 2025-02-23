@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "yeastnfeast:elderberries"
+    },
+    {
+      "item": "yeastnfeast:rye"
+    },
+    {
+      "item": "yeastnfeast:mint"
+    },
+    {
+      "tag": "c:foods/cooked_meats/cooked_mutton"
+    }
+  ],
+  "result": {
+    "item": "yeastnfeast:forager_feast"
+  }
+}

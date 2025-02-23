@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.grapes.yeastnfeast.item.ModItems;
 import net.grapes.yeastnfeast.util.ModTags;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
@@ -65,5 +66,20 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ModTags.Items.MILK_BOTTLE)
                 .add(ModItems.MILK_BOTTLE);
+
+        getOrCreateTagBuilder(ModTags.Items.COOKED_MEATS)
+                .addTag(ModTags.Items.COOKED_BEEF)
+                .addTag(ModTags.Items.COOKED_CHICKEN)
+                .addTag(ModTags.Items.COOKED_MUTTON)
+                .addTag(ModTags.Items.COOKED_PORK);
+
+        getOrCreateTagBuilder(ModTags.Items.COOKED_BEEF)
+                .add(Items.COOKED_BEEF);
+        getOrCreateTagBuilder(ModTags.Items.COOKED_CHICKEN)
+                .add(Items.COOKED_CHICKEN);
+        getOrCreateTagBuilder(ModTags.Items.COOKED_MUTTON)
+                .add(Items.COOKED_MUTTON);
+        getOrCreateTagBuilder(ModTags.Items.COOKED_PORK)
+                .add(Items.COOKED_PORKCHOP);
     }
 }

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "yeastnfeast:garlic"
+    },
+    {
+      "item": "yeastnfeast:lemon"
+    },
+    {
+      "tag": "c:foods/cooked_meats/cooked_chicken"
+    }
+  ],
+  "result": {
+    "item": "yeastnfeast:lemon_glazed_chicken"
+  }
+}

@@ -7,6 +7,7 @@ import net.grapes.yeastnfeast.util.ModTags;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
@@ -54,6 +55,78 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModItems.MILK_BOTTLE)
                 .input(ModItems.MILK_BOTTLE)
                 .criterion("has_milk_bottle", conditionsFromItem(Items.BUCKET))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SWEET_PORRIDGE)
+                .input(Items.BOWL)
+                .input(ModItems.MOLASSES)
+                .input(ModTags.Items.MILKS)
+                .input(Items.WHEAT)
+                .input(ModTags.Items.FOODS_BERRIES)
+                .criterion("has_molasses", conditionsFromItem(ModItems.MOLASSES))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPICED_PORRIDGE)
+                .input(Items.BOWL)
+                .input(ModItems.GARLIC)
+                .input(ModTags.Items.MILKS)
+                .input(ModItems.RYE)
+                .input(ModItems.GINGER)
+                .criterion("has_rye", conditionsFromItem(ModItems.RYE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BARLEY_AND_BEEF_STEW)
+                .input(Items.BOWL)
+                .input(ModItems.BARLEY)
+                .input(ModTags.Items.FOODS_VEGETABLES)
+                .input(ModTags.Items.FOODS_VEGETABLES)
+                .input(ModTags.Items.COOKED_BEEF)
+                .criterion("has_barley", conditionsFromItem(ModItems.BARLEY))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MEAD_BRAISED_PORK)
+                .input(Items.BOWL)
+                .input(ModItems.HONEY_MEAD)
+                .input(ModItems.BARLEY)
+                .input(ModTags.Items.FOODS_VEGETABLES)
+                .input(ModTags.Items.COOKED_PORK)
+                .criterion("has_barley", conditionsFromItem(ModItems.BARLEY))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HERBED_COD)
+                .input(Items.BOWL)
+                .input(ModItems.MINT)
+                .input(ModItems.GINGER)
+                .input(ModItems.LEMON)
+                .input(Items.COOKED_COD)
+                .criterion("has_mint", conditionsFromItem(ModItems.MINT))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEMON_GLAZED_CHICKEN)
+                .input(Items.BOWL)
+                .input(Items.HONEY_BOTTLE)
+                .input(ModItems.GARLIC)
+                .input(ModItems.LEMON)
+                .input(ModTags.Items.COOKED_CHICKEN)
+                .criterion("has_lemon", conditionsFromItem(ModItems.LEMON))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FORAGER_FEAST)
+                .input(Items.BOWL)
+                .input(ModItems.ELDERBERRIES)
+                .input(ModItems.RYE)
+                .input(ModItems.MINT)
+                .input(ModTags.Items.COOKED_MUTTON)
+                .criterion("has_rye", conditionsFromItem(ModItems.RYE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MAPLE_GLAZED_RABBIT)
+                .input(Items.BOWL)
+                .input(ModItems.MAPLE_SYRUP)
+                .input(ModItems.BARLEY)
+                .input(Items.BEETROOT)
+                .input(Items.COOKED_RABBIT)
+                .criterion("has_barley", conditionsFromItem(ModItems.BARLEY))
                 .offerTo(exporter);
 
         // Shapeless Recipes for Seeds

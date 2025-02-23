@@ -2,6 +2,7 @@ package net.grapes.yeastnfeast.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.grapes.yeastnfeast.YeastNFeastMod;
+import net.grapes.yeastnfeast.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -37,7 +38,7 @@ public class ModItemGroup {
                         entries.add(ModItems.BARLEY);
                         entries.add(ModItems.RYE);
 
-                        // Food
+                        // Baked
                         entries.add(ModItems.BARLEY_BREAD);
                         entries.add(ModItems.RYE_BREAD);
                         entries.add(ModItems.MOLASSES_BREAD);
@@ -45,6 +46,16 @@ public class ModItemGroup {
                         entries.add(ModItems.ROSE_TART);
                         entries.add(ModItems.ELDERBERRY_PIE);
                         entries.add(ModItems.APPLE_PIE);
+
+                        // Food
+                        entries.add(ModItems.SWEET_PORRIDGE);
+                        entries.add(ModItems.SPICED_PORRIDGE);
+                        entries.add(ModItems.BARLEY_AND_BEEF_STEW);
+                        entries.add(ModItems.MEAD_BRAISED_PORK);
+                        entries.add(ModItems.HERBED_COD);
+                        entries.add(ModItems.LEMON_GLAZED_CHICKEN);
+                        entries.add(ModItems.FORAGER_FEAST);
+                        entries.add(ModItems.MAPLE_GLAZED_RABBIT);
 
                         // Mead
                         entries.add(ModItems.TANKARD);
@@ -60,6 +71,7 @@ public class ModItemGroup {
                         // Decorative Blocks
 
                         // Wood-Related Items
+                        entries.add(ModBlocks.MAPLE_LOG);
 
                     }).build());
 

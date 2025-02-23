@@ -21,6 +21,12 @@ public class ModTags {
         public static final TagKey<Item> FOODS_VEGETABLES = createCommonItemTag("foods/vegetables");
         public static final TagKey<Item> GRAINS = createCommonItemTag("grains");
 
+        public static final TagKey<Item> COOKED_MEATS = createCommonItemTag("foods/cooked_meats");
+        public static final TagKey<Item> COOKED_BEEF = createCommonItemTag("foods/cooked_meats/cooked_beef");
+        public static final TagKey<Item> COOKED_CHICKEN = createCommonItemTag("foods/cooked_meats/cooked_chicken");
+        public static final TagKey<Item> COOKED_MUTTON = createCommonItemTag("foods/cooked_meats/cooked_mutton");
+        public static final TagKey<Item> COOKED_PORK = createCommonItemTag("foods/cooked_meats/cooked_pork");
+
         public static final TagKey<Item> MILKS = createCommonItemTag("milks");
         public static final TagKey<Item> MILK_BOTTLE = createCommonItemTag("milks/milk_bottles");
 

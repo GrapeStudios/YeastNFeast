@@ -1,8 +1,10 @@
 package net.grapes.yeastnfeast.item;
 
+import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.grapes.yeastnfeast.block.ModBlocks;
+import net.grapes.yeastnfeast.entity.ModBoats;
 import net.grapes.yeastnfeast.item.custom.MilkBottleItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -58,12 +60,30 @@ public class ModItems {
             new Item(new FabricItemSettings()));
 
     // Food Items
+    public static final Item SWEET_PORRIDGE = registerItem("sweet_porridge",
+            new StewItem(new FabricItemSettings().maxCount(1)));
+    public static final Item SPICED_PORRIDGE = registerItem("spiced_porridge",
+            new StewItem(new FabricItemSettings().maxCount(1)));
+    public static final Item BARLEY_AND_BEEF_STEW = registerItem("barley_and_beef_stew",
+            new StewItem(new FabricItemSettings().maxCount(1)));
+    public static final Item MEAD_BRAISED_PORK = registerItem("mead_braised_pork",
+            new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item HERBED_COD = registerItem("herbed_cod",
+            new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item LEMON_GLAZED_CHICKEN = registerItem("lemon_glazed_chicken",
+            new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item FORAGER_FEAST = registerItem("forager_feast",
+            new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item MAPLE_GLAZED_RABBIT = registerItem("maple_glazed_rabbit",
+            new Item(new FabricItemSettings().maxCount(1)));
+
+    // Baked Goods
     public static final Item BARLEY_BREAD = registerItem("barley_bread",
             new Item(new FabricItemSettings().food(ModFoodComponents.BARLEY_BREAD)));
     public static final Item RYE_BREAD = registerItem("rye_bread",
             new Item(new FabricItemSettings().food(ModFoodComponents.RYE_BREAD)));
     public static final Item MOLASSES_BREAD = registerItem("molasses_bread",
-            new Item(new FabricItemSettings().food(ModFoodComponents.CHOCOLATE_BUN)));
+            new Item(new FabricItemSettings().food(ModFoodComponents.MOLASSES_BREAD)));
     public static final Item BERRY_ROLL = registerItem("berry_roll",
             new Item(new FabricItemSettings().food(ModFoodComponents.BERRY_ROLL)));
     public static final Item ROSE_TART = registerItem("rose_tart",
@@ -77,17 +97,27 @@ public class ModItems {
     public static final Item TANKARD = registerItem("tankard",
             new Item(new FabricItemSettings()));
     public static final Item HONEY_MEAD = registerItem("honey_mead",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
     public static final Item MOLASSES_MEAD = registerItem("molasses_mead",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
     public static final Item SOUR_MEAD = registerItem("sour_mead",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
     public static final Item THORNBERRY_MEAD = registerItem("thornberry_mead",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
     public static final Item BLOSSOM_MEAD = registerItem("blossom_mead",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
     public static final Item AMBER_MEAD = registerItem("amber_mead",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
+
+    // Wooden-related Items
+    public static final Item MAPLE_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_BOAT_ID,
+            ModBoats.MAPLE_BOAT_KEY, false);
+    public static final Item MAPLE_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_CHEST_BOAT_ID,
+            ModBoats.MAPLE_BOAT_KEY, true);
+    public static final Item MAPLE_SIGN = registerItem("maple_sign",
+            new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.MAPLE_SIGN, ModBlocks.MAPLE_WALL_SIGN));
+    public static final Item MAPLE_HANGING_SIGN = registerItem("maple_hanging_sign",
+            new HangingSignItem(ModBlocks.MAPLE_HANGING_SIGN, ModBlocks.MAPLE_HANGING_WALL_SIGN, new FabricItemSettings().maxCount(16)));
 
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(YeastNFeastMod.MOD_ID, name), item);
