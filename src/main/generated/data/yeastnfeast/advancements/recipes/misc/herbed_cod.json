@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mint": {
+    "has_cooked_cod": {
       "conditions": {
         "items": [
           {
             "items": [
-              "yeastnfeast:mint"
+              "minecraft:cooked_cod"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_mint",
+      "has_cooked_cod",
       "has_the_recipe"
     ]
   ],

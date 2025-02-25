@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-24T20:27:10.7223526	Yeast 'N Feast/Tags for minecraft:item
+// 1.20.1	2025-02-24T20:38:35.1674646	Yeast 'N Feast/Tags for minecraft:item
 13580401148858ae14088491753a15e045e6fbef data\c\tags\items\milks\milk_bottles.json
 bd24f46f4d5fe2807c6070575e8ed3f55612f7c8 data\minecraft\tags\items\planks.json
 2479dc868198982d1374678622923ed92be86fcb data\c\tags\items\foods.json
@@ -15,8 +15,8 @@ c7f775072f5c4e1922f37527b3c7607e8c0372b7 data\c\tags\items\seeds.json
 87a47378c3fc9c35df85c4632270455fb91614ae data\c\tags\items\foods\cooked_meats\cooked_chicken.json
 d6281dc784180bcb8e914fd0bd79f553c4596809 data\minecraft\tags\items\wooden_slabs.json
 d0f625feba76042923fbd03250b1c680cbff2873 data\c\tags\items\berries.json
-d0f625feba76042923fbd03250b1c680cbff2873 data\c\tags\items\foods\berries.json
 51cfcd6b6d68addfcc32807ea436ae56405cd71f data\c\tags\items\foods\breads.json
+d0f625feba76042923fbd03250b1c680cbff2873 data\c\tags\items\foods\berries.json
 43580562ab2d077c7aed610efae2776fcb96a5a8 data\c\tags\items\foods\vegetables.json
 95c296f774bf26658f2ab0d225017405ff90e4c8 data\minecraft\tags\items\wooden_buttons.json
 76ded3000133a6fc40ab407dd82781de3ce5e3e2 data\minecraft\tags\items\wooden_pressure_plates.json

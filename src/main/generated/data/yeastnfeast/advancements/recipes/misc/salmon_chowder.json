@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cooked_rabbit": {
+    "has_cooked_salmon": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:cooked_rabbit"
+              "minecraft:cooked_salmon"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "yeastnfeast:maple_glazed_rabbit"
+        "recipe": "yeastnfeast:salmon_chowder"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_cooked_rabbit",
+      "has_cooked_salmon",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "yeastnfeast:maple_glazed_rabbit"
+      "yeastnfeast:salmon_chowder"
     ]
   },
   "sends_telemetry_event": false

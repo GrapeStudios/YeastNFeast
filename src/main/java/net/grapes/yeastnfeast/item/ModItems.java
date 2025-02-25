@@ -66,16 +66,18 @@ public class ModItems {
             new StewItem(new FabricItemSettings().maxCount(1)));
     public static final Item BARLEY_AND_BEEF_STEW = registerItem("barley_and_beef_stew",
             new StewItem(new FabricItemSettings().maxCount(1)));
+    public static final Item SALMON_CHOWDER = registerItem("salmon_chowder",
+            new StewItem(new FabricItemSettings().maxCount(1)));
     public static final Item MEAD_BRAISED_PORK = registerItem("mead_braised_pork",
-            new Item(new FabricItemSettings().maxCount(1)));
+            new StewItem(new FabricItemSettings().maxCount(1)));
     public static final Item HERBED_COD = registerItem("herbed_cod",
-            new Item(new FabricItemSettings().maxCount(1)));
+            new StewItem(new FabricItemSettings().maxCount(1)));
     public static final Item LEMON_GLAZED_CHICKEN = registerItem("lemon_glazed_chicken",
-            new Item(new FabricItemSettings().maxCount(1)));
+            new StewItem(new FabricItemSettings().maxCount(1)));
     public static final Item FORAGER_FEAST = registerItem("forager_feast",
-            new Item(new FabricItemSettings().maxCount(1)));
+            new StewItem(new FabricItemSettings().maxCount(1)));
     public static final Item MAPLE_GLAZED_RABBIT = registerItem("maple_glazed_rabbit",
-            new Item(new FabricItemSettings().maxCount(1)));
+            new StewItem(new FabricItemSettings().maxCount(1)));
 
     // Baked Goods
     public static final Item BARLEY_BREAD = registerItem("barley_bread",

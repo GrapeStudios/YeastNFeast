@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lemon": {
+    "has_cooked_chicken": {
       "conditions": {
         "items": [
           {
             "items": [
-              "yeastnfeast:lemon"
+              "minecraft:cooked_chicken"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_lemon",
+      "has_cooked_chicken",
       "has_the_recipe"
     ]
   ],

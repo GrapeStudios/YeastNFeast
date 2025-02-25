@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-24T20:27:10.7198556	Yeast 'N Feast/Block Loot Tables
+// 1.20.1	2025-02-24T20:38:35.1649532	Yeast 'N Feast/Block Loot Tables
 3ca927159a312105e2acb3588adf692c74ff2e6d data\yeastnfeast\loot_tables\blocks\maple_fence.json
 0d4a493543f96c5743a43cdb66a3741736d0ccfa data\yeastnfeast\loot_tables\blocks\maple_leaves.json
 efa2b6c6cbeb404a84a67c52523839c7828ccde9 data\yeastnfeast\loot_tables\blocks\rye_crop.json
@@ -27,5 +27,5 @@ e80dc9eaff7024781aaba57bd4d32c3fce827459 data\yeastnfeast\loot_tables\blocks\str
 8c3d8cb5b5ec7da90e80fdf661e8054dcf363d54 data\yeastnfeast\loot_tables\blocks\maple_sapling.json
 8c4b54c86073733d727dc2ca15c93affcad2550b data\minecraft\loot_tables\blocks\oak_sign.json
 1475e64ff5fc71bac2ec35b4f1bbd4fd8933d326 data\yeastnfeast\loot_tables\blocks\maple_trapdoor.json
-5a0ce3043dce7dfe7d3979f3a5384e0391786ada data\yeastnfeast\loot_tables\blocks\maple_pressure_plate.json
 e4c89c5ea8ff092e5fcccf7b2643f3c499669157 data\yeastnfeast\loot_tables\blocks\garlic_crop.json
+5a0ce3043dce7dfe7d3979f3a5384e0391786ada data\yeastnfeast\loot_tables\blocks\maple_pressure_plate.json

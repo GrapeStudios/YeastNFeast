@@ -32,8 +32,8 @@ public class YeastNFeastModClient implements ClientModInitializer {
                 ModBlocks.RYE_CROP, ModBlocks.GINGER_CROP,
                 ModBlocks.ROSE_HIPS_BUSH, ModBlocks.GARLIC_CROP,
                 ModBlocks.ELDERBERRY_BUSH, ModBlocks.MINT_CROP,
-                ModBlocks.MAPLE_SAPLING, ModBlocks.MAPLE_DOOR,
-                ModBlocks.MAPLE_TRAPDOOR
+                ModBlocks.MAPLE_SAPLING, ModBlocks.POTTED_MAPLE_SAPLING,
+                ModBlocks.MAPLE_DOOR, ModBlocks.MAPLE_TRAPDOOR
         );
     }
 

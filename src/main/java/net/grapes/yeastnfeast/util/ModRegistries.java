@@ -41,6 +41,8 @@ public class ModRegistries {
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WILD_GINGER, 60, 100);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROSE_HIPS_BUSH, 60, 100);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ELDERBERRY_BUSH, 60, 100);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MAPLE_SAPLING, 60, 100);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MAPLE_LEAVES, 60, 100);
 
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MAPLE_LOG, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MAPLE_WOOD, 5, 5);

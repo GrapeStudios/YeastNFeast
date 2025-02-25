@@ -9,7 +9,6 @@ import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -84,7 +83,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModTags.Items.FOODS_VEGETABLES)
                 .input(ModTags.Items.FOODS_VEGETABLES)
                 .input(ModTags.Items.COOKED_BEEF)
-                .criterion("has_barley", conditionsFromItem(ModItems.BARLEY))
+                .criterion("has_cooked_beef", conditionsFromItem(Items.COOKED_BEEF))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MEAD_BRAISED_PORK)
@@ -93,7 +92,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModItems.BARLEY)
                 .input(ModTags.Items.FOODS_VEGETABLES)
                 .input(ModTags.Items.COOKED_PORK)
-                .criterion("has_barley", conditionsFromItem(ModItems.BARLEY))
+                .criterion("has_cooked_pork", conditionsFromItem(Items.COOKED_PORKCHOP))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HERBED_COD)
@@ -102,7 +101,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModItems.GINGER)
                 .input(ModItems.LEMON)
                 .input(Items.COOKED_COD)
-                .criterion("has_mint", conditionsFromItem(ModItems.MINT))
+                .criterion("has_cooked_cod", conditionsFromItem(Items.COOKED_COD))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEMON_GLAZED_CHICKEN)
@@ -111,7 +110,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModItems.GARLIC)
                 .input(ModItems.LEMON)
                 .input(ModTags.Items.COOKED_CHICKEN)
-                .criterion("has_lemon", conditionsFromItem(ModItems.LEMON))
+                .criterion("has_cooked_chicken", conditionsFromItem(Items.COOKED_CHICKEN))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FORAGER_FEAST)
@@ -120,7 +119,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModItems.RYE)
                 .input(ModItems.MINT)
                 .input(ModTags.Items.COOKED_MUTTON)
-                .criterion("has_rye", conditionsFromItem(ModItems.RYE))
+                .criterion("has_cooked_mutton", conditionsFromItem(Items.COOKED_SALMON))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MAPLE_GLAZED_RABBIT)
@@ -129,7 +128,16 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModItems.BARLEY)
                 .input(Items.BEETROOT)
                 .input(Items.COOKED_RABBIT)
-                .criterion("has_barley", conditionsFromItem(ModItems.BARLEY))
+                .criterion("has_cooked_rabbit", conditionsFromItem(Items.COOKED_RABBIT))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SALMON_CHOWDER)
+                .input(Items.BOWL)
+                .input(ModItems.LEMON)
+                .input(ModTags.Items.MILKS)
+                .input(Items.KELP)
+                .input(Items.COOKED_SALMON)
+                .criterion("has_cooked_salmon", conditionsFromItem(Items.COOKED_SALMON))
                 .offerTo(exporter);
 
         // Shapeless Recipes for Seeds

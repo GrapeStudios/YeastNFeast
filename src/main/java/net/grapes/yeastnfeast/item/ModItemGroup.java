@@ -51,6 +51,7 @@ public class ModItemGroup {
                         entries.add(ModItems.SWEET_PORRIDGE);
                         entries.add(ModItems.SPICED_PORRIDGE);
                         entries.add(ModItems.BARLEY_AND_BEEF_STEW);
+                        entries.add(ModItems.SALMON_CHOWDER);
                         entries.add(ModItems.MEAD_BRAISED_PORK);
                         entries.add(ModItems.HERBED_COD);
                         entries.add(ModItems.LEMON_GLAZED_CHICKEN);

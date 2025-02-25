@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rye": {
+    "has_cooked_mutton": {
       "conditions": {
         "items": [
           {
             "items": [
-              "yeastnfeast:rye"
+              "minecraft:cooked_salmon"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_rye",
+      "has_cooked_mutton",
       "has_the_recipe"
     ]
   ],

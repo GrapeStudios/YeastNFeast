@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_barley": {
+    "has_cooked_beef": {
       "conditions": {
         "items": [
           {
             "items": [
-              "yeastnfeast:barley"
+              "minecraft:cooked_beef"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_barley",
+      "has_cooked_beef",
       "has_the_recipe"
     ]
   ],
