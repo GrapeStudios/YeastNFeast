@@ -6,14 +6,21 @@ import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+
+import java.util.List;
 
 public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> WILD_BARLEY_KEY = registerKey("wild_barley");
     public static final RegistryKey<ConfiguredFeature<?, ?>> WILD_RYE_KEY = registerKey("wild_rye");
     public static final RegistryKey<ConfiguredFeature<?, ?>> WILD_GINGER_KEY = registerKey("wild_ginger");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MAPLE_KEY = registerKey("maple");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         // Wild Crops
@@ -26,6 +33,16 @@ public class ModConfiguredFeatures {
         register(context, WILD_GINGER_KEY, Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(3,
                 PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.WILD_GINGER)))));
+
+        // Trees
+        register(context, MAPLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.MAPLE_LOG),
+                new StraightTrunkPlacer(4, 2, 1),
+                BlockStateProvider.of(ModBlocks.MAPLE_LEAVES),
+                new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 3) {},
+                new TwoLayersFeatureSize(1, 0, 2))
+                .ignoreVines()
+                .build());
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "yeastnfeast:maple_planks"
+    }
+  ],
+  "result": {
+    "item": "yeastnfeast:maple_button"
+  }
+}

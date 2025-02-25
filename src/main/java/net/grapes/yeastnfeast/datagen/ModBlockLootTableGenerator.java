@@ -63,6 +63,29 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         this.addDrop(ModBlocks.ELDERBERRY_BUSH, createHarvestablePlantBlock(
                 ModBlocks.ELDERBERRY_BUSH, ModItems.ELDERBERRIES,
                 RoseHipsBushBlock.AGE, 3, 2.0F, 3.0F));
+        
+        
+        // Loot for Wood-related Blocks
+        addDrop(ModBlocks.MAPLE_LEAVES, leavesDrops(ModBlocks.MAPLE_LEAVES, ModBlocks.MAPLE_SAPLING, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.MAPLE_LOG);
+        addDrop(ModBlocks.MAPLE_WOOD);
+        addDrop(ModBlocks.STRIPPED_MAPLE_LOG);
+        addDrop(ModBlocks.STRIPPED_MAPLE_WOOD);
+        addDrop(ModBlocks.MAPLE_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_MAPLE_SAPLING);
+        addDrop(ModBlocks.MAPLE_PLANKS);
+        addDrop(ModBlocks.MAPLE_STAIRS);
+        addDrop(ModBlocks.MAPLE_PRESSURE_PLATE);
+        addDrop(ModBlocks.MAPLE_SLAB, slabDrops(ModBlocks.MAPLE_SLAB));
+        addDrop(ModBlocks.MAPLE_BUTTON);
+        addDrop(ModBlocks.MAPLE_FENCE);
+        addDrop(ModBlocks.MAPLE_FENCE_GATE);
+        addDrop(ModBlocks.MAPLE_TRAPDOOR);
+        addDrop(ModBlocks.MAPLE_DOOR, doorDrops(ModBlocks.MAPLE_DOOR));
+        addDrop(ModBlocks.MAPLE_SIGN);
+        addDrop(ModBlocks.MAPLE_WALL_SIGN);
+        addDrop(ModBlocks.MAPLE_HANGING_WALL_SIGN);
+        addDrop(ModBlocks.MAPLE_HANGING_SIGN);
     }
 
     protected LootTable.Builder createSimpleCropBlock(Block cropBlock, Item cropItem, LootCondition.Builder dropGrownCropCondition) {

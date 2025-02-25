@@ -110,14 +110,14 @@ public class ModItems {
             new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
 
     // Wooden-related Items
-    public static final Item MAPLE_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_BOAT_ID,
-            ModBoats.MAPLE_BOAT_KEY, false);
-    public static final Item MAPLE_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_CHEST_BOAT_ID,
-            ModBoats.MAPLE_BOAT_KEY, true);
     public static final Item MAPLE_SIGN = registerItem("maple_sign",
             new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.MAPLE_SIGN, ModBlocks.MAPLE_WALL_SIGN));
     public static final Item MAPLE_HANGING_SIGN = registerItem("maple_hanging_sign",
             new HangingSignItem(ModBlocks.MAPLE_HANGING_SIGN, ModBlocks.MAPLE_HANGING_WALL_SIGN, new FabricItemSettings().maxCount(16)));
+    public static final Item MAPLE_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_BOAT_ID,
+            ModBoats.MAPLE_BOAT_KEY, false);
+    public static final Item MAPLE_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_CHEST_BOAT_ID,
+            ModBoats.MAPLE_BOAT_KEY, true);
 
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(YeastNFeastMod.MOD_ID, name), item);

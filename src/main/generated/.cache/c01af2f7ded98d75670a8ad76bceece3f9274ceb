@@ -1,3 +1,12 @@
-// 1.20.1	2025-02-20T09:37:00.7292196	Yeast 'N Feast/Tags for minecraft:block
+// 1.20.1	2025-02-24T20:27:10.724869	Yeast 'N Feast/Tags for minecraft:block
+59afdc2d03eb8d5d8aac29ee9b5bb43ebc710c57 data\minecraft\tags\blocks\logs_that_burn.json
+76ded3000133a6fc40ab407dd82781de3ce5e3e2 data\minecraft\tags\blocks\wooden_pressure_plates.json
+b3bf8208db8f650d3c34c55afee2dc76b5840cf1 data\minecraft\tags\blocks\planks.json
+d6281dc784180bcb8e914fd0bd79f553c4596809 data\minecraft\tags\blocks\wooden_slabs.json
+7a6cde1ea8a55de2552104fb6fd04e824f09e091 data\minecraft\tags\blocks\wooden_fences.json
+79d79a02df167be3dd825fdba42685a8eabe6440 data\minecraft\tags\blocks\wooden_stairs.json
+95c296f774bf26658f2ab0d225017405ff90e4c8 data\minecraft\tags\blocks\wooden_buttons.json
 c4e3afcf4e0a717d3baf8719069eadf0b3a5d4d6 data\minecraft\tags\blocks\bee_growables.json
+dd2781763ac7ed2e4edbeea5625c438283591a89 data\minecraft\tags\blocks\fence_gates.json
+7e9e7c1bf83464cbc7c97eda177532ed93d4fc12 data\yeastnfeast\tags\blocks\maple_logs.json
 c4e3afcf4e0a717d3baf8719069eadf0b3a5d4d6 data\minecraft\tags\blocks\crops.json

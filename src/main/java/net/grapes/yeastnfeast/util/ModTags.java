@@ -11,6 +11,7 @@ public class ModTags {
 
     public static class Items {
         // Custom Item Tags
+        public static final TagKey<Item> MAPLE_LOGS = createItemTag("maple_logs");
 
         // Common Item Tags
         public static final TagKey<Item> FOODS = createCommonItemTag("foods");
@@ -45,6 +46,8 @@ public class ModTags {
 
     public static class Blocks {
         // Custom Block Tags
+
+        public static final TagKey<Block> MAPLE_LOGS = createBlockTag("maple_logs");
 
         // Common Block Tags
 

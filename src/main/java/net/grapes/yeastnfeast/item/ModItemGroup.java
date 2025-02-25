@@ -71,7 +71,25 @@ public class ModItemGroup {
                         // Decorative Blocks
 
                         // Wood-Related Items
+                        entries.add(ModBlocks.MAPLE_SAPLING);
+                        entries.add(ModBlocks.MAPLE_LEAVES);
                         entries.add(ModBlocks.MAPLE_LOG);
+                        entries.add(ModBlocks.MAPLE_WOOD);
+                        entries.add(ModBlocks.STRIPPED_MAPLE_LOG);
+                        entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);
+                        entries.add(ModBlocks.MAPLE_PLANKS);
+                        entries.add(ModBlocks.MAPLE_STAIRS);
+                        entries.add(ModBlocks.MAPLE_SLAB);
+                        entries.add(ModBlocks.MAPLE_FENCE);
+                        entries.add(ModBlocks.MAPLE_FENCE_GATE);
+                        entries.add(ModBlocks.MAPLE_DOOR);
+                        entries.add(ModBlocks.MAPLE_TRAPDOOR);
+                        entries.add(ModBlocks.MAPLE_PRESSURE_PLATE);
+                        entries.add(ModBlocks.MAPLE_BUTTON);
+                        entries.add(ModItems.MAPLE_BOAT);
+                        entries.add(ModItems.MAPLE_CHEST_BOAT);
+                        entries.add(ModItems.MAPLE_SIGN);
+                        entries.add(ModItems.MAPLE_HANGING_SIGN);
 
                     }).build());
 

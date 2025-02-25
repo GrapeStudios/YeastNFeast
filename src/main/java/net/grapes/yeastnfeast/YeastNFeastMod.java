@@ -3,8 +3,11 @@ package net.grapes.yeastnfeast;
 import net.fabricmc.api.ModInitializer;
 
 import net.grapes.yeastnfeast.block.ModBlocks;
+import net.grapes.yeastnfeast.block.entity.ModBlockEntities;
+import net.grapes.yeastnfeast.entity.ModBoats;
 import net.grapes.yeastnfeast.item.ModItemGroup;
 import net.grapes.yeastnfeast.item.ModItems;
+import net.grapes.yeastnfeast.particle.ModParticles;
 import net.grapes.yeastnfeast.util.ModRegistries;
 import net.grapes.yeastnfeast.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
@@ -22,5 +25,8 @@ public class YeastNFeastMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModWorldGeneration.generateModWorldGeneration();
 		ModRegistries.registerModStuff();
+		ModBoats.registerBoats();
+		ModBlockEntities.registerBlockEntities();
+		ModParticles.registerParticles();
 	}
 }
