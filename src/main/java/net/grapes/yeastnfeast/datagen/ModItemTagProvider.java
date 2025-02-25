@@ -60,7 +60,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.GARLIC);
 
         getOrCreateTagBuilder(ModTags.Items.GRAINS)
-                .add(ModItems.RYE).add(ModItems.BARLEY);
+                .add(ModItems.RYE).add(ModItems.BARLEY)
+                .add(Items.WHEAT);
+
+        getOrCreateTagBuilder(ModTags.Items.GRAINS_WHEAT)
+                .add(ModItems.RYE).add(ModItems.BARLEY)
+                .add(Items.WHEAT);
 
         getOrCreateTagBuilder(ModTags.Items.MILKS)
                 .add(ModItems.MILK_BOTTLE);
@@ -82,6 +87,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(Items.COOKED_MUTTON);
         getOrCreateTagBuilder(ModTags.Items.COOKED_PORK)
                 .add(Items.COOKED_PORKCHOP);
+
+        getOrCreateTagBuilder(ModTags.Items.COOKED_SALMON)
+                .add(Items.SALMON);
+
+        getOrCreateTagBuilder(ModTags.Items.COOKED_COD)
+                .add(Items.COD);
         
         // Wood-related Tags
         getOrCreateTagBuilder(ModTags.Items.MAPLE_LOGS)

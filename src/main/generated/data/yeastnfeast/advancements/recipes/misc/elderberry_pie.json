@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_iron_nugget": {
+    "has_elderberries": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:iron_nugget"
+              "yeastnfeast:elderberries"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:tankard"
+        "recipe": "minecraft:elderberry_pie"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_iron_nugget",
+      "has_elderberries",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:tankard"
+      "minecraft:elderberry_pie"
     ]
   },
   "sends_telemetry_event": false

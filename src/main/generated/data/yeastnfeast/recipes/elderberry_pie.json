@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "c:milks"
+    },
+    "P": {
+      "tag": "c:grains/wheats"
+    },
+    "S": {
+      "item": "yeastnfeast:elderberries"
+    },
+    "T": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    " S ",
+    "STS",
+    "PHP"
+  ],
+  "result": {
+    "item": "yeastnfeast:elderberry_pie"
+  },
+  "show_notification": true
+}

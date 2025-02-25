@@ -15,7 +15,7 @@
       "item": "yeastnfeast:lemon"
     },
     {
-      "item": "minecraft:cooked_cod"
+      "tag": "c:foods/cooked_fishes/cod"
     }
   ],
   "result": {

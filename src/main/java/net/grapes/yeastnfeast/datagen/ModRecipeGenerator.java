@@ -31,8 +31,51 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("PSP")
                 .input('P', Items.IRON_NUGGET)
                 .input('S', ItemTags.PLANKS)
-                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.IRON_NUGGET))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.TANKARD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ELDERBERRY_PIE)
+                .pattern(" S ")
+                .pattern("STS")
+                .pattern("PHP")
+                .input('P', ModTags.Items.GRAINS_WHEAT)
+                .input('S', ModItems.ELDERBERRIES)
+                .input('T', Items.SUGAR)
+                .input('H', ModTags.Items.MILKS)
+                .criterion(hasItem(ModItems.ELDERBERRIES), conditionsFromItem(ModItems.ELDERBERRIES))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.ELDERBERRY_PIE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ROSE_TART)
+                .pattern(" S ")
+                .pattern("STS")
+                .pattern("PHP")
+                .input('P', ModTags.Items.GRAINS_WHEAT)
+                .input('S', ModItems.ROSE_HIPS)
+                .input('T', Items.SUGAR)
+                .input('H', ModTags.Items.MILKS)
+                .criterion(hasItem(ModItems.ROSE_HIPS), conditionsFromItem(ModItems.ROSE_HIPS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.ROSE_TART)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.APPLE_PIE)
+                .pattern(" S ")
+                .pattern("STS")
+                .pattern("PHP")
+                .input('P', ModTags.Items.GRAINS_WHEAT)
+                .input('S', Items.APPLE)
+                .input('T', Items.SUGAR)
+                .input('H', ModTags.Items.MILKS)
+                .criterion(hasItem(Items.APPLE), conditionsFromItem(Items.APPLE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.APPLE_PIE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BERRY_ROLL)
+                .pattern(" S ")
+                .pattern("SPS")
+                .pattern("PHP")
+                .input('P', ModTags.Items.GRAINS_WHEAT)
+                .input('S', ModItems.HAWTHORN_BERRIES)
+                .input('H', ModTags.Items.MILKS)
+                .criterion(hasItem(ModItems.HAWTHORN_BERRIES), conditionsFromItem(ModItems.HAWTHORN_BERRIES))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BERRY_ROLL)));
 
         // Shapeless Recipes
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.YEAST)
@@ -59,7 +102,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_milk_bottle", conditionsFromItem(Items.BUCKET))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SWEET_PORRIDGE)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SWEET_PORRIDGE)
                 .input(Items.BOWL)
                 .input(ModItems.MOLASSES)
                 .input(ModTags.Items.MILKS)
@@ -68,7 +111,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_molasses", conditionsFromItem(ModItems.MOLASSES))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPICED_PORRIDGE)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SPICED_PORRIDGE)
                 .input(Items.BOWL)
                 .input(ModItems.GARLIC)
                 .input(ModTags.Items.MILKS)
@@ -77,7 +120,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_rye", conditionsFromItem(ModItems.RYE))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BARLEY_AND_BEEF_STEW)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BARLEY_AND_BEEF_STEW)
                 .input(Items.BOWL)
                 .input(ModItems.BARLEY)
                 .input(ModTags.Items.FOODS_VEGETABLES)
@@ -86,7 +129,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_cooked_beef", conditionsFromItem(Items.COOKED_BEEF))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MEAD_BRAISED_PORK)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MEAD_BRAISED_PORK)
                 .input(Items.BOWL)
                 .input(ModItems.HONEY_MEAD)
                 .input(ModItems.BARLEY)
@@ -95,16 +138,16 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_cooked_pork", conditionsFromItem(Items.COOKED_PORKCHOP))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HERBED_COD)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.HERBED_COD)
                 .input(Items.BOWL)
                 .input(ModItems.MINT)
                 .input(ModItems.GINGER)
                 .input(ModItems.LEMON)
-                .input(Items.COOKED_COD)
+                .input(ModTags.Items.COOKED_COD)
                 .criterion("has_cooked_cod", conditionsFromItem(Items.COOKED_COD))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEMON_GLAZED_CHICKEN)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.LEMON_GLAZED_CHICKEN)
                 .input(Items.BOWL)
                 .input(Items.HONEY_BOTTLE)
                 .input(ModItems.GARLIC)
@@ -113,7 +156,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_cooked_chicken", conditionsFromItem(Items.COOKED_CHICKEN))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FORAGER_FEAST)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.FORAGER_FEAST)
                 .input(Items.BOWL)
                 .input(ModItems.ELDERBERRIES)
                 .input(ModItems.RYE)
@@ -122,7 +165,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_cooked_mutton", conditionsFromItem(Items.COOKED_SALMON))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MAPLE_GLAZED_RABBIT)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MAPLE_GLAZED_RABBIT)
                 .input(Items.BOWL)
                 .input(ModItems.MAPLE_SYRUP)
                 .input(ModItems.BARLEY)
@@ -131,13 +174,37 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_cooked_rabbit", conditionsFromItem(Items.COOKED_RABBIT))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SALMON_CHOWDER)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SALMON_CHOWDER)
                 .input(Items.BOWL)
                 .input(ModItems.LEMON)
                 .input(ModTags.Items.MILKS)
                 .input(Items.KELP)
-                .input(Items.COOKED_SALMON)
+                .input(ModTags.Items.COOKED_SALMON)
                 .criterion("has_cooked_salmon", conditionsFromItem(Items.COOKED_SALMON))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BARLEY_BREAD)
+                .input(ModItems.BARLEY)
+                .input(ModItems.BARLEY)
+                .input(ModTags.Items.MILKS)
+                .input(ModItems.YEAST)
+                .criterion("has_barley", conditionsFromItem(ModItems.BARLEY))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.RYE_BREAD)
+                .input(ModItems.RYE)
+                .input(ModItems.RYE)
+                .input(ModTags.Items.MILKS)
+                .input(ModItems.YEAST)
+                .criterion("has_rye", conditionsFromItem(ModItems.RYE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MOLASSES_BREAD)
+                .input(ModTags.Items.GRAINS_WHEAT)
+                .input(ModTags.Items.GRAINS_WHEAT)
+                .input(ModItems.MOLASSES)
+                .input(ModItems.YEAST)
+                .criterion("has_rye", conditionsFromItem(ModItems.RYE))
                 .offerTo(exporter);
 
         // Shapeless Recipes for Seeds

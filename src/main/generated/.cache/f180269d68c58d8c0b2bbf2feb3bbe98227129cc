@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-24T20:38:35.1674646	Yeast 'N Feast/Tags for minecraft:item
+// 1.20.1	2025-02-24T22:29:31.3055873	Yeast 'N Feast/Tags for minecraft:item
 13580401148858ae14088491753a15e045e6fbef data\c\tags\items\milks\milk_bottles.json
 bd24f46f4d5fe2807c6070575e8ed3f55612f7c8 data\minecraft\tags\items\planks.json
 2479dc868198982d1374678622923ed92be86fcb data\c\tags\items\foods.json
@@ -7,8 +7,10 @@ dd2781763ac7ed2e4edbeea5625c438283591a89 data\minecraft\tags\items\fence_gates.j
 7a6cde1ea8a55de2552104fb6fd04e824f09e091 data\minecraft\tags\items\wooden_fences.json
 c7f775072f5c4e1922f37527b3c7607e8c0372b7 data\minecraft\tags\items\villager_plantable_seeds.json
 d0f625feba76042923fbd03250b1c680cbff2873 data\minecraft\tags\items\fox_food.json
-43cdc3cff38c66db2c0f4dcc7d2853703101fbc9 data\c\tags\items\grains.json
+c282f30cf5f8d4ba2b79c2868b6e7555fd7a56f7 data\c\tags\items\grains.json
+439f75334da3f9b0dde2cb98d8ad7762665b614d data\c\tags\items\foods\cooked_fishes\cod.json
 c7f775072f5c4e1922f37527b3c7607e8c0372b7 data\c\tags\items\seeds.json
+c282f30cf5f8d4ba2b79c2868b6e7555fd7a56f7 data\c\tags\items\grains\wheats.json
 4b70c54e1940064288c43fe1f6e1c7b470d69f9d data\c\tags\items\foods\cooked_meats\cooked_beef.json
 59afdc2d03eb8d5d8aac29ee9b5bb43ebc710c57 data\minecraft\tags\items\logs_that_burn.json
 13580401148858ae14088491753a15e045e6fbef data\c\tags\items\milks.json
@@ -24,4 +26,5 @@ d0f625feba76042923fbd03250b1c680cbff2873 data\c\tags\items\foods\berries.json
 79d79a02df167be3dd825fdba42685a8eabe6440 data\minecraft\tags\items\wooden_stairs.json
 d8099df77a527ed57fe3597c097be282ffdf90b0 data\c\tags\items\crops.json
 522c3557805f57cce75b71ff3519a1c29b3e9578 data\c\tags\items\foods\cooked_meats.json
+b488f19f3905e6d4e8612c099f5d258673368601 data\c\tags\items\foods\cooked_fishes\salmon.json
 7e9e7c1bf83464cbc7c97eda177532ed93d4fc12 data\yeastnfeast\tags\items\maple_logs.json

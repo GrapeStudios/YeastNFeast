@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_iron_nugget": {
+    "has_hawthorn_berries": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:iron_nugget"
+              "yeastnfeast:hawthorn_berries"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:tankard"
+        "recipe": "minecraft:berry_roll"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_iron_nugget",
+      "has_hawthorn_berries",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:tankard"
+      "minecraft:berry_roll"
     ]
   },
   "sends_telemetry_event": false

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_iron_nugget": {
+    "has_rye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:iron_nugget"
+              "yeastnfeast:rye"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:tankard"
+        "recipe": "yeastnfeast:rye_bread"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_iron_nugget",
+      "has_rye",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:tankard"
+      "yeastnfeast:rye_bread"
     ]
   },
   "sends_telemetry_event": false

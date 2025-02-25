@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "yeastnfeast:barley"
+    },
+    {
+      "item": "yeastnfeast:barley"
+    },
+    {
+      "tag": "c:milks"
+    },
+    {
+      "item": "yeastnfeast:yeast"
+    }
+  ],
+  "result": {
+    "item": "yeastnfeast:barley_bread"
+  }
+}

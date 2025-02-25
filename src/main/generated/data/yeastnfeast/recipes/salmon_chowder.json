@@ -15,7 +15,7 @@
       "item": "minecraft:kelp"
     },
     {
-      "item": "minecraft:cooked_salmon"
+      "tag": "c:foods/cooked_fishes/salmon"
     }
   ],
   "result": {
