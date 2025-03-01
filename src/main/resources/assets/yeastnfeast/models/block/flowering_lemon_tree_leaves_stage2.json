@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "yeastnfeast:block/flowering_lemon_tree_leaves_stage2"
+  }
+}

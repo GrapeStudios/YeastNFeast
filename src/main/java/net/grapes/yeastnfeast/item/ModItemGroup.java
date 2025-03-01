@@ -72,7 +72,7 @@ public class ModItemGroup {
                         // Decorative Blocks
 
                         // Wood-Related Items
-                        entries.add(ModBlocks.MAPLE_SAPLING);
+                        entries.add(ModBlocks.TREE_TAP);
                         entries.add(ModBlocks.MAPLE_LEAVES);
                         entries.add(ModBlocks.MAPLE_LOG);
                         entries.add(ModBlocks.MAPLE_WOOD);
@@ -92,6 +92,9 @@ public class ModItemGroup {
                         entries.add(ModItems.MAPLE_SIGN);
                         entries.add(ModItems.MAPLE_HANGING_SIGN);
 
+                        entries.add(ModBlocks.MAPLE_SAPLING);
+                        entries.add(ModBlocks.LEMON_SAPLING);
+                        entries.add(ModBlocks.HAWTHORN_SAPLING);
                     }).build());
 
     public static void registerItemGroups() {

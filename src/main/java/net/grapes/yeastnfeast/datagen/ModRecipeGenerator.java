@@ -207,7 +207,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_rye", conditionsFromItem(ModItems.RYE))
                 .offerTo(exporter);
 
-        // Shapeless Recipes for Seeds
+        // Shapeless Recipes
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BARLEY_SEEDS)
                 .input(ModItems.BARLEY)
                 .criterion(hasItem(ModItems.BARLEY), conditionsFromItem(ModItems.BARLEY))
@@ -216,6 +216,26 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RYE_SEEDS)
                 .input(ModItems.RYE)
                 .criterion(hasItem(ModItems.RYE), conditionsFromItem(ModItems.RYE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LEMON_SAPLING)
+                .input(ModItems.LEMON)
+                .input(Items.OAK_SAPLING)
+                .criterion(hasItem(ModItems.LEMON), conditionsFromItem(ModItems.LEMON))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.HAWTHORN_SAPLING)
+                .input(ModItems.HAWTHORN_BERRIES)
+                .input(Items.OAK_SAPLING)
+                .criterion(hasItem(ModItems.HAWTHORN_BERRIES), conditionsFromItem(ModItems.HAWTHORN_BERRIES))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MOLASSES)
+                .input(Items.GLASS_BOTTLE)
+                .input(Items.SUGAR_CANE)
+                .input(Items.SUGAR_CANE)
+                .input(Items.SUGAR_CANE)
+                .criterion(hasItem(Items.SUGAR_CANE), conditionsFromItem(Items.SUGAR_CANE))
                 .offerTo(exporter);
 
         // Recipes for Wood-related Blocks & Items

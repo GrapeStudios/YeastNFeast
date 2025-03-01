@@ -104,8 +104,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.MAPLE_PLANKS.asItem());
-        getOrCreateTagBuilder(ItemTags.PLANKS)
-                .add(ModBlocks.MAPLE_PLANKS.asItem());
         getOrCreateTagBuilder(ItemTags.WOODEN_STAIRS)
                 .add(ModBlocks.MAPLE_STAIRS.asItem());
         getOrCreateTagBuilder(ItemTags.WOODEN_SLABS)
@@ -119,9 +117,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.WOODEN_FENCES)
                 .add(ModBlocks.MAPLE_FENCE.asItem());
 
-        /*getOrCreateTagBuilder(ItemTags.WOODEN_DOORS)
+        getOrCreateTagBuilder(ItemTags.WOODEN_DOORS)
                 .add(ModBlocks.MAPLE_DOOR.asItem());
         getOrCreateTagBuilder(ItemTags.WOODEN_TRAPDOORS)
-                .add(ModBlocks.MAPLE_TRAPDOOR.asItem());*/
+                .add(ModBlocks.MAPLE_TRAPDOOR.asItem());
     }
 }

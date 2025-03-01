@@ -9,6 +9,8 @@ import net.grapes.yeastnfeast.block.custom.signs.ModStandingSignBlock;
 import net.grapes.yeastnfeast.block.custom.signs.ModWallHangingSignBlock;
 import net.grapes.yeastnfeast.block.custom.signs.ModWallSignBlock;
 import net.grapes.yeastnfeast.util.ModWoodTypes;
+import net.grapes.yeastnfeast.world.tree.HawthornSaplingGenerator;
+import net.grapes.yeastnfeast.world.tree.LemonSaplingGenerator;
 import net.grapes.yeastnfeast.world.tree.MapleSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
@@ -34,6 +36,8 @@ public class ModBlocks {
             new RoseHipsBushBlock(FabricBlockSettings.copyOf(Blocks.SWEET_BERRY_BUSH)));
     public static final Block ELDERBERRY_BUSH = registerBlockWithoutBlockItem("elderberry_bush",
             new ElderberryBushBlock(FabricBlockSettings.copyOf(Blocks.SWEET_BERRY_BUSH)));
+    public static final Block TREE_TAP = registerBlock("tree_tap",
+            new TreeTapBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
 
     // Wild Crop Blocks
     public static final Block WILD_BARLEY = registerBlock("wild_barley",
@@ -42,6 +46,24 @@ public class ModBlocks {
             new FlowerBlock(StatusEffects.LUCK, 6, FabricBlockSettings.copyOf(Blocks.ALLIUM)));
     public static final Block WILD_GINGER = registerBlock("wild_ginger",
             new FlowerBlock(StatusEffects.LUCK, 6, FabricBlockSettings.copyOf(Blocks.ALLIUM)));
+
+    public static final Block FLOWERING_LEMON_TREE_LEAVES = registerBlock("flowering_lemon_tree_leaves",
+            new LemonLeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(0.2f)));
+    public static final Block LEMON_TREE_LEAVES = registerBlock("lemon_tree_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(0.2f)));
+    public static final Block LEMON_SAPLING = registerBlock("lemon_sapling",
+            new SaplingBlock(new LemonSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+    public static final Block POTTED_LEMON_SAPLING = registerBlock("potted_lemon_sapling",
+            new FlowerPotBlock(LEMON_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING)));
+
+    public static final Block FLOWERING_HAWTHORN_TREE_LEAVES = registerBlock("flowering_hawthorn_tree_leaves",
+            new HawthornLeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(0.2f)));
+    public static final Block HAWTHORN_TREE_LEAVES = registerBlock("hawthorn_tree_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(0.2f)));
+    public static final Block HAWTHORN_SAPLING = registerBlock("hawthorn_sapling",
+            new SaplingBlock(new HawthornSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+    public static final Block POTTED_HAWTHORN_SAPLING = registerBlock("potted_hawthorn_sapling",
+            new FlowerPotBlock(HAWTHORN_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING)));
 
     // Wooden-Related Blocks
     public static final Block MAPLE_LOG = registerBlock("maple_log",
@@ -84,7 +106,7 @@ public class ModBlocks {
     public static final Block MAPLE_SAPLING = registerBlock("maple_sapling",
             new SaplingBlock(new MapleSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block POTTED_MAPLE_SAPLING = registerBlock("potted_maple_sapling",
-            new FlowerPotBlock(MAPLE_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING)));
+            new FlowerPotBlock(LEMON_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING)));
     public static final Block MAPLE_TRAPDOOR = registerBlock("maple_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR).nonOpaque(), BlockSetType.OAK));
     public static final Block MAPLE_DOOR = registerBlock("maple_door",

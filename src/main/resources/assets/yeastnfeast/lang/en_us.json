@@ -11,6 +11,17 @@
   "block.yeastnfeast.mint_crop": "Mint Crop",
   "block.yeastnfeast.rose_hips_bush": "Rose Hips",
   "block.yeastnfeast.elderberry_bush": "Elderberries",
+  "block.yeastnfeast.tree_tap": "Tree Tap",
+
+  "block.yeastnfeast.lemon_tree_leaves": "Lemon Tree Leaves",
+  "block.yeastnfeast.flowering_lemon_tree_leaves": "Flowering Lemon Tree Leaves",
+  "block.yeastnfeast.lemon_sapling": "Lemon Sapling",
+  "block.yeastnfeast.potted_lemon_sapling": "Potted Lemon Sapling",
+
+  "block.yeastnfeast.hawthorn_tree_leaves": "Hawthorn Tree Leaves",
+  "block.yeastnfeast.flowering_hawthorn_tree_leaves": "Flowering Hawthorn Tree Leaves",
+  "block.yeastnfeast.hawthorn_sapling": "Hawthorn Sapling",
+  "block.yeastnfeast.potted_hawthorn_sapling": "Potted Hawthorn Sapling",
 
   "item.yeastnfeast.yeast": "Yeast",
   "item.yeastnfeast.maple_syrup": "Maple Syrup",

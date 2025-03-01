@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "yeastnfeast:block/flowering_hawthorn_tree_leaves_stage1"
+  }
+}

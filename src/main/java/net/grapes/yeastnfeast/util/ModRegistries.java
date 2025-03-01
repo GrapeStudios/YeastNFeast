@@ -21,6 +21,12 @@ public class ModRegistries {
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.HAWTHORN_BERRIES, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.ROSE_HIPS, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LEMON, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.HAWTHORN_SAPLING, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.LEMON_SAPLING, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.FLOWERING_LEMON_TREE_LEAVES, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.LEMON_TREE_LEAVES, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.FLOWERING_HAWTHORN_TREE_LEAVES, 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.HAWTHORN_TREE_LEAVES, 0.3f);
 
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GARLIC, 0.5f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.MINT, 0.5f);
@@ -43,6 +49,12 @@ public class ModRegistries {
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ELDERBERRY_BUSH, 60, 100);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MAPLE_SAPLING, 60, 100);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MAPLE_LEAVES, 60, 100);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.LEMON_SAPLING, 60, 100);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.LEMON_TREE_LEAVES, 60, 100);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.FLOWERING_LEMON_TREE_LEAVES, 60, 100);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.HAWTHORN_SAPLING, 60, 100);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.HAWTHORN_TREE_LEAVES, 60, 100);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.FLOWERING_HAWTHORN_TREE_LEAVES, 60, 100);
 
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MAPLE_LOG, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MAPLE_WOOD, 5, 5);

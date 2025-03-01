@@ -46,10 +46,18 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MAPLE_FENCE_GATE);
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.MAPLE_FENCE);
-
-        /*getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
+        getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
                 .add(ModBlocks.MAPLE_TRAPDOOR);
         getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
-                .add(ModBlocks.MAPLE_DOOR);*/
+                .add(ModBlocks.MAPLE_DOOR);
+
+        getOrCreateTagBuilder(BlockTags.LEAVES)
+                .add(ModBlocks.MAPLE_LEAVES).add(ModBlocks.LEMON_TREE_LEAVES)
+                .add(ModBlocks.FLOWERING_LEMON_TREE_LEAVES).add(ModBlocks.HAWTHORN_TREE_LEAVES)
+                .add(ModBlocks.FLOWERING_HAWTHORN_TREE_LEAVES);
+
+        getOrCreateTagBuilder(BlockTags.SAPLINGS)
+                .add(ModBlocks.MAPLE_SAPLING).add(ModBlocks.LEMON_SAPLING)
+                .add(ModBlocks.HAWTHORN_SAPLING);
     }
 }

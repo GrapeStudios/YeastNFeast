@@ -33,8 +33,12 @@ public class YeastNFeastModClient implements ClientModInitializer {
                 ModBlocks.ROSE_HIPS_BUSH, ModBlocks.GARLIC_CROP,
                 ModBlocks.ELDERBERRY_BUSH, ModBlocks.MINT_CROP,
                 ModBlocks.MAPLE_SAPLING, ModBlocks.POTTED_MAPLE_SAPLING,
-                ModBlocks.MAPLE_DOOR, ModBlocks.MAPLE_TRAPDOOR
-        );
+                ModBlocks.MAPLE_DOOR, ModBlocks.MAPLE_TRAPDOOR,
+                ModBlocks.FLOWERING_LEMON_TREE_LEAVES, ModBlocks.LEMON_TREE_LEAVES,
+                ModBlocks.LEMON_SAPLING, ModBlocks.POTTED_MAPLE_SAPLING,
+                ModBlocks.FLOWERING_HAWTHORN_TREE_LEAVES, ModBlocks.HAWTHORN_TREE_LEAVES,
+                ModBlocks.HAWTHORN_SAPLING, ModBlocks.POTTED_HAWTHORN_SAPLING
+                );
     }
 
     private void registerBlockEntityRenderers() {

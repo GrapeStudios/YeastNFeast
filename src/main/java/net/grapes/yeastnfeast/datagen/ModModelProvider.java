@@ -27,12 +27,19 @@ public class ModModelProvider extends FabricModelProvider {
         mapleTexturePool.fence(ModBlocks.MAPLE_FENCE);
         mapleTexturePool.fenceGate(ModBlocks.MAPLE_FENCE_GATE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAPLE_LEAVES);
+
         mapleTexturePool.family(BlockFamilies.register(ModBlocks.MAPLE_PLANKS).sign(ModBlocks.MAPLE_SIGN, ModBlocks.MAPLE_WALL_SIGN).build());
         blockStateModelGenerator.registerHangingSign(ModBlocks.STRIPPED_MAPLE_LOG, ModBlocks.MAPLE_HANGING_SIGN, ModBlocks.MAPLE_HANGING_WALL_SIGN);
         blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.MAPLE_SAPLING, ModBlocks.POTTED_MAPLE_SAPLING,
                 BlockStateModelGenerator.TintType.NOT_TINTED);
+
         blockStateModelGenerator.registerTrapdoor(ModBlocks.MAPLE_TRAPDOOR);
         blockStateModelGenerator.registerDoor(ModBlocks.MAPLE_DOOR);
+
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.LEMON_SAPLING, ModBlocks.POTTED_LEMON_SAPLING,
+                BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.HAWTHORN_SAPLING, ModBlocks.POTTED_HAWTHORN_SAPLING,
+                BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override
