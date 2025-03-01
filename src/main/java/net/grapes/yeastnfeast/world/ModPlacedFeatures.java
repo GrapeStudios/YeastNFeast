@@ -58,7 +58,7 @@ public class ModPlacedFeatures {
 
         register(context, LEMON_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.LEMON_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        RarityFilterPlacementModifier.of(5),
+                        RarityFilterPlacementModifier.of(10),
                         ModBlocks.LEMON_SAPLING
                 ));
 

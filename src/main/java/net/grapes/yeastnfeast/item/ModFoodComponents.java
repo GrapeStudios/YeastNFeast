@@ -11,8 +11,8 @@ public class ModFoodComponents {
     public static final FoodComponent RYE_BREAD = new FoodComponent.Builder().hunger(5).saturationModifier(0.8f).build();
     public static final FoodComponent MOLASSES_BREAD = new FoodComponent.Builder().hunger(5).saturationModifier(0.8f).build();
 
-    public static final FoodComponent MAPLE_SYRUP = new FoodComponent.Builder().hunger(6).saturationModifier(0.1F).build();
-    public static final FoodComponent MOLASSES = new FoodComponent.Builder().hunger(6).saturationModifier(0.1F).build();
+    public static final FoodComponent MAPLE_SYRUP = new FoodComponent.Builder().hunger(6).saturationModifier(0.1F).alwaysEdible().build();
+    public static final FoodComponent MOLASSES = new FoodComponent.Builder().hunger(6).saturationModifier(0.1F).alwaysEdible().build();
 
     public static final FoodComponent BERRY_ROLL = new FoodComponent.Builder().hunger(4).saturationModifier(0.5f).build();
     public static final FoodComponent ROSE_TART = new FoodComponent.Builder().hunger(8).saturationModifier(0.6f).build();

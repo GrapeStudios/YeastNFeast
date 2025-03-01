@@ -6,6 +6,7 @@ import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.grapes.yeastnfeast.block.ModBlocks;
 import net.grapes.yeastnfeast.entity.ModBoats;
 import net.grapes.yeastnfeast.item.custom.MilkBottleItem;
+import net.grapes.yeastnfeast.item.custom.SweetenerBottleItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -18,9 +19,9 @@ public class ModItems {
     public static final Item YEAST = registerItem("yeast",
             new Item(new FabricItemSettings()));
     public static final Item MAPLE_SYRUP = registerItem("maple_syrup",
-            new Item(new FabricItemSettings().maxCount(16).food(ModFoodComponents.MAPLE_SYRUP)));
+            new SweetenerBottleItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.MAPLE_SYRUP)));
     public static final Item MOLASSES = registerItem("molasses",
-            new Item(new FabricItemSettings().maxCount(16).food(ModFoodComponents.MOLASSES)));
+            new SweetenerBottleItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.MOLASSES)));
     public static final Item MILK_BOTTLE = registerItem("milk_bottle",
             new MilkBottleItem(new FabricItemSettings().recipeRemainder(Items.GLASS_BOTTLE).maxCount(16)));
 

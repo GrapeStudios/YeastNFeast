@@ -34,7 +34,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.TANKARD)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ELDERBERRY_PIE)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.ELDERBERRY_PIE)
                 .pattern(" S ")
                 .pattern("STS")
                 .pattern("PHP")
@@ -45,7 +45,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.ELDERBERRIES), conditionsFromItem(ModItems.ELDERBERRIES))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.ELDERBERRY_PIE)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ROSE_TART)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.ROSE_TART)
                 .pattern(" S ")
                 .pattern("STS")
                 .pattern("PHP")
@@ -56,7 +56,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.ROSE_HIPS), conditionsFromItem(ModItems.ROSE_HIPS))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.ROSE_TART)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.APPLE_PIE)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.APPLE_PIE)
                 .pattern(" S ")
                 .pattern("STS")
                 .pattern("PHP")
@@ -67,7 +67,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Items.APPLE), conditionsFromItem(Items.APPLE))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.APPLE_PIE)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BERRY_ROLL)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BERRY_ROLL)
                 .pattern(" S ")
                 .pattern("SPS")
                 .pattern("PHP")
@@ -76,6 +76,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('H', ModTags.Items.MILKS)
                 .criterion(hasItem(ModItems.HAWTHORN_BERRIES), conditionsFromItem(ModItems.HAWTHORN_BERRIES))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.BERRY_ROLL)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.TREE_TAP)
+                .pattern(" H")
+                .pattern("PS")
+                .input('P', Items.STICK)
+                .input('S', ItemTags.PLANKS)
+                .input('H', Items.IRON_NUGGET)
+                .criterion(hasItem(ModItems.HAWTHORN_BERRIES), conditionsFromItem(ModItems.HAWTHORN_BERRIES))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.TREE_TAP)));
 
         // Shapeless Recipes
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.YEAST)
@@ -230,7 +239,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.HAWTHORN_BERRIES), conditionsFromItem(ModItems.HAWTHORN_BERRIES))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MOLASSES)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MOLASSES)
                 .input(Items.GLASS_BOTTLE)
                 .input(Items.SUGAR_CANE)
                 .input(Items.SUGAR_CANE)

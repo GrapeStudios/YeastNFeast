@@ -9,6 +9,7 @@ import net.grapes.yeastnfeast.block.entity.ModBlockEntities;
 import net.grapes.yeastnfeast.entity.ModBoats;
 import net.grapes.yeastnfeast.particle.ModParticles;
 import net.grapes.yeastnfeast.particle.custom.MapleLeavesParticle;
+import net.grapes.yeastnfeast.particle.custom.DrippingSyrupParticle;
 import net.grapes.yeastnfeast.util.ModWoodTypes;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
@@ -54,5 +55,6 @@ public class YeastNFeastModClient implements ClientModInitializer {
 
     private void registerParticles() {
         ParticleFactoryRegistry.getInstance().register(ModParticles.MAPLE_LEAVES, MapleLeavesParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.SYRUP_DRIPPING, DrippingSyrupParticle.Factory::new);
     }
 }

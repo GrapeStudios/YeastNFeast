@@ -1,32 +1,50 @@
 package net.grapes.yeastnfeast.block.custom;
 
+import net.grapes.yeastnfeast.block.entity.ModBlockEntities;
+import net.grapes.yeastnfeast.block.entity.TreeTapBlockEntity;
+import net.grapes.yeastnfeast.item.ModItems;
+import net.grapes.yeastnfeast.particle.ModParticles;
+import net.grapes.yeastnfeast.util.ModTags;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
-public class TreeTapBlock extends Block {
+public class TreeTapBlock extends BlockWithEntity {
+
+    public static final BooleanProperty DRIPPING = BooleanProperty.of("dripping");
 
     public static final DirectionProperty FACING = DirectionProperty.of("facing", Direction.Type.HORIZONTAL);
 
-    private static final VoxelShape NORTH_SHAPE = VoxelShapes.cuboid(0.125, 0.0625, 0.9375, 0.875, 0.875, 1);
-    private static final VoxelShape SOUTH_SHAPE = VoxelShapes.cuboid(0.125, 0.0625, 0, 0.875, 0.875, 0.0625);
-    private static final VoxelShape WEST_SHAPE = VoxelShapes.cuboid(0.9375, 0.0625, 0.125, 1, 0.875, 0.875);
-    private static final VoxelShape EAST_SHAPE = VoxelShapes.cuboid(0, 0.0625, 0.125, 0.0625, 0.875, 0.875);
+    private static final VoxelShape NORTH_WALL_SHAPE = Block.createCuboidShape(5.0, 4.0, 10.0, 11.0, 12.0, 16.0);
+    private static final VoxelShape SOUTH_WALL_SHAPE = Block.createCuboidShape(5.0, 4.0, 0.0, 11.0, 12.0, 6.0);
+    private static final VoxelShape WEST_WALL_SHAPE = Block.createCuboidShape(10.0, 4.0, 5.0, 16.0, 12.0, 11.0);
+    private static final VoxelShape EAST_WALL_SHAPE = Block.createCuboidShape(0.0, 4.0, 5.0, 6.0, 12.0, 11.0);
 
     public TreeTapBlock(Settings settings) {
         super(settings);
-        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
+        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(DRIPPING, false));
     }
 
     @Nullable
@@ -47,10 +65,10 @@ public class TreeTapBlock extends Block {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction direction = state.get(FACING);
         return switch (direction) {
-            case SOUTH -> SOUTH_SHAPE;
-            case WEST -> WEST_SHAPE;
-            case EAST -> EAST_SHAPE;
-            default -> NORTH_SHAPE;
+            case SOUTH -> SOUTH_WALL_SHAPE;
+            case WEST -> WEST_WALL_SHAPE;
+            case EAST -> EAST_WALL_SHAPE;
+            default -> NORTH_WALL_SHAPE;
         };
     }
 
@@ -71,11 +89,69 @@ public class TreeTapBlock extends Block {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        return world.getBlockState(pos.offset(state.get(FACING).getOpposite())).isSolid();
+        return world.getBlockState(pos.offset(state.get(FACING).getOpposite())).isIn(ModTags.Blocks.MAPLE_LOGS);
+    }
+
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (state.get(DRIPPING) && player.getStackInHand(hand).isOf(Items.GLASS_BOTTLE)) {
+            player.getStackInHand(hand).decrement(1);
+            player.giveItemStack(new ItemStack(ModItems.MAPLE_SYRUP));
+            world.setBlockState(pos, state.with(DRIPPING, false));
+            return ActionResult.SUCCESS;
+        }
+        return ActionResult.PASS;
+    }
+
+    @Override
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        if (state.get(TreeTapBlock.DRIPPING)) {
+            if (world.isClient && world.random.nextInt(2) == 0) {
+                Direction facing = state.get(TreeTapBlock.FACING);
+                double x = pos.getX() + 0.5;
+                double y = pos.getY() + 0.5;
+                double z = pos.getZ() + 0.5;
+
+                switch (facing) {
+                    case NORTH:
+                        z = pos.getZ() + 0.8;
+                        break;
+                    case SOUTH:
+                        z = pos.getZ() + 0.2;
+                        break;
+                    case WEST:
+                        x = pos.getX() + 0.8;
+                        break;
+                    case EAST:
+                        x = pos.getX() + 0.2;
+                        break;
+                }
+                world.addParticle(ModParticles.SYRUP_DRIPPING, x, y, z, 0.0, 0.0, 0.0);
+            }
+        }
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(FACING, DRIPPING);
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new TreeTapBlockEntity(pos, state);
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        if (world.isClient) {
+            return null;
+        }
+        return type == ModBlockEntities.TREE_TAP_BE ? (world1, pos, state1, blockEntity) -> {
+            if (blockEntity instanceof TreeTapBlockEntity treeTap) {
+                TreeTapBlockEntity.tick(world1, pos, state1, treeTap);
+            }
+        } : null;
     }
 }
