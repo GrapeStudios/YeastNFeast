@@ -91,13 +91,15 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MAPLE_HANGING_SIGN);
 
         addDrop(ModBlocks.LEMON_SAPLING);
-        addDrop(ModBlocks.FLOWERING_LEMON_TREE_LEAVES, lemonLeavesDrop(ModBlocks.FLOWERING_LEMON_TREE_LEAVES,
+        addDrop(ModBlocks.FLOWERING_LEMON_TREE_LEAVES, floweringLeavesBlock(ModBlocks.FLOWERING_LEMON_TREE_LEAVES,
                 ModBlocks.LEMON_SAPLING, SAPLING_DROP_CHANCE));
-        addDrop(ModBlocks.LEMON_TREE_LEAVES, lemonLeavesDrop(ModBlocks.LEMON_TREE_LEAVES,
+        addDrop(ModBlocks.LEMON_TREE_LEAVES, floweringLeavesBlock(ModBlocks.LEMON_TREE_LEAVES,
                 ModBlocks.LEMON_SAPLING, SAPLING_DROP_CHANCE));
 
         addDrop(ModBlocks.HAWTHORN_SAPLING);
-        addDrop(ModBlocks.HAWTHORN_TREE_LEAVES, lemonLeavesDrop(ModBlocks.HAWTHORN_TREE_LEAVES,
+        addDrop(ModBlocks.FLOWERING_HAWTHORN_TREE_LEAVES, floweringLeavesBlock(ModBlocks.FLOWERING_HAWTHORN_TREE_LEAVES,
+                ModBlocks.HAWTHORN_SAPLING, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.HAWTHORN_TREE_LEAVES, floweringLeavesBlock(ModBlocks.HAWTHORN_TREE_LEAVES,
                 ModBlocks.HAWTHORN_SAPLING, SAPLING_DROP_CHANCE));
     }
 
@@ -140,35 +142,48 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
                                 .apply(ApplyBonusLootFunction.binomialWithBonusCount(Enchantments.FORTUNE, 1, 2))));
     }
 
-    public LootTable.Builder lemonLeavesDrop(Block leaves, Block drop, float... chance) {
+    public LootTable.Builder floweringLeavesBlock(Block leaves, Block drop, float... chance) {
         LootTable.Builder lootTable = dropsWithSilkTouchOrShears(
                 leaves,
-                ((LeafEntry.Builder) this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(drop)))
+                ((LeafEntry.Builder<?>) this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(drop)))
                         .conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, chance))
         ).pool(
                 LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0F))
                         .conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS)
                         .with(
-                                ((LeafEntry.Builder) this.applyExplosionDecay(
+                                ((LeafEntry.Builder<?>) this.applyExplosionDecay(
                                         leaves, ItemEntry.builder(Items.STICK)
                                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
                                 )).conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, LEAVES_STICK_DROP_CHANCE))
                         )
         );
-
-        // Check if the block is Flowering Lemon Tree Leaves
+        
         if (leaves == ModBlocks.FLOWERING_LEMON_TREE_LEAVES) {
             lootTable.pool(
                     LootPool.builder()
-                            .rolls(ConstantLootNumberProvider.create(1.0F)) // Always rolls
-                            .conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS) // Only drops if no silk touch
+                            .rolls(ConstantLootNumberProvider.create(1.0F))
+                            .conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS) 
                             .conditionally(BlockStatePropertyLootCondition.builder(leaves)
-                                    .properties(StatePredicate.Builder.create().exactMatch(LemonLeavesBlock.AGE, 2)) // Correct age check
+                                    .properties(StatePredicate.Builder.create().exactMatch(LemonLeavesBlock.AGE, 2))
                             )
                             .with(
                                     this.applyExplosionDecay(
-                                            leaves, ItemEntry.builder(ModItems.LEMON) // Drop a Lemon
+                                            leaves, ItemEntry.builder(ModItems.LEMON)
+                                    )
+                            )
+            );
+        } else if (leaves == ModBlocks.FLOWERING_HAWTHORN_TREE_LEAVES) {
+            lootTable.pool(
+                    LootPool.builder()
+                            .rolls(ConstantLootNumberProvider.create(1.0F))
+                            .conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS)
+                            .conditionally(BlockStatePropertyLootCondition.builder(leaves)
+                                    .properties(StatePredicate.Builder.create().exactMatch(HawthornLeavesBlock.AGE, 2))
+                            )
+                            .with(
+                                    this.applyExplosionDecay(
+                                            leaves, ItemEntry.builder(ModItems.HAWTHORN_BERRIES)
                                     )
                             )
             );

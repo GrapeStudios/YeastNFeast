@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-28T23:05:04.9926297	Yeast 'N Feast/Recipes
+// 1.20.1	2025-02-28T23:07:59.8141555	Yeast 'N Feast/Recipes
 5ecac54f2c879f888774dd004bc9d26b5700bd1d data\yeastnfeast\recipes\maple_button_from_maple_planks.json
 aefac8796d1aa47446a16cfdbe32c779afc89d99 data\yeastnfeast\recipes\lemon_glazed_chicken.json
 d2df43980070e5ac6add4f9c37faa1609b30c28e data\yeastnfeast\recipes\salmon_chowder.json
@@ -8,8 +8,8 @@ d2df43980070e5ac6add4f9c37faa1609b30c28e data\yeastnfeast\recipes\salmon_chowder
 54834fca6d6d50aebb7912dcadd5b287e46def1c data\yeastnfeast\advancements\recipes\misc\yeast.json
 e00dba6db5481d2970ffb75f0eda5c61ff25a3f7 data\yeastnfeast\recipes\mead_braised_pork.json
 3a921cf4b1ecebb37bb797ca6034e70c7b15ebb8 data\yeastnfeast\advancements\recipes\misc\rye_seeds.json
-56d8e020c7f5bfcd4717b51eb99febde0fbef7ce data\yeastnfeast\advancements\recipes\redstone\maple_door.json
 a5a8703b80c45d8277cad2c726b3e79d0b78c470 data\yeastnfeast\advancements\recipes\decorations\maple_slab.json
+56d8e020c7f5bfcd4717b51eb99febde0fbef7ce data\yeastnfeast\advancements\recipes\redstone\maple_door.json
 bd7e0fbc272e8ade27ede2f2726ffcfd2ca3837d data\yeastnfeast\recipes\sweet_porridge.json
 352bd44925dec89cb8a1abfa86bf7d709df65d5c data\yeastnfeast\recipes\berry_roll.json
 6a4de8e5e95500513b6941ea5d4f1a3eaed2fc9a data\yeastnfeast\advancements\recipes\building_blocks\maple_stairs.json
