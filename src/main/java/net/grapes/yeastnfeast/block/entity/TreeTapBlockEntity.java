@@ -1,12 +1,10 @@
 package net.grapes.yeastnfeast.block.entity;
 
 import net.grapes.yeastnfeast.block.custom.TreeTapBlock;
-import net.grapes.yeastnfeast.util.ModTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
 public class TreeTapBlockEntity extends BlockEntity {
@@ -17,15 +15,11 @@ public class TreeTapBlockEntity extends BlockEntity {
     }
 
     public static void tick(World world, BlockPos pos, BlockState state, TreeTapBlockEntity blockEntity) {
-        Direction facing = state.get(TreeTapBlock.FACING);
-        BlockPos attachedPos = pos.offset(facing.getOpposite());
-        if (world.getBlockState(attachedPos).isIn(ModTags.Blocks.MAPLE_LOGS)) {
-            if (!state.get(TreeTapBlock.DRIPPING)) {
-                blockEntity.tickCounter++;
-                if (blockEntity.tickCounter >= 60) {
-                    world.setBlockState(pos, state.with(TreeTapBlock.DRIPPING, true));
-                    blockEntity.tickCounter = 0;
-                }
+        if (!state.get(TreeTapBlock.DRIPPING)) {
+            blockEntity.tickCounter++;
+            if (blockEntity.tickCounter >= 60) {
+                world.setBlockState(pos, state.with(TreeTapBlock.DRIPPING, true));
+                blockEntity.tickCounter = 0;
             }
         }
     }
