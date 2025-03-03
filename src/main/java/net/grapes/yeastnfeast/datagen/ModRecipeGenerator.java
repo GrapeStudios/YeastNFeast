@@ -3,9 +3,11 @@ package net.grapes.yeastnfeast.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.grapes.yeastnfeast.block.ModBlocks;
+import net.grapes.yeastnfeast.datagen.custom.KegRecipeBuilder;
 import net.grapes.yeastnfeast.item.ModItems;
 import net.grapes.yeastnfeast.util.ModTags;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -15,6 +17,7 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeGenerator extends FabricRecipeProvider {
@@ -85,6 +88,13 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('H', Items.IRON_NUGGET)
                 .criterion(hasItem(ModItems.HAWTHORN_BERRIES), conditionsFromItem(ModItems.HAWTHORN_BERRIES))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.TREE_TAP)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.KEG)
+                .pattern("PSP")
+                .input('P', Items.STICK)
+                .input('S', Blocks.BARREL)
+                .criterion(hasItem(Blocks.BARREL), conditionsFromItem(Blocks.BARREL))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.KEG)));
 
         // Shapeless Recipes
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.YEAST)
@@ -216,6 +226,101 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_rye", conditionsFromItem(ModItems.RYE))
                 .offerTo(exporter);
 
+        // Convertible for Storage Bags
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.ELDERBERRIES, RecipeCategory.MISC, ModBlocks.BAG_OF_ELDERBERRIES);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.GARLIC, RecipeCategory.MISC, ModBlocks.BAG_OF_GARLIC);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.GINGER, RecipeCategory.MISC, ModBlocks.BAG_OF_GINGER);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.HAWTHORN_BERRIES, RecipeCategory.MISC, ModBlocks.BAG_OF_HAWTHORN_BERRIES);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.LEMON, RecipeCategory.MISC, ModBlocks.BAG_OF_LEMON);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.MINT, RecipeCategory.MISC, ModBlocks.BAG_OF_MINT);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.ROSE_HIPS, RecipeCategory.MISC, ModBlocks.BAG_OF_ROSE_HIPS);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.BARLEY, RecipeCategory.MISC, ModBlocks.BARLEY_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.RYE, RecipeCategory.MISC, ModBlocks.RYE_BLOCK);
+
+        // Keg Recipe Generator
+        new KegRecipeBuilder(List.of(Items.APPLE, Items.HONEY_BOTTLE, Items.WHEAT),
+                ModItems.YEAST, ModItems.TANKARD,
+                ModItems.HONEY_MEAD)
+                .criterion(hasItem(ModItems.TANKARD), conditionsFromItem(ModItems.TANKARD))
+                .offerTo(exporter);
+
+        new KegRecipeBuilder(List.of(ModItems.ELDERBERRIES, ModItems.LEMON, ModItems.GINGER),
+                ModItems.YEAST, ModItems.TANKARD,
+                ModItems.SOUR_MEAD)
+                .criterion(hasItem(ModItems.TANKARD), conditionsFromItem(ModItems.TANKARD))
+                .offerTo(exporter);
+
+        new KegRecipeBuilder(List.of(ModItems.BARLEY, ModItems.MOLASSES, Items.SUGAR_CANE),
+                ModItems.YEAST, ModItems.TANKARD,
+                ModItems.MOLASSES_MEAD)
+                .criterion(hasItem(ModItems.TANKARD), conditionsFromItem(ModItems.TANKARD))
+                .offerTo(exporter);
+
+        new KegRecipeBuilder(List.of(ModItems.HAWTHORN_BERRIES, ModItems.ELDERBERRIES, Items.SUGAR),
+                ModItems.YEAST, ModItems.TANKARD,
+                ModItems.THORNBERRY_MEAD)
+                .criterion(hasItem(ModItems.TANKARD), conditionsFromItem(ModItems.TANKARD))
+                .offerTo(exporter);
+
+        new KegRecipeBuilder(List.of(ModItems.ROSE_HIPS, ModItems.MAPLE_SYRUP, ModItems.MINT),
+                ModItems.YEAST, ModItems.TANKARD,
+                ModItems.BLOSSOM_MEAD)
+                .criterion(hasItem(ModItems.TANKARD), conditionsFromItem(ModItems.TANKARD))
+                .offerTo(exporter);
+
+        new KegRecipeBuilder(List.of(ModItems.RYE, ModItems.MAPLE_SYRUP, ModItems.ROSE_HIPS),
+                ModItems.YEAST, ModItems.TANKARD,
+                ModItems.AMBER_MEAD)
+                .criterion(hasItem(ModItems.TANKARD), conditionsFromItem(ModItems.TANKARD))
+                .offerTo(exporter);
+
+
+        new KegRecipeBuilder(List.of(Items.APPLE, Items.APPLE, Items.APPLE),
+                Items.SUGAR, ModItems.JAR,
+                ModItems.APPLE_JAM)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(exporter);
+        new KegRecipeBuilder(List.of(Items.CHORUS_FRUIT, Items.CHORUS_FRUIT, Items.CHORUS_FRUIT),
+                Items.SUGAR, ModItems.JAR,
+                ModItems.CHORUS_FRUIT_JAM)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(exporter);
+        new KegRecipeBuilder(List.of(ModItems.ELDERBERRIES, ModItems.ELDERBERRIES, ModItems.ELDERBERRIES),
+                Items.SUGAR, ModItems.JAR,
+                ModItems.ELDERBERRIES_JAM)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(exporter);
+        new KegRecipeBuilder(List.of(Items.GLOW_BERRIES, Items.GLOW_BERRIES, Items.GLOW_BERRIES),
+                Items.SUGAR, ModItems.JAR,
+                ModItems.GLOW_BERRIES_JAM)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(exporter);
+        new KegRecipeBuilder(List.of(Items.GOLDEN_APPLE, Items.GOLDEN_APPLE, Items.GOLDEN_APPLE),
+                Items.SUGAR, ModItems.JAR,
+                ModItems.GOLDEN_APPLE_JAM)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(exporter);
+        new KegRecipeBuilder(List.of(ModItems.HAWTHORN_BERRIES, ModItems.HAWTHORN_BERRIES, ModItems.HAWTHORN_BERRIES),
+                Items.SUGAR, ModItems.JAR,
+                ModItems.HAWTHORN_BERRIES_JAM)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(exporter);
+        new KegRecipeBuilder(List.of(ModItems.LEMON, ModItems.LEMON, ModItems.LEMON),
+                Items.SUGAR, ModItems.JAR,
+                ModItems.LEMON_JAM)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(exporter);
+        new KegRecipeBuilder(List.of(ModItems.ROSE_HIPS, ModItems.ROSE_HIPS, ModItems.ROSE_HIPS),
+                Items.SUGAR, ModItems.JAR,
+                ModItems.ROSE_HIPS_JAM)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(exporter);
+        new KegRecipeBuilder(List.of(Items.SWEET_BERRIES, Items.SWEET_BERRIES, Items.SWEET_BERRIES),
+                Items.SUGAR, ModItems.JAR,
+                ModItems.SWEET_BERRIES_JAM)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(exporter);
+
         // Shapeless Recipes
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BARLEY_SEEDS)
                 .input(ModItems.BARLEY)
@@ -273,5 +378,10 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter);
         offerBoatRecipe(exporter, ModItems.MAPLE_BOAT, ModBlocks.MAPLE_PLANKS);
         offerChestBoatRecipe(exporter, ModItems.MAPLE_CHEST_BOAT, ModItems.MAPLE_BOAT);
+
+        createSignRecipe(ModItems.MAPLE_SIGN, Ingredient.ofItems(ModBlocks.MAPLE_PLANKS))
+                .criterion("has_planks", InventoryChangedCriterion.Conditions.items(ModBlocks.MAPLE_PLANKS))
+                .offerTo(exporter);
+        offerHangingSignRecipe(exporter, ModItems.MAPLE_HANGING_SIGN, ModBlocks.STRIPPED_MAPLE_LOG);
     }
 }

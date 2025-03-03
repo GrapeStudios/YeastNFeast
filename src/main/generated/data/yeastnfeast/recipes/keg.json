@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "minecraft:barrel"
+    }
+  },
+  "pattern": [
+    "PSP"
+  ],
+  "result": {
+    "item": "yeastnfeast:keg"
+  },
+  "show_notification": true
+}

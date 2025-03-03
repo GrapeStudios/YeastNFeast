@@ -1,0 +1,23 @@
+{
+  "type": "yeastnfeast:keg",
+  "ingredients": [
+    {
+      "item": "yeastnfeast:hawthorn_berries"
+    },
+    {
+      "item": "yeastnfeast:elderberries"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "output": {
+    "item": "yeastnfeast:thornberry_mead"
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:tankard"
+  },
+  "yeast_slot": {
+    "item": "yeastnfeast:yeast"
+  }
+}

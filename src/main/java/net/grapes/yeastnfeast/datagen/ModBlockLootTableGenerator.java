@@ -37,6 +37,10 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
             this.addDrop(ModBlocks.WILD_RYE, ModItems.RYE_SEEDS);
         addDrop(ModBlocks.WILD_GINGER);
             this.addDrop(ModBlocks.WILD_GINGER, ModItems.GINGER);
+        addDrop(ModBlocks.WILD_MINT);
+            this.addDrop(ModBlocks.WILD_MINT, ModItems.MINT_SEEDS);
+        addDrop(ModBlocks.WILD_GARLIC);
+            this.addDrop(ModBlocks.WILD_GARLIC, ModItems.GARLIC);
 
         // Crops Loot
         BlockStatePropertyLootCondition.Builder builder0 = BlockStatePropertyLootCondition.builder(ModBlocks.GINGER_CROP)
@@ -67,7 +71,19 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
                 ModBlocks.ELDERBERRY_BUSH, ModItems.ELDERBERRIES,
                 RoseHipsBushBlock.AGE, 3, 2.0F, 3.0F));
         
-        
+        // General Loot
+        addDrop(ModBlocks.KEG);
+        addDrop(ModBlocks.TREE_TAP);
+        addDrop(ModBlocks.BAG_OF_ELDERBERRIES);
+        addDrop(ModBlocks.BAG_OF_GARLIC);
+        addDrop(ModBlocks.BAG_OF_GINGER);
+        addDrop(ModBlocks.BAG_OF_HAWTHORN_BERRIES);
+        addDrop(ModBlocks.BAG_OF_LEMON);
+        addDrop(ModBlocks.BAG_OF_MINT);
+        addDrop(ModBlocks.BAG_OF_ROSE_HIPS);
+        addDrop(ModBlocks.BARLEY_BLOCK);
+        addDrop(ModBlocks.RYE_BLOCK);
+
         // Loot for Wood-related Blocks
         addDrop(ModBlocks.MAPLE_LEAVES, leavesDrops(ModBlocks.MAPLE_LEAVES, ModBlocks.MAPLE_SAPLING, SAPLING_DROP_CHANCE));
         addDrop(ModBlocks.MAPLE_LOG);

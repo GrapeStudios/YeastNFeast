@@ -20,6 +20,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> WILD_BARLEY_PLACED_KEY = registerKey("wild_barley_placed");
     public static final RegistryKey<PlacedFeature> WILD_RYE_PLACED_KEY = registerKey("wild_rye_placed");
     public static final RegistryKey<PlacedFeature> WILD_GINGER_PLACED_KEY = registerKey("wild_ginger_placed");
+    public static final RegistryKey<PlacedFeature> WILD_GARLIC_PLACED_KEY = registerKey("wild_garlic_placed");
+    public static final RegistryKey<PlacedFeature> WILD_MINT_PLACED_KEY = registerKey("wild_mint_placed");
     public static final RegistryKey<PlacedFeature> MAPLE_PLACED_KEY = registerKey("maple_placed");
     public static final RegistryKey<PlacedFeature> LEMON_PLACED_KEY = registerKey("lemon_placed");
     public static final RegistryKey<PlacedFeature> HAWTHORN_PLACED_KEY = registerKey("hawthorn_placed");
@@ -43,6 +45,20 @@ public class ModPlacedFeatures {
                 BiomePlacementModifier.of());
 
         register(context, WILD_GINGER_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_GINGER_KEY),
+                RarityFilterPlacementModifier.of(5),
+                SquarePlacementModifier.of(),
+                PlacedFeatures.createCountExtraModifier(4, 0.2f, 3),
+                PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
+                BiomePlacementModifier.of());
+
+        register(context, WILD_GARLIC_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_GARLIC_KEY),
+                RarityFilterPlacementModifier.of(10),
+                SquarePlacementModifier.of(),
+                PlacedFeatures.createCountExtraModifier(4, 0.2f, 3),
+                PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
+                BiomePlacementModifier.of());
+
+        register(context, WILD_MINT_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_MINT_KEY),
                 RarityFilterPlacementModifier.of(5),
                 SquarePlacementModifier.of(),
                 PlacedFeatures.createCountExtraModifier(4, 0.2f, 3),

@@ -45,6 +45,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.BARLEY_SEEDS).add(ModItems.RYE_SEEDS)
                 .add(ModItems.MINT_SEEDS);
 
+        getOrCreateTagBuilder(ModTags.Items.MUSHROOMS)
+                .add(Items.BROWN_MUSHROOM).add(Items.RED_MUSHROOM);
+
         getOrCreateTagBuilder(ModTags.Items.FOODS_BREADS)
                 .add(ModItems.BARLEY_BREAD).add(ModItems.RYE_BREAD)
                 .add(ModItems.MOLASSES_BREAD);

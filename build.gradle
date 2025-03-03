@@ -15,6 +15,8 @@ repositories {
 		name = 'TerraformersMC'
 		url = 'https://maven.terraformersmc.com/'
 	}
+
+	maven { url "https://maven.shedaniel.me" }
 }
 
 fabricApi {
@@ -31,6 +33,10 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	// Recipe
+	modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:12.0.684"
+	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:12.0.684"
 
 	modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:7.0.1"
 	include "com.terraformersmc.terraform-api:terraform-wood-api-v1:7.0.1"

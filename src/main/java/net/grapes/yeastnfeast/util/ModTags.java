@@ -52,6 +52,7 @@ public class ModTags {
         // Custom Block Tags
 
         public static final TagKey<Block> MAPLE_LOGS = createBlockTag("maple_logs");
+        public static final TagKey<Block> STORED_CROPS = createBlockTag("stored_crops");
 
         // Common Block Tags
 

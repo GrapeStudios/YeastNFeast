@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.grapes.yeastnfeast.block.ModBlocks;
 import net.grapes.yeastnfeast.entity.ModBoats;
+import net.grapes.yeastnfeast.item.custom.JamItem;
 import net.grapes.yeastnfeast.item.custom.MilkBottleItem;
 import net.grapes.yeastnfeast.item.custom.SweetenerBottleItem;
 import net.minecraft.item.*;
@@ -111,6 +112,28 @@ public class ModItems {
             new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
     public static final Item AMBER_MEAD = registerItem("amber_mead",
             new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
+
+    // Jams
+    public static final Item JAR = registerItem("jar",
+            new JamItem(new FabricItemSettings()));
+    public static final Item APPLE_JAM = registerItem("apple_jam",
+            new JamItem(new FabricItemSettings()));
+    public static final Item CHORUS_FRUIT_JAM = registerItem("chorus_fruit_jam",
+            new JamItem(new FabricItemSettings()));
+    public static final Item ELDERBERRIES_JAM = registerItem("elderberries_jam",
+            new JamItem(new FabricItemSettings()));
+    public static final Item GLOW_BERRIES_JAM = registerItem("glow_berries_jam",
+            new JamItem(new FabricItemSettings()));
+    public static final Item GOLDEN_APPLE_JAM = registerItem("golden_apple_jam",
+            new JamItem(new FabricItemSettings()));
+    public static final Item HAWTHORN_BERRIES_JAM = registerItem("hawthorn_berries_jam",
+            new JamItem(new FabricItemSettings()));
+    public static final Item LEMON_JAM = registerItem("lemon_jam",
+            new JamItem(new FabricItemSettings()));
+    public static final Item ROSE_HIPS_JAM = registerItem("rose_hips_jam",
+            new JamItem(new FabricItemSettings()));
+    public static final Item SWEET_BERRIES_JAM = registerItem("sweet_berries_jam",
+            new JamItem(new FabricItemSettings()));
 
     // Wooden-related Items
     public static final Item MAPLE_SIGN = registerItem("maple_sign",

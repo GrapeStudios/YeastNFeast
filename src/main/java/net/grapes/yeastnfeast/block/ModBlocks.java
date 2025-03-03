@@ -36,8 +36,32 @@ public class ModBlocks {
             new RoseHipsBushBlock(FabricBlockSettings.copyOf(Blocks.SWEET_BERRY_BUSH)));
     public static final Block ELDERBERRY_BUSH = registerBlockWithoutBlockItem("elderberry_bush",
             new ElderberryBushBlock(FabricBlockSettings.copyOf(Blocks.SWEET_BERRY_BUSH)));
+
+    // Functional Blocks
     public static final Block TREE_TAP = registerBlock("tree_tap",
             new TreeTapBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block KEG = registerBlock("keg",
+            new KegBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).nonOpaque()));
+
+    // Storage Blocks
+    public static final Block BAG_OF_ELDERBERRIES = registerBlock("bag_of_elderberries",
+            new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+    public static final Block BAG_OF_GARLIC = registerBlock("bag_of_garlic",
+            new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+    public static final Block BAG_OF_GINGER = registerBlock("bag_of_ginger",
+            new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+    public static final Block BAG_OF_HAWTHORN_BERRIES = registerBlock("bag_of_hawthorn_berries",
+            new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+    public static final Block BAG_OF_LEMON = registerBlock("bag_of_lemon",
+            new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+    public static final Block BAG_OF_MINT = registerBlock("bag_of_mint",
+            new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+    public static final Block BAG_OF_ROSE_HIPS = registerBlock("bag_of_rose_hips",
+            new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+    public static final Block BARLEY_BLOCK = registerBlock("barley_block",
+            new HayBlock(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
+    public static final Block RYE_BLOCK = registerBlock("rye_block",
+            new HayBlock(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK)));
 
     // Wild Crop Blocks
     public static final Block WILD_BARLEY = registerBlock("wild_barley",
@@ -46,7 +70,12 @@ public class ModBlocks {
             new FlowerBlock(StatusEffects.LUCK, 6, FabricBlockSettings.copyOf(Blocks.ALLIUM)));
     public static final Block WILD_GINGER = registerBlock("wild_ginger",
             new FlowerBlock(StatusEffects.LUCK, 6, FabricBlockSettings.copyOf(Blocks.ALLIUM)));
+    public static final Block WILD_GARLIC = registerBlock("wild_garlic",
+            new FlowerBlock(StatusEffects.LUCK, 6, FabricBlockSettings.copyOf(Blocks.ALLIUM)));
+    public static final Block WILD_MINT = registerBlock("wild_mint",
+            new WildMintBlock(StatusEffects.LUCK, 6, FabricBlockSettings.copyOf(Blocks.ALLIUM)));
 
+    // Flowering Trees Block
     public static final Block FLOWERING_LEMON_TREE_LEAVES = registerBlock("flowering_lemon_tree_leaves",
             new LemonLeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(0.2f)));
     public static final Block LEMON_TREE_LEAVES = registerBlock("lemon_tree_leaves",
@@ -55,7 +84,6 @@ public class ModBlocks {
             new SaplingBlock(new LemonSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block POTTED_LEMON_SAPLING = registerBlock("potted_lemon_sapling",
             new FlowerPotBlock(LEMON_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING)));
-
     public static final Block FLOWERING_HAWTHORN_TREE_LEAVES = registerBlock("flowering_hawthorn_tree_leaves",
             new HawthornLeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(0.2f)));
     public static final Block HAWTHORN_TREE_LEAVES = registerBlock("hawthorn_tree_leaves",

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "yeastnfeast:block/bag_bottom",
+    "up": "yeastnfeast:block/bag_elderberries",
+    "north": "yeastnfeast:block/bag_side",
+    "east": "yeastnfeast:block/bag_side",
+    "south": "yeastnfeast:block/bag_side",
+    "west": "yeastnfeast:block/bag_side",
+    "particle": "yeastnfeast:block/bag_side"
+  },
+  "render_type": "solid"
+}

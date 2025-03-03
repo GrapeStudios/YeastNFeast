@@ -10,7 +10,10 @@ import net.grapes.yeastnfeast.entity.ModBoats;
 import net.grapes.yeastnfeast.particle.ModParticles;
 import net.grapes.yeastnfeast.particle.custom.MapleLeavesParticle;
 import net.grapes.yeastnfeast.particle.custom.DrippingSyrupParticle;
+import net.grapes.yeastnfeast.screen.KegScreen;
+import net.grapes.yeastnfeast.screen.ModScreenHandler;
 import net.grapes.yeastnfeast.util.ModWoodTypes;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
@@ -24,6 +27,7 @@ public class YeastNFeastModClient implements ClientModInitializer {
         registerBlockEntityRenderers();
         registerWoodTypes();
         registerParticles();
+        registerScreens();
     }
 
     private void registerBlockRenderLayers(){
@@ -38,7 +42,8 @@ public class YeastNFeastModClient implements ClientModInitializer {
                 ModBlocks.FLOWERING_LEMON_TREE_LEAVES, ModBlocks.LEMON_TREE_LEAVES,
                 ModBlocks.LEMON_SAPLING, ModBlocks.POTTED_MAPLE_SAPLING,
                 ModBlocks.FLOWERING_HAWTHORN_TREE_LEAVES, ModBlocks.HAWTHORN_TREE_LEAVES,
-                ModBlocks.HAWTHORN_SAPLING, ModBlocks.POTTED_HAWTHORN_SAPLING
+                ModBlocks.HAWTHORN_SAPLING, ModBlocks.POTTED_HAWTHORN_SAPLING,
+                ModBlocks.WILD_GARLIC, ModBlocks.WILD_MINT
                 );
     }
 
@@ -56,5 +61,9 @@ public class YeastNFeastModClient implements ClientModInitializer {
     private void registerParticles() {
         ParticleFactoryRegistry.getInstance().register(ModParticles.MAPLE_LEAVES, MapleLeavesParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.SYRUP_DRIPPING, DrippingSyrupParticle.Factory::new);
+    }
+
+    private void registerScreens() {
+        HandledScreens.register(ModScreenHandler.KEG_SCREEN_HANDLER, KegScreen::new);
     }
 }

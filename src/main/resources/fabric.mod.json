@@ -23,6 +23,9 @@
 		],
 		"client": [
           "net.grapes.yeastnfeast.YeastNFeastModClient"
+		],
+		"rei_client": [
+			"net.grapes.yeastnfeast.compat.rei.YeastNFeastREIPlugin"
 		]
 	},
 	"mixins": [

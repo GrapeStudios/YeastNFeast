@@ -26,6 +26,24 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.GINGER_CROP).add(ModBlocks.GARLIC_CROP)
                 .add(ModBlocks.MINT_CROP);
 
+        getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.KEG).add(ModBlocks.TREE_TAP)
+                .addTag(ModTags.Blocks.STORED_CROPS);
+
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(ModBlocks.KEG).add(ModBlocks.TREE_TAP);
+
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+                .addTag(ModTags.Blocks.STORED_CROPS);
+
+        // Custom Tags
+        getOrCreateTagBuilder(ModTags.Blocks.STORED_CROPS)
+                .add(ModBlocks.BAG_OF_ELDERBERRIES).add(ModBlocks.BAG_OF_GARLIC)
+                .add(ModBlocks.BAG_OF_GINGER).add(ModBlocks.BAG_OF_HAWTHORN_BERRIES)
+                .add(ModBlocks.BAG_OF_LEMON).add(ModBlocks.BAG_OF_MINT)
+                .add(ModBlocks.BAG_OF_ROSE_HIPS).add(ModBlocks.RYE_BLOCK)
+                .add(ModBlocks.BARLEY_BLOCK);
+
         // Wood-related Tags
         getOrCreateTagBuilder(ModTags.Blocks.MAPLE_LOGS)
                 .add(ModBlocks.MAPLE_LOG, ModBlocks.STRIPPED_MAPLE_LOG,
