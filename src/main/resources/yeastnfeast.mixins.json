@@ -3,7 +3,10 @@
 	"package": "net.grapes.yeastnfeast.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"accessors.ExhaustionAccessorMixin",
+		"LivingEntityJumpMixin",
+		"LivingEntityFallDamageMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

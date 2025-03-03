@@ -4,13 +4,15 @@ import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.grapes.yeastnfeast.block.ModBlocks;
+import net.grapes.yeastnfeast.effect.ModEffects;
 import net.grapes.yeastnfeast.entity.ModBoats;
-import net.grapes.yeastnfeast.item.custom.JamItem;
-import net.grapes.yeastnfeast.item.custom.MilkBottleItem;
-import net.grapes.yeastnfeast.item.custom.SweetenerBottleItem;
+import net.grapes.yeastnfeast.item.custom.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 
 
@@ -20,9 +22,9 @@ public class ModItems {
     public static final Item YEAST = registerItem("yeast",
             new Item(new FabricItemSettings()));
     public static final Item MAPLE_SYRUP = registerItem("maple_syrup",
-            new SweetenerBottleItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.MAPLE_SYRUP)));
+            new ConsumableItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.MAPLE_SYRUP)));
     public static final Item MOLASSES = registerItem("molasses",
-            new SweetenerBottleItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.MOLASSES)));
+            new ConsumableItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.MOLASSES)));
     public static final Item MILK_BOTTLE = registerItem("milk_bottle",
             new MilkBottleItem(new FabricItemSettings().recipeRemainder(Items.GLASS_BOTTLE).maxCount(16)));
 
@@ -61,25 +63,43 @@ public class ModItems {
     public static final Item RYE = registerItem("rye",
             new Item(new FabricItemSettings()));
 
-    // Food Items
+    // Feasts
     public static final Item SWEET_PORRIDGE = registerItem("sweet_porridge",
-            new StewItem(new FabricItemSettings().maxCount(1)));
+            new FeastItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.SWEET_PORRIDGE),
+                    ()-> ModEffects.OVERFED, 4800, 0,
+                    Text.translatable("tooltip.yeastnfeast.feast_item.bowl").formatted(Formatting.BLUE)));
     public static final Item SPICED_PORRIDGE = registerItem("spiced_porridge",
-            new StewItem(new FabricItemSettings().maxCount(1)));
+            new FeastItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.SPICED_PORRIDGE),
+                    ()-> ModEffects.OVERFED, 4800, 0,
+                    Text.translatable("tooltip.yeastnfeast.feast_item.bowl").formatted(Formatting.BLUE)));
     public static final Item BARLEY_AND_BEEF_STEW = registerItem("barley_and_beef_stew",
-            new StewItem(new FabricItemSettings().maxCount(1)));
+            new FeastItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.BARLEY_AND_BEEF_STEW),
+                    ()-> ModEffects.OVERFED, 4800, 0,
+                    Text.translatable("tooltip.yeastnfeast.feast_item.bowl").formatted(Formatting.BLUE)));
     public static final Item SALMON_CHOWDER = registerItem("salmon_chowder",
-            new StewItem(new FabricItemSettings().maxCount(1)));
+            new FeastItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.SALMON_CHOWDER),
+                    ()-> ModEffects.OVERFED, 4800, 0,
+                    Text.translatable("tooltip.yeastnfeast.feast_item.bowl").formatted(Formatting.BLUE)));
     public static final Item MEAD_BRAISED_PORK = registerItem("mead_braised_pork",
-            new StewItem(new FabricItemSettings().maxCount(1)));
-    public static final Item HERBED_COD = registerItem("herbed_cod",
-            new StewItem(new FabricItemSettings().maxCount(1)));
+            new FeastItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.MEAD_BRAISED_PORK),
+                    ()-> ModEffects.VIGOROUS, 4800, 0,
+                    Text.translatable("tooltip.yeastnfeast.feast_item.plate").formatted(Formatting.BLUE)));
+    public static final Item HERBAL_COD = registerItem("herbal_cod",
+            new FeastItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.HERBAL_COD),
+                    ()-> ModEffects.VIGOROUS, 4800, 0,
+                    Text.translatable("tooltip.yeastnfeast.feast_item.plate").formatted(Formatting.BLUE)));
     public static final Item LEMON_GLAZED_CHICKEN = registerItem("lemon_glazed_chicken",
-            new StewItem(new FabricItemSettings().maxCount(1)));
+            new FeastItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.LEMON_GLAZED_CHICKEN),
+                    ()-> ModEffects.VIGOROUS, 4800, 0,
+                    Text.translatable("tooltip.yeastnfeast.feast_item.plate").formatted(Formatting.BLUE)));
     public static final Item FORAGER_FEAST = registerItem("forager_feast",
-            new StewItem(new FabricItemSettings().maxCount(1)));
+            new FeastItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.FORAGER_FEAST),
+                    ()-> ModEffects.VIGOROUS, 4800, 0,
+                    Text.translatable("tooltip.yeastnfeast.feast_item.plate").formatted(Formatting.BLUE)));
     public static final Item MAPLE_GLAZED_RABBIT = registerItem("maple_glazed_rabbit",
-            new StewItem(new FabricItemSettings().maxCount(1)));
+            new FeastItem(new FabricItemSettings().maxCount(16).food(ModFoodComponents.MAPLE_GLAZED_RABBIT),
+                    ()-> ModEffects.VIGOROUS, 4800, 0,
+                    Text.translatable("tooltip.yeastnfeast.feast_item.plate").formatted(Formatting.BLUE)));
 
     // Baked Goods
     public static final Item BARLEY_BREAD = registerItem("barley_bread",
@@ -101,39 +121,45 @@ public class ModItems {
     public static final Item TANKARD = registerItem("tankard",
             new Item(new FabricItemSettings()));
     public static final Item HONEY_MEAD = registerItem("honey_mead",
-            new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
+            new MeadItem(new FabricItemSettings().maxCount(16), ()-> StatusEffects.RESISTANCE, 7200, 1,
+                    Text.translatable("tooltip.yeastnfeast.mead_item.sweet").formatted(Formatting.BLUE)));
     public static final Item MOLASSES_MEAD = registerItem("molasses_mead",
-            new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
+            new MeadItem(new FabricItemSettings().maxCount(16), ()-> StatusEffects.RESISTANCE, 7200, 1,
+                    Text.translatable("tooltip.yeastnfeast.mead_item.sweet").formatted(Formatting.BLUE)));
     public static final Item SOUR_MEAD = registerItem("sour_mead",
-            new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
+            new MeadItem(new FabricItemSettings().maxCount(16), ()-> StatusEffects.STRENGTH, 7200, 1,
+                    Text.translatable("tooltip.yeastnfeast.mead_item.sour").formatted(Formatting.BLUE)));
     public static final Item THORNBERRY_MEAD = registerItem("thornberry_mead",
-            new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
+            new MeadItem(new FabricItemSettings().maxCount(16), ()-> StatusEffects.STRENGTH, 7200, 1,
+                    Text.translatable("tooltip.yeastnfeast.mead_item.sour").formatted(Formatting.BLUE)));
     public static final Item BLOSSOM_MEAD = registerItem("blossom_mead",
-            new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
+            new MeadItem(new FabricItemSettings().maxCount(16), ()-> StatusEffects.REGENERATION, 4800, 1,
+                    Text.translatable("tooltip.yeastnfeast.mead_item.floral").formatted(Formatting.BLUE)));
     public static final Item AMBER_MEAD = registerItem("amber_mead",
-            new Item(new FabricItemSettings().recipeRemainder(ModItems.TANKARD)));
+            new MeadItem(new FabricItemSettings().maxCount(16), ()-> StatusEffects.REGENERATION, 4800, 1,
+                    Text.translatable("tooltip.yeastnfeast.mead_item.floral").formatted(Formatting.BLUE)));
 
     // Jams
     public static final Item JAR = registerItem("jar",
-            new JamItem(new FabricItemSettings()));
+            new Item(new FabricItemSettings()));
     public static final Item APPLE_JAM = registerItem("apple_jam",
-            new JamItem(new FabricItemSettings()));
+            new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.APPLE_JAM)));
     public static final Item CHORUS_FRUIT_JAM = registerItem("chorus_fruit_jam",
-            new JamItem(new FabricItemSettings()));
+            new ChorusFruitJamItem(new FabricItemSettings().food(ModFoodComponents.CHORUS_FRUIT_JAM)));
     public static final Item ELDERBERRIES_JAM = registerItem("elderberries_jam",
-            new JamItem(new FabricItemSettings()));
+            new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.ELDERBERRIES_JAM)));
     public static final Item GLOW_BERRIES_JAM = registerItem("glow_berries_jam",
-            new JamItem(new FabricItemSettings()));
+            new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.GLOW_BERRIES_JAM)));
     public static final Item GOLDEN_APPLE_JAM = registerItem("golden_apple_jam",
-            new JamItem(new FabricItemSettings()));
+            new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.GOLDEN_APPLE_JAM)));
     public static final Item HAWTHORN_BERRIES_JAM = registerItem("hawthorn_berries_jam",
-            new JamItem(new FabricItemSettings()));
+            new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.HAWTHORN_BERRIES_JAM)));
     public static final Item LEMON_JAM = registerItem("lemon_jam",
-            new JamItem(new FabricItemSettings()));
+            new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.LEMON_JAM)));
     public static final Item ROSE_HIPS_JAM = registerItem("rose_hips_jam",
-            new JamItem(new FabricItemSettings()));
+            new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.ROSE_HIPS_JAM)));
     public static final Item SWEET_BERRIES_JAM = registerItem("sweet_berries_jam",
-            new JamItem(new FabricItemSettings()));
+            new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.SWEET_BERRIES_JAM)));
 
     // Wooden-related Items
     public static final Item MAPLE_SIGN = registerItem("maple_sign",

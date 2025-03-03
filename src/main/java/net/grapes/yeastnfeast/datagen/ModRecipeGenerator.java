@@ -14,6 +14,7 @@ import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
@@ -96,6 +97,14 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks.BARREL), conditionsFromItem(Blocks.BARREL))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.KEG)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.JAR, 2)
+                .pattern("PSP")
+                .pattern(" P ")
+                .input('P', Blocks.GLASS)
+                .input('S', ItemTags.PLANKS)
+                .criterion(hasItem(Blocks.GLASS), conditionsFromItem(Blocks.GLASS))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.JAR)));
+
         // Shapeless Recipes
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.YEAST)
                 .input(ModTags.Items.MUSHROOMS)
@@ -157,7 +166,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_cooked_pork", conditionsFromItem(Items.COOKED_PORKCHOP))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.HERBED_COD)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.HERBAL_COD)
                 .input(Items.BOWL)
                 .input(ModItems.MINT)
                 .input(ModItems.GINGER)

@@ -83,14 +83,22 @@
   "item.yeastnfeast.barley_and_beef_stew": "Barley and Beef Stew",
   "item.yeastnfeast.salmon_chowder": "Salmon Chowder",
   "item.yeastnfeast.mead_braised_pork": "Mead-Braised Pork",
-  "item.yeastnfeast.herbed_cod": "Herbed Cod",
+  "item.yeastnfeast.herbal_cod": "Herbal Cod",
   "item.yeastnfeast.lemon_glazed_chicken": "Lemon-Glazed Chicken",
   "item.yeastnfeast.forager_feast": "Forager's Feast",
   "item.yeastnfeast.maple_glazed_rabbit": "Maple-Glazed Rabbit",
 
   "effect.yeastnfeast.overfed": "Overfed",
+  "effect.yeastnfeast.overfed.description": "Prevents saturation from lowering but the user can still consume food.",
+  "effect.yeastnfeast.vigorous": "Vigorous",
+  "effect.yeastnfeast.vigorous.description": "Slightly reduces fall damage and increases jump height.",
 
   "tooltip.yeastnfeast.milk_bottle": "Removes a single effect",
+  "tooltip.yeastnfeast.mead_item.sour": "Strength II (6:00)",
+  "tooltip.yeastnfeast.mead_item.sweet": "Resistance II (6:00)",
+  "tooltip.yeastnfeast.mead_item.floral": "Regeneration II (4:00)",
+  "tooltip.yeastnfeast.feast_item.bowl": "Overfed (4:00)",
+  "tooltip.yeastnfeast.feast_item.plate": "Vigorous (4:00)",
 
   "advancements.yeastnfeast.root.title": "Yeast & Feast",
   "advancements.yeastnfeast.root.desc": "Thank you for downloading our mod!",

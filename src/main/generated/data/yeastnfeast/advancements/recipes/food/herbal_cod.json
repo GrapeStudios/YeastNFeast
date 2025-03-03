@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "yeastnfeast:herbed_cod"
+        "recipe": "yeastnfeast:herbal_cod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "yeastnfeast:herbed_cod"
+      "yeastnfeast:herbal_cod"
     ]
   },
   "sends_telemetry_event": false

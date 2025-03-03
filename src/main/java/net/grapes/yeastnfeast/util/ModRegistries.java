@@ -34,6 +34,17 @@ public class ModRegistries {
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.GINGER, 0.6f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.BARLEY, 0.6f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.RYE, 0.6f);
+
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.BARLEY_BLOCK, 0.85f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.RYE_BLOCK, 0.85f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.BARLEY_BREAD, 0.85f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.RYE_BREAD, 0.85f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.MOLASSES_BREAD, 0.85f);
+
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.BERRY_ROLL, 1f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.ROSE_TART, 1f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.ELDERBERRY_PIE, 1f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.APPLE_PIE, 1f);
     }
 
     private static void registerStrippables() {

@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.grapes.yeastnfeast.block.ModBlocks;
 import net.grapes.yeastnfeast.block.entity.ModBlockEntities;
+import net.grapes.yeastnfeast.effect.ModEffects;
 import net.grapes.yeastnfeast.entity.ModBoats;
 import net.grapes.yeastnfeast.item.ModItemGroup;
 import net.grapes.yeastnfeast.item.ModItems;
@@ -32,5 +33,6 @@ public class YeastNFeastMod implements ModInitializer {
 		ModParticles.registerParticles();
 		ModScreenHandler.registerScreenHandlers();
 		ModRecipes.registerRecipes();
+		ModEffects.registerEffects();
 	}
 }

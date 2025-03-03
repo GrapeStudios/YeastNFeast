@@ -67,7 +67,7 @@ public class ModItemGroup {
                         entries.add(ModItems.BARLEY_AND_BEEF_STEW);
                         entries.add(ModItems.SALMON_CHOWDER);
                         entries.add(ModItems.MEAD_BRAISED_PORK);
-                        entries.add(ModItems.HERBED_COD);
+                        entries.add(ModItems.HERBAL_COD);
                         entries.add(ModItems.LEMON_GLAZED_CHICKEN);
                         entries.add(ModItems.FORAGER_FEAST);
                         entries.add(ModItems.MAPLE_GLAZED_RABBIT);
