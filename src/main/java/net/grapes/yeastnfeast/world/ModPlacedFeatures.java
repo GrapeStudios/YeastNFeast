@@ -31,35 +31,35 @@ public class ModPlacedFeatures {
 
         // Wild Crops
         register(context, WILD_BARLEY_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_BARLEY_KEY),
-                RarityFilterPlacementModifier.of(5),
+                RarityFilterPlacementModifier.of(20),
                 SquarePlacementModifier.of(),
-                PlacedFeatures.createCountExtraModifier(4, 0.2f, 3),
+                PlacedFeatures.createCountExtraModifier(2, 0.2f, 3),
                 PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                 BiomePlacementModifier.of());
 
         register(context, WILD_RYE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_RYE_KEY),
-                RarityFilterPlacementModifier.of(5),
+                RarityFilterPlacementModifier.of(10),
                 SquarePlacementModifier.of(),
-                PlacedFeatures.createCountExtraModifier(4, 0.2f, 3),
+                PlacedFeatures.createCountExtraModifier(2, 0.2f, 3),
                 PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                 BiomePlacementModifier.of());
 
         register(context, WILD_GINGER_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_GINGER_KEY),
-                RarityFilterPlacementModifier.of(5),
-                SquarePlacementModifier.of(),
-                PlacedFeatures.createCountExtraModifier(4, 0.2f, 3),
-                PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
-                BiomePlacementModifier.of());
-
-        register(context, WILD_GARLIC_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_GARLIC_KEY),
                 RarityFilterPlacementModifier.of(10),
                 SquarePlacementModifier.of(),
                 PlacedFeatures.createCountExtraModifier(4, 0.2f, 3),
                 PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                 BiomePlacementModifier.of());
 
+        register(context, WILD_GARLIC_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_GARLIC_KEY),
+                RarityFilterPlacementModifier.of(25),
+                SquarePlacementModifier.of(),
+                PlacedFeatures.createCountExtraModifier(2, 0.2f, 3),
+                PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
+                BiomePlacementModifier.of());
+
         register(context, WILD_MINT_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_MINT_KEY),
-                RarityFilterPlacementModifier.of(5),
+                RarityFilterPlacementModifier.of(10),
                 SquarePlacementModifier.of(),
                 PlacedFeatures.createCountExtraModifier(4, 0.2f, 3),
                 PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
@@ -74,13 +74,13 @@ public class ModPlacedFeatures {
 
         register(context, LEMON_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.LEMON_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        RarityFilterPlacementModifier.of(10),
+                        RarityFilterPlacementModifier.of(15),
                         ModBlocks.LEMON_SAPLING
                 ));
 
         register(context, HAWTHORN_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.HAWTHORN_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        RarityFilterPlacementModifier.of(5),
+                        RarityFilterPlacementModifier.of(10),
                         ModBlocks.HAWTHORN_SAPLING
                 ));
 
