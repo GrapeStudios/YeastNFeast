@@ -19,5 +19,9 @@ public class ModVegetationGeneration {
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.WILD_MINT_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.TAIGA),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.WILD_GINGER_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ELDERBERRIES_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SPARSE_JUNGLE, BiomeKeys.JUNGLE),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ROSE_HIPS_PLACED_KEY);
     }
 }

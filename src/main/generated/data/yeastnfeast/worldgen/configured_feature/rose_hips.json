@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:flower",
+  "type": "minecraft:random_patch",
   "config": {
     "feature": {
       "feature": {
@@ -8,7 +8,10 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "yeastnfeast:wild_mint"
+              "Name": "yeastnfeast:rose_hips_bush",
+              "Properties": {
+                "age": "3"
+              }
             }
           }
         }

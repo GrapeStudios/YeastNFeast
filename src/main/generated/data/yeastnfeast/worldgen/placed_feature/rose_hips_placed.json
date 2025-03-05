@@ -1,9 +1,9 @@
 {
-  "feature": "yeastnfeast:wild_mint",
+  "feature": "yeastnfeast:rose_hips",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 5
+      "chance": 10
     },
     {
       "type": "minecraft:in_square"
@@ -14,11 +14,11 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "data": 2,
+            "data": 4,
             "weight": 4
           },
           {
-            "data": 3,
+            "data": 5,
             "weight": 1
           }
         ]

@@ -25,6 +25,8 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> MAPLE_PLACED_KEY = registerKey("maple_placed");
     public static final RegistryKey<PlacedFeature> LEMON_PLACED_KEY = registerKey("lemon_placed");
     public static final RegistryKey<PlacedFeature> HAWTHORN_PLACED_KEY = registerKey("hawthorn_placed");
+    public static final RegistryKey<PlacedFeature> ELDERBERRIES_PLACED_KEY = registerKey("elderberries_placed");
+    public static final RegistryKey<PlacedFeature> ROSE_HIPS_PLACED_KEY = registerKey("rose_hips_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -54,14 +56,28 @@ public class ModPlacedFeatures {
         register(context, WILD_GARLIC_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_GARLIC_KEY),
                 RarityFilterPlacementModifier.of(25),
                 SquarePlacementModifier.of(),
-                PlacedFeatures.createCountExtraModifier(2, 0.2f, 3),
+                PlacedFeatures.createCountExtraModifier(3, 0.2f, 1),
                 PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                 BiomePlacementModifier.of());
 
         register(context, WILD_MINT_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_MINT_KEY),
                 RarityFilterPlacementModifier.of(5),
                 SquarePlacementModifier.of(),
-                PlacedFeatures.createCountExtraModifier(4, 0.2f, 3),
+                PlacedFeatures.createCountExtraModifier(2, 0.2f, 1),
+                PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
+                BiomePlacementModifier.of());
+
+        register(context, ELDERBERRIES_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ELDERBERRIES_KEY),
+                RarityFilterPlacementModifier.of(10),
+                SquarePlacementModifier.of(),
+                PlacedFeatures.createCountExtraModifier(4, 0.2f, 1),
+                PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
+                BiomePlacementModifier.of());
+
+        register(context, ROSE_HIPS_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ROSE_HIPS_KEY),
+                RarityFilterPlacementModifier.of(10),
+                SquarePlacementModifier.of(),
+                PlacedFeatures.createCountExtraModifier(4, 0.2f, 1),
                 PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                 BiomePlacementModifier.of());
 
