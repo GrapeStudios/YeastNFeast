@@ -1,0 +1,54 @@
+{
+  "parent": "yeastnfeast:keg",
+  "criteria": {
+    "has_sour_mead": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:sour_mead"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_thornberry_mead": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:thornberry_mead"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "yeastnfeast:textures/block/maple_log.png",
+    "description": {
+      "translate": "advancements.yeastnfeast.sour.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "yeastnfeast:sour_mead"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.yeastnfeast.sour.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_sour_mead"
+    ],
+    [
+      "has_thornberry_mead"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

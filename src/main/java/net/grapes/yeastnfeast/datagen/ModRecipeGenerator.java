@@ -329,6 +329,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 ModItems.SWEET_BERRIES_JAM)
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(exporter);
+        new KegRecipeBuilder(List.of(Items.MELON_SLICE, Items.MELON_SLICE, Items.MELON_SLICE),
+                Items.SUGAR, ModItems.JAR,
+                ModItems.MELON_JAM)
+                .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
+                .offerTo(exporter);
 
         // Shapeless Recipes
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BARLEY_SEEDS)

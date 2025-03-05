@@ -38,7 +38,7 @@ public class ModPlacedFeatures {
                 BiomePlacementModifier.of());
 
         register(context, WILD_RYE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_RYE_KEY),
-                RarityFilterPlacementModifier.of(10),
+                RarityFilterPlacementModifier.of(5),
                 SquarePlacementModifier.of(),
                 PlacedFeatures.createCountExtraModifier(2, 0.2f, 3),
                 PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
@@ -59,7 +59,7 @@ public class ModPlacedFeatures {
                 BiomePlacementModifier.of());
 
         register(context, WILD_MINT_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_MINT_KEY),
-                RarityFilterPlacementModifier.of(10),
+                RarityFilterPlacementModifier.of(5),
                 SquarePlacementModifier.of(),
                 PlacedFeatures.createCountExtraModifier(4, 0.2f, 3),
                 PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
@@ -80,7 +80,7 @@ public class ModPlacedFeatures {
 
         register(context, HAWTHORN_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.HAWTHORN_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        RarityFilterPlacementModifier.of(10),
+                        RarityFilterPlacementModifier.of(5),
                         ModBlocks.HAWTHORN_SAPLING
                 ));
 

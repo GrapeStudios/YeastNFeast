@@ -1,5 +1,6 @@
 package net.grapes.yeastnfeast.item;
 
+import net.grapes.yeastnfeast.util.ModUtils;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
@@ -52,4 +53,14 @@ public class ModFoodComponents {
     public static final FoodComponent LEMON_JAM = new FoodComponent.Builder().hunger(6).saturationModifier(0.8f).build();
     public static final FoodComponent ROSE_HIPS_JAM = new FoodComponent.Builder().hunger(6).saturationModifier(0.8f).build();
     public static final FoodComponent SWEET_BERRIES_JAM = new FoodComponent.Builder().hunger(6).saturationModifier(0.8f).build();
+    public static final FoodComponent MELON_JAM = new FoodComponent.Builder().hunger(6).saturationModifier(0.8f).build();
+
+    // Compat Items
+    public static FoodComponent CHILLBERRIES_JAM;
+    static {
+        if (ModUtils.isModLoaded("hexalia")) {
+            CHILLBERRIES_JAM = new FoodComponent.Builder()
+                    .hunger(6).saturationModifier(0.8f).build();
+        }
+    }
 }

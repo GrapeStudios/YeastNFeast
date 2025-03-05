@@ -1,0 +1,174 @@
+{
+  "parent": "yeastnfeast:jar",
+  "criteria": {
+    "has_apple_jam": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:apple_jam"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_chorus_fruit_jam": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:chorus_fruit_jam"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_elderberries_jam": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:elderberries_jam"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_glow_berries_jam": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:glow_berries_jam"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_golden_apple_jam": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:golden_apple_jam"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hawthorn_berries_jam": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:hawthorn_berries_jam"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_lemon_jam": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:lemon_jam"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_melon_jam": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:melon_jam"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_rose_hips_jam": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:rose_hips_jam"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sweet_berries_jam": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:sweet_berries_jam"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "yeastnfeast:textures/block/maple_log.png",
+    "description": {
+      "translate": "advancements.yeastnfeast.jam.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "yeastnfeast:apple_jam"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.yeastnfeast.jam.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_apple_jam"
+    ],
+    [
+      "has_chorus_fruit_jam"
+    ],
+    [
+      "has_elderberries_jam"
+    ],
+    [
+      "has_glow_berries_jam"
+    ],
+    [
+      "has_golden_apple_jam"
+    ],
+    [
+      "has_hawthorn_berries_jam"
+    ],
+    [
+      "has_lemon_jam"
+    ],
+    [
+      "has_melon_jam"
+    ],
+    [
+      "has_rose_hips_jam"
+    ],
+    [
+      "has_sweet_berries_jam"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

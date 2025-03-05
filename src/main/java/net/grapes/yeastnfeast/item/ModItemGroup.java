@@ -90,6 +90,7 @@ public class ModItemGroup {
                         entries.add(ModItems.GOLDEN_APPLE_JAM);
                         entries.add(ModItems.HAWTHORN_BERRIES_JAM);
                         entries.add(ModItems.LEMON_JAM);
+                        entries.add(ModItems.MELON_JAM);
                         entries.add(ModItems.ROSE_HIPS_JAM);
                         entries.add(ModItems.SWEET_BERRIES_JAM);
 

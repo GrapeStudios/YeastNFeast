@@ -1,0 +1,39 @@
+{
+  "parent": "yeastnfeast:root",
+  "criteria": {
+    "has_keg": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:keg"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "yeastnfeast:textures/block/maple_log.png",
+    "description": {
+      "translate": "advancements.yeastnfeast.keg.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "yeastnfeast:keg"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.yeastnfeast.keg.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_keg"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

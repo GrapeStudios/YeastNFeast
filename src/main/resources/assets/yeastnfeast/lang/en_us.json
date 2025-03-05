@@ -75,8 +75,10 @@
   "item.yeastnfeast.golden_apple_jam": "Golden Apple Jam",
   "item.yeastnfeast.hawthorn_berries_jam": "Hawthorn Berries Jam",
   "item.yeastnfeast.lemon_jam": "Lemon Jam",
+  "item.yeastnfeast.melon_jam": "Melon Jam",
   "item.yeastnfeast.rose_hips_jam": "Rose Hips Jam",
   "item.yeastnfeast.sweet_berries_jam": "Sweet Berries Jam",
+  "item.yeastnfeast.chillberries_jam": "Chillberries Jam",
 
   "item.yeastnfeast.sweet_porridge": "Sweet Porridge",
   "item.yeastnfeast.spiced_porridge": "Spiced Porridge",
@@ -101,11 +103,31 @@
   "tooltip.yeastnfeast.feast_item.plate": "Vigorous (4:00)",
 
   "advancements.yeastnfeast.root.title": "Yeast & Feast",
-  "advancements.yeastnfeast.root.desc": "Thank you for downloading our mod!",
-  "advancements.yeastnfeast.tankard.title": "Multipurpose Cup",
-  "advancements.yeastnfeast.tankard.desc": "Craft a Tankard.",
-  "advancements.yeastnfeast.barley_bread.title": "Joshua's Grandma' Bread",
-  "advancements.yeastnfeast.barley_bread.desc": "The hardest bread in existence",
+  "advancements.yeastnfeast.root.desc": "Obtain Yeast from mushrooms.",
+  "advancements.yeastnfeast.keg.title": "Keg Stand",
+  "advancements.yeastnfeast.keg.desc": "Craft a Keg to start brewing.",
+  "advancements.yeastnfeast.sweet.title": "Sweet Victory",
+  "advancements.yeastnfeast.sweet.desc": "Brew all the Sweet Meads.",
+  "advancements.yeastnfeast.sour.title": "Sour Power",
+  "advancements.yeastnfeast.sour.desc": "Brew all the Sour Meads.",
+  "advancements.yeastnfeast.floral.title": "Floral Finesse",
+  "advancements.yeastnfeast.floral.desc": "Brew all the Floral Meads.",
+  "advancements.yeastnfeast.jar.title": "For the Jar Jar’s Sake!",
+  "advancements.yeastnfeast.jar.desc": "Obtain a Jar, made out of Glass and Planks.",
+  "advancements.yeastnfeast.jam.title": "Jam Session",
+  "advancements.yeastnfeast.jam.desc": "Obtain all the available Jams",
+
+  "advancements.yeastnfeast.crops.title": "Harvest Season",
+  "advancements.yeastnfeast.crops.desc": "Obtain any Yeast 'n Feast crop.",
+
+  "advancements.yeastnfeast.berry_roll.title": "Let me guess...",
+  "advancements.yeastnfeast.berry_roll.desc": "Make a Berry Roll, but make sure it does not get stolen!.",
+
+  "advancements.yeastnfeast.bowl.title": "Meat & Greet",
+  "advancements.yeastnfeast.bowl.desc": "Eat all of the bowl dishes.",
+
+  "advancements.yeastnfeast.plate.title": "Feast Your Eyes",
+  "advancements.yeastnfeast.plate.desc": "Eat all of the plates dishes.",
 
   "block.yeastnfeast.maple_leaves": "Maple Leaves",
   "block.yeastnfeast.maple_catkin": "Maple Catkin",

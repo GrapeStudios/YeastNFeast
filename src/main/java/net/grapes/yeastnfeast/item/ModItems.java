@@ -7,6 +7,7 @@ import net.grapes.yeastnfeast.block.ModBlocks;
 import net.grapes.yeastnfeast.effect.ModEffects;
 import net.grapes.yeastnfeast.entity.ModBoats;
 import net.grapes.yeastnfeast.item.custom.*;
+import net.grapes.yeastnfeast.util.ModUtils;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -156,6 +157,8 @@ public class ModItems {
             new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.HAWTHORN_BERRIES_JAM)));
     public static final Item LEMON_JAM = registerItem("lemon_jam",
             new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.LEMON_JAM)));
+    public static final Item MELON_JAM = registerItem("melon_jam",
+            new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.MELON_JAM)));
     public static final Item ROSE_HIPS_JAM = registerItem("rose_hips_jam",
             new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.ROSE_HIPS_JAM)));
     public static final Item SWEET_BERRIES_JAM = registerItem("sweet_berries_jam",
@@ -170,6 +173,16 @@ public class ModItems {
             ModBoats.MAPLE_BOAT_KEY, false);
     public static final Item MAPLE_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_CHEST_BOAT_ID,
             ModBoats.MAPLE_BOAT_KEY, true);
+
+    // Addon/Compat Items
+    public static Item CHILLBERRIES_JAM;
+    static {
+        if (ModUtils.isModLoaded("hexalia")) {
+            CHILLBERRIES_JAM = registerItem("chillberries_jam",
+                    new Item(new FabricItemSettings().food(ModFoodComponents.CHILLBERRIES_JAM)));
+        }
+    }
+
 
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(YeastNFeastMod.MOD_ID, name), item);
