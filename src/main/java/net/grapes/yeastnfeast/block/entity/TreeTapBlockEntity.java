@@ -17,7 +17,7 @@ public class TreeTapBlockEntity extends BlockEntity {
     public static void tick(World world, BlockPos pos, BlockState state, TreeTapBlockEntity blockEntity) {
         if (!state.get(TreeTapBlock.DRIPPING)) {
             blockEntity.tickCounter++;
-            if (blockEntity.tickCounter >= 60) {
+            if (blockEntity.tickCounter >= 7200) {
                 world.setBlockState(pos, state.with(TreeTapBlock.DRIPPING, true));
                 blockEntity.tickCounter = 0;
             }

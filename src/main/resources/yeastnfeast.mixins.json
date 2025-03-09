@@ -5,8 +5,7 @@
 	"mixins": [
 		"ExampleMixin",
 		"accessors.ExhaustionAccessorMixin",
-		"LivingEntityJumpMixin",
-		"LivingEntityFallDamageMixin"
+		"HealingMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -43,14 +43,13 @@ public class KegBlockEntity extends BlockEntity implements ExtendedScreenHandler
     public static final int TANKARD_SLOT = 5;
 
     private int progress = 0;
-    private int maxProgress = 7200;
 
     protected final PropertyDelegate propertyDelegate = new PropertyDelegate() {
         @Override
         public int get(int index) {
             return switch (index) {
                 case 0 -> KegBlockEntity.this.progress;
-                case 1 -> KegBlockEntity.this.maxProgress;
+                case 1 -> getCurrentRecipe().map(KegRecipe::getBrewTime).orElse(0);
                 default -> 0;
             };
         }
@@ -59,7 +58,6 @@ public class KegBlockEntity extends BlockEntity implements ExtendedScreenHandler
         public void set(int index, int value) {
             switch (index) {
                 case 0 -> KegBlockEntity.this.progress = value;
-                case 1 -> KegBlockEntity.this.maxProgress = value;
             }
         }
 
@@ -143,7 +141,7 @@ public class KegBlockEntity extends BlockEntity implements ExtendedScreenHandler
     }
 
     private boolean hasCraftingFinished() {
-        return this.progress >= this.maxProgress;
+        return this.progress >= getCurrentRecipe().map(KegRecipe::getBrewTime).orElse(0);
     }
 
     private void increaseCraftingProgress() {

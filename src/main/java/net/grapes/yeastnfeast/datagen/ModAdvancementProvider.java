@@ -94,7 +94,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .display(new AdvancementDisplay(new ItemStack(ModItems.APPLE_JAM),
                         Text.translatable("advancements.yeastnfeast.jam.title"),
                         Text.translatable("advancements.yeastnfeast.jam.desc"),
-                        BACKGROUND, AdvancementFrame.TASK,
+                        BACKGROUND, AdvancementFrame.CHALLENGE,
                         true, true, false))
                 .parent(jarAdvancements)
                 .criterion("has_apple_jam", InventoryChangedCriterion.Conditions.items(ModItems.APPLE_JAM))
@@ -143,7 +143,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .display(new AdvancementDisplay(new ItemStack(ModItems.BARLEY_AND_BEEF_STEW),
                         Text.translatable("advancements.yeastnfeast.bowl.title"),
                         Text.translatable("advancements.yeastnfeast.bowl.desc"),
-                        BACKGROUND, AdvancementFrame.TASK,
+                        BACKGROUND, AdvancementFrame.CHALLENGE,
                         true, true, false))
                 .parent(cropsAdvancements)
                 .criterion("eat_sweet_porridge", ConsumeItemCriterion.Conditions.item(ModItems.SWEET_PORRIDGE))
@@ -156,7 +156,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .display(new AdvancementDisplay(new ItemStack(ModItems.MAPLE_GLAZED_RABBIT),
                         Text.translatable("advancements.yeastnfeast.plate.title"),
                         Text.translatable("advancements.yeastnfeast.plate.desc"),
-                        BACKGROUND, AdvancementFrame.TASK,
+                        BACKGROUND, AdvancementFrame.CHALLENGE,
                         true, true, false))
                 .parent(cropsAdvancements)
                 .criterion("eat_mead_pork", ConsumeItemCriterion.Conditions.item(ModItems.MEAD_BRAISED_PORK))

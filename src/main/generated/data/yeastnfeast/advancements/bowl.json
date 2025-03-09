@@ -48,7 +48,7 @@
     "description": {
       "translate": "advancements.yeastnfeast.bowl.desc"
     },
-    "frame": "task",
+    "frame": "challenge",
     "hidden": false,
     "icon": {
       "item": "yeastnfeast:barley_and_beef_stew"

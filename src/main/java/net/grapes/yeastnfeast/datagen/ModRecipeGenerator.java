@@ -248,89 +248,89 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         // Keg Recipe Generator
         new KegRecipeBuilder(List.of(Items.APPLE, Items.HONEY_BOTTLE, Items.WHEAT),
                 ModItems.YEAST, ModItems.TANKARD,
-                ModItems.HONEY_MEAD)
+                ModItems.HONEY_MEAD, 7200)
                 .criterion(hasItem(ModItems.TANKARD), conditionsFromItem(ModItems.TANKARD))
                 .offerTo(exporter);
 
         new KegRecipeBuilder(List.of(ModItems.ELDERBERRIES, ModItems.LEMON, ModItems.GINGER),
                 ModItems.YEAST, ModItems.TANKARD,
-                ModItems.SOUR_MEAD)
+                ModItems.SOUR_MEAD, 7200)
                 .criterion(hasItem(ModItems.TANKARD), conditionsFromItem(ModItems.TANKARD))
                 .offerTo(exporter);
 
         new KegRecipeBuilder(List.of(ModItems.BARLEY, ModItems.MOLASSES, Items.SUGAR_CANE),
                 ModItems.YEAST, ModItems.TANKARD,
-                ModItems.MOLASSES_MEAD)
+                ModItems.MOLASSES_MEAD, 7200)
                 .criterion(hasItem(ModItems.TANKARD), conditionsFromItem(ModItems.TANKARD))
                 .offerTo(exporter);
 
         new KegRecipeBuilder(List.of(ModItems.HAWTHORN_BERRIES, ModItems.ELDERBERRIES, Items.SUGAR),
                 ModItems.YEAST, ModItems.TANKARD,
-                ModItems.THORNBERRY_MEAD)
+                ModItems.THORNBERRY_MEAD, 7200)
                 .criterion(hasItem(ModItems.TANKARD), conditionsFromItem(ModItems.TANKARD))
                 .offerTo(exporter);
 
         new KegRecipeBuilder(List.of(ModItems.ROSE_HIPS, ModItems.MAPLE_SYRUP, ModItems.MINT),
                 ModItems.YEAST, ModItems.TANKARD,
-                ModItems.BLOSSOM_MEAD)
+                ModItems.BLOSSOM_MEAD, 7200)
                 .criterion(hasItem(ModItems.TANKARD), conditionsFromItem(ModItems.TANKARD))
                 .offerTo(exporter);
 
         new KegRecipeBuilder(List.of(ModItems.RYE, ModItems.MAPLE_SYRUP, ModItems.ROSE_HIPS),
                 ModItems.YEAST, ModItems.TANKARD,
-                ModItems.AMBER_MEAD)
+                ModItems.AMBER_MEAD, 7200)
                 .criterion(hasItem(ModItems.TANKARD), conditionsFromItem(ModItems.TANKARD))
                 .offerTo(exporter);
 
 
         new KegRecipeBuilder(List.of(Items.APPLE, Items.APPLE, Items.APPLE),
                 Items.SUGAR, ModItems.JAR,
-                ModItems.APPLE_JAM)
+                ModItems.APPLE_JAM, 4800)
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(exporter);
         new KegRecipeBuilder(List.of(Items.CHORUS_FRUIT, Items.CHORUS_FRUIT, Items.CHORUS_FRUIT),
                 Items.SUGAR, ModItems.JAR,
-                ModItems.CHORUS_FRUIT_JAM)
+                ModItems.CHORUS_FRUIT_JAM, 4800)
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(exporter);
         new KegRecipeBuilder(List.of(ModItems.ELDERBERRIES, ModItems.ELDERBERRIES, ModItems.ELDERBERRIES),
                 Items.SUGAR, ModItems.JAR,
-                ModItems.ELDERBERRIES_JAM)
+                ModItems.ELDERBERRIES_JAM, 4800)
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(exporter);
         new KegRecipeBuilder(List.of(Items.GLOW_BERRIES, Items.GLOW_BERRIES, Items.GLOW_BERRIES),
                 Items.SUGAR, ModItems.JAR,
-                ModItems.GLOW_BERRIES_JAM)
+                ModItems.GLOW_BERRIES_JAM, 4800)
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(exporter);
         new KegRecipeBuilder(List.of(Items.GOLDEN_APPLE, Items.GOLDEN_APPLE, Items.GOLDEN_APPLE),
                 Items.SUGAR, ModItems.JAR,
-                ModItems.GOLDEN_APPLE_JAM)
+                ModItems.GOLDEN_APPLE_JAM, 4800)
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(exporter);
         new KegRecipeBuilder(List.of(ModItems.HAWTHORN_BERRIES, ModItems.HAWTHORN_BERRIES, ModItems.HAWTHORN_BERRIES),
                 Items.SUGAR, ModItems.JAR,
-                ModItems.HAWTHORN_BERRIES_JAM)
+                ModItems.HAWTHORN_BERRIES_JAM, 4800)
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(exporter);
         new KegRecipeBuilder(List.of(ModItems.LEMON, ModItems.LEMON, ModItems.LEMON),
                 Items.SUGAR, ModItems.JAR,
-                ModItems.LEMON_JAM)
+                ModItems.LEMON_JAM, 4800)
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(exporter);
         new KegRecipeBuilder(List.of(ModItems.ROSE_HIPS, ModItems.ROSE_HIPS, ModItems.ROSE_HIPS),
                 Items.SUGAR, ModItems.JAR,
-                ModItems.ROSE_HIPS_JAM)
+                ModItems.ROSE_HIPS_JAM, 4800)
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(exporter);
         new KegRecipeBuilder(List.of(Items.SWEET_BERRIES, Items.SWEET_BERRIES, Items.SWEET_BERRIES),
                 Items.SUGAR, ModItems.JAR,
-                ModItems.SWEET_BERRIES_JAM)
+                ModItems.SWEET_BERRIES_JAM, 4800)
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(exporter);
         new KegRecipeBuilder(List.of(Items.MELON_SLICE, Items.MELON_SLICE, Items.MELON_SLICE),
                 Items.SUGAR, ModItems.JAR,
-                ModItems.MELON_JAM)
+                ModItems.MELON_JAM, 4800)
                 .criterion(hasItem(ModItems.JAR), conditionsFromItem(ModItems.JAR))
                 .offerTo(exporter);
 

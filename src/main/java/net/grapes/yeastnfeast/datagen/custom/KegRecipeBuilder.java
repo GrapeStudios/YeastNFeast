@@ -28,15 +28,18 @@ public class KegRecipeBuilder implements CraftingRecipeJsonBuilder {
     private final Item output;
     private final Item yeastItem;
     private final Item tankardItem;
+    private final int brewTime; // Add brewTime field
     private final Advancement.Builder advancement = Advancement.Builder.create();
 
-    public KegRecipeBuilder(List<ItemConvertible> ingredients, ItemConvertible yeastItem, ItemConvertible tankardItem, ItemConvertible output) {
+    // Update the constructor to include brewTime
+    public KegRecipeBuilder(List<ItemConvertible> ingredients, ItemConvertible yeastItem, ItemConvertible tankardItem, ItemConvertible output, int brewTime) {
         for (ItemConvertible ingredient : ingredients) {
             this.ingredients.add(Ingredient.ofItems(ingredient));
         }
         this.yeastItem = yeastItem.asItem();
         this.tankardItem = tankardItem.asItem();
         this.output = output.asItem();
+        this.brewTime = brewTime; // Initialize brewTime
     }
 
     @Override
@@ -62,7 +65,7 @@ public class KegRecipeBuilder implements CraftingRecipeJsonBuilder {
                 .rewards(AdvancementRewards.Builder.recipe(recipeId));
 
         exporter.accept(new JsonBuilder(recipeId, this.output, this.ingredients, this.yeastItem, this.tankardItem,
-                this.advancement, new Identifier(recipeId.getNamespace(), "recipes/" + recipeId.getPath())));
+                this.brewTime, this.advancement, new Identifier(recipeId.getNamespace(), "recipes/" + recipeId.getPath())));
     }
 
     public static class JsonBuilder implements RecipeJsonProvider {
@@ -71,16 +74,19 @@ public class KegRecipeBuilder implements CraftingRecipeJsonBuilder {
         private final List<Ingredient> ingredients;
         private final Item yeastSlotItem;
         private final Item tankardSlotItem;
+        private final int brewTime; // Add brewTime field
         private final Advancement.Builder advancement;
         private final Identifier advancementId;
 
+        // Update the constructor to include brewTime
         public JsonBuilder(Identifier id, Item output, List<Ingredient> ingredients, Item yeastSlotItem,
-                           Item tankardSlotItem, Advancement.Builder advancement, Identifier advancementId) {
+                           Item tankardSlotItem, int brewTime, Advancement.Builder advancement, Identifier advancementId) {
             this.id = id;
             this.output = output;
             this.ingredients = ingredients;
             this.yeastSlotItem = yeastSlotItem;
             this.tankardSlotItem = tankardSlotItem;
+            this.brewTime = brewTime; // Initialize brewTime
             this.advancement = advancement;
             this.advancementId = advancementId;
         }
@@ -106,6 +112,8 @@ public class KegRecipeBuilder implements CraftingRecipeJsonBuilder {
             JsonObject jsonOutput = new JsonObject();
             jsonOutput.addProperty("item", Registries.ITEM.getId(this.output).toString());
             json.add("output", jsonOutput);
+
+            json.addProperty("brew_time", this.brewTime); // Add brewTime to the JSON
         }
 
         @Override

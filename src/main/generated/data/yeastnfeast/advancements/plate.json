@@ -58,7 +58,7 @@
     "description": {
       "translate": "advancements.yeastnfeast.plate.desc"
     },
-    "frame": "task",
+    "frame": "challenge",
     "hidden": false,
     "icon": {
       "item": "yeastnfeast:maple_glazed_rabbit"
