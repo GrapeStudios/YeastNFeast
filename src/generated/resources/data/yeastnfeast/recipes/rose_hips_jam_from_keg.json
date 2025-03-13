@@ -1,0 +1,23 @@
+{
+  "type": "yeastnfeast:keg",
+  "ingredients": [
+    {
+      "item": "yeastnfeast:rose_hips"
+    },
+    {
+      "item": "yeastnfeast:rose_hips"
+    },
+    {
+      "item": "yeastnfeast:rose_hips"
+    }
+  ],
+  "output": {
+    "item": "yeastnfeast:rose_hips_jam"
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:jar"
+  },
+  "yeast_slot": {
+    "item": "minecraft:sugar"
+  }
+}

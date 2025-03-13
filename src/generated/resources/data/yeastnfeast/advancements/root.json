@@ -1,11 +1,11 @@
 {
   "criteria": {
-    "has_yeast": {
+    "has_tankard": {
       "conditions": {
         "items": [
           {
             "items": [
-              "yeastnfeast:yeast"
+              "yeastnfeast:tankard"
             ]
           }
         ]
@@ -15,14 +15,14 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:block/spruce_planks",
+    "background": "yeastnfeast:textures/block/willow_log.png",
     "description": {
       "translate": "advancements.yeastnfeast.root.desc"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "yeastnfeast:yeast"
+      "item": "yeastnfeast:tankard"
     },
     "show_toast": true,
     "title": {
@@ -31,7 +31,7 @@
   },
   "requirements": [
     [
-      "has_yeast"
+      "has_tankard"
     ]
   ],
   "sends_telemetry_event": true

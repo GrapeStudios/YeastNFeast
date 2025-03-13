@@ -1,0 +1,23 @@
+{
+  "type": "yeastnfeast:keg",
+  "ingredients": [
+    {
+      "item": "yeastnfeast:rose_hips"
+    },
+    {
+      "item": "yeastnfeast:maple_syrup"
+    },
+    {
+      "item": "yeastnfeast:mint"
+    }
+  ],
+  "output": {
+    "item": "yeastnfeast:blossom_mead"
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:tankard"
+  },
+  "yeast_slot": {
+    "item": "yeastnfeast:yeast"
+  }
+}

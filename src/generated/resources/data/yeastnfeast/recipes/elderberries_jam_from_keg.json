@@ -1,0 +1,23 @@
+{
+  "type": "yeastnfeast:keg",
+  "ingredients": [
+    {
+      "item": "yeastnfeast:elderberries"
+    },
+    {
+      "item": "yeastnfeast:elderberries"
+    },
+    {
+      "item": "yeastnfeast:elderberries"
+    }
+  ],
+  "output": {
+    "item": "yeastnfeast:elderberries_jam"
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:jar"
+  },
+  "yeast_slot": {
+    "item": "minecraft:sugar"
+  }
+}

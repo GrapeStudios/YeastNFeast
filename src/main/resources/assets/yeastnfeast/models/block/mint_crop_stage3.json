@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout",
+	"render_type": "cutout",
 	"textures": {
 		"0": "yeastnfeast:block/mint_crop_stage2",
 		"1": "yeastnfeast:block/mint_petal2",

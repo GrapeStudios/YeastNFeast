@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:taiga",
+  "features": "yeastnfeast:wild_ginger_placed",
+  "step": "vegetal_decoration"
+}

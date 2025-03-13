@@ -1,0 +1,23 @@
+{
+  "type": "yeastnfeast:keg",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "output": {
+    "item": "yeastnfeast:honey_mead"
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:tankard"
+  },
+  "yeast_slot": {
+    "item": "yeastnfeast:yeast"
+  }
+}

@@ -9,7 +9,6 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -32,13 +31,45 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        // Drops for Wild Crops
+
+        // Drops
+        this.dropSelf(ModBlocks.TREE_TAP.get());
+        this.dropSelf(ModBlocks.KEG.get());
+
+        this.dropSelf(ModBlocks.BAG_OF_ELDERBERRIES.get());
+        this.dropSelf(ModBlocks.BAG_OF_GARLIC.get());
+        this.dropSelf(ModBlocks.BAG_OF_GINGER.get());
+        this.dropSelf(ModBlocks.BAG_OF_HAWTHORN_BERRIES.get());
+        this.dropSelf(ModBlocks.BAG_OF_LEMON.get());
+        this.dropSelf(ModBlocks.BAG_OF_MINT.get());
+        this.dropSelf(ModBlocks.BAG_OF_ROSE_HIPS.get());
+        this.dropSelf(ModBlocks.BARLEY_BLOCK.get());
+        this.dropSelf(ModBlocks.RYE_BLOCK.get());
+
+        this.dropSelf(ModBlocks.FLOWERING_LEMON_TREE_LEAVES.get());
+        this.dropSelf(ModBlocks.LEMON_TREE_LEAVES.get());
+        this.dropSelf(ModBlocks.LEMON_SAPLING.get());
+
+        this.dropSelf(ModBlocks.FLOWERING_HAWTHORN_TREE_LEAVES.get());
+        this.dropSelf(ModBlocks.HAWTHORN_TREE_LEAVES.get());
+        this.dropSelf(ModBlocks.HAWTHORN_SAPLING.get());
+
+        //Drops for Wild Crops
         this.add(ModBlocks.WILD_BARLEY.get(), block ->
                 createSingleItemTable(ModItems.BARLEY_SEEDS.get()));
         this.add(ModBlocks.WILD_RYE.get(), block ->
                 createSingleItemTable(ModItems.RYE_SEEDS.get()));
         this.add(ModBlocks.WILD_GINGER.get(), block ->
                 createSingleItemTable(ModItems.GINGER.get()));
+        this.add(ModBlocks.WILD_MINT.get(), block ->
+                createSingleItemTable(ModItems.MINT_SEEDS.get()));
+        this.add(ModBlocks.WILD_GARLIC.get(), block ->
+                createSingleItemTable(ModItems.GARLIC.get()));
+
+        this.add(ModBlocks.POTTED_LEMON_SAPLING.get(),
+                createPotFlowerItemTable(ModBlocks.LEMON_SAPLING.get()));
+        this.add(ModBlocks.POTTED_HAWTHORN_SAPLING.get(),
+                createPotFlowerItemTable(ModBlocks.POTTED_HAWTHORN_SAPLING.get()));
 
         // Crops Loot        
         LootItemCondition.Builder builder0 = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.GINGER_CROP.get())
@@ -70,7 +101,26 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 ElderberryBushBlock.AGE, 3, 2.0f, 3.0f));
 
         // Blocks
-        this.dropSelf(ModBlocks.MEAD_KEG.get());
+        this.add(ModBlocks.MAPLE_LEAVES.get(), createLeavesDrops(ModBlocks.MAPLE_LEAVES.get(), ModBlocks.MAPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.MAPLE_LOG.get());
+        this.dropSelf(ModBlocks.MAPLE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_MAPLE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_MAPLE_WOOD.get());
+        this.dropSelf(ModBlocks.MAPLE_PLANKS.get());
+        this.dropSelf(ModBlocks.MAPLE_SAPLING.get());
+        this.add(ModBlocks.POTTED_MAPLE_SAPLING.get(), createPotFlowerItemTable(ModBlocks.MAPLE_SAPLING.get()));
+        this.dropSelf(ModBlocks.MAPLE_STAIRS.get());
+        this.dropSelf(ModBlocks.MAPLE_PRESSURE_PLATE.get());
+        this.add(ModBlocks.MAPLE_SLAB.get(), createSlabItemTable(ModBlocks.MAPLE_SLAB.get()));
+        this.dropSelf(ModBlocks.MAPLE_BUTTON.get());
+        this.dropSelf(ModBlocks.MAPLE_FENCE.get());
+        this.dropSelf(ModBlocks.MAPLE_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.MAPLE_TRAPDOOR.get());
+        this.add(ModBlocks.MAPLE_DOOR.get(), createDoorTable(ModBlocks.MAPLE_DOOR.get()));
+        this.add(ModBlocks.MAPLE_SIGN.get(), createSingleItemTable(ModBlocks.MAPLE_SIGN.get()));
+        this.add(ModBlocks.MAPLE_WALL_SIGN.get(), createSingleItemTable(ModBlocks.MAPLE_SIGN.get()));
+        this.add(ModBlocks.MAPLE_HANGING_SIGN.get(), createSingleItemTable(ModBlocks.MAPLE_HANGING_SIGN.get()));
+        this.add(ModBlocks.MAPLE_HANGING_WALL_SIGN.get(), createSingleItemTable(ModBlocks.MAPLE_HANGING_SIGN.get()));
     }
 
     protected LootTable.Builder createSimpleCropBlock(Block pCropBlock, Item pGrownCropItem, LootItemCondition.Builder pDropGrownCropCondition) {
@@ -96,8 +146,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 1, 2))
                         ));
     }
-
-
 
     @Override
     protected Iterable<Block> getKnownBlocks() {

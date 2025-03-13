@@ -1,0 +1,23 @@
+{
+  "type": "yeastnfeast:keg",
+  "ingredients": [
+    {
+      "item": "minecraft:melon_slice"
+    },
+    {
+      "item": "minecraft:melon_slice"
+    },
+    {
+      "item": "minecraft:melon_slice"
+    }
+  ],
+  "output": {
+    "item": "yeastnfeast:melon_jam"
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:jar"
+  },
+  "yeast_slot": {
+    "item": "minecraft:sugar"
+  }
+}

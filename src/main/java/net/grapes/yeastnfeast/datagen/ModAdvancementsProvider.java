@@ -20,12 +20,12 @@ public class ModAdvancementsProvider implements ForgeAdvancementProvider.Advance
     @Override
     public void generate(HolderLookup.Provider registries, Consumer<Advancement> saver, ExistingFileHelper existingFileHelper) {
         Advancement rootAdvancement = Advancement.Builder.advancement()
-                .display(new DisplayInfo(new ItemStack(ModItems.YEAST.get()),
+                .display(new DisplayInfo(new ItemStack(ModItems.TANKARD.get()),
                         Component.translatable("advancements.yeastnfeast.root.title"),
                         Component.translatable("advancements.yeastnfeast.root.desc"),
-                        new ResourceLocation("block/spruce_planks"), FrameType.TASK,
+                        new ResourceLocation(YeastNFeastMod.MOD_ID, "textures/block/willow_log.png"), FrameType.TASK,
                         true,true, false))
-                .addCriterion("has_yeast", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.YEAST.get()))
+                .addCriterion("has_tankard", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.TANKARD.get()))
                 .save(saver, new ResourceLocation(YeastNFeastMod.MOD_ID, "root"), existingFileHelper);
     }
 }

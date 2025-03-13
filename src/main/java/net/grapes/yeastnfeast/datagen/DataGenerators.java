@@ -28,5 +28,7 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new ForgeAdvancementProvider(packOutput, lookupProvider,
                 existingFileHelper, List.of(new ModAdvancementsProvider())));
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
+
+        generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
     }
 }
