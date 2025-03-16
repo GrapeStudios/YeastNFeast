@@ -68,8 +68,8 @@ public class ModAdvancementsProvider implements ForgeAdvancementProvider.Advance
 
         Advancement floralAdvancement = Advancement.Builder.advancement()
                 .display(new DisplayInfo(new ItemStack(ModItems.BLOSSOM_MEAD.get()),
-                        Component.translatable("advancements.yeastnfeast.sour.title"),
-                        Component.translatable("advancements.yeastnfeast.sour.desc"),
+                        Component.translatable("advancements.yeastnfeast.floral.title"),
+                        Component.translatable("advancements.yeastnfeast.floral.desc"),
                         BACKGROUND, FrameType.TASK,
                         true,true, false))
                 .parent(kegAdvancement)

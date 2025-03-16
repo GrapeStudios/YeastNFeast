@@ -30,7 +30,7 @@
     "announce_to_chat": true,
     "background": "yeastnfeast:textures/block/willow_log.png",
     "description": {
-      "translate": "advancements.yeastnfeast.sour.desc"
+      "translate": "advancements.yeastnfeast.floral.desc"
     },
     "frame": "task",
     "hidden": false,
@@ -39,7 +39,7 @@
     },
     "show_toast": true,
     "title": {
-      "translate": "advancements.yeastnfeast.sour.title"
+      "translate": "advancements.yeastnfeast.floral.title"
     }
   },
   "requirements": [
