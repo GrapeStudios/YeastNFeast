@@ -39,7 +39,7 @@ public class MeadItem extends Item {
         super.finishUsingItem(stack, world, user);
 
         if (user instanceof ServerPlayer serverPlayer) {
-            serverPlayer.awardStat(Stats.ITEM_USED.get(this)); // Proper stat tracking
+            serverPlayer.awardStat(Stats.ITEM_USED.get(this));
         }
 
         if (!world.isClientSide) {

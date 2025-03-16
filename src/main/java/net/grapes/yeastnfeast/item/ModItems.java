@@ -64,39 +64,39 @@ public class ModItems {
     // Feasts
     public static final RegistryObject<Item> SWEET_PORRIDGE = ITEMS.register("sweet_porridge",
             () -> new FeastItem(new Item.Properties().food(ModFoodProperties.SWEET_PORRIDGE).stacksTo(16),
-                    ModEffects.OVERFED_EFFECT, 4800, 0,
+                    ModEffects.OVERFED, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
     public static final RegistryObject<Item> SPICED_PORRIDGE = ITEMS.register("spiced_porridge",
             () -> new FeastItem(new Item.Properties().food(ModFoodProperties.SPICED_PORRIDGE).stacksTo(16),
-                    ModEffects.OVERFED_EFFECT, 4800, 0,
+                    ModEffects.OVERFED, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
     public static final RegistryObject<Item> BARLEY_AND_BEEF_STEW = ITEMS.register("barley_and_beef_stew",
             () -> new FeastItem(new Item.Properties().food(ModFoodProperties.BARLEY_AND_BEEF_STEW).stacksTo(16),
-                    ModEffects.OVERFED_EFFECT, 4800, 0,
+                    ModEffects.OVERFED, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
     public static final RegistryObject<Item> SALMON_CHOWDER = ITEMS.register("salmon_chowder",
             () -> new FeastItem(new Item.Properties().food(ModFoodProperties.SALMON_CHOWDER).stacksTo(16),
-                    ModEffects.OVERFED_EFFECT, 4800, 0,
+                    ModEffects.OVERFED, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
     public static final RegistryObject<Item> MEAD_BRAISED_PORK = ITEMS.register("mead_braised_pork",
             () -> new FeastItem(new Item.Properties().food(ModFoodProperties.MEAD_BRAISED_PORK).stacksTo(16),
-                    ModEffects.OVERFED_EFFECT, 4800, 0,
+                    ModEffects.VIGOROUS, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
     public static final RegistryObject<Item> HERBAL_COD = ITEMS.register("herbal_cod",
             () -> new FeastItem(new Item.Properties().food(ModFoodProperties.HERBAL_COD).stacksTo(16),
-                    ModEffects.OVERFED_EFFECT, 4800, 0,
+                    ModEffects.VIGOROUS, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
     public static final RegistryObject<Item> LEMON_GLAZED_CHICKEN = ITEMS.register("lemon_glazed_chicken",
             () -> new FeastItem(new Item.Properties().food(ModFoodProperties.LEMON_GLAZED_CHICKEN).stacksTo(16),
-                    ModEffects.OVERFED_EFFECT, 4800, 0,
+                    ModEffects.VIGOROUS, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
     public static final RegistryObject<Item> FORAGER_FEAST = ITEMS.register("forager_feast",
             () -> new FeastItem(new Item.Properties().food(ModFoodProperties.FORAGER_FEAST).stacksTo(16),
-                    ModEffects.OVERFED_EFFECT, 4800, 0,
+                    ModEffects.VIGOROUS, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
     public static final RegistryObject<Item> MAPLE_GLAZED_RABBIT = ITEMS.register("maple_glazed_rabbit",
             () -> new FeastItem(new Item.Properties().food(ModFoodProperties.MAPLE_GLAZED_RABBIT).stacksTo(16),
-                    ModEffects.OVERFED_EFFECT, 4800, 0,
+                    ModEffects.VIGOROUS, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
 
     // Baked Goods
@@ -168,7 +168,6 @@ public class ModItems {
             () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.SWEET_BERRIES_JAM)));
     
     // Wood-related Items
-
     public static final RegistryObject<Item> MAPLE_SIGN = ITEMS.register("maple_sign",
             () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.MAPLE_SIGN.get(),
                     ModBlocks.MAPLE_WALL_SIGN.get()));
@@ -183,8 +182,8 @@ public class ModItems {
     // Addon/Compat Items
     public static RegistryObject<Item> CHILLBERRIES_JAM;
     static {
-        if (ModList.get().isLoaded("farmersdelight")) {
-            CHILLBERRIES_JAM = ITEMS.register("witch_salad",
+        if (ModList.get().isLoaded("hexalia")) {
+            CHILLBERRIES_JAM = ITEMS.register("chillberries_jam",
                     () -> new Item(new Item.Properties().food(ModFoodProperties.CHILLBERRIES_JAM)));
         }
     }

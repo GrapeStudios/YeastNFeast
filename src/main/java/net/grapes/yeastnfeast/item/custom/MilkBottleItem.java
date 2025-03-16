@@ -8,6 +8,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 
@@ -22,19 +23,29 @@ public class MilkBottleItem extends Item {
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity user) {
         List<MobEffect> removableEffects = new ArrayList<>();
-
         for (MobEffectInstance effect : user.getActiveEffects()) {
-            if (effect.getEffect().isBeneficial()) {
+            if (!effect.getEffect().isBeneficial()) {
                 removableEffects.add(effect.getEffect());
             }
         }
-
         if (!removableEffects.isEmpty()) {
             MobEffect selectedEffect = removableEffects.get(level.random.nextInt(removableEffects.size()));
             user.removeEffect(selectedEffect);
         }
 
-        return super.finishUsingItem(stack, level, user);
+        if (user instanceof Player) {
+            Player player = (Player) user;
+            if (!player.getAbilities().instabuild) {
+                stack.shrink(1);
+                if (stack.isEmpty()) {
+                    return new ItemStack(Items.GLASS_BOTTLE);
+                } else {
+                    player.getInventory().add(new ItemStack(Items.GLASS_BOTTLE));
+                }
+            }
+        }
+
+        return stack;
     }
 
     @Override
@@ -53,6 +64,4 @@ public class MilkBottleItem extends Item {
     public UseAnim getUseAnimation(ItemStack pStack) {
         return UseAnim.DRINK;
     }
-
-
 }

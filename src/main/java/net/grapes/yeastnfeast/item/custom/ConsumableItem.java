@@ -18,17 +18,18 @@ public class ConsumableItem extends HoneyBottleItem {
 
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user) {
+        ItemStack copy = stack.copy(); // Make a copy of the original stack
         super.finishUsingItem(stack, world, user);
 
         if (user instanceof ServerPlayer serverPlayer) {
             serverPlayer.awardStat(Stats.ITEM_USED.get(this));
         }
 
-        if (!world.isClientSide && (stack.getItem() == ModItems.MOLASSES.get() || stack.getItem() == ModItems.MAPLE_SYRUP.get())) {
+        if (!world.isClientSide && (copy.getItem() == ModItems.MOLASSES.get() || copy.getItem() == ModItems.MAPLE_SYRUP.get())) {
             user.removeEffect(MobEffects.DIG_SLOWDOWN);
         }
 
-        boolean isSpecialItem = stack.getItem() == ModItems.MOLASSES.get() || stack.getItem() == ModItems.MAPLE_SYRUP.get();
+        boolean isSpecialItem = copy.getItem() == ModItems.MOLASSES.get() || copy.getItem() == ModItems.MAPLE_SYRUP.get();
         ItemStack returnStack = isSpecialItem ? new ItemStack(Items.GLASS_BOTTLE) : new ItemStack(ModItems.JAR.get());
 
         if (user instanceof Player player && !player.getAbilities().instabuild) {
@@ -41,6 +42,6 @@ public class ConsumableItem extends HoneyBottleItem {
             }
         }
 
-        return stack;
+        return stack.isEmpty() ? returnStack : stack;
     }
 }

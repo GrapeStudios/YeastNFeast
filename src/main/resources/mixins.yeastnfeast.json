@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "net.grapes.yeastnfeast.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"minVersion": "0.8",
+	"refmap": "mixins.yeastnfeast.refmap.json",
+	"mixins": [
+		"HealingMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

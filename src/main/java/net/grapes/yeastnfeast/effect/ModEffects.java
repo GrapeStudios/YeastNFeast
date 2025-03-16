@@ -15,10 +15,13 @@ public class ModEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS =
             DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, YeastNFeastMod.MOD_ID);
 
-    public static final RegistryObject<MobEffect> OVERFED_EFFECT = MOB_EFFECTS.register("overfed",
+    public static final RegistryObject<MobEffect> OVERFED = MOB_EFFECTS.register("overfed",
             () -> new OverfedEffect(MobEffectCategory.BENEFICIAL, 0xDCD789)
                     .addAttributeModifier(Attributes.MOVEMENT_SPEED, "BF8B6E3F-3328-4C0A-AA66-3BA6BB6DBEF6", -0.1f,
                             AttributeModifier.Operation.MULTIPLY_TOTAL));
+
+    public static final RegistryObject<MobEffect> VIGOROUS = MOB_EFFECTS.register("vigorous",
+            () -> new OverfedEffect(MobEffectCategory.BENEFICIAL, 0x90C19A));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

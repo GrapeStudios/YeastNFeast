@@ -17,12 +17,15 @@ import net.grapes.yeastnfeast.util.ModWoodTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -54,10 +57,18 @@ public class YeastNFeastMod {
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ModRegistries.registerCompostables();
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.MAPLE_SAPLING.getId(), ModBlocks.POTTED_MAPLE_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.LEMON_SAPLING.getId(), ModBlocks.POTTED_LEMON_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.HAWTHORN_SAPLING.getId(), ModBlocks.POTTED_HAWTHORN_SAPLING);
         });
     }
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTab() == ModCreativeModeTabs.YEASTNFEAST_TAB.get()) {
+            if (ModList.get().isLoaded("hexalia")) {
+                event.accept(ModItems.CHILLBERRIES_JAM);
+            }
+        }
     }
 
     @SubscribeEvent

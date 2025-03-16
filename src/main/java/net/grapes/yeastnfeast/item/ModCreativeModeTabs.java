@@ -18,7 +18,7 @@ public class ModCreativeModeTabs {
 
                 // Functional Blocks
                 output.accept(ModBlocks.KEG.get());
-                /*output.accept(ModBlocks.TREE_TAP.get());*/
+                output.accept(ModBlocks.TREE_TAP.get());
 
                 // Resources
                 output.accept(ModItems.YEAST.get());
