@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "has_keg": {
+    "has_yeast": {
       "conditions": {
         "items": [
           {
@@ -31,7 +31,7 @@
   },
   "requirements": [
     [
-      "has_keg"
+      "has_yeast"
     ]
   ],
   "sends_telemetry_event": true

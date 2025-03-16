@@ -30,6 +30,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+
         // Drops for Wild Crops
         addDrop(ModBlocks.WILD_BARLEY);
             this.addDrop(ModBlocks.WILD_BARLEY, ModItems.BARLEY_SEEDS);

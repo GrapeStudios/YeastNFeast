@@ -1,0 +1,41 @@
+{
+  "category": "yeastnfeast:food",
+  "name": "Mead",
+  "icon": "yeastnfeast:tankard",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Mead are beverages crafted on a Keg when Yeast and other ingredients are combined.$(br2)There are three types of mead:$(br2)- $(#cc0000)Sweet$() (Grants Resistance II)$(br)- $(#6a329f)Sour$() (Strength II)$(br)- $(#c90076)Floral$() (Regeneration II)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:tankard",
+      "text": "Each time a Mead item is crafted, it requires a Tankard, which is returned when consuming a Mead item."
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:honey_mead_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:molasses_mead_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:sour_mead_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:thornberry_mead_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:blossom_mead_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:amber_mead_from_keg"
+    }
+  ]
+}

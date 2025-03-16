@@ -34,7 +34,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         Text.translatable("advancements.yeastnfeast.root.desc"),
                         BACKGROUND, AdvancementFrame.TASK,
                         true, true, false))
-                .criterion("has_keg", InventoryChangedCriterion.Conditions.items(ModItems.YEAST))
+                .criterion("has_yeast", InventoryChangedCriterion.Conditions.items(ModItems.YEAST))
                 .build(consumer, YeastNFeastMod.MOD_ID + ":root");
 
         Advancement kegAdvancement = Advancement.Builder.create()
@@ -165,5 +165,15 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .criterion("eat_forager_feast", ConsumeItemCriterion.Conditions.item(ModItems.FORAGER_FEAST))
                 .criterion("eat_maple_rabbit", ConsumeItemCriterion.Conditions.item(ModItems.MAPLE_GLAZED_RABBIT))
                 .build(consumer, YeastNFeastMod.MOD_ID + ":plate");
+
+        Advancement mapleAdvancement = Advancement.Builder.create()
+                .display(new AdvancementDisplay(new ItemStack(ModBlocks.KEG),
+                        Text.translatable("advancements.yeastnfeast.maple.tile"),
+                        Text.translatable("advancements.yeastnfeast.maple.desc"),
+                        BACKGROUND, AdvancementFrame.TASK,
+                        true, true, false))
+                .parent(rootAdvancement)
+                .criterion("has_maple_syrup", InventoryChangedCriterion.Conditions.items(ModItems.MAPLE_SYRUP))
+                .build(consumer, YeastNFeastMod.MOD_ID + ":maple");
     }
 }

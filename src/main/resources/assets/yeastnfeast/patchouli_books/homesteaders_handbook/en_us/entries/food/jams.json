@@ -1,0 +1,53 @@
+{
+  "category": "yeastnfeast:food",
+  "name": "Jams",
+  "icon": "yeastnfeast:jar",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Jams are edible items that can be consumed to eat fruit more efficiently, while still retaining the effects of some of these, such as teleporting with Chorus Fruit Jam or the effects of the Golden Apple."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:jar",
+      "text": "Each time a Jam item is crafted, it requires a Jar, which is returned when consuming a Jam item."
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:apple_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:chorus_fruit_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:elderberries_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:golden_apple_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:hawthorn_berries_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:lemon_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:rose_hips_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:sweet_berries_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:melon_jam_from_keg"
+    }
+  ]
+}

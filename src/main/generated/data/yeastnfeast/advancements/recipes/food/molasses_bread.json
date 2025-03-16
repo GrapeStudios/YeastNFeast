@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rye": {
+    "has_molasses": {
       "conditions": {
         "items": [
           {
             "items": [
-              "yeastnfeast:rye"
+              "yeastnfeast:molasses"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_rye",
+      "has_molasses",
       "has_the_recipe"
     ]
   ],

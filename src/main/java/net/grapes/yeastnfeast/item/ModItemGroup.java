@@ -3,6 +3,7 @@ package net.grapes.yeastnfeast.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.grapes.yeastnfeast.block.ModBlocks;
+import net.grapes.yeastnfeast.util.ModUtils;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -93,6 +94,13 @@ public class ModItemGroup {
                         entries.add(ModItems.MELON_JAM);
                         entries.add(ModItems.ROSE_HIPS_JAM);
                         entries.add(ModItems.SWEET_BERRIES_JAM);
+                        if (ModUtils.isModLoaded("hexalia")) {
+                            entries.add(ModItems.CHILLBERRIES_JAM);
+                        }
+
+                        if (ModUtils.isModLoaded("patchouli")) {
+                            entries.add(ModItems.HOMESTEADERS_HANDBOOK);
+                        }
 
                         // Wood-Related Items
                         entries.add(ModBlocks.MAPLE_LEAVES);
@@ -117,6 +125,7 @@ public class ModItemGroup {
                         entries.add(ModBlocks.MAPLE_SAPLING);
                         entries.add(ModBlocks.LEMON_SAPLING);
                         entries.add(ModBlocks.HAWTHORN_SAPLING);
+
                     }).build());
 
     public static void registerItemGroups() {

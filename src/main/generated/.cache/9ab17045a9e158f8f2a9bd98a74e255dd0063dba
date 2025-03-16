@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-05T07:16:41.5198168	Yeast 'N Feast/Block Loot Tables
+// 1.20.1	2025-03-16T14:50:51.3500395	Yeast 'N Feast/Block Loot Tables
 0d4a493543f96c5743a43cdb66a3741736d0ccfa data\yeastnfeast\loot_tables\blocks\maple_leaves.json
 5fa714436bba6a37143d6248a01e4820420bbdeb data\yeastnfeast\loot_tables\blocks\maple_wood.json
 700b95054809a3edf70dcd64d84390741c85a25a data\yeastnfeast\loot_tables\blocks\mint_crop.json
@@ -18,8 +18,8 @@ b5587fe55fd9380f543d6d9e0777f942262b95f3 data\yeastnfeast\loot_tables\blocks\wil
 2ad5e0d5badd48bba19b0e92417328799c0a1704 data\yeastnfeast\loot_tables\blocks\bag_of_mint.json
 e80dc9eaff7024781aaba57bd4d32c3fce827459 data\yeastnfeast\loot_tables\blocks\stripped_maple_log.json
 820ae9e2e606e0a87f9e399ad6ae1a96aacacc84 data\yeastnfeast\loot_tables\blocks\bag_of_elderberries.json
-b92f18efa4bc78c226f2270dd7fd3be84f6bab23 data\yeastnfeast\loot_tables\blocks\keg.json
 795d33748380009e02c077394539364e7c855cd2 data\yeastnfeast\loot_tables\blocks\maple_hanging_sign.json
+b92f18efa4bc78c226f2270dd7fd3be84f6bab23 data\yeastnfeast\loot_tables\blocks\keg.json
 52da7d24963278363fcd1fa5c198a34da258d052 data\yeastnfeast\loot_tables\blocks\barley_crop.json
 aaf1cc369a9c3c4a790a0ef3e958e0665b57d295 data\yeastnfeast\loot_tables\blocks\flowering_hawthorn_tree_leaves.json
 8c3d8cb5b5ec7da90e80fdf661e8054dcf363d54 data\yeastnfeast\loot_tables\blocks\maple_sapling.json

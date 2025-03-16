@@ -1,5 +1,6 @@
 {
   "type": "yeastnfeast:keg",
+  "brew_time": 7200,
   "ingredients": [
     {
       "item": "yeastnfeast:hawthorn_berries"
@@ -8,7 +9,7 @@
       "item": "yeastnfeast:elderberries"
     },
     {
-      "item": "minecraft:sugar"
+      "item": "minecraft:sweet_berries"
     }
   ],
   "output": {

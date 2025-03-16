@@ -1,0 +1,28 @@
+{
+  "category": "yeastnfeast:world_gen",
+  "name": "Fruit Bearing Trees",
+  "icon": "yeastnfeast:lemon_sapling",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Lemon Tree",
+      "item": "yeastnfeast:lemon_sapling,yeastnfeast:lemon",
+      "text": "Lemon Trees are found in the Plains biome, and Lemons can be obtained from its flowering leaves. The flowering leaves produce Lemons every so often."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:lemon_sapling"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Hawthorn Tree",
+      "item": "yeastnfeast:hawthorn_sapling,yeastnfeast:hawthorn_berries",
+      "text": "Hawthorn Trees are found in the Forest biome, and Hawthorn Berries can be obtained from its flowering leaves. The flowering leaves produce Hawthorn Berries every so often."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:hawthorn_sapling"
+    }
+  ]
+}

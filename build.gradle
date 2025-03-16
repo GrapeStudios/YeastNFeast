@@ -24,6 +24,11 @@ repositories {
 			includeGroup "curse.maven"
 		}
 	}
+
+	maven {
+		name "patchouli"
+		url "https://maven.blamejared.com"
+	}
 }
 
 fabricApi {
@@ -47,6 +52,8 @@ dependencies {
 
 	// Other
 	// modCompileOnly "curse.maven:hexalia-962878:6207659"
+
+	modImplementation "vazkii.patchouli:Patchouli:${patchouli_version}"
 
 	modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:7.0.1"
 	include "com.terraformersmc.terraform-api:terraform-wood-api-v1:7.0.1"

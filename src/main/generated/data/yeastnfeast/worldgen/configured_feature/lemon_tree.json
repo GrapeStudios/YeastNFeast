@@ -32,7 +32,10 @@
           "data": {
             "Name": "yeastnfeast:flowering_lemon_tree_leaves",
             "Properties": {
-              "age": "2"
+              "age": "2",
+              "distance": "7",
+              "persistent": "false",
+              "waterlogged": "false"
             }
           },
           "weight": 1

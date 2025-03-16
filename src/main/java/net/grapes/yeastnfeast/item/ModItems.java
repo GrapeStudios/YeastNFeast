@@ -7,6 +7,7 @@ import net.grapes.yeastnfeast.block.ModBlocks;
 import net.grapes.yeastnfeast.effect.ModEffects;
 import net.grapes.yeastnfeast.entity.ModBoats;
 import net.grapes.yeastnfeast.item.custom.*;
+import net.grapes.yeastnfeast.item.custom.GuideBookItem;
 import net.grapes.yeastnfeast.util.ModUtils;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
@@ -180,6 +181,14 @@ public class ModItems {
         if (ModUtils.isModLoaded("hexalia")) {
             CHILLBERRIES_JAM = registerItem("chillberries_jam",
                     new Item(new FabricItemSettings().food(ModFoodComponents.CHILLBERRIES_JAM)));
+        }
+    }
+
+    public static Item HOMESTEADERS_HANDBOOK;
+    static {
+        if (ModUtils.isModLoaded("patchouli")) {
+            HOMESTEADERS_HANDBOOK = registerItem("homesteaders_handbook",
+                    new GuideBookItem(new FabricItemSettings()));
         }
     }
 

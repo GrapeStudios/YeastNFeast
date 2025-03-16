@@ -1,5 +1,6 @@
 {
   "type": "yeastnfeast:keg",
+  "brew_time": 3600,
   "ingredients": [
     {
       "item": "minecraft:golden_apple"
