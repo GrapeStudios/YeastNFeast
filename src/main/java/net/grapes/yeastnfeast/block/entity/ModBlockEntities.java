@@ -20,6 +20,11 @@ public class ModBlockEntities {
                     () -> BlockEntityType.Builder.of(KegBlockEntity::new,
                             ModBlocks.KEG.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<TreeTapBlockEntity>> TREE_TAP_BE =
+            BLOCK_ENTITIES.register("tree_tap_block_entity",
+                    () -> BlockEntityType.Builder.of(TreeTapBlockEntity::new,
+                            ModBlocks.TREE_TAP.get()).build(null));
+
     // Sign and Hanging Sign Entities
     public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> MOD_SIGN =
             BLOCK_ENTITIES.register("mod_sign", () ->

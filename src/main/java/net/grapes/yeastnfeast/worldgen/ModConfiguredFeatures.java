@@ -1,6 +1,5 @@
 package net.grapes.yeastnfeast.worldgen;
 
-import com.google.common.collect.ImmutableList;
 import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.grapes.yeastnfeast.block.ModBlocks;
 import net.grapes.yeastnfeast.block.custom.HawthornLeavesBlock;
@@ -22,7 +21,6 @@ import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConf
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.CherryFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
@@ -34,10 +32,13 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_BARLEY_KEY = registerKey("wild_barley");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_RYE_KEY = registerKey("wild_rye");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_GINGER_KEY = registerKey("wild_ginger");
-
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_GARLIC_KEY = registerKey("wild_garlic");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_MINT_KEY = registerKey("wild_mint");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MAPLE_KEY = registerKey("maple");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LEMON_TREE_KEY = registerKey("lemon_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HAWTHORN_TREE_KEY = registerKey("hawthorn_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ELDERBERRIES_KEY = registerKey("elderberries");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_HIPS_KEY = registerKey("rose_hips");
 
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -45,14 +46,28 @@ public class ModConfiguredFeatures {
 
         // Wild Crops
         register(context, WILD_BARLEY_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(3, 7, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                new RandomPatchConfiguration(2, 3, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_BARLEY.get())))));
         register(context, WILD_RYE_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(3, 7, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                new RandomPatchConfiguration(2, 3, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_RYE.get())))));
         register(context, WILD_GINGER_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(3, 7, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                new RandomPatchConfiguration(2, 3, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_GINGER.get())))));
+        register(context, WILD_GARLIC_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(2, 3, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_GARLIC.get())))));
+        register(context, WILD_MINT_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(2, 3, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_MINT.get())))));
+
+
+        register(context, ELDERBERRIES_KEY, Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(30, 8, 4, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ELDERBERRY_BUSH.get())))));
+        register(context, ROSE_HIPS_KEY, Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(30, 8, 4, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ROSE_HIPS_BUSH.get())))));
 
         // Trees
         register(context, MAPLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(

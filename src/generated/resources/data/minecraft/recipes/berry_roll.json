@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "forge:milk"
+    },
+    "P": {
+      "tag": "forge:grains/wheat"
+    },
+    "S": {
+      "item": "yeastnfeast:hawthorn_berries"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SPS",
+    "PHP"
+  ],
+  "result": {
+    "item": "yeastnfeast:berry_roll"
+  },
+  "show_notification": true
+}

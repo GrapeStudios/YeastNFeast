@@ -8,6 +8,7 @@ import net.grapes.yeastnfeast.entity.ModEntities;
 import net.grapes.yeastnfeast.entity.client.ModBoatRenderer;
 import net.grapes.yeastnfeast.item.ModCreativeModeTabs;
 import net.grapes.yeastnfeast.item.ModItems;
+import net.grapes.yeastnfeast.particle.ModParticles;
 import net.grapes.yeastnfeast.recipe.ModRecipes;
 import net.grapes.yeastnfeast.screen.KegScreen;
 import net.grapes.yeastnfeast.screen.ModMenuTypes;
@@ -47,6 +48,7 @@ public class YeastNFeastMod {
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModRecipes.register(modEventBus);
+        ModParticles.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

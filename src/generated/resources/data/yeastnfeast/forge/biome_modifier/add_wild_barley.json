@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "minecraft:forest",
+  "biomes": "#forge:is_plains",
   "features": "yeastnfeast:wild_barley_placed",
   "step": "vegetal_decoration"
 }

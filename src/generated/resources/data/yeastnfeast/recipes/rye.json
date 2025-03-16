@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rye",
+  "key": {
+    "#": {
+      "item": "yeastnfeast:rye"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "yeastnfeast:rye_block"
+  },
+  "show_notification": true
+}

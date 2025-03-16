@@ -19,13 +19,19 @@ public class KegRecipe implements Recipe<SimpleContainer> {
     private final Ingredient yeastSlot;
     private final ItemStack output;
     private final ResourceLocation id;
+    private final int brewTime;
 
-    public KegRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> recipeItems, Ingredient yeastSlot, Ingredient tankardSlot) {
+    public KegRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> recipeItems, Ingredient yeastSlot, Ingredient tankardSlot, int brewTime) {
         this.recipeItems = recipeItems;
         this.output = output;
         this.tankardSlot = tankardSlot;
         this.yeastSlot = yeastSlot;
         this.id = id;
+        this.brewTime = brewTime;
+    }
+
+    public int getBrewTime() {
+        return brewTime;
     }
 
     @Override
@@ -69,7 +75,6 @@ public class KegRecipe implements Recipe<SimpleContainer> {
 
         return true;
     }
-
 
     @Override
     public ItemStack assemble(SimpleContainer pContainer, RegistryAccess pRegistryAccess) {
@@ -136,8 +141,9 @@ public class KegRecipe implements Recipe<SimpleContainer> {
 
             Ingredient yeastSlot = Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "yeast_slot"));
             Ingredient tankardSlot = Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "tankard_slot"));
+            int brewTime = GsonHelper.getAsInt(json, "brew_time", 7200);
 
-            return new KegRecipe(id, output, inputs, yeastSlot, tankardSlot);
+            return new KegRecipe(id, output, inputs, yeastSlot, tankardSlot, brewTime);
         }
 
         @Override
@@ -151,8 +157,9 @@ public class KegRecipe implements Recipe<SimpleContainer> {
             ItemStack output = buf.readItem();
             Ingredient tankardSlot = Ingredient.fromNetwork(buf);
             Ingredient yeastSlot = Ingredient.fromNetwork(buf);
+            int brewTime = buf.readVarInt();
 
-            return new KegRecipe(id, output, inputs, tankardSlot, yeastSlot);
+            return new KegRecipe(id, output, inputs, tankardSlot, yeastSlot, brewTime);
         }
 
         @Override
@@ -164,6 +171,7 @@ public class KegRecipe implements Recipe<SimpleContainer> {
             buf.writeItem(recipe.getResultItem(null));
             recipe.tankardSlot.toNetwork(buf);
             recipe.yeastSlot.toNetwork(buf);
+            buf.writeVarInt(recipe.getBrewTime());
         }
     }
 }

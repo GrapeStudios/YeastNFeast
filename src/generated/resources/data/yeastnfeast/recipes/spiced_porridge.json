@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "yeastnfeast:garlic"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "yeastnfeast:rye"
+    },
+    {
+      "item": "yeastnfeast:ginger"
+    }
+  ],
+  "result": {
+    "item": "yeastnfeast:spiced_porridge"
+  }
+}

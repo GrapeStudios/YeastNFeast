@@ -1,0 +1,89 @@
+{
+  "parent": "yeastnfeast:crops",
+  "criteria": {
+    "eat_forager_feast": {
+      "conditions": {
+        "item": {
+          "items": [
+            "yeastnfeast:forager_feast"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "eat_herbal_cod": {
+      "conditions": {
+        "item": {
+          "items": [
+            "yeastnfeast:herbal_cod"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "eat_lemon_chicken": {
+      "conditions": {
+        "item": {
+          "items": [
+            "yeastnfeast:lemon_glazed_chicken"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "eat_maple_rabbit": {
+      "conditions": {
+        "item": {
+          "items": [
+            "yeastnfeast:maple_glazed_rabbit"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "eat_mead_pork": {
+      "conditions": {
+        "item": {
+          "items": [
+            "yeastnfeast:mead_braised_pork"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "yeastnfeast:textures/block/willow_log.png",
+    "description": {
+      "translate": "advancements.yeastnfeast.plate.desc"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "yeastnfeast:jar"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.yeastnfeast.plate.title"
+    }
+  },
+  "requirements": [
+    [
+      "eat_mead_pork"
+    ],
+    [
+      "eat_herbal_cod"
+    ],
+    [
+      "eat_lemon_chicken"
+    ],
+    [
+      "eat_forager_feast"
+    ],
+    [
+      "eat_maple_rabbit"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

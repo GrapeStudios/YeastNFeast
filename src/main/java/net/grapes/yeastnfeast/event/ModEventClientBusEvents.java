@@ -2,6 +2,9 @@ package net.grapes.yeastnfeast.event;
 
 import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.grapes.yeastnfeast.block.entity.ModBlockEntities;
+import net.grapes.yeastnfeast.particle.ModParticles;
+import net.grapes.yeastnfeast.particle.custom.DrippingSyrupParticle;
+import net.grapes.yeastnfeast.particle.custom.MapleLeavesParticle;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraftforge.api.distmarker.Dist;
@@ -15,7 +18,8 @@ public class ModEventClientBusEvents {
 
     @SubscribeEvent
     public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
-        // event.registerSpriteSet(ModParticles.SPORE_PARTICLE.get(), SporeParticle.Provider::new);
+        event.registerSpriteSet(ModParticles.MAPLE_LEAVES.get(), MapleLeavesParticle.Factory::new);
+        event.registerSpriteSet(ModParticles.DRIPPING_SYRUP.get(), DrippingSyrupParticle.Factory::new);
     }
 
     @SubscribeEvent

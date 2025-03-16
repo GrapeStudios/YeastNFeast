@@ -1,6 +1,7 @@
 package net.grapes.yeastnfeast.worldgen;
 
 import net.grapes.yeastnfeast.YeastNFeastMod;
+import net.grapes.yeastnfeast.util.ModTags;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -22,25 +23,51 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_WILD_RYE = registerKey("add_wild_rye");
     public static final ResourceKey<BiomeModifier> ADD_WILD_GINGER = registerKey("add_wild_ginger");
 
+    public static final ResourceKey<BiomeModifier> ADD_WILD_GARLIC = registerKey("add_wild_garlic");
+    public static final ResourceKey<BiomeModifier> ADD_WILD_MINT = registerKey("add_wild_mint");
+    public static final ResourceKey<BiomeModifier> ADD_ELDERBERRIES_BUSH = registerKey("add_elderberries_bush");
+    public static final ResourceKey<BiomeModifier> ADD_ROSE_HIPS = registerKey("add_rose_hips");
+
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
         Optional<Holder.Reference<Biome>> taigaBiome = biomes.get(Biomes.TAIGA);
         Optional<Holder.Reference<Biome>> forestBiome = biomes.get(Biomes.FOREST);
+        Optional<Holder.Reference<Biome>> darkForestBiome = biomes.get(Biomes.DARK_FOREST);
 
         context.register(ADD_WILD_BARLEY, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(forestBiome.get()),
+                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_BARLEY_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_WILD_RYE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
+                HolderSet.direct(forestBiome.get()),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_RYE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_WILD_GARLIC, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_GARLIC_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_WILD_MINT, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(forestBiome.get()),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_MINT_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_WILD_GINGER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(taigaBiome.get()),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_GINGER_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_ELDERBERRIES_BUSH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(darkForestBiome.get()),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ELDERBERRIES_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_ROSE_HIPS, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(darkForestBiome.get()),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ROSE_HIPS_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 

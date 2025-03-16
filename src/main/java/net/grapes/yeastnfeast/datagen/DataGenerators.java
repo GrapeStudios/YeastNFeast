@@ -4,6 +4,8 @@ import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.BiomeTagsProvider;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.data.ForgeAdvancementProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -22,12 +24,17 @@ public class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));
-        generator.addProvider(event.includeServer(), new ForgeAdvancementProvider(packOutput, lookupProvider,
-                existingFileHelper, List.of(new ModAdvancementsProvider())));
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
+        generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));
+
+        BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
+        BiomeTagsProvider biomeTagsProvider = new ModBiomeTagProvider(packOutput, lookupProvider, existingFileHelper);
+
+        generator.addProvider(event.includeServer(), blockTagsProvider);
+        generator.addProvider(event.includeServer(), biomeTagsProvider);
+        generator.addProvider(event.includeServer(), new ModItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
+
+        generator.addProvider(event.includeClient(), new ForgeAdvancementProvider(packOutput, lookupProvider, existingFileHelper, List.of(new ModAdvancementsProvider())));
 
         generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
     }

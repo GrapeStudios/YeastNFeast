@@ -8,6 +8,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -42,15 +44,21 @@ public class KegBlockEntity extends BlockEntity implements MenuProvider {
 
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-            return switch (slot){
+            Item item = stack.getItem();
+
+            return switch (slot) {
                 case 3 -> false;
-                case 4 -> stack.getItem() == ModItems.YEAST.get()
-                        || stack.getItem() == Items.SUGAR;
-                case 5 -> stack.getItem() == ModItems.TANKARD.get()
-                        || stack.getItem() == ModItems.JAR.get();
-                default -> super.isItemValid(slot, stack);
+                case 4 -> item == ModItems.YEAST.get() || item == Items.SUGAR;
+                case 5 -> item == ModItems.TANKARD.get() || item == ModItems.JAR.get();
+                default -> item != ModItems.YEAST.get()
+                        && item != ModItems.JAR.get()
+                        && item != ModItems.TANKARD.get()
+                        && item != Items.SUGAR
+                        && super.isItemValid(slot, stack);
             };
         }
+
+
     };
 
     public static final int INPUT_SLOT_1 = 0;
@@ -64,7 +72,7 @@ public class KegBlockEntity extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 60;
+    private int maxProgress = 7200;
 
     public KegBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.KEG_BE.get(), pPos, pBlockState);
@@ -72,8 +80,8 @@ public class KegBlockEntity extends BlockEntity implements MenuProvider {
             @Override
             public int get(int pIndex) {
                 return switch (pIndex) {
-                  case 0 -> KegBlockEntity.this.progress;
-                  case 1 -> KegBlockEntity.this.maxProgress;
+                    case 0 -> KegBlockEntity.this.progress;
+                    case 1 -> KegBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -146,6 +154,11 @@ public class KegBlockEntity extends BlockEntity implements MenuProvider {
 
     public void tick(Level level, BlockPos pPos, BlockState pState) {
         if (isOutputSlotEmptyOrReceivable() && hasRecipe()) {
+            Optional<KegRecipe> recipe = getCurrentRecipe();
+            if (recipe.isPresent()) {
+                this.maxProgress = recipe.get().getBrewTime();
+            }
+
             increaseCraftingProgress();
             setChanged(level, pPos, pState);
             if (hasProgressFinished()){
@@ -156,6 +169,7 @@ public class KegBlockEntity extends BlockEntity implements MenuProvider {
             resetProgress();
         }
     }
+
 
     private void craftItem() {
         Optional<KegRecipe> recipe = getCurrentRecipe();
@@ -186,6 +200,10 @@ public class KegBlockEntity extends BlockEntity implements MenuProvider {
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(resultItem.getItem(),
                 this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + resultItem.getCount()));
+
+        if (!level.isClientSide()) {
+            level.playSound(null, getBlockPos(), SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 1.0f, 1.0f);
+        }
     }
 
     private void resetProgress() {

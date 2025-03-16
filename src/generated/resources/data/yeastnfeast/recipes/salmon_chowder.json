@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "yeastnfeast:lemon"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "tag": "forge:cooked_fishes/salmon"
+    }
+  ],
+  "result": {
+    "item": "yeastnfeast:salmon_chowder"
+  }
+}

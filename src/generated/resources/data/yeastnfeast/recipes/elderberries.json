@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "elderberries",
+  "key": {
+    "#": {
+      "item": "yeastnfeast:elderberries"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "yeastnfeast:bag_of_elderberries"
+  },
+  "show_notification": true
+}

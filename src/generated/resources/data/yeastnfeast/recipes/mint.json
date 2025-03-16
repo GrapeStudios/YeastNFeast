@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "mint",
+  "key": {
+    "#": {
+      "item": "yeastnfeast:mint"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "yeastnfeast:bag_of_mint"
+  },
+  "show_notification": true
+}

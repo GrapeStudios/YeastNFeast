@@ -1,0 +1,79 @@
+{
+  "parent": "yeastnfeast:root",
+  "criteria": {
+    "has_crop": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:elderberries"
+            ]
+          },
+          {
+            "items": [
+              "yeastnfeast:hawthorn_berries"
+            ]
+          },
+          {
+            "items": [
+              "yeastnfeast:lemon"
+            ]
+          },
+          {
+            "items": [
+              "yeastnfeast:rose_hips"
+            ]
+          },
+          {
+            "items": [
+              "yeastnfeast:garlic"
+            ]
+          },
+          {
+            "items": [
+              "yeastnfeast:barley"
+            ]
+          },
+          {
+            "items": [
+              "yeastnfeast:rye"
+            ]
+          },
+          {
+            "items": [
+              "yeastnfeast:mint"
+            ]
+          },
+          {
+            "items": [
+              "yeastnfeast:ginger"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "yeastnfeast:textures/block/willow_log.png",
+    "description": {
+      "translate": "advancements.yeastnfeast.crops.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "yeastnfeast:jar"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.yeastnfeast.crops.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_crop"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

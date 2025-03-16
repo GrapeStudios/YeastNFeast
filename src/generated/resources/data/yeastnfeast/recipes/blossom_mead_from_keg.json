@@ -1,5 +1,6 @@
 {
   "type": "yeastnfeast:keg",
+  "brew_time": 7200,
   "ingredients": [
     {
       "item": "yeastnfeast:rose_hips"

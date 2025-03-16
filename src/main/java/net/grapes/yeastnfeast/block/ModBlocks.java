@@ -44,7 +44,7 @@ public class ModBlocks {
 
     // Functional Blocks
     public static final RegistryObject<Block> TREE_TAP = registerBlock("tree_tap",
-            () -> new KegBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
+            () -> new TreeTapBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
     public static final RegistryObject<Block> KEG = registerBlock("keg",
             () -> new KegBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
 
@@ -89,8 +89,6 @@ public class ModBlocks {
             () -> new SaplingBlock(new LemonTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).strength(0.2f)));
     public static final RegistryObject<Block> POTTED_LEMON_SAPLING = BLOCKS.register("potted_lemon_sapling",
             () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), LEMON_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)));
-
-
     public static final RegistryObject<Block> FLOWERING_HAWTHORN_TREE_LEAVES  = registerBlock("flowering_hawthorn_tree_leaves",
             () -> new HawthornLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(0.2f)));
     public static final RegistryObject<Block> HAWTHORN_TREE_LEAVES = registerBlock("hawthorn_tree_leaves",
@@ -102,7 +100,7 @@ public class ModBlocks {
 
     // Wood-related Blocks
     public static final RegistryObject<Block> MAPLE_LEAVES = registerBlock("maple_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(0.2f)));
+            () -> new MapleLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(0.2f)));
     public static final RegistryObject<Block> MAPLE_SAPLING = registerBlock("maple_sapling",
             () -> new SaplingBlock(new MapleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).strength(0.2f)));
     public static final RegistryObject<Block> POTTED_MAPLE_SAPLING = BLOCKS.register("potted_maple_sapling",

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "yeastnfeast:mint"
+    },
+    {
+      "item": "yeastnfeast:ginger"
+    },
+    {
+      "item": "yeastnfeast:lemon"
+    },
+    {
+      "tag": "forge:cooked_fishes/cod"
+    }
+  ],
+  "result": {
+    "item": "yeastnfeast:herbal_cod"
+  }
+}

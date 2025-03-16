@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "hawthorn_berries",
+  "key": {
+    "#": {
+      "item": "yeastnfeast:hawthorn_berries"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "yeastnfeast:bag_of_hawthorn_berries"
+  },
+  "show_notification": true
+}
