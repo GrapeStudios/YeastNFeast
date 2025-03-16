@@ -1,0 +1,23 @@
+{
+  "type": "yeastnfeast:keg",
+  "ingredients": [
+    {
+      "item": "hexalia:chillberries"
+    },
+    {
+      "item": "hexalia:chillberries"
+    },
+    {
+      "item": "hexalia:chillberries"
+    }
+  ],
+  "output": {
+    "item": "yeastnfeast:chillberries_jam"
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:jar"
+  },
+  "yeast_slot": {
+    "item": "minecraft:sugar"
+  }
+}

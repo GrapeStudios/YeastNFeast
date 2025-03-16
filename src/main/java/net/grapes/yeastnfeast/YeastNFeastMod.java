@@ -68,6 +68,10 @@ public class YeastNFeastMod {
             if (ModList.get().isLoaded("hexalia")) {
                 event.accept(ModItems.CHILLBERRIES_JAM);
             }
+
+            if (ModList.get().isLoaded("patchouli")) {
+                event.accept(ModItems.HOMESTEADERS_HANDBOOK);
+            }
         }
     }
 

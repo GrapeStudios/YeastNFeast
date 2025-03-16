@@ -7,9 +7,7 @@ import net.grapes.yeastnfeast.util.ModTags;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
@@ -46,7 +44,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('H', ModTags.Items.MILK)
                 .unlockedBy("has_elderberries", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.ELDERBERRIES.get()).build()))
-                .save(pWriter, new ResourceLocation(getSimpleRecipeName(ModItems.ELDERBERRY_PIE.get())));
+                .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.ROSE_TART.get())
                 .pattern(" S ")
@@ -58,7 +56,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('H', ModTags.Items.MILK)
                 .unlockedBy("has_rose_hips", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.ROSE_HIPS.get()).build()))
-                .save(pWriter, new ResourceLocation(getSimpleRecipeName(ModItems.ROSE_TART.get())));
+                .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.APPLE_PIE.get())
                 .pattern(" S ")
@@ -70,7 +68,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('H', ModTags.Items.MILK)
                 .unlockedBy("has_apple", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.APPLE).build()))
-                .save(pWriter, new ResourceLocation(getSimpleRecipeName(ModItems.APPLE_PIE.get())));
+                .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.BERRY_ROLL.get())
                 .pattern(" S ")
@@ -81,7 +79,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('H', ModTags.Items.MILK)
                 .unlockedBy("has_hawthorn_berries", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.HAWTHORN_BERRIES.get()).build()))
-                .save(pWriter, new ResourceLocation(getSimpleRecipeName(ModItems.BERRY_ROLL.get())));
+                .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TREE_TAP.get())
                 .pattern(" H")
@@ -91,7 +89,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('H', Items.IRON_NUGGET)
                 .unlockedBy("has_hawthorn_berries", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.HAWTHORN_BERRIES.get()).build()))
-                .save(pWriter, new ResourceLocation(getSimpleRecipeName(ModBlocks.TREE_TAP.get())));
+                .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.KEG.get())
                 .pattern("PSP")
@@ -99,7 +97,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', Blocks.BARREL)
                 .unlockedBy("has_barrel", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Blocks.BARREL).build()))
-                .save(pWriter, new ResourceLocation(getSimpleRecipeName(ModBlocks.KEG.get())));
+                .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.JAR.get(), 2)
                 .pattern("PSP")
@@ -108,7 +106,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ItemTags.PLANKS)
                 .unlockedBy("has_glass", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Blocks.GLASS).build()))
-                .save(pWriter, new ResourceLocation(getSimpleRecipeName(ModItems.JAR.get())));
+                .save(pWriter);
 
         // Shapeless Recipes
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.YEAST.get())
@@ -281,6 +279,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.SUGAR_CANE).build()))
                 .save(pWriter);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HOMESTEADERS_HANDBOOK.get())
+                .requires(Items.BOOK)
+                .requires(ModTags.Items.CROPS)
+                .unlockedBy("has_book",
+                        inventoryTrigger(ItemPredicate.Builder.item().of(Items.BOOK).build()))
+                .save(pWriter);
+
         // Convertible for Storage Bags
         nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.ELDERBERRIES.get(), RecipeCategory.MISC, ModBlocks.BAG_OF_ELDERBERRIES.get(),
                 "yeastnfeast:elderberries", "elderberries","yeastnfeast:bag_of_elderberries", "elderberries");
@@ -340,6 +345,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         new KegRecipeBuilder(List.of(ModItems.BARLEY.get(), ModItems.MOLASSES.get(), Items.SUGAR_CANE),
                 ModItems.TANKARD.get(), ModItems.YEAST.get(),
                 ModItems.MOLASSES_MEAD.get(), 7200)
+                .unlockedBy("has_tankard", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.TANKARD.get()).build()))
+                .save(pWriter);
+
+        new KegRecipeBuilder(List.of(ModItems.ELDERBERRIES.get(), ModItems.LEMON.get(), ModItems.GINGER.get()),
+                ModItems.TANKARD.get(), ModItems.YEAST.get(),
+                ModItems.SOUR_MEAD.get(), 7200)
                 .unlockedBy("has_tankard", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.TANKARD.get()).build()))
                 .save(pWriter);
 

@@ -1,5 +1,5 @@
 {
-  "parent": "yeastnfeast:crops",
+  "parent": "yeastnfeast:crops.json",
   "criteria": {
     "eat_barley_stew": {
       "conditions": {

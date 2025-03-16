@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_hawthorn_berries": {
+    "has_barrel": {
       "conditions": {
         "items": [
           {
             "items": [
-              "yeastnfeast:hawthorn_berries"
+              "minecraft:barrel"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:berry_roll"
+        "recipe": "yeastnfeast:keg"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_hawthorn_berries",
+      "has_barrel",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:berry_roll"
+      "yeastnfeast:keg"
     ]
   },
   "sends_telemetry_event": false

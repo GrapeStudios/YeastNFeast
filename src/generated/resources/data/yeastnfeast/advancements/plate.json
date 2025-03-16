@@ -1,5 +1,5 @@
 {
-  "parent": "yeastnfeast:crops",
+  "parent": "yeastnfeast:crops.json",
   "criteria": {
     "eat_forager_feast": {
       "conditions": {

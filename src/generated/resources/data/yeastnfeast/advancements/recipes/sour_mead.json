@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_barrel": {
+    "has_tankard": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:barrel"
+              "yeastnfeast:tankard"
             ]
           }
         ]
@@ -15,21 +15,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:keg"
+        "recipe": "yeastnfeast:sour_mead"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_barrel",
+      "has_tankard",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:keg"
+      "yeastnfeast:sour_mead"
     ]
   },
-  "sends_telemetry_event": false
+  "sends_telemetry_event": true
 }

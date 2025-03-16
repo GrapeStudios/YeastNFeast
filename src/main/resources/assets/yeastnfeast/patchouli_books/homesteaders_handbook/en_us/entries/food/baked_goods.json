@@ -1,0 +1,40 @@
+{
+  "category": "yeastnfeast:food",
+  "name": "Baked Goods",
+  "icon": "yeastnfeast:barley_bread",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Baked Goods are food items mostly made out of yeast. These items serve as a more varied type of food."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:barley_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:rye_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:molasses_bread"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:berry_roll"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:rose_tart"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:elderberry_pie"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:apple_pie"
+    }
+  ]
+}

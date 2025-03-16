@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "minecraft:dark_forest",
+  "biomes": "#yeastnfeast:has_rose_hips",
   "features": "yeastnfeast:rose_hips_placed",
   "step": "vegetal_decoration"
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_elderberries": {
+    "has_hawthorn_berries": {
       "conditions": {
         "items": [
           {
             "items": [
-              "yeastnfeast:elderberries"
+              "yeastnfeast:hawthorn_berries"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:elderberry_pie"
+        "recipe": "yeastnfeast:tree_tap"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_elderberries",
+      "has_hawthorn_berries",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:elderberry_pie"
+      "yeastnfeast:tree_tap"
     ]
   },
   "sends_telemetry_event": false

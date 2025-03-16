@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_glass": {
+    "has_rose_hips": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:glass"
+              "yeastnfeast:rose_hips"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:jar"
+        "recipe": "yeastnfeast:rose_tart"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_glass",
+      "has_rose_hips",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:jar"
+      "yeastnfeast:rose_tart"
     ]
   },
   "sends_telemetry_event": false

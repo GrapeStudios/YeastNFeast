@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_apple": {
+    "has_book": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:apple"
+              "minecraft:book"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:apple_pie"
+        "recipe": "yeastnfeast:homesteaders_handbook"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_apple",
+      "has_book",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:apple_pie"
+      "yeastnfeast:homesteaders_handbook"
     ]
   },
   "sends_telemetry_event": false

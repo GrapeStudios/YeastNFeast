@@ -28,6 +28,10 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_ELDERBERRIES_BUSH = registerKey("add_elderberries_bush");
     public static final ResourceKey<BiomeModifier> ADD_ROSE_HIPS = registerKey("add_rose_hips");
 
+    public static final ResourceKey<BiomeModifier> ADD_MAPLE_TREE = registerKey("add_maple_tree");
+    public static final ResourceKey<BiomeModifier> ADD_LEMON_TREE = registerKey("add_lemon_tree");
+    public static final ResourceKey<BiomeModifier> ADD_HAWTHORN_TREE = registerKey("add_hawthorn_tree");
+
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -66,8 +70,24 @@ public class ModBiomeModifiers {
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_ROSE_HIPS, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(darkForestBiome.get()),
+                biomes.getOrThrow(ModTags.Biomes.HAS_ROSE_HIPS),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ROSE_HIPS_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        // Trees
+        context.register(ADD_MAPLE_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(forestBiome.get()),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MAPLE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_HAWTHORN_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(forestBiome.get()),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.HAWTHORN_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_LEMON_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.LEMON_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 

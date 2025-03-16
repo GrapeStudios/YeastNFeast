@@ -119,7 +119,7 @@ public class ModAdvancementsProvider implements ForgeAdvancementProvider.Advance
                                         ModItems.LEMON.get(), ModItems.ROSE_HIPS.get(), ModItems.GARLIC.get(),
                                         ModItems.BARLEY.get(), ModItems.RYE.get(), ModItems.MINT.get(),
                                         ModItems.GINGER.get()))
-                .save(saver, new ResourceLocation(YeastNFeastMod.MOD_ID, "crops"), existingFileHelper);
+                .save(saver, new ResourceLocation(YeastNFeastMod.MOD_ID, "crops.json"), existingFileHelper);
 
         Advancement berryRollAdvancement = Advancement.Builder.advancement()
                 .display(new DisplayInfo(new ItemStack(ModItems.JAR.get()),

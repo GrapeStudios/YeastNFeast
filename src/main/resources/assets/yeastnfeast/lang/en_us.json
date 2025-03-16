@@ -150,5 +150,8 @@
   "item.yeastnfeast.maple_boat": "Maple Boat",
   "item.yeastnfeast.maple_chest_boat": "Maple Chest Boat",
   "block.yeastnfeast.maple_sign": "Maple Sign",
-  "block.yeastnfeast.maple_hanging_sign": "Maple Hanging Sign"
+  "block.yeastnfeast.maple_hanging_sign": "Maple Hanging Sign",
+
+  "item.yeastnfeast.homesteaders_handbook": "Homesteader’s Handbook",
+  "item.yeastnfeast.homesteaders_handbook.landing_text": "A well-detailed handbook is your trusted guide to mastering the art of fermentation, baking, and crafting delicious feasts."
 }
