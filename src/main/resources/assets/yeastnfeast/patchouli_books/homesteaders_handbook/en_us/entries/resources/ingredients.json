@@ -16,7 +16,7 @@
     {
       "type": "patchouli:spotlight",
       "item": "yeastnfeast:maple_syrup",
-      "text": "Maple Syrup can be obtained from a $(l:yeastnfeast:blocks/tree_tap)Tree Tap$(). When consumed, it cleanses the player of Weakness."
+      "text": "Maple Syrup can be obtained from a $(l:yeastnfeast:blocks/tree_tap)Tree Tap$(). When consumed, it cleanses the player of Mining Fatigue."
     },
     {
       "type": "patchouli:image",
@@ -29,7 +29,7 @@
     {
       "type": "patchouli:crafting",
       "recipe": "yeastnfeast:molasses",
-      "text": "Molasses can be obtained from Sugar Canes. When consumed, it cleanses the player of Weakness."
+      "text": "Molasses can be obtained from Sugar Canes. When consumed, it cleanses the player of Mining Fatigue."
     },
     {
       "type": "patchouli:crafting",
