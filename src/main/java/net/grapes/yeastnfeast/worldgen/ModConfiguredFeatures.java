@@ -2,7 +2,9 @@ package net.grapes.yeastnfeast.worldgen;
 
 import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.grapes.yeastnfeast.block.ModBlocks;
+import net.grapes.yeastnfeast.block.custom.ElderberryBushBlock;
 import net.grapes.yeastnfeast.block.custom.HawthornLeavesBlock;
+import net.grapes.yeastnfeast.block.custom.RoseHipsBushBlock;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -13,6 +15,7 @@ import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -61,13 +64,15 @@ public class ModConfiguredFeatures {
                 new RandomPatchConfiguration(2, 3, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_MINT.get())))));
 
-
+        // FIXED DEFAULT STATE
         register(context, ELDERBERRIES_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchConfiguration(30, 8, 4, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ELDERBERRY_BUSH.get())))));
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ELDERBERRY_BUSH.get().defaultBlockState()
+                                .setValue(ElderberryBushBlock.AGE, 3))))));
         register(context, ROSE_HIPS_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchConfiguration(30, 8, 4, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ROSE_HIPS_BUSH.get())))));
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ROSE_HIPS_BUSH.get().defaultBlockState()
+                                .setValue(RoseHipsBushBlock.AGE, 3))))));
 
         // Trees
         register(context, MAPLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(

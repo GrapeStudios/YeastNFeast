@@ -6,7 +6,7 @@
       "item": "minecraft:book"
     },
     {
-      "tag": "forge:crops.json"
+      "tag": "forge:crops"
     }
   ],
   "result": {

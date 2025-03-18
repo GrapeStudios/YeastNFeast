@@ -2,6 +2,7 @@ package net.grapes.yeastnfeast.effect;
 
 import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.grapes.yeastnfeast.effect.custom.OverfedEffect;
+import net.grapes.yeastnfeast.effect.custom.VigorousEffect;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -21,7 +22,7 @@ public class ModEffects {
                             AttributeModifier.Operation.MULTIPLY_TOTAL));
 
     public static final RegistryObject<MobEffect> VIGOROUS = MOB_EFFECTS.register("vigorous",
-            () -> new OverfedEffect(MobEffectCategory.BENEFICIAL, 0x90C19A));
+            () -> new VigorousEffect(MobEffectCategory.BENEFICIAL, 0x90C19A));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

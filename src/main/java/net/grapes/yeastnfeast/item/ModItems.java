@@ -154,9 +154,9 @@ public class ModItems {
     public static final RegistryObject<Item> ELDERBERRIES_JAM = ITEMS.register("elderberries_jam",
             () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.ELDERBERRIES_JAM)));
     public static final RegistryObject<Item> GLOW_BERRIES_JAM  = ITEMS.register("glow_berries_jam",
-            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.GLOW_BERRIES_JAM )));
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.GLOW_BERRIES_JAM)));
     public static final RegistryObject<Item> GOLDEN_APPLE_JAM = ITEMS.register("golden_apple_jam",
-            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.GOLDEN_APPLE_JAM )));
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.GOLDEN_APPLE_JAM).rarity(Rarity.RARE)));
     public static final RegistryObject<Item> HAWTHORN_BERRIES_JAM = ITEMS.register("hawthorn_berries_jam",
             () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.HAWTHORN_BERRIES_JAM)));
     public static final RegistryObject<Item> LEMON_JAM = ITEMS.register("lemon_jam",

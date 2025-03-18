@@ -18,7 +18,7 @@ public class ConsumableItem extends HoneyBottleItem {
 
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user) {
-        ItemStack copy = stack.copy(); // Make a copy of the original stack
+        ItemStack copy = stack.copy();
         super.finishUsingItem(stack, world, user);
 
         if (user instanceof ServerPlayer serverPlayer) {

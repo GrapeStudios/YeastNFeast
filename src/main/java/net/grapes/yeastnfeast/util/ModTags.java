@@ -18,7 +18,7 @@ public class ModTags {
 
         // Conventional Item Tags
         public static final TagKey<Item> BREAD = forgeItemTag("bread");
-        public static final TagKey<Item> CROPS = forgeItemTag("crops.json");
+        public static final TagKey<Item> CROPS = forgeItemTag("crops");
         public static final TagKey<Item> BERRIES = forgeItemTag("berries");
         public static final TagKey<Item> VEGETABLES = forgeItemTag("vegetables");
         public static final TagKey<Item> GRAINS = forgeItemTag("grains");

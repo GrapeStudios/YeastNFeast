@@ -54,14 +54,14 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "yeastnfeast:textures/block/willow_log.png",
+    "background": "yeastnfeast:textures/block/maple_log.png",
     "description": {
       "translate": "advancements.yeastnfeast.plate.desc"
     },
     "frame": "challenge",
     "hidden": false,
     "icon": {
-      "item": "yeastnfeast:jar"
+      "item": "yeastnfeast:maple_glazed_rabbit"
     },
     "show_toast": true,
     "title": {

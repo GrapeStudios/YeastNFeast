@@ -25,10 +25,10 @@ public class ModFoodProperties {
 
 
     // Baked Goods
-    public static FoodProperties BERRY_ROLL = new FoodProperties.Builder().nutrition(4).saturationMod(0.5f).build();
-    public static FoodProperties ROSE_TART = new FoodProperties.Builder().nutrition(8).saturationMod(0.6f).build();
-    public static FoodProperties ELDERBERRY_PIE = new FoodProperties.Builder().nutrition(8).saturationMod(0.6f).build();
-    public static FoodProperties APPLE_PIE = new FoodProperties.Builder().nutrition(8).saturationMod(0.6f).build();
+    public static FoodProperties BERRY_ROLL = new FoodProperties.Builder().nutrition(8).saturationMod(0.6f).build();
+    public static FoodProperties ROSE_TART = new FoodProperties.Builder().nutrition(10).saturationMod(0.8f).build();
+    public static FoodProperties ELDERBERRY_PIE = new FoodProperties.Builder().nutrition(10).saturationMod(0.8f).build();
+    public static FoodProperties APPLE_PIE = new FoodProperties.Builder().nutrition(10).saturationMod(0.8f).build();
 
     // Feasts
     public static final FoodProperties SWEET_PORRIDGE = new FoodProperties.Builder().nutrition(10).saturationMod(0.6f).build();

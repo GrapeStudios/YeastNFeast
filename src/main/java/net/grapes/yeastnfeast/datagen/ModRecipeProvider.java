@@ -206,6 +206,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.COOKED_MUTTON).build()))
                 .save(pWriter);
 
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MAPLE_GLAZED_RABBIT.get())
+                .requires(Items.BOWL)
+                .requires(ModItems.MAPLE_SYRUP.get())
+                .requires(ModItems.BARLEY.get())
+                .requires(Items.BEETROOT)
+                .requires(Items.COOKED_RABBIT)
+                .unlockedBy("has_cooked_rabbit", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.COOKED_RABBIT).build()))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SALMON_CHOWDER.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.LEMON.get())

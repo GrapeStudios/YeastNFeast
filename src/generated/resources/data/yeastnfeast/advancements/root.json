@@ -15,7 +15,7 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "yeastnfeast:textures/block/willow_log.png",
+    "background": "yeastnfeast:textures/block/maple_log.png",
     "description": {
       "translate": "advancements.yeastnfeast.root.desc"
     },

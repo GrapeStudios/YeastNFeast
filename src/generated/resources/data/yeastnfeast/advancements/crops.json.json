@@ -56,14 +56,14 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "yeastnfeast:textures/block/willow_log.png",
+    "background": "yeastnfeast:textures/block/maple_log.png",
     "description": {
       "translate": "advancements.yeastnfeast.crops.desc"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "yeastnfeast:jar"
+      "item": "yeastnfeast:barley"
     },
     "show_toast": true,
     "title": {

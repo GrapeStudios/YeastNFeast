@@ -20,7 +20,7 @@ import java.util.function.Consumer;
 public class ModAdvancementsProvider implements ForgeAdvancementProvider.AdvancementGenerator {
 
     public static final ResourceLocation BACKGROUND =
-            new ResourceLocation(YeastNFeastMod.MOD_ID, "textures/block/willow_log.png");
+            new ResourceLocation(YeastNFeastMod.MOD_ID, "textures/block/maple_log.png");
 
     @Override
     public void generate(HolderLookup.Provider registries, Consumer<Advancement> saver, ExistingFileHelper existingFileHelper) {
@@ -107,7 +107,7 @@ public class ModAdvancementsProvider implements ForgeAdvancementProvider.Advance
                 .save(saver, new ResourceLocation(YeastNFeastMod.MOD_ID, "jam"), existingFileHelper);
 
         Advancement cropsAdvancement = Advancement.Builder.advancement()
-                .display(new DisplayInfo(new ItemStack(ModItems.JAR.get()),
+                .display(new DisplayInfo(new ItemStack(ModItems.BARLEY.get()),
                         Component.translatable("advancements.yeastnfeast.crops.title"),
                         Component.translatable("advancements.yeastnfeast.crops.desc"),
                         BACKGROUND, FrameType.TASK,
@@ -122,7 +122,7 @@ public class ModAdvancementsProvider implements ForgeAdvancementProvider.Advance
                 .save(saver, new ResourceLocation(YeastNFeastMod.MOD_ID, "crops.json"), existingFileHelper);
 
         Advancement berryRollAdvancement = Advancement.Builder.advancement()
-                .display(new DisplayInfo(new ItemStack(ModItems.JAR.get()),
+                .display(new DisplayInfo(new ItemStack(ModItems.BERRY_ROLL.get()),
                         Component.translatable("advancements.yeastnfeast.berry_roll.title"),
                         Component.translatable("advancements.yeastnfeast.berry_roll.desc"),
                         BACKGROUND, FrameType.TASK,
@@ -132,7 +132,7 @@ public class ModAdvancementsProvider implements ForgeAdvancementProvider.Advance
                 .save(saver, new ResourceLocation(YeastNFeastMod.MOD_ID, "berry_roll"), existingFileHelper);
 
         Advancement bowlAdvancement = Advancement.Builder.advancement()
-                .display(new DisplayInfo(new ItemStack(ModItems.JAR.get()),
+                .display(new DisplayInfo(new ItemStack(ModItems.BARLEY_AND_BEEF_STEW.get()),
                         Component.translatable("advancements.yeastnfeast.bowl.title"),
                         Component.translatable("advancements.yeastnfeast.bowl.desc"),
                         BACKGROUND, FrameType.CHALLENGE,
@@ -145,7 +145,7 @@ public class ModAdvancementsProvider implements ForgeAdvancementProvider.Advance
                 .save(saver, new ResourceLocation(YeastNFeastMod.MOD_ID, "bowl"), existingFileHelper);
 
         Advancement plateAdvancement = Advancement.Builder.advancement()
-                .display(new DisplayInfo(new ItemStack(ModItems.JAR.get()),
+                .display(new DisplayInfo(new ItemStack(ModItems.MAPLE_GLAZED_RABBIT.get()),
                         Component.translatable("advancements.yeastnfeast.plate.title"),
                         Component.translatable("advancements.yeastnfeast.plate.desc"),
                         BACKGROUND, FrameType.CHALLENGE,
@@ -159,7 +159,7 @@ public class ModAdvancementsProvider implements ForgeAdvancementProvider.Advance
                 .save(saver, new ResourceLocation(YeastNFeastMod.MOD_ID, "plate"), existingFileHelper);
 
         Advancement mapleAdvancement = Advancement.Builder.advancement()
-                .display(new DisplayInfo(new ItemStack(ModItems.JAR.get()),
+                .display(new DisplayInfo(new ItemStack(ModItems.MAPLE_SYRUP.get()),
                         Component.translatable("advancements.yeastnfeast.maple.title"),
                         Component.translatable("advancements.yeastnfeast.maple.desc"),
                         BACKGROUND, FrameType.TASK,
