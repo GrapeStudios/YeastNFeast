@@ -16,6 +16,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 
 public class ModItems {
@@ -153,7 +154,7 @@ public class ModItems {
     public static final Item GLOW_BERRIES_JAM = registerItem("glow_berries_jam",
             new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.GLOW_BERRIES_JAM)));
     public static final Item GOLDEN_APPLE_JAM = registerItem("golden_apple_jam",
-            new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.GOLDEN_APPLE_JAM)));
+            new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.GOLDEN_APPLE_JAM).rarity(Rarity.RARE)));
     public static final Item HAWTHORN_BERRIES_JAM = registerItem("hawthorn_berries_jam",
             new ConsumableItem(new FabricItemSettings().food(ModFoodComponents.HAWTHORN_BERRIES_JAM)));
     public static final Item LEMON_JAM = registerItem("lemon_jam",

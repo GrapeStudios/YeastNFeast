@@ -167,7 +167,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .build(consumer, YeastNFeastMod.MOD_ID + ":plate");
 
         Advancement mapleAdvancement = Advancement.Builder.create()
-                .display(new AdvancementDisplay(new ItemStack(ModBlocks.KEG),
+                .display(new AdvancementDisplay(new ItemStack(ModItems.MAPLE_SYRUP),
                         Text.translatable("advancements.yeastnfeast.maple.tile"),
                         Text.translatable("advancements.yeastnfeast.maple.desc"),
                         BACKGROUND, AdvancementFrame.TASK,

@@ -25,10 +25,10 @@ public class ModFoodComponents {
     public static final FoodComponent MOLASSES_BREAD = new FoodComponent.Builder().hunger(5).saturationModifier(0.8f).build();
 
     // Baked Goods
-    public static final FoodComponent BERRY_ROLL = new FoodComponent.Builder().hunger(4).saturationModifier(0.5f).build();
-    public static final FoodComponent ROSE_TART = new FoodComponent.Builder().hunger(8).saturationModifier(0.6f).build();
-    public static final FoodComponent ELDERBERRY_PIE = new FoodComponent.Builder().hunger(8).saturationModifier(0.6f).build();
-    public static final FoodComponent APPLE_PIE = new FoodComponent.Builder().hunger(8).saturationModifier(0.6f).build();
+    public static final FoodComponent BERRY_ROLL = new FoodComponent.Builder().hunger(8).saturationModifier(0.6f).build();
+    public static final FoodComponent ROSE_TART = new FoodComponent.Builder().hunger(10).saturationModifier(0.8f).build();
+    public static final FoodComponent ELDERBERRY_PIE = new FoodComponent.Builder().hunger(10).saturationModifier(0.8f).build();
+    public static final FoodComponent APPLE_PIE = new FoodComponent.Builder().hunger(10).saturationModifier(0.8f).build();
 
     // Feasts
     public static final FoodComponent SWEET_PORRIDGE = new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build();

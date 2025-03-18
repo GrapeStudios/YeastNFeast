@@ -12,7 +12,7 @@
 		"sources": "https://github.com/GrapeStudios/YeastNFeast"
 	},
 	"license": "MIT",
-	"icon": "assets/yeastnfeast/icon.png",
+	"icon": "assets/yeastnfeast/textures/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
