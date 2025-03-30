@@ -1,0 +1,53 @@
+{
+  "category": "yeastnfeast:food",
+  "name": "Jams",
+  "icon": "yeastnfeast:jar",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Las mermeladas son elementos comestibles que se pueden consumir para comer fruta de forma más eficiente, conservando al mismo tiempo los efectos de algunas de ellas, como el teletransporte con Fruta de Chorus o los efectos de la Manzana de Oro."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:jar",
+      "text": "Cada vez que se elabora un artículo de mermelada, se requiere un Frasco, que se devuelve al consumir una mermelada."
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:apple_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:chorus_fruit_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:elderberries_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:golden_apple_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:hawthorn_berries_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:lemon_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:rose_hips_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:sweet_berries_jam_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:melon_jam_from_keg"
+    }
+  ]
+}

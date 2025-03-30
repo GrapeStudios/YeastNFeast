@@ -1,0 +1,40 @@
+{
+  "category": "yeastnfeast:resources",
+  "name": "Ingredients",
+  "icon": "yeastnfeast:yeast",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ingredients are items that can be obtained and are mainly used to make other food items. However, some of these items can also be consumed, granting special effects."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:yeast",
+      "text": "This item can be made from any type of mushroom."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:maple_syrup",
+      "text": "Maple Syrup can be obtained from a $(l:yeastnfeast:blocks/tree_tap)Tree Tap$(). When consumed, it cleanses the player of Mining Fatigue."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Tree Tap",
+      "images": [
+        "yeastnfeast:textures/gui/patchouli/tree_tap.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:molasses",
+      "text": "Molasses can be obtained from Sugar Canes. When consumed, it cleanses the player of Mining Fatigue."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:milk_bottle",
+      "text": "Milk Bottles can be obtained from Milk Buckets. When consumed, it cleanses the player of a single negative effect."
+    }
+  ]
+}

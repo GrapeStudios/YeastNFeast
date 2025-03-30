@@ -1,0 +1,23 @@
+{
+  "category": "yeastnfeast:world_gen",
+  "name": "Maple Tree",
+  "icon": "yeastnfeast:maple_sapling",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Maple Tree",
+      "item": "yeastnfeast:maple_sapling",
+      "text": "Maple Sapling is a new type of tree found in Forest biomes, this tree comes with its own wooden block set."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Tree Tap",
+      "images": [
+        "yeastnfeast:textures/gui/patchouli/tree_tap.png"
+      ],
+      "border": true,
+      "text": "A $(l:yeastnfeast:blocks/tree_tap)Tree Tap$() can be placed on its log to obtain Maple Syrup."
+    }
+  ]
+}

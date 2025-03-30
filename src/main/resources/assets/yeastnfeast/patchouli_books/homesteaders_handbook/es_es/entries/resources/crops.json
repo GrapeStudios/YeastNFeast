@@ -1,0 +1,43 @@
+{
+  "category": "yeastnfeast:resources",
+  "name": "Crops",
+  "icon": "yeastnfeast:barley",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:barley,yeastnfeast:barley_seeds",
+      "text": "La Cebada es un cultivo parecido al trigo que se puede encontrar en las Planicies."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:rye,yeastnfeast:rye_seeds",
+      "text": "El Centeno es un cultivo similar al trigo que se puede encontrar en el bioma de Bosque."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:garlic",
+      "text": "El Ajo Silvestre se puede encontrar en el bioma de las Planicies y el ajo en sí se puede plantar en tierras de cultivo."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:mint,yeastnfeast:mint_seeds",
+      "text": "La menta es un cultivo que se puede encontrar en el bioma del Bosque."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:ginger",
+      "text": "El Jengibre se encuentra en el bioma de Taiga y, al igual que el ajo, se puede plantar para cultivar un cultivo de jengibre."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:rose_hips",
+      "text": "Los Escaramujos se pueden encontrar en selvas y junglas dispersas, la baya se puede plantar para hacer crecer un arbusto de escaramujos."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:elderberries",
+      "text": "Las Bayas de Saúco se encuentran en el bioma del Bosque Oscuro y sus bayas se pueden plantar para cultivar un Arbusto de Saúco."
+    }
+  ]
+}
