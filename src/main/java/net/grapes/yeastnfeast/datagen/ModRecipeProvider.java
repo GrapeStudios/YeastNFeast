@@ -345,6 +345,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_planks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MAPLE_PLANKS.get()).build()))
                 .save(pWriter);
         hangingSign(pWriter, ModItems.MAPLE_HANGING_SIGN.get(), ModBlocks.STRIPPED_MAPLE_LOG.get());
+        woodFromLogs(pWriter, ModBlocks.MAPLE_WOOD.get(), ModBlocks.MAPLE_PLANKS.get());
+        chestBoat(pWriter, ModItems.MAPLE_CHEST_BOAT.get(), ModBlocks.MAPLE_PLANKS.get());
+        woodenBoat(pWriter, ModItems.MAPLE_BOAT.get(), ModBlocks.MAPLE_PLANKS.get());
 
         // Recipes for Keg Items
         new KegRecipeBuilder(List.of(Items.APPLE, Items.HONEY_BOTTLE, Items.WHEAT),
@@ -386,6 +389,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         new KegRecipeBuilder(List.of(Items.APPLE, Items.APPLE, Items.APPLE),
                 ModItems.JAR.get(), Items.SUGAR,
                 ModItems.APPLE_JAM.get(), 3600)
+                .unlockedBy("has_jar", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.JAR.get()).build()))
+                .save(pWriter);
+
+        new KegRecipeBuilder(List.of(Items.GLOW_BERRIES, Items.GLOW_BERRIES, Items.GLOW_BERRIES),
+                ModItems.JAR.get(), Items.SUGAR,
+                ModItems.GLOW_BERRIES_JAM.get(), 3600)
                 .unlockedBy("has_jar", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.JAR.get()).build()))
                 .save(pWriter);
 

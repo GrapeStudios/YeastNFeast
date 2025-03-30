@@ -1,0 +1,24 @@
+{
+  "type": "yeastnfeast:keg",
+  "brew_time": 3600,
+  "ingredients": [
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    }
+  ],
+  "output": {
+    "item": "yeastnfeast:glow_berries_jam"
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:jar"
+  },
+  "yeast_slot": {
+    "item": "minecraft:sugar"
+  }
+}
