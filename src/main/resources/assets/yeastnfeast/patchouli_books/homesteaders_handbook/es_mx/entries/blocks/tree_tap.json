@@ -1,0 +1,17 @@
+{
+  "category": "yeastnfeast:blocks",
+  "name": "Tree Tap",
+  "icon": "yeastnfeast:tree_tap",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:tree_tap",
+      "text": "El Tree Tap es un bloque único que se puede colocar en un árbol de arce y, después de 6 minutos, goteará jarabe de arce, que puedes recolectar con una botella vacía."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:tree_tap"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "category": "yeastnfeast:world_gen",
+  "name": "Maple Tree",
+  "icon": "yeastnfeast:maple_sapling",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Maple Tree",
+      "item": "yeastnfeast:maple_sapling",
+      "text": "El retoño de arce es un nuevo tipo de árbol que se encuentra en los biomas forestales. Este árbol viene con su propio juego de bloques de madera."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Tree Tap",
+      "images": [
+        "yeastnfeast:textures/gui/patchouli/tree_tap.png"
+      ],
+      "border": true,
+      "text": "Un $(l:yeastnfeast:blocks/tree_tap)Grifo de Árbol$() se puede colocar en su tronco para obtener jarabe de arce."
+    }
+  ]
+}

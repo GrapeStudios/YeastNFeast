@@ -1,0 +1,28 @@
+{
+  "category": "yeastnfeast:world_gen",
+  "name": "Fruit Bearing Trees",
+  "icon": "yeastnfeast:lemon_sapling",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Lemon Tree",
+      "item": "yeastnfeast:lemon_sapling,yeastnfeast:lemon",
+      "text": "Los limoneros se encuentran en el bioma de las Llanuras, y se pueden obtener limones de sus hojas floridas. Estas hojas producen limones con frecuencia."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:lemon_sapling"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Hawthorn Tree",
+      "item": "yeastnfeast:hawthorn_sapling,yeastnfeast:hawthorn_berries",
+      "text": "Los espinos se encuentran en el bioma del bosque, y sus hojas floridas producen bayas de espino con frecuencia."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:hawthorn_sapling"
+    }
+  ]
+}

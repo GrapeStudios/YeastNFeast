@@ -1,0 +1,60 @@
+{
+  "processor": "net.grapes.yeastnfeast.compat.patchouli.KegProcessor",
+  "components": [
+    {
+      "type": "patchouli:image",
+      "image": "yeastnfeast:textures/gui/patchouli/keg.png",
+      "x": 20,
+      "y": 16,
+      "u": 0,
+      "v": 0,
+      "texture_width": 256,
+      "texture_height": 256,
+      "width": 80,
+      "height": 120,
+      "scale": 1
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#ingredient0",
+      "x": 26,
+      "y": 55
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#ingredient1",
+      "x": 49,
+      "y": 55
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#ingredient2",
+      "x": 74,
+      "y": 55
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#yeast_slot",
+      "x": 36,
+      "y": 80
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#tankard_slot",
+      "x": 60,
+      "y": 80
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#output",
+      "x": 50,
+      "y": 22
+    },
+    {
+      "type": "patchouli:header",
+      "text": "#header",
+      "x": -1,
+      "y": 0
+    }
+  ]
+}

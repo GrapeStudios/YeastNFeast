@@ -1,0 +1,17 @@
+{
+  "category": "yeastnfeast:blocks",
+  "name": "Keg",
+  "icon": "yeastnfeast:keg",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:keg",
+      "text": "El barrilete es un bloque que puede usarse para elaborar hidromiel o mermeladas: elaborar hidromiel toma 6 minutos, mientras que elaborar mermeladas toma 3 minutos."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:keg"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "category": "yeastnfeast:blocks",
+  "name": "Storage Blocks",
+  "icon": "yeastnfeast:bag_of_hawthorn_berries",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:bag_of_hawthorn_berries,yeastnfeast:rye_block",
+      "text": "Todos los $(l:yeastnfeast:resources/crops)Cultivos$() y $(l:yeastnfeast:world_gen/fruit_bearing_trees)Frutas$() se puede almacenar en un bloque compactable."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:bag_of_elderberries"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:bag_of_garlic"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:bag_of_ginger"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:bag_of_hawthorn_berries"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:bag_of_lemon"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:bag_of_mint"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:bag_of_rose_hips"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:barley_block"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:rye_block"
+    }
+  ]
+}

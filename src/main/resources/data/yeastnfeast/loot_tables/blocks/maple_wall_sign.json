@@ -11,10 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "yeastnfeast:maple_hanging_sign"
+          "name": "yeastnfeast:maple_sign"
         }
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "yeastnfeast:blocks/maple_wall_sign"
 }

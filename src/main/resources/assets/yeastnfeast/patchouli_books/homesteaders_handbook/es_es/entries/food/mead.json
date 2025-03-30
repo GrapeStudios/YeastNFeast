@@ -1,0 +1,41 @@
+{
+  "category": "yeastnfeast:food",
+  "name": "Mead",
+  "icon": "yeastnfeast:tankard",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "El hidromiel es una bebida elaborada en barril cuando se combinan levadura y otros ingredientes.$(br2)Hay tres tipos de hidromiel:$(br2)- $(#cc0000)Dulces$() (Otorga Resistancia II)$(br)- $(#6a329f)Amargos$() (Otorga Fuerza II)$(br)- $(#c90076)Floral$() (Otorga Regeneración II)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:tankard",
+      "text": "Cada vez que se elabora una hidromiel, se requiere un Jarro, que se devuelve al consumir una hidromiel."
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:honey_mead_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:molasses_mead_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:sour_mead_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:thornberry_mead_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:blossom_mead_from_keg"
+    },
+    {
+      "type": "yeastnfeast:keg",
+      "recipe": "yeastnfeast:amber_mead_from_keg"
+    }
+  ]
+}

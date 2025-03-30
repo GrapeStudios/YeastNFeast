@@ -1,0 +1,40 @@
+{
+  "category": "yeastnfeast:resources",
+  "name": "Ingredients",
+  "icon": "yeastnfeast:yeast",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Los ingredientes son objetos que se pueden obtener y se usan principalmente para elaborar otros alimentos. Sin embargo, algunos de estos objetos también se pueden consumir, lo que otorga efectos especiales."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:yeast",
+      "text": "Este objeto se puede elaborar a partir de cualquier tipo de hongo."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:maple_syrup",
+      "text": "El Jarabe de Arce se puede obtener de un $(l:yeastnfeast:blocks/tree_tap)Grijo de Árbol$(). Al consumirlo, limpia la Fatiga Minera del jugador."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "Tree Tap",
+      "images": [
+        "yeastnfeast:textures/gui/patchouli/tree_tap.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:molasses",
+      "text": "La melaza se obtiene de la caña de azúcar. Al consumirla, elimina la fatiga minera del jugador."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:milk_bottle",
+      "text": "Las Botellas de Leche se pueden obtener de los cubos de leche. Al consumirlas, eliminan un único efecto negativo."
+    }
+  ]
+}

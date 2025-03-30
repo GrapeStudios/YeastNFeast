@@ -1,5 +1,5 @@
 {
-  "itemgroup.yeastnfeast": "Yeast 'N Feast",
+  "itemgroup.yeastnfeast": "Yeast 'n Feast",
 
   "block.yeastnfeast.wild_barley": "Wild Barley",
   "block.yeastnfeast.wild_rye": "Wild Rye",
@@ -66,7 +66,7 @@
   "item.yeastnfeast.elderberry_pie": "Elderberry Pie",
   "item.yeastnfeast.rose_tart": "Rose Tart",
   "item.yeastnfeast.apple_pie": "Apple Pie",
-  
+
   "item.yeastnfeast.jar": "Jar",
   "item.yeastnfeast.apple_jam": "Apple Jam",
   "item.yeastnfeast.chorus_fruit_jam": "Chorus Fruit Jam",
@@ -93,7 +93,7 @@
   "effect.yeastnfeast.overfed": "Overfed",
   "effect.yeastnfeast.overfed.description": "Prevents saturation from lowering but the user can still consume food.",
   "effect.yeastnfeast.vigorous": "Vigorous",
-  "effect.yeastnfeast.vigorous.description": "Slightly reduces fall damage and increases jump height.",
+  "effect.yeastnfeast.vigorous.description": "Increases healing received in addition to increasing maximum health.",
 
   "tooltip.yeastnfeast.milk_bottle": "Removes a single effect",
   "tooltip.yeastnfeast.mead_item.sour": "Strength II (6:00)",
@@ -102,7 +102,7 @@
   "tooltip.yeastnfeast.feast_item.bowl": "Overfed (4:00)",
   "tooltip.yeastnfeast.feast_item.plate": "Vigorous (4:00)",
 
-  "advancements.yeastnfeast.root.title": "Yeast & Feast",
+  "advancements.yeastnfeast.root.title": "Yeast 'n Feast",
   "advancements.yeastnfeast.root.desc": "Obtain Yeast from mushrooms.",
   "advancements.yeastnfeast.keg.title": "Keg Stand",
   "advancements.yeastnfeast.keg.desc": "Craft a Keg to start brewing.",
@@ -116,23 +116,18 @@
   "advancements.yeastnfeast.jar.desc": "Obtain a Jar, made out of Glass and Planks.",
   "advancements.yeastnfeast.jam.title": "Jam Session",
   "advancements.yeastnfeast.jam.desc": "Obtain all the available Jams",
-  "advancements.yeastnfeast.maple.tile": "Maple Story",
+  "advancements.yeastnfeast.maple.title": "Maple Story",
   "advancements.yeastnfeast.maple.desc": "Obtain Maple Syrup by placing a Tree Tap on maple trees.",
-
   "advancements.yeastnfeast.crops.title": "Harvest Season",
   "advancements.yeastnfeast.crops.desc": "Obtain any Yeast 'n Feast crop.",
-
   "advancements.yeastnfeast.berry_roll.title": "Let me guess...",
   "advancements.yeastnfeast.berry_roll.desc": "Make a Berry Roll, but make sure it does not get stolen!.",
-
   "advancements.yeastnfeast.bowl.title": "Meat & Greet",
   "advancements.yeastnfeast.bowl.desc": "Eat all of the bowl dishes.",
-
   "advancements.yeastnfeast.plate.title": "Feast Your Eyes",
   "advancements.yeastnfeast.plate.desc": "Eat all of the plates dishes.",
 
   "block.yeastnfeast.maple_leaves": "Maple Leaves",
-  "block.yeastnfeast.maple_catkin": "Maple Catkin",
   "block.yeastnfeast.maple_log": "Maple Log",
   "block.yeastnfeast.maple_wood": "Maple Wood",
   "block.yeastnfeast.stripped_maple_log": "Stripped Maple Log",
