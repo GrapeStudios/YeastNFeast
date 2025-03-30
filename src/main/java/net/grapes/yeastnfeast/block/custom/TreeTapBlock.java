@@ -88,8 +88,12 @@ public class TreeTapBlock extends BaseEntityBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        return level.getBlockState(pos.relative(state.getValue(FACING).getOpposite())).is(ModTags.Blocks.MAPLE_LOGS);
+        BlockState blockBehind = level.getBlockState(pos.relative(state.getValue(FACING).getOpposite()));
+        String blockId = blockBehind.getBlock().getDescriptionId();
+
+        return blockId.contains("maple_log") || blockId.contains("maple_wood");
     }
+
 
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
