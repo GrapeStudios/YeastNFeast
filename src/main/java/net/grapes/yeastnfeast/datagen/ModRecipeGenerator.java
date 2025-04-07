@@ -235,7 +235,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.HOMESTEADERS_HANDBOOK)
-                .input(ModTags.Items.CROPS)
+                .input(Items.WHEAT)
                 .input(Items.BOOK)
                 .criterion("has_book", conditionsFromItem(Items.BOOK))
                 .offerTo(exporter);
