@@ -6,7 +6,7 @@
       "item": "minecraft:book"
     },
     {
-      "tag": "forge:crops"
+      "item": "minecraft:wheat"
     }
   ],
   "result": {

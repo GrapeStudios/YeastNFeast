@@ -292,7 +292,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HOMESTEADERS_HANDBOOK.get())
                 .requires(Items.BOOK)
-                .requires(ModTags.Items.CROPS)
+                .requires(Items.WHEAT)
                 .unlockedBy("has_book",
                         inventoryTrigger(ItemPredicate.Builder.item().of(Items.BOOK).build()))
                 .save(pWriter);
@@ -345,8 +345,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_planks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MAPLE_PLANKS.get()).build()))
                 .save(pWriter);
         hangingSign(pWriter, ModItems.MAPLE_HANGING_SIGN.get(), ModBlocks.STRIPPED_MAPLE_LOG.get());
-        woodFromLogs(pWriter, ModBlocks.MAPLE_WOOD.get(), ModBlocks.MAPLE_PLANKS.get());
-        chestBoat(pWriter, ModItems.MAPLE_CHEST_BOAT.get(), ModBlocks.MAPLE_PLANKS.get());
+        woodFromLogs(pWriter, ModBlocks.MAPLE_WOOD.get(), ModBlocks.MAPLE_LOG.get());
+
+        chestBoat(pWriter, ModItems.MAPLE_CHEST_BOAT.get(), ModItems.MAPLE_BOAT.get());
         woodenBoat(pWriter, ModItems.MAPLE_BOAT.get(), ModBlocks.MAPLE_PLANKS.get());
 
         // Recipes for Keg Items
