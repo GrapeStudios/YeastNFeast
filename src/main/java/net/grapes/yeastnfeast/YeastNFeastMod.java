@@ -14,6 +14,7 @@ import net.grapes.yeastnfeast.screen.KegScreen;
 import net.grapes.yeastnfeast.screen.ModMenuTypes;
 import net.grapes.yeastnfeast.util.ModRegistries;
 import net.grapes.yeastnfeast.util.ModWoodTypes;
+import net.grapes.yeastnfeast.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -52,6 +53,7 @@ public class YeastNFeastMod {
         ModBlockEntities.register(modEventBus);
         ModRecipes.register(modEventBus);
         ModParticles.register(modEventBus);
+        ModVillagers.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

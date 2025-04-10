@@ -15,7 +15,6 @@
   "block.yeastnfeast.elderberry_bush": "Elderberries",
   "block.yeastnfeast.tree_tap": "Tree Tap",
   "block.yeastnfeast.keg": "Keg",
-
   "block.yeastnfeast.bag_of_elderberries": "Bag of Elderberries",
   "block.yeastnfeast.bag_of_ginger": "Bag of Ginger",
   "block.yeastnfeast.bag_of_hawthorn_berries": "Bag of Hawthorn Berries",
@@ -25,12 +24,10 @@
   "block.yeastnfeast.bag_of_garlic": "Bag of Garlic",
   "block.yeastnfeast.rye_block": "Barley Block",
   "block.yeastnfeast.barley_block": "Rye Block",
-
   "block.yeastnfeast.lemon_tree_leaves": "Lemon Tree Leaves",
   "block.yeastnfeast.flowering_lemon_tree_leaves": "Flowering Lemon Tree Leaves",
   "block.yeastnfeast.lemon_sapling": "Lemon Sapling",
   "block.yeastnfeast.potted_lemon_sapling": "Potted Lemon Sapling",
-
   "block.yeastnfeast.hawthorn_tree_leaves": "Hawthorn Tree Leaves",
   "block.yeastnfeast.flowering_hawthorn_tree_leaves": "Flowering Hawthorn Tree Leaves",
   "block.yeastnfeast.hawthorn_sapling": "Hawthorn Sapling",
@@ -126,6 +123,8 @@
   "advancements.yeastnfeast.bowl.desc": "Eat all of the bowl dishes.",
   "advancements.yeastnfeast.plate.title": "Feast Your Eyes",
   "advancements.yeastnfeast.plate.desc": "Eat all of the plates dishes.",
+
+  "entity.minecraft.villager.yeastnfeast.tavernkeeper": "Tavern Keeper",
 
   "block.yeastnfeast.maple_leaves": "Maple Leaves",
   "block.yeastnfeast.maple_log": "Maple Log",
