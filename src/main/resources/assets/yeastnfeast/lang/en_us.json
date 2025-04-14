@@ -127,6 +127,8 @@
   "advancements.yeastnfeast.plate.title": "Feast Your Eyes",
   "advancements.yeastnfeast.plate.desc": "Eat all of the plates dishes.",
 
+  "entity.minecraft.villager.tavernkeeper": "Tavern Keeper",
+
   "block.yeastnfeast.maple_leaves": "Maple Leaves",
   "block.yeastnfeast.maple_log": "Maple Log",
   "block.yeastnfeast.maple_wood": "Maple Wood",

@@ -19,6 +19,7 @@ public class YeastNFeastModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModRecipeGenerator::new);
 		pack.addProvider(ModWorldGenerator::new);
 		pack.addProvider(ModAdvancementProvider::new);
+		pack.addProvider(ModPOITagProvider::new);
 	}
 
 	@Override

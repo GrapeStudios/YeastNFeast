@@ -3,7 +3,7 @@
   "category": "equipment",
   "ingredients": [
     {
-      "tag": "c:crops"
+      "item": "minecraft:wheat"
     },
     {
       "item": "minecraft:book"

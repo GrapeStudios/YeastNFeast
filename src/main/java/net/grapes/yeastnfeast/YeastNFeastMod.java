@@ -6,12 +6,14 @@ import net.grapes.yeastnfeast.block.ModBlocks;
 import net.grapes.yeastnfeast.block.entity.ModBlockEntities;
 import net.grapes.yeastnfeast.effect.ModEffects;
 import net.grapes.yeastnfeast.entity.ModBoats;
+import net.grapes.yeastnfeast.event.VillagerEvents;
 import net.grapes.yeastnfeast.item.ModItemGroup;
 import net.grapes.yeastnfeast.item.ModItems;
 import net.grapes.yeastnfeast.particle.ModParticles;
 import net.grapes.yeastnfeast.recipe.ModRecipes;
 import net.grapes.yeastnfeast.screen.ModScreenHandler;
 import net.grapes.yeastnfeast.util.ModRegistries;
+import net.grapes.yeastnfeast.villager.ModVillagers;
 import net.grapes.yeastnfeast.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,5 +36,7 @@ public class YeastNFeastMod implements ModInitializer {
 		ModScreenHandler.registerScreenHandlers();
 		ModRecipes.registerRecipes();
 		ModEffects.registerEffects();
+		ModVillagers.registerVillager();
+		VillagerEvents.init();
 	}
 }

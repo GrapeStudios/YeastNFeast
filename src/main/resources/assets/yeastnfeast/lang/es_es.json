@@ -66,7 +66,7 @@
   "item.yeastnfeast.elderberry_pie": "Tarta de Saúco",
   "item.yeastnfeast.rose_tart": "Tarta de Rosas",
   "item.yeastnfeast.apple_pie": "Tarta de Manzana",
-  
+
   "item.yeastnfeast.jar": "Frasco",
   "item.yeastnfeast.apple_jam": "Mermelada de Manzana",
   "item.yeastnfeast.chorus_fruit_jam": "Mermelada de Fruta de Chorus",
@@ -127,6 +127,8 @@
   "advancements.yeastnfeast.plate.title": "Deleita tus Ojos",
   "advancements.yeastnfeast.plate.desc": "Come todos alimentos considerados platillos.",
 
+  "entity.minecraft.villager.tavernkeeper": "Tabernero",
+
   "block.yeastnfeast.maple_leaves": "Hojas de Arce",
   "block.yeastnfeast.maple_log": "Tronco de Arce",
   "block.yeastnfeast.maple_wood": "Madera de Arce",
@@ -146,7 +148,7 @@
   "item.yeastnfeast.maple_chest_boat": "Bote con Cofre de Arce",
   "block.yeastnfeast.maple_sign": "Cartel de Arce",
   "block.yeastnfeast.maple_hanging_sign": "Cartel Colgante de Arce",
-  
+
   "item.yeastnfeast.homesteaders_handbook": "Manual del Tavernero",
   "item.yeastnfeast.homesteaders_handbook.landing_text": "Un manual bien detallado es su guía confiable para dominar el arte de la fermentación, la repostería y la elaboración de deliciosos festines."
 }
