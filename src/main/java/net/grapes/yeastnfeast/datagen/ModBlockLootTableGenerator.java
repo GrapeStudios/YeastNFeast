@@ -61,7 +61,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         this.addDrop(ModBlocks.RYE_CROP, this.cropDrops(ModBlocks.RYE_CROP, ModItems.RYE, ModItems.RYE_SEEDS, builder3));
 
         BlockStatePropertyLootCondition.Builder builder4 = BlockStatePropertyLootCondition.builder(ModBlocks.MINT_CROP)
-                .properties(StatePredicate.Builder.create().exactMatch(RyeCropBlock.AGE, 3));
+                .properties(StatePredicate.Builder.create().exactMatch(MintCropBlock.AGE, 3));
         this.addDrop(ModBlocks.MINT_CROP, this.cropDrops(ModBlocks.MINT_CROP, ModItems.MINT, ModItems.MINT_SEEDS, builder4));
 
         this.addDrop(ModBlocks.ROSE_HIPS_BUSH, createHarvestablePlantBlock(

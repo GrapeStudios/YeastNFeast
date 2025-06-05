@@ -27,7 +27,6 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> WILD_RYE_KEY = registerKey("wild_rye");
     public static final RegistryKey<ConfiguredFeature<?, ?>> WILD_GINGER_KEY = registerKey("wild_ginger");
     public static final RegistryKey<ConfiguredFeature<?, ?>> WILD_GARLIC_KEY = registerKey("wild_garlic");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> WILD_MINT_KEY = registerKey("wild_mint");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MAPLE_KEY = registerKey("maple");
     public static final RegistryKey<ConfiguredFeature<?, ?>> LEMON_TREE_KEY = registerKey("lemon_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> HAWTHORN_TREE_KEY = registerKey("hawthorn_tree");
@@ -48,10 +47,6 @@ public class ModConfiguredFeatures {
         register(context, WILD_GARLIC_KEY, Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(2,
                 PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.WILD_GARLIC)))));
-        register(context, WILD_MINT_KEY, Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(2,
-                PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.WILD_MINT)))));
-
         register(context, ELDERBERRIES_KEY, Feature.RANDOM_PATCH, ConfiguredFeatures.createRandomPatchFeatureConfig(2,
                 PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of
                         (ModBlocks.ELDERBERRY_BUSH.getDefaultState().with(ElderberryBushBlock.AGE, 3))))));

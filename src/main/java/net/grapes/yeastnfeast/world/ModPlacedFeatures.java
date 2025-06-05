@@ -21,7 +21,6 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> WILD_RYE_PLACED_KEY = registerKey("wild_rye_placed");
     public static final RegistryKey<PlacedFeature> WILD_GINGER_PLACED_KEY = registerKey("wild_ginger_placed");
     public static final RegistryKey<PlacedFeature> WILD_GARLIC_PLACED_KEY = registerKey("wild_garlic_placed");
-    public static final RegistryKey<PlacedFeature> WILD_MINT_PLACED_KEY = registerKey("wild_mint_placed");
     public static final RegistryKey<PlacedFeature> MAPLE_PLACED_KEY = registerKey("maple_placed");
     public static final RegistryKey<PlacedFeature> LEMON_PLACED_KEY = registerKey("lemon_placed");
     public static final RegistryKey<PlacedFeature> HAWTHORN_PLACED_KEY = registerKey("hawthorn_placed");
@@ -57,13 +56,6 @@ public class ModPlacedFeatures {
                 RarityFilterPlacementModifier.of(25),
                 SquarePlacementModifier.of(),
                 PlacedFeatures.createCountExtraModifier(3, 0.2f, 1),
-                PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
-                BiomePlacementModifier.of());
-
-        register(context, WILD_MINT_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WILD_MINT_KEY),
-                RarityFilterPlacementModifier.of(5),
-                SquarePlacementModifier.of(),
-                PlacedFeatures.createCountExtraModifier(2, 0.2f, 1),
                 PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                 BiomePlacementModifier.of());
 
