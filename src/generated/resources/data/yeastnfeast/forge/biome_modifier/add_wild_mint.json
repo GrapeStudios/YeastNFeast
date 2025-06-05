@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "minecraft:forest",
-  "features": "yeastnfeast:wild_mint_placed",
-  "step": "vegetal_decoration"
-}

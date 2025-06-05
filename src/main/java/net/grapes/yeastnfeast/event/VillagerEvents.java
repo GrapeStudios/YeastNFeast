@@ -1,5 +1,4 @@
 package net.grapes.yeastnfeast.event;
-
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.grapes.yeastnfeast.YeastNFeastMod;
 import net.grapes.yeastnfeast.block.ModBlocks;
@@ -13,23 +12,18 @@ import net.minecraftforge.common.BasicItemListing;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
-import java.util.Random;
 
 @Mod.EventBusSubscriber(modid = YeastNFeastMod.MOD_ID)
 @ParametersAreNonnullByDefault
 public class VillagerEvents
 {
-    private static final Random RANDOM = new Random();
-
     @SubscribeEvent
     public static void onVillagerTrades(VillagerTradesEvent event) {
         if (event.getType() != ModVillagers.TAVERN_KEEPER.get()) {
             return;
         }
-
         Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
         // Level 1 trades - Seeds
@@ -39,42 +33,26 @@ public class VillagerEvents
         trades.get(2).add(itemForEmeralds(ModBlocks.TREE_TAP.get(), 1, 8, 2, 12));
         trades.get(2).add(itemForEmeralds(ModItems.TANKARD.get(), 1, 4, 4, 8));
 
-        // Level 3 trades - Random selection of mead items
-        addRandomMeadTrades(trades.get(3));
+        // Level 3 trades - Add ALL mead options
+        addAllMeadTrades(trades.get(3));
     }
 
     private static void addLevel1Trades(List<VillagerTrades.ItemListing> level1Trades) {
         level1Trades.add(itemForEmeralds(ModItems.MINT_SEEDS.get(), 3, 3, 6, 3));
 
-        ItemLike[] secondaryOptions = {
-                ModItems.BARLEY_SEEDS.get(),
-                ModItems.RYE_SEEDS.get(),
-                ModItems.GINGER.get(),
-                ModItems.GARLIC.get()
-        };
-
-        ItemLike selectedOption = secondaryOptions[RANDOM.nextInt(secondaryOptions.length)];
-        level1Trades.add(itemForEmeralds(selectedOption, 3, 3, 6, 3));
+        level1Trades.add(itemForEmeralds(ModItems.BARLEY_SEEDS.get(), 3, 3, 6, 3));
+        level1Trades.add(itemForEmeralds(ModItems.RYE_SEEDS.get(), 3, 3, 6, 3));
+        level1Trades.add(itemForEmeralds(ModItems.GINGER.get(), 3, 3, 6, 3));
+        level1Trades.add(itemForEmeralds(ModItems.GARLIC.get(), 3, 3, 6, 3));
     }
 
-    private static void addRandomMeadTrades(List<VillagerTrades.ItemListing> level3Trades) {
-        ItemLike[] meads = {
-                ModItems.BLOSSOM_MEAD.get(),
-                ModItems.AMBER_MEAD.get(),
-                ModItems.MOLASSES_MEAD.get(),
-                ModItems.SOUR_MEAD.get(),
-                ModItems.HONEY_MEAD.get(),
-                ModItems.THORNBERRY_MEAD.get()
-        };
-
-        int firstIndex = RANDOM.nextInt(meads.length);
-        int secondIndex;
-        do {
-            secondIndex = RANDOM.nextInt(meads.length);
-        } while (secondIndex == firstIndex);
-
-        level3Trades.add(itemForEmeralds(meads[firstIndex], 1, 2, 2, 8));
-        level3Trades.add(itemForEmeralds(meads[secondIndex], 1, 2, 2, 8));
+    private static void addAllMeadTrades(List<VillagerTrades.ItemListing> level3Trades) {
+        level3Trades.add(itemForEmeralds(ModItems.BLOSSOM_MEAD.get(), 1, 2, 2, 8));
+        level3Trades.add(itemForEmeralds(ModItems.AMBER_MEAD.get(), 1, 2, 2, 8));
+        level3Trades.add(itemForEmeralds(ModItems.MOLASSES_MEAD.get(), 1, 2, 2, 8));
+        level3Trades.add(itemForEmeralds(ModItems.SOUR_MEAD.get(), 1, 2, 2, 8));
+        level3Trades.add(itemForEmeralds(ModItems.HONEY_MEAD.get(), 1, 2, 2, 8));
+        level3Trades.add(itemForEmeralds(ModItems.THORNBERRY_MEAD.get(), 1, 2, 2, 8));
     }
 
     public static BasicItemListing emeraldForItems(ItemLike item, int emeraldCost, int itemCount, int maxTrades, int xp) {

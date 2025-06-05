@@ -24,7 +24,6 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_WILD_GINGER = registerKey("add_wild_ginger");
 
     public static final ResourceKey<BiomeModifier> ADD_WILD_GARLIC = registerKey("add_wild_garlic");
-    public static final ResourceKey<BiomeModifier> ADD_WILD_MINT = registerKey("add_wild_mint");
     public static final ResourceKey<BiomeModifier> ADD_ELDERBERRIES_BUSH = registerKey("add_elderberries_bush");
     public static final ResourceKey<BiomeModifier> ADD_ROSE_HIPS = registerKey("add_rose_hips");
 
@@ -52,11 +51,6 @@ public class ModBiomeModifiers {
         context.register(ADD_WILD_GARLIC, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_GARLIC_PLACED_KEY)),
-                GenerationStep.Decoration.VEGETAL_DECORATION));
-
-        context.register(ADD_WILD_MINT, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(forestBiome.get()),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_MINT_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_WILD_GINGER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(

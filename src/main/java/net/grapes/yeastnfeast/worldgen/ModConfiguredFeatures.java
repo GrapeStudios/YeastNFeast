@@ -15,7 +15,6 @@ import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -36,7 +35,6 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_RYE_KEY = registerKey("wild_rye");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_GINGER_KEY = registerKey("wild_ginger");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_GARLIC_KEY = registerKey("wild_garlic");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_MINT_KEY = registerKey("wild_mint");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MAPLE_KEY = registerKey("maple");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LEMON_TREE_KEY = registerKey("lemon_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HAWTHORN_TREE_KEY = registerKey("hawthorn_tree");
@@ -60,9 +58,6 @@ public class ModConfiguredFeatures {
         register(context, WILD_GARLIC_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(2, 3, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_GARLIC.get())))));
-        register(context, WILD_MINT_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(2, 3, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_MINT.get())))));
 
         // FIXED DEFAULT STATE
         register(context, ELDERBERRIES_KEY, Feature.RANDOM_PATCH,

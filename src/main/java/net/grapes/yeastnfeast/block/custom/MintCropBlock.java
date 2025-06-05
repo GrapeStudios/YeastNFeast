@@ -2,8 +2,10 @@ package net.grapes.yeastnfeast.block.custom;
 
 import net.grapes.yeastnfeast.item.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -22,7 +24,7 @@ import net.minecraft.world.phys.BlockHitResult;
 public class MintCropBlock extends CropBlock {
 
     public static final int MAX_AGE = 3;
-    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 3);
+    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, MAX_AGE);
 
     public MintCropBlock(Properties pProperties) {
         super(pProperties);
@@ -44,8 +46,28 @@ public class MintCropBlock extends CropBlock {
     }
 
     @Override
+    public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
+        if (!pLevel.isAreaLoaded(pPos, 1)) return;
+        if (pLevel.getRawBrightness(pPos, 0) >= 9) {
+            int currentAge = pState.getValue(AGE);
+            if (currentAge < MAX_AGE) {
+                float growthSpeed = getGrowthSpeed(this, pLevel, pPos);
+                if (net.minecraftforge.common.ForgeHooks.onCropsGrowPre(pLevel, pPos, pState, pRandom.nextInt((int)(25.0F / growthSpeed) + 1) == 0)) {
+                    pLevel.setBlock(pPos, pState.setValue(AGE, currentAge + 1), 2);
+                    net.minecraftforge.common.ForgeHooks.onCropsGrowPost(pLevel, pPos, pState);
+                }
+            }
+        }
+    }
+
+    @Override
+    protected int getBonemealAgeIncrease(Level pLevel) {
+        return Math.min(super.getBonemealAgeIncrease(pLevel), MAX_AGE - 1);
+    }
+
+    @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        int age = pState.getValue(AGE);
+        int age = Math.min(pState.getValue(AGE), MAX_AGE);
         ItemStack itemStack = pPlayer.getItemInHand(pHand);
 
         if (age == MAX_AGE) {
@@ -55,7 +77,7 @@ public class MintCropBlock extends CropBlock {
             pLevel.setBlockAndUpdate(pPos, pState.setValue(AGE, 1));
             pLevel.gameEvent(GameEvent.BLOCK_CHANGE, pPos, GameEvent.Context.of(pPlayer, pState.setValue(AGE, 1)));
             return InteractionResult.SUCCESS;
-        }  else if (itemStack.is(Items.BONE_MEAL)) {
+        } else if (itemStack.is(Items.BONE_MEAL)) {
             return InteractionResult.PASS;
         } else {
             return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);

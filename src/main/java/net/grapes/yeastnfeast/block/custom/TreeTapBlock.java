@@ -4,7 +4,6 @@ import net.grapes.yeastnfeast.block.entity.ModBlockEntities;
 import net.grapes.yeastnfeast.block.entity.TreeTapBlockEntity;
 import net.grapes.yeastnfeast.item.ModItems;
 import net.grapes.yeastnfeast.particle.ModParticles;
-import net.grapes.yeastnfeast.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;

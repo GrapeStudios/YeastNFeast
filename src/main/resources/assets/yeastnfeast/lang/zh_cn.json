@@ -127,6 +127,8 @@
   "advancements.yeastnfeast.plate.title": "饕餮盛宴",
   "advancements.yeastnfeast.plate.desc": "食用所有盘装菜肴。",
 
+  "entity.minecraft.villager.yeastnfeast.tavernkeeper": "酒馆老板",
+
   "block.yeastnfeast.maple_leaves": "枫树叶",
   "block.yeastnfeast.maple_log": "枫木原木",
   "block.yeastnfeast.maple_wood": "枫木",

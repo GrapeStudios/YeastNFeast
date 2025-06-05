@@ -10,7 +10,6 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 
@@ -21,7 +20,6 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> WILD_RYE_PLACED_KEY = registerKey("wild_rye_placed");
     public static final ResourceKey<PlacedFeature> WILD_GINGER_PLACED_KEY = registerKey("wild_ginger_placed");
     public static final ResourceKey<PlacedFeature> WILD_GARLIC_PLACED_KEY = registerKey("wild_garlic_placed");
-    public static final ResourceKey<PlacedFeature> WILD_MINT_PLACED_KEY = registerKey("wild_mint_placed");
     public static final ResourceKey<PlacedFeature> MAPLE_PLACED_KEY = registerKey("maple_placed");
     public static final ResourceKey<PlacedFeature> LEMON_PLACED_KEY = registerKey("lemon_placed");
     public static final ResourceKey<PlacedFeature> HAWTHORN_PLACED_KEY = registerKey("hawthorn_placed");
@@ -46,10 +44,6 @@ public class ModPlacedFeatures {
 
         register(context, WILD_GINGER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILD_GINGER_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.countExtra(4, 0.2f, 1),
-                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
-        
-        register(context, WILD_MINT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILD_MINT_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(25), InSquarePlacement.spread(), PlacementUtils.countExtra(2, 0.2f, 2),
                         PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
         
         register(context, ELDERBERRIES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ELDERBERRIES_KEY),

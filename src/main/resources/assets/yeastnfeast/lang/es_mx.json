@@ -127,6 +127,8 @@
   "advancements.yeastnfeast.plate.title": "Deleita tus Ojos",
   "advancements.yeastnfeast.plate.desc": "Come todos alimentos considerados platillos.",
 
+  "entity.minecraft.villager.yeastnfeast.tavernkeeper": "Tabernero",
+
   "block.yeastnfeast.maple_leaves": "Hojas de Arce",
   "block.yeastnfeast.maple_log": "Tronco de Arce",
   "block.yeastnfeast.maple_wood": "Madera de Arce",
