@@ -1,5 +1,5 @@
 {
-  "processor": "net.grapes.yeastnfeast.compat.patchouli.KegProcessor",
+  "processor": "net.astralya.yeastnfeast.compat.patchouli.KegProcessor",
   "components": [
     {
       "type": "patchouli:image",
