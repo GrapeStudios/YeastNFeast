@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "yeastnfeast",
+	"version": "${version}",
+	"name": "Yeast 'n Feast",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/yeastnfeast/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.astralya.yeastnfeast.YeastnFeast"
+		],
+		"fabric-datagen": [
+			"net.astralya.yeastnfeast.YeastnFeastDataGenerator"
+		]
+	},
+	"mixins": [
+		"yeastnfeast.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
