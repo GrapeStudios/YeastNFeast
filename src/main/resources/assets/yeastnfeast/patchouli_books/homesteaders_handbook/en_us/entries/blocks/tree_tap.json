@@ -1,0 +1,17 @@
+{
+  "category": "yeastnfeast:blocks",
+  "name": "Tree Tap",
+  "icon": "yeastnfeast:tree_tap",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:tree_tap",
+      "text": "The Tree Tap is a unique block that can be placed on a Maple Tree, and after 6 minutes, it will drip Maple Syrup, which you can collect with an empty bottle."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:tree_tap"
+    }
+  ]
+}

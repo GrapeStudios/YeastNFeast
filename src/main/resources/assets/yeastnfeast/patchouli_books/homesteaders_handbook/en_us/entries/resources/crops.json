@@ -1,0 +1,43 @@
+{
+  "category": "yeastnfeast:resources",
+  "name": "Crops",
+  "icon": "yeastnfeast:barley",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:barley,yeastnfeast:barley_seeds",
+      "text": "Barley is a wheat-like crop that can be found in Plains."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:rye,yeastnfeast:rye_seeds",
+      "text": "Rye is a wheat-like crop that can be found in the Forest biome."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:garlic",
+      "text": "Wild Garlic can be found in the Plains biome, the garlic itself can be planted in farmland."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:mint,yeastnfeast:mint_seeds",
+      "text": "Mint is a crop which seeds can be purchased from a Tavern Keeper, found in the Tavern structure."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:ginger",
+      "text": "Ginger is found in the Taiga biome, and similar to Garlic, it can be planted to grow a Ginger crop."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:rose_hips",
+      "text": "Rose Hips can be found in Jungles and Sparse Jungles, the berry can be planted to grow a Rose Hips bush."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "yeastnfeast:elderberries",
+      "text": "Elderberries are found in the Dark Forest biome, and their berries can be planted to grow an Elderberry Bush."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "yeastnfeast:keg",
+  "brewtime": 7200,
+  "experience": 0.5,
+  "ingredients": [
+    {
+      "item": "yeastnfeast:barley"
+    },
+    {
+      "item": "yeastnfeast:molasses"
+    },
+    {
+      "item": "minecraft:sugar_cane"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "yeastnfeast:molasses_mead"
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:tankard"
+  },
+  "yeast_slot": {
+    "item": "yeastnfeast:yeast"
+  }
+}

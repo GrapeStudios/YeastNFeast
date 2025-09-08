@@ -1,0 +1,44 @@
+{
+  "parent": "yeastnfeast:root",
+  "criteria": {
+    "has_crop": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "yeastnfeast:elderberries",
+              "yeastnfeast:hawthorn_berries",
+              "yeastnfeast:lemon",
+              "yeastnfeast:rose_hips",
+              "yeastnfeast:garlic",
+              "yeastnfeast:barley",
+              "yeastnfeast:rye",
+              "yeastnfeast:mint",
+              "yeastnfeast:ginger"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "yeastnfeast:textures/block/maple_log.png",
+    "description": {
+      "translate": "advancements.yeastnfeast.crops.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "yeastnfeast:barley"
+    },
+    "title": {
+      "translate": "advancements.yeastnfeast.crops.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_crop"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

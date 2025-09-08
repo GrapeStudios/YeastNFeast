@@ -1,0 +1,47 @@
+{
+  "parent": "yeastnfeast:keg",
+  "criteria": {
+    "has_honey_mead": {
+      "conditions": {
+        "items": [
+          {
+            "items": "yeastnfeast:honey_mead"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_molasses_mead": {
+      "conditions": {
+        "items": [
+          {
+            "items": "yeastnfeast:molasses_mead"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "yeastnfeast:textures/block/maple_log.png",
+    "description": {
+      "translate": "advancements.yeastnfeast.sweet.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "yeastnfeast:honey_mead"
+    },
+    "title": {
+      "translate": "advancements.yeastnfeast.sweet.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_honey_mead"
+    ],
+    [
+      "has_molasses_mead"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

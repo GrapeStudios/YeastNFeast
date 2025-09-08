@@ -1,0 +1,48 @@
+{
+  "category": "yeastnfeast:food",
+  "name": "Feasts",
+  "icon": "yeastnfeast:sweet_porridge",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Feasts are a type of food made from Yeast 'n Feast items, categorized into Bowl food and Plated food.$(br2)Bowl food grants the Overfed effect, while Plated food grants the Vigorous effect."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:sweet_porridge"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:spiced_porridge"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:barley_and_beef_stew"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:salmon_chowder"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:mead_braised_pork"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:herbal_cod"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:lemon_glazed_chicken"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:forager_feast"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "yeastnfeast:maple_glazed_rabbit"
+    }
+  ]
+}

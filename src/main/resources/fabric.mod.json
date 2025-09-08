@@ -1,27 +1,33 @@
 {
 	"schemaVersion": 1,
 	"id": "yeastnfeast",
-	"version": "${version}",
+	"version":  "${version}",
 	"name": "Yeast 'n Feast",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A mod centered around brewing Mead and crafting food items that range from elaborate dishes to delicious Jams.",
 	"authors": [
-		"Me!"
+		"Astralya Studios"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/AstralyaStudios",
+		"sources": "https://github.com/AstralyaStudios/YeastNFeast"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/yeastnfeast/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.astralya.yeastnfeast.YeastnFeast"
+          "net.astralya.yeastnfeast.YeastNFeastMod"
 		],
 		"fabric-datagen": [
-			"net.astralya.yeastnfeast.YeastnFeastDataGenerator"
-		]
-	},
+          "net.astralya.yeastnfeast.YeastNFeastModDataGenerator"
+		],
+      "client": [
+        "net.astralya.yeastnfeast.YeastNFeastModClient"
+      ],
+      "rei_client": [
+        "net.astralya.yeastnfeast.compat.rei.YeastNFeastREIPlugin"
+      ]
+    },
 	"mixins": [
 		"yeastnfeast.mixins.json"
 	],

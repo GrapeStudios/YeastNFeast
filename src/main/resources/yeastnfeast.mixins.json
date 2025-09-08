@@ -3,7 +3,7 @@
 	"package": "net.astralya.yeastnfeast.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"HealingMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

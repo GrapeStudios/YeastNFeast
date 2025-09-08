@@ -1,0 +1,34 @@
+{
+  "parent": "yeastnfeast:crops",
+  "criteria": {
+    "has_berry_roll": {
+      "conditions": {
+        "items": [
+          {
+            "items": "yeastnfeast:berry_roll"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "yeastnfeast:textures/block/maple_log.png",
+    "description": {
+      "translate": "advancements.yeastnfeast.berry_roll.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "yeastnfeast:berry_roll"
+    },
+    "title": {
+      "translate": "advancements.yeastnfeast.berry_roll.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_berry_roll"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

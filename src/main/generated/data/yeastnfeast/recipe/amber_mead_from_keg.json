@@ -1,0 +1,26 @@
+{
+  "type": "yeastnfeast:keg",
+  "brewtime": 7200,
+  "experience": 0.5,
+  "ingredients": [
+    {
+      "item": "yeastnfeast:rye"
+    },
+    {
+      "item": "yeastnfeast:maple_syrup"
+    },
+    {
+      "item": "yeastnfeast:rose_hips"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "yeastnfeast:amber_mead"
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:tankard"
+  },
+  "yeast_slot": {
+    "item": "yeastnfeast:yeast"
+  }
+}

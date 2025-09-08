@@ -1,0 +1,26 @@
+{
+  "type": "yeastnfeast:keg",
+  "brewtime": 7200,
+  "experience": 0.5,
+  "ingredients": [
+    {
+      "item": "yeastnfeast:elderberries"
+    },
+    {
+      "item": "yeastnfeast:lemon"
+    },
+    {
+      "item": "yeastnfeast:ginger"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "yeastnfeast:sour_mead"
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:tankard"
+  },
+  "yeast_slot": {
+    "item": "yeastnfeast:yeast"
+  }
+}
