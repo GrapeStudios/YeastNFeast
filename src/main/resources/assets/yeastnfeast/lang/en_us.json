@@ -74,7 +74,6 @@
   "item.yeastnfeast.melon_jam": "Melon Jam",
   "item.yeastnfeast.rose_hips_jam": "Rose Hips Jam",
   "item.yeastnfeast.sweet_berries_jam": "Sweet Berries Jam",
-  "item.yeastnfeast.chillberries_jam": "Chillberries Jam",
 
   "item.yeastnfeast.sweet_porridge": "Sweet Porridge",
   "item.yeastnfeast.spiced_porridge": "Spiced Porridge",
@@ -85,6 +84,14 @@
   "item.yeastnfeast.lemon_glazed_chicken": "Lemon-Glazed Chicken",
   "item.yeastnfeast.forager_feast": "Forager's Feast",
   "item.yeastnfeast.maple_glazed_rabbit": "Maple-Glazed Rabbit",
+
+  "item.yeastnfeast.chillberries_jam": "Chillberries Jam",
+  "item.yeastnfeast.frostgale_mead": "Frostgale Mead",
+  "item.yeastnfeast.sunfire_tomato_bruschetta": "Sunfire Tomato Bruschetta",
+  "item.yeastnfeast.stuffed_mandrake": "Stuffed Mandrake",
+  "item.yeastnfeast.garden_soup": "Garden Soup",
+  "item.yeastnfeast.ginger_tea": "Ginger Tea",
+  "item.yeastnfeast.spiced_flatbread": "Spiced Flatbread",
 
   "effect.yeastnfeast.overfed": "Overfed",
   "effect.yeastnfeast.overfed.description": "Prevents saturation from lowering but the user can still consume food.",
