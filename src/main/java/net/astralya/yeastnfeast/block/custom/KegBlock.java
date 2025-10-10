@@ -8,14 +8,15 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
-import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -28,11 +29,10 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
-public class KegBlock extends BaseEntityBlock {
+public class KegBlock extends BaseEntityBlock implements SimpleWaterloggedBlock {
 
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
     public static final BooleanProperty WATERLOGGED = BooleanProperty.create("waterlogged");
-
     public static final MapCodec<KegBlock> CODEC = simpleCodec(KegBlock::new);
 
     public KegBlock(Properties properties) {
@@ -47,11 +47,12 @@ public class KegBlock extends BaseEntityBlock {
 
     @Override
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
-        BlockPos blockPos = context.getClickedPos();
+        BlockPos pos = context.getClickedPos();
         Level level = context.getLevel();
-        FluidState fluidState = level.getFluidState(blockPos);
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite())
-                .setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
+        FluidState fluid = level.getFluidState(pos);
+        return this.defaultBlockState()
+                .setValue(FACING, context.getHorizontalDirection().getOpposite())
+                .setValue(WATERLOGGED, fluid.getType() == Fluids.WATER);
     }
 
     @Override
@@ -70,10 +71,18 @@ public class KegBlock extends BaseEntityBlock {
     }
 
     @Override
+    protected BlockState updateShape(BlockState state, Direction dir, BlockState neighbor, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+        if (state.getValue(WATERLOGGED)) {
+            level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+        }
+        return super.updateShape(state, dir, neighbor, level, pos, neighborPos);
+    }
+
+    @Override
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
         if (state.getBlock() != newState.getBlock()) {
-            if (level.getBlockEntity(pos) instanceof KegBlockEntity kegBlockEntity) {
-                kegBlockEntity.drops();
+            if (level.getBlockEntity(pos) instanceof KegBlockEntity keg) {
+                keg.drops();
                 level.updateNeighbourForOutputSignal(pos, this);
             }
         }
@@ -81,32 +90,27 @@ public class KegBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos,
-                                              Player player, InteractionHand hand, BlockHitResult hitResult) {
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (!level.isClientSide()) {
-            BlockEntity entity = level.getBlockEntity(pos);
-            if(entity instanceof KegBlockEntity kegBlockEntity) {
-                player.openMenu(new SimpleMenuProvider(kegBlockEntity, Component.translatable("block.yeastnfeast.keg")), pos);
+            BlockEntity be = level.getBlockEntity(pos);
+            if (be instanceof KegBlockEntity keg) {
+                keg.setLastInteractedPlayer(player);
+                player.openMenu(keg, pos);
             } else {
-                throw new IllegalStateException("Our Container provider is missing!");
+                throw new IllegalStateException("Missing MenuProvider for KegBlockEntity");
             }
         }
-
         return ItemInteractionResult.sidedSuccess(level.isClientSide());
     }
 
     @Override
-    public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
-        return new KegBlockEntity(blockPos, blockState);
+    public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new KegBlockEntity(pos, state);
     }
 
     @Override
-    public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
-        if (level.isClientSide()) {
-            return null;
-        }
-
-        return createTickerHelper(blockEntityType, ModBlockEntityTypes.KEG.get(),
-                (level1, pos, state1, blockEntity) -> blockEntity.tick(level1, pos, state1));
+    public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+        if (level.isClientSide()) return null;
+        return createTickerHelper(type, ModBlockEntityTypes.KEG.get(), (lvl, p, st, be) -> be.tick(lvl, p, st));
     }
 }

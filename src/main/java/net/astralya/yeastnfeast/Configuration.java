@@ -13,7 +13,7 @@ public class Configuration {
     static {
         ModConfigSpec.Builder COMMON_BUILDER = new ModConfigSpec.Builder();
 
-        // --- CATEGORY: Dreamcatcher
+        // --- CATEGORY: Tree Tap
         COMMON_BUILDER.comment("Functional Blocks Settings").push(FUNCTIONAL_BLOCKS);
         COMMON_BUILDER.comment("Tree Tap Settings").push(FUNCTIONAL_BLOCKS);
         TREE_TAP_DRIP_DELAY = COMMON_BUILDER

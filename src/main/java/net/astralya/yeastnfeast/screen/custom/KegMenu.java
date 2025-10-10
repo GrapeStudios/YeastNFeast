@@ -5,6 +5,7 @@ import net.astralya.yeastnfeast.block.entity.custom.KegBlockEntity;
 import net.astralya.yeastnfeast.item.ModItems;
 import net.astralya.yeastnfeast.screen.ModMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
@@ -55,7 +56,22 @@ public class KegMenu extends AbstractContainerMenu {
         this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 3, 125, 28) {
             @Override
             public boolean mayPlace(ItemStack stack) {
-                return false; // output only
+                return false;
+            }
+            @Override
+            public void onTake(Player player, ItemStack taken) {
+                super.onTake(player, taken);
+                if (player instanceof ServerPlayer sp) {
+                    ((KegBlockEntity) blockEntity).setLastInteractedPlayer(player);
+                    ((KegBlockEntity) blockEntity).dropExperienceForRecipesUsed(sp);
+                } else {
+                    ((KegBlockEntity) blockEntity).setLastInteractedPlayer(player);
+                    ((KegBlockEntity) blockEntity).dropExperienceForRecipesUsed();
+                }
+            }
+            @Override
+            protected void onQuickCraft(ItemStack from, int amount) {
+                super.onQuickCraft(from, amount);
             }
         });
 
@@ -77,8 +93,8 @@ public class KegMenu extends AbstractContainerMenu {
     }
 
     private boolean isValidIngredient(ItemStack stack) {
-        return !stack.is(ModItems.TANKARD.get()) || !stack.is(ModItems.JAR.get())
-                && !stack.is(ModItems.YEAST) || !stack.is(Items.SUGAR);
+        if (stack.is(ModItems.TANKARD.get()) || stack.is(ModItems.JAR.get())) return false;
+        return !stack.is(ModItems.YEAST.get()) && !stack.is(Items.SUGAR);
     }
 
     @Override
@@ -95,7 +111,6 @@ public class KegMenu extends AbstractContainerMenu {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);
         int progressBarSize = 26;
-
         return maxProgress != 0 && progress != 0 ? progress * progressBarSize / maxProgress : 0;
     }
 
@@ -111,15 +126,15 @@ public class KegMenu extends AbstractContainerMenu {
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
         Slot sourceSlot = slots.get(index);
-        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
+        if (!sourceSlot.hasItem()) return ItemStack.EMPTY;
         ItemStack sourceStack = sourceSlot.getItem();
         ItemStack copyOfSourceStack = sourceStack.copy();
 
         if (index < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT) {
-            if (sourceStack.is(ModItems.YEAST) || sourceStack.is(Items.SUGAR)) {
+            if (sourceStack.is(ModItems.YEAST.get()) || sourceStack.is(Items.SUGAR)) {
                 if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX + 4, TE_INVENTORY_FIRST_SLOT_INDEX + 5, false))
                     return ItemStack.EMPTY;
-            } else if (sourceStack.is(ModItems.TANKARD) || sourceStack.is(ModItems.JAR)) {
+            } else if (sourceStack.is(ModItems.TANKARD.get()) || sourceStack.is(ModItems.JAR.get())) {
                 if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX + 5, TE_INVENTORY_FIRST_SLOT_INDEX + 6, false))
                     return ItemStack.EMPTY;
             } else {
@@ -130,7 +145,6 @@ public class KegMenu extends AbstractContainerMenu {
             if (!moveItemStackTo(sourceStack, VANILLA_FIRST_SLOT_INDEX, VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT, false))
                 return ItemStack.EMPTY;
         } else {
-            System.out.println("Invalid slotIndex:" + index);
             return ItemStack.EMPTY;
         }
 
@@ -153,8 +167,7 @@ public class KegMenu extends AbstractContainerMenu {
     private void addPlayerInventory(Inventory playerInventory) {
         for (int row = 0; row < 3; ++row) {
             for (int col = 0; col < 9; ++col) {
-                this.addSlot(new Slot(playerInventory, col + row * 9 + 9,
-                        8 + col * 18, 84 + row * 18));
+                this.addSlot(new Slot(playerInventory, col + row * 9 + 9, 8 + col * 18, 84 + row * 18));
             }
         }
     }
