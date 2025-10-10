@@ -56,42 +56,33 @@ public class ModItems {
 
     // Bowl Food Items
     public static final DeferredItem<Item> SWEET_PORRIDGE = ITEMS.register("sweet_porridge",
-            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.SWEET_PORRIDGE).stacksTo(1),
-                    () -> ModMobEffects.OVERFED, 4800, 0,
+            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.SWEET_PORRIDGE), () -> ModMobEffects.OVERFED, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
     public static final DeferredItem<Item> SPICED_PORRIDGE = ITEMS.register("spiced_porridge",
-            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.SPICED_PORRIDGE).stacksTo(1),
-                    () -> ModMobEffects.OVERFED, 4800, 0,
+            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.SPICED_PORRIDGE), () -> ModMobEffects.OVERFED, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
     public static final DeferredItem<Item> BARLEY_AND_BEEF_STEW = ITEMS.register("barley_and_beef_stew",
-            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.BARLEY_AND_BEEF_STEW).stacksTo(1),
-                    () -> ModMobEffects.OVERFED, 4800, 0,
+            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.BARLEY_AND_BEEF_STEW), () -> ModMobEffects.OVERFED, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
     public static final DeferredItem<Item> SALMON_CHOWDER = ITEMS.register("salmon_chowder",
-            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.SALMON_CHOWDER).stacksTo(1),
-                    () -> ModMobEffects.OVERFED, 4800, 0,
+            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.SALMON_CHOWDER), () -> ModMobEffects.OVERFED, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
     
     // Plated Food Items
     public static final DeferredItem<Item> MEAD_BRAISED_PORK = ITEMS.register("mead_braised_pork",
-            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.MEAD_BRAISED_PORK).stacksTo(1),
-                    () -> ModMobEffects.VIGOROUS, 4800, 0,
+            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.MEAD_BRAISED_PORK), () -> ModMobEffects.VIGOROUS, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
     public static final DeferredItem<Item> HERBAL_COD = ITEMS.register("herbal_cod",
-            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.HERBAL_COD).stacksTo(1),
-                    () -> ModMobEffects.VIGOROUS, 4800, 0,
+            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.HERBAL_COD), () -> ModMobEffects.VIGOROUS, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
     public static final DeferredItem<Item> LEMON_GLAZED_CHICKEN = ITEMS.register("lemon_glazed_chicken",
-            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.LEMON_GLAZED_CHICKEN).stacksTo(1),
-                    () -> ModMobEffects.VIGOROUS, 4800, 0,
+            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.LEMON_GLAZED_CHICKEN), () -> ModMobEffects.VIGOROUS, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
     public static final DeferredItem<Item> FORAGER_FEAST = ITEMS.register("forager_feast",
-            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.FORAGER_FEAST).stacksTo(1),
-                    () -> ModMobEffects.VIGOROUS, 4800, 0,
+            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.FORAGER_FEAST), () -> ModMobEffects.VIGOROUS, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
     public static final DeferredItem<Item> MAPLE_GLAZED_RABBIT = ITEMS.register("maple_glazed_rabbit",
-            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.MAPLE_GLAZED_RABBIT).stacksTo(1),
-                    () -> ModMobEffects.VIGOROUS, 4800, 0,
+            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.MAPLE_GLAZED_RABBIT), () -> ModMobEffects.VIGOROUS, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
 
     // 0ther Food Items
@@ -112,47 +103,47 @@ public class ModItems {
 
     // Mead Items
     public static final DeferredItem<Item> TANKARD = ITEMS.registerSimpleItem("tankard");
-    public static final DeferredItem<Item> HONEY_MEAD = ITEMS.register("honey_mead",
-            () -> new MeadItem(new Item.Properties().stacksTo(16), () -> MobEffects.DAMAGE_RESISTANCE, 4800, 1,
-                    Component.translatable("tooltip.yeastnfeast.mead_item.sweet").withStyle(ChatFormatting.BLUE)));
-    public static final DeferredItem<Item> MOLASSES_MEAD = ITEMS.register("molasses_mead",
-            () -> new MeadItem(new Item.Properties().stacksTo(16), () -> MobEffects.DAMAGE_RESISTANCE, 4800, 1,
-                    Component.translatable("tooltip.yeastnfeast.mead_item.sweet").withStyle(ChatFormatting.BLUE)));
-    public static final DeferredItem<Item> SOUR_MEAD = ITEMS.register("sour_mead",
-            () -> new MeadItem(new Item.Properties().stacksTo(16), () -> MobEffects.DAMAGE_BOOST, 4800, 1,
-                    Component.translatable("tooltip.yeastnfeast.mead_item.sour").withStyle(ChatFormatting.BLUE)));
-    public static final DeferredItem<Item> THORNBERRY_MEAD = ITEMS.register("thornberry_mead",
-            () -> new MeadItem(new Item.Properties().stacksTo(16), () -> MobEffects.DAMAGE_BOOST, 4800, 1,
-                    Component.translatable("tooltip.yeastnfeast.mead_item.sour").withStyle(ChatFormatting.BLUE)));
-    public static final DeferredItem<Item> BLOSSOM_MEAD = ITEMS.register("blossom_mead",
-            () -> new MeadItem(new Item.Properties().stacksTo(16), () -> MobEffects.REGENERATION, 4800, 1,
-                    Component.translatable("tooltip.yeastnfeast.mead_item.floral").withStyle(ChatFormatting.BLUE)));
-    public static final DeferredItem<Item> AMBER_MEAD = ITEMS.register("amber_mead",
-            () -> new MeadItem(new Item.Properties().stacksTo(16), () -> MobEffects.REGENERATION, 4800, 1,
-                    Component.translatable("tooltip.yeastnfeast.mead_item.floral").withStyle(ChatFormatting.BLUE)));
+    public static final DeferredItem<Item> HONEY_MEAD = ITEMS.register("honey_mead", () -> new MeadItem(new Item.Properties(), 
+            () -> MobEffects.DAMAGE_RESISTANCE, 4800, 1, 
+            Component.translatable("tooltip.yeastnfeast.mead_item.sweet").withStyle(ChatFormatting.BLUE)));
+    public static final DeferredItem<Item> MOLASSES_MEAD = ITEMS.register("molasses_mead", () -> new MeadItem(new Item.Properties(), 
+            () -> MobEffects.DAMAGE_RESISTANCE, 4800, 1,
+            Component.translatable("tooltip.yeastnfeast.mead_item.sweet").withStyle(ChatFormatting.BLUE)));
+    public static final DeferredItem<Item> SOUR_MEAD = ITEMS.register("sour_mead", () -> new MeadItem(new Item.Properties(), 
+            () -> MobEffects.DAMAGE_BOOST, 4800, 1,
+            Component.translatable("tooltip.yeastnfeast.mead_item.sour").withStyle(ChatFormatting.BLUE)));
+    public static final DeferredItem<Item> THORNBERRY_MEAD = ITEMS.register("thornberry_mead", () -> new MeadItem(new Item.Properties(), 
+            () -> MobEffects.DAMAGE_BOOST, 4800, 1,
+            Component.translatable("tooltip.yeastnfeast.mead_item.sour").withStyle(ChatFormatting.BLUE)));
+    public static final DeferredItem<Item> BLOSSOM_MEAD = ITEMS.register("blossom_mead", () -> new MeadItem(new Item.Properties(), 
+            () -> MobEffects.REGENERATION, 4800, 1,
+            Component.translatable("tooltip.yeastnfeast.mead_item.floral").withStyle(ChatFormatting.BLUE)));
+    public static final DeferredItem<Item> AMBER_MEAD = ITEMS.register("amber_mead", () -> new MeadItem(new Item.Properties(), 
+            () -> MobEffects.REGENERATION, 4800, 1, 
+            Component.translatable("tooltip.yeastnfeast.mead_item.floral").withStyle(ChatFormatting.BLUE)));
 
     // Jams
     public static final DeferredItem<Item> JAR = ITEMS.registerSimpleItem("jar");
     public static final DeferredItem<Item> APPLE_JAM = ITEMS.registerItem("apple_jam",
-            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.APPLE_JAM).stacksTo(16));
+            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.APPLE_JAM));
     public static final DeferredItem<Item> CHORUS_FRUIT_JAM = ITEMS.registerItem("chorus_fruit_jam",
-            ChorusFruitJamItem::new, new Item.Properties().food(ModFoodProperties.CHORUS_FRUIT_JAM).stacksTo(16));
+            ChorusFruitJamItem::new, new Item.Properties().food(ModFoodProperties.CHORUS_FRUIT_JAM));
     public static final DeferredItem<Item> ELDERBERRIES_JAM = ITEMS.registerItem("elderberries_jam",
-            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.ELDERBERRIES_JAM).stacksTo(16));
+            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.ELDERBERRIES_JAM));
     public static final DeferredItem<Item> GLOW_BERRIES_JAM = ITEMS.registerItem("glow_berries_jam",
-            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.GLOW_BERRIES_JAM).stacksTo(16));
+            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.GLOW_BERRIES_JAM));
     public static final DeferredItem<Item> GOLDEN_APPLE_JAM = ITEMS.registerItem("golden_apple_jam",
-            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.GOLDEN_APPLE_JAM).stacksTo(16));
+            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.GOLDEN_APPLE_JAM));
     public static final DeferredItem<Item> HAWTHORN_BERRIES_JAM = ITEMS.registerItem("hawthorn_berries_jam",
-            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.HAWTHORN_BERRIES_JAM).stacksTo(16));
+            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.HAWTHORN_BERRIES_JAM));
     public static final DeferredItem<Item> LEMON_JAM = ITEMS.registerItem("lemon_jam",
-            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.LEMON_JAM).stacksTo(16));
+            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.LEMON_JAM));
     public static final DeferredItem<Item> MELON_JAM = ITEMS.registerItem("melon_jam",
-            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.MELON_JAM).stacksTo(16));
+            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.MELON_JAM));
     public static final DeferredItem<Item> ROSE_HIPS_JAM = ITEMS.registerItem("rose_hips_jam",
-            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.ROSE_HIPS_JAM).stacksTo(16));
+            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.ROSE_HIPS_JAM));
     public static final DeferredItem<Item> SWEET_BERRIES_JAM = ITEMS.registerItem("sweet_berries_jam",
-            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.SWEET_BERRIES_JAM).stacksTo(16));
+            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.SWEET_BERRIES_JAM));
 
     // Wood-Related Items
     public static final DeferredItem<Item> MAPLE_BOAT = ITEMS.register("maple_boat",
@@ -160,9 +151,9 @@ public class ModItems {
     public static final DeferredItem<Item> MAPLE_CHEST_BOAT = ITEMS.register("maple_chest_boat",
             () -> new ModBoatItem(true, ModBoatEntity.Type.MAPLE, new Item.Properties()));
     public static final DeferredItem<Item> MAPLE_SIGN = ITEMS.register("maple_sign",
-            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.MAPLE_SIGN.get(), ModBlocks.MAPLE_WALL_SIGN.get()));
+            () -> new SignItem(new Item.Properties(), ModBlocks.MAPLE_SIGN.get(), ModBlocks.MAPLE_WALL_SIGN.get()));
     public static final DeferredItem<Item> MAPLE_HANGING_SIGN = ITEMS.register("maple_hanging_sign",
-            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.MAPLE_HANGING_SIGN.get(), ModBlocks.MAPLE_HANGING_WALL_SIGN.get()));
+            () -> new SignItem(new Item.Properties(), ModBlocks.MAPLE_HANGING_SIGN.get(), ModBlocks.MAPLE_HANGING_WALL_SIGN.get()));
 
     // Block Items
     public static final DeferredItem<Item> KEG = ITEMS.register("keg",
@@ -175,12 +166,10 @@ public class ModItems {
     public static DeferredItem<Item> STUFFED_MANDRAKE;
     static {
         if (ModList.get().isLoaded("hexalia")) {
-            CHILLBERRIES_JAM = ITEMS.register("chillberries_jam", () ->
-                    new ConsumableItem(new Item.Properties().food(ModFoodProperties.CHILLBERRIES_JAM)));
+            CHILLBERRIES_JAM = ITEMS.register("chillberries_jam", () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.CHILLBERRIES_JAM)));
             STUFFED_MANDRAKE = ITEMS.register("stuffed_mandrake", () -> new FeastItem(new Item.Properties().food(ModFoodProperties.STUFFED_MANDRAKE),
-                    () -> ModMobEffects.VIGOROUS, 4800, 0,
-                    Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
-            FROSTGALE_MEAD =  ITEMS.register("frostgale_mead", () -> new MeadItem(new Item.Properties().stacksTo(16),
+                    () -> ModMobEffects.VIGOROUS, 4800, 0, Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
+            FROSTGALE_MEAD =  ITEMS.register("frostgale_mead", () -> new MeadItem(new Item.Properties(),
                     () -> MobEffects.DAMAGE_RESISTANCE, 4800, 1, Component.translatable("tooltip.yeastnfeast.mead_item.sweet").withStyle(ChatFormatting.BLUE)));
             SUNFIRE_TOMATO_BRUSCHETTA = ITEMS.register("sunfire_tomato_bruschetta", () -> new Item(new Item.Properties().food(ModFoodProperties.SUNFIRE_TOMATO_BRUSCHETTA)));
         }

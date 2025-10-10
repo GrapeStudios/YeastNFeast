@@ -140,6 +140,9 @@ dependencies {
 
     compileOnly "vazkii.patchouli:Patchouli:${patchouli_version}-NEOFORGE:api"
     runtimeOnly "vazkii.patchouli:Patchouli:${patchouli_version}-NEOFORGE"
+
+    implementation "curse.maven:lets-do-farm-charm-1038103:7081972"
+    implementation "curse.maven:architectury-api-419699:5786327"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
