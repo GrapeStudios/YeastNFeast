@@ -20,8 +20,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(YeastNFeastMod.MODID);
 
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(YeastNFeastMod.MODID);
     
     // Crop Blocks
     public static final DeferredBlock<Block> BARLEY_CROP = BLOCKS.register("barley_crop",
@@ -43,7 +43,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> TREE_TAP = registerBlock("tree_tap",
             () -> new TreeTapBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
     public static final DeferredBlock<Block> KEG = BLOCKS.register("keg",
-            () -> new KegBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL).noOcclusion()));
+            () -> new KegBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
 
     // Storage Blocks
     public static final DeferredBlock<Block> BAG_OF_ELDERBERRIES = registerBlock("bag_of_elderberries",
@@ -134,7 +134,6 @@ public class ModBlocks {
             () -> new ModHangingSignBlock(ModWoodTypes.MAPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<Block> MAPLE_HANGING_WALL_SIGN = BLOCKS.register("maple_hanging_wall_sign",
             () -> new ModWallHangingSignBlock(ModWoodTypes.MAPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
-
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

@@ -1,6 +1,7 @@
 package net.astralya.yeastnfeast;
 
 import net.astralya.yeastnfeast.block.ModBlocks;
+import net.astralya.yeastnfeast.block.ModFlammables;
 import net.astralya.yeastnfeast.block.entity.ModBlockEntityTypes;
 import net.astralya.yeastnfeast.effect.ModMobEffects;
 import net.astralya.yeastnfeast.entity.ModEntities;
@@ -69,6 +70,7 @@ public class YeastNFeastMod {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.LEMON_SAPLING.getId(), ModBlocks.POTTED_LEMON_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.HAWTHORN_SAPLING.getId(), ModBlocks.POTTED_HAWTHORN_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.MAPLE_SAPLING.getId(), ModBlocks.POTTED_MAPLE_SAPLING);
+            event.enqueueWork(ModFlammables::register);
         });
     }
 
@@ -76,6 +78,21 @@ public class YeastNFeastMod {
         if (event.getTab() == ModCreativeModeTabs.YEASTNFEAST_TAB.get()) {
             if (ModList.get().isLoaded("patchouli")) {
                 event.accept(ModItems.HOMESTEADERS_HANDBOOK);
+            }
+        }
+        if (event.getTab() == ModCreativeModeTabs.YEASTNFEAST_TAB.get()) {
+            if (ModList.get().isLoaded("hexalia")) {
+                event.accept(ModItems.CHILLBERRIES_JAM);
+                event.accept(ModItems.FROSTGALE_MEAD);
+                event.accept(ModItems.SUNFIRE_TOMATO_BRUSCHETTA);
+                event.accept(ModItems.STUFFED_MANDRAKE);
+            }
+        }
+        if (event.getTab() == ModCreativeModeTabs.YEASTNFEAST_TAB.get()) {
+            if (ModList.get().isLoaded("farmersdelight")) {
+                event.accept(ModItems.GARDEN_SOUP);
+                event.accept(ModItems.GINGER_TEA);
+                event.accept(ModItems.SPICED_FLATBREAD);
             }
         }
     }

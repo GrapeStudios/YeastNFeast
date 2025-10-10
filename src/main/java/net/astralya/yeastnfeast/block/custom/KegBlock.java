@@ -3,11 +3,9 @@ package net.astralya.yeastnfeast.block.custom;
 import com.mojang.serialization.MapCodec;
 import net.astralya.yeastnfeast.block.entity.ModBlockEntityTypes;
 import net.astralya.yeastnfeast.block.entity.custom.KegBlockEntity;
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.SimpleMenuProvider;
@@ -30,10 +28,6 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
 public class KegBlock extends BaseEntityBlock {
 
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
@@ -92,7 +86,7 @@ public class KegBlock extends BaseEntityBlock {
         if (!level.isClientSide()) {
             BlockEntity entity = level.getBlockEntity(pos);
             if(entity instanceof KegBlockEntity kegBlockEntity) {
-                ((ServerPlayer) player).openMenu(new SimpleMenuProvider(kegBlockEntity, Component.translatable("block.yeastnfeast.keg")), pos);
+                player.openMenu(new SimpleMenuProvider(kegBlockEntity, Component.translatable("block.yeastnfeast.keg")), pos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }

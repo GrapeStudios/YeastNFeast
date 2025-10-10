@@ -37,16 +37,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        simpleCrossBlock(ModBlocks.WILD_BARLEY.get());
-        simpleCrossBlock(ModBlocks.WILD_RYE.get());
-        simpleCrossBlock(ModBlocks.WILD_GINGER.get());
-        simpleCrossBlock(ModBlocks.WILD_GARLIC.get());
-
         blockWithItem(ModBlocks.MAPLE_PLANKS);
         blockItem(ModBlocks.MAPLE_LOG);
         blockItem(ModBlocks.MAPLE_WOOD);
         blockItem(ModBlocks.STRIPPED_MAPLE_LOG);
         blockItem(ModBlocks.STRIPPED_MAPLE_WOOD);
+
+        simpleCrossBlock(ModBlocks.WILD_BARLEY.get());
+        simpleCrossBlock(ModBlocks.WILD_RYE.get());
+        simpleCrossBlock(ModBlocks.WILD_GINGER.get());
+        simpleCrossBlock(ModBlocks.WILD_GARLIC.get());
 
         leavesBlock(ModBlocks.LEMON_TREE_LEAVES);
         leavesBlock(ModBlocks.MAPLE_LEAVES);
@@ -161,10 +161,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     public void grainBlockWithAxis(Block block, String sideTexture, String endTexture) {
         String name = blockName(block);
 
-        // Base model (vertical)
         ModelFile vertical = models().cubeColumn(name, resourceBlock(sideTexture), resourceBlock(endTexture));
 
-        // Horizontal model
         ModelFile horizontal = models().cubeColumn(name + "_horizontal", resourceBlock(sideTexture), resourceBlock(endTexture));
 
         getVariantBuilder(block)

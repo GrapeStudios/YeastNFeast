@@ -8,6 +8,8 @@ import net.astralya.yeastnfeast.particle.ModParticleType;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
@@ -111,6 +113,7 @@ public class TreeTapBlock extends BaseEntityBlock {
             player.getItemInHand(hand).shrink(1);
             player.addItem(new ItemStack(ModItems.MAPLE_SYRUP.get()));
             level.setBlock(pos, state.setValue(DRIPPING, false), 3);
+            level.playSound(null, pos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1.0f, 0.8f + level.random.nextFloat() * 0.4f);
             return ItemInteractionResult.SUCCESS;
         }
         return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
