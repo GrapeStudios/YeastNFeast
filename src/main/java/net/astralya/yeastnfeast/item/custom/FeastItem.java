@@ -3,6 +3,8 @@ package net.astralya.yeastnfeast.item.custom;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
@@ -22,7 +24,7 @@ public class FeastItem extends AbstractConsumableItem  {
     private final Supplier<Holder<MobEffect>> effectSupplier;
 
     public FeastItem(Properties properties, Supplier<Holder<MobEffect>> effectSupplier, int duration, int amplifier, Component tooltip) {
-        super(properties);
+        super(properties.stacksTo(1));
         this.effectSupplier = effectSupplier;
         this.duration = duration;
         this.amplifier = amplifier;
@@ -39,6 +41,11 @@ public class FeastItem extends AbstractConsumableItem  {
     @Override
     protected ItemStack getReturnContainer(ItemStack stack) {
         return new ItemStack(Items.BOWL);
+    }
+
+    @Override
+    public SoundEvent getEatingSound() {
+        return SoundEvents.GENERIC_EAT;
     }
 
     @Override

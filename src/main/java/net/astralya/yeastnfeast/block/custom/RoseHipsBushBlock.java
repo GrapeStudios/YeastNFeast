@@ -33,10 +33,10 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 public class RoseHipsBushBlock extends BushBlock implements BonemealableBlock {
 
+    protected static final VoxelShape SHAPE = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 10.0D, 11.0D);
+
     public static final int MAX_AGE = 3;
     public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 3);
-    private static final VoxelShape SAPLING_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
-    private static final VoxelShape MID_GROWTH_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
 
     public static final MapCodec<RoseHipsBushBlock> CODEC = simpleCodec(RoseHipsBushBlock::new);
 
@@ -51,11 +51,7 @@ public class RoseHipsBushBlock extends BushBlock implements BonemealableBlock {
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        if (state.getValue(AGE) <= 1) {
-            return SAPLING_SHAPE;
-        } else {
-            return state.getValue(AGE) < 3 ? MID_GROWTH_SHAPE : super.getShape(state, level, pos, context);
-        }
+        return SHAPE;
     }
 
     @Override

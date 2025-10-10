@@ -2,7 +2,6 @@ package net.astralya.yeastnfeast.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.astralya.yeastnfeast.item.ModItems;
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -26,8 +25,6 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.common.CommonHooks;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 public class ElderberryBushBlock extends BushBlock implements BonemealableBlock {
 

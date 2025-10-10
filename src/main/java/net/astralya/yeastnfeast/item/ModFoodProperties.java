@@ -1,5 +1,6 @@
 package net.astralya.yeastnfeast.item;
 
+import net.astralya.yeastnfeast.effect.ModMobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -54,5 +55,16 @@ public class ModFoodProperties {
     public static final FoodProperties ROSE_HIPS_JAM = new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).build();
     public static final FoodProperties SWEET_BERRIES_JAM = new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).build();
     public static final FoodProperties MELON_JAM = new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).build();
+
+    // Compat Foods
+    public static final FoodProperties CHILLBERRIES_JAM = new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).build();
+    public static final FoodProperties STUFFED_MANDRAKE = new FoodProperties.Builder().nutrition(12).saturationModifier(0.8f)
+            .effect(() -> new MobEffectInstance(ModMobEffects.OVERFED, 1200, 0), 1.0F).build();
+    public static final FoodProperties SUNFIRE_TOMATO_BRUSCHETTA = new FoodProperties.Builder().nutrition(8).saturationModifier(0.8f)
+            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0), 1.0F).build();
+
+    public static final FoodProperties GARDEN_SOUP = new FoodProperties.Builder().nutrition(13).saturationModifier(0.8f).build();
+    public static final FoodProperties GINGER_TEA = new FoodProperties.Builder().nutrition(6).saturationModifier(0.1f).build();
+    public static final FoodProperties SPICED_FLATBREAD = new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f).build();
 
 }

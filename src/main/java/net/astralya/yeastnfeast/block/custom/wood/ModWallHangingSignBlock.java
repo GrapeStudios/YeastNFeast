@@ -2,7 +2,6 @@ package net.astralya.yeastnfeast.block.custom.wood;
 
 import net.astralya.yeastnfeast.block.entity.wood.ModHangingSignBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.CeilingHangingSignBlock;
 import net.minecraft.world.level.block.WallHangingSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;

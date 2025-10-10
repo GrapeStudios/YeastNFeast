@@ -4,6 +4,8 @@ import net.astralya.yeastnfeast.item.ModItems;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
@@ -27,6 +29,11 @@ public class MeadItem extends FeastItem {
     @Override
     public int getUseDuration(ItemStack stack, LivingEntity entity) {
         return 40;
+    }
+
+    @Override
+    public SoundEvent getEatingSound() {
+        return SoundEvents.GENERIC_DRINK;
     }
 
     @Override
