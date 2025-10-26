@@ -5,7 +5,6 @@ import net.astralya.yeastnfeast.block.entity.ModBlockEntityTypes;
 import net.astralya.yeastnfeast.block.entity.custom.KegBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
