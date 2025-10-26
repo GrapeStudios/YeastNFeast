@@ -5,6 +5,7 @@ import net.astralya.yeastnfeast.datagen.loot.ModBlockLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.data.advancements.AdvancementProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -37,5 +38,6 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new DataMapGenerator(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeClient(), new ModPoiTagProvider(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new AdvancementProvider(packOutput, lookupProvider, java.util.List.of(new ModAdvancementsProvider())));
     }
 }
