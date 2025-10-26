@@ -10,7 +10,7 @@ public class ModTreeGrower {
     public static final TreeGrower MAPLE = new TreeGrower(YeastNFeastMod.MODID + ":maple",
             Optional.empty(), Optional.of(ModConfiguredFeatures.MAPLE_TREE), Optional.empty());
     public static final TreeGrower LEMON = new TreeGrower(YeastNFeastMod.MODID + ":lemon",
-            Optional.empty(), Optional.of(ModConfiguredFeatures.MAPLE_TREE), Optional.empty());
+            Optional.empty(), Optional.of(ModConfiguredFeatures.LEMON_TREE), Optional.empty());
     public static final TreeGrower HAWTHORN = new TreeGrower(YeastNFeastMod.MODID + ":hawthorn",
-            Optional.empty(), Optional.of(ModConfiguredFeatures.MAPLE_TREE), Optional.empty());
+            Optional.empty(), Optional.of(ModConfiguredFeatures.HAWTHORN_TREE), Optional.empty());
 }

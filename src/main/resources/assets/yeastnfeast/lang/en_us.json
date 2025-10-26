@@ -31,6 +31,7 @@
   "block.yeastnfeast.flowering_hawthorn_tree_leaves": "Flowering Hawthorn Tree Leaves",
   "block.yeastnfeast.hawthorn_sapling": "Hawthorn Sapling",
   "block.yeastnfeast.potted_hawthorn_sapling": "Potted Hawthorn Sapling",
+  "block.yeastnfeast.maple_syrup_cauldron": "Maple Syrup Cauldron",
 
   "item.yeastnfeast.yeast": "Yeast",
   "item.yeastnfeast.maple_syrup": "Maple Syrup",
@@ -92,6 +93,9 @@
   "item.yeastnfeast.garden_soup": "Garden Soup",
   "item.yeastnfeast.ginger_tea": "Ginger Tea",
   "item.yeastnfeast.spiced_flatbread": "Spiced Flatbread",
+  "item.yeastnfeast.strawberries_jam": "Strawberries Jam",
+  "item.yeastnfeast.maple_rye_pancakes": "Maple-Rye Pancakes",
+  "item.yeastnfeast.elderberries_oatmeal": "Oatmeal with Elderberries",
 
   "effect.yeastnfeast.overfed": "Overfed",
   "effect.yeastnfeast.overfed.description": "Prevents saturation from lowering but the user can still consume food.",

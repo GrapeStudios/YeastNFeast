@@ -1,6 +1,5 @@
 package net.astralya.yeastnfeast.item.custom;
 
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
@@ -11,11 +10,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Supplier;
 
-@MethodsReturnNonnullByDefault
-@ParametersAreNonnullByDefault
 public class FeastItem extends AbstractConsumableItem  {
 
     private final int duration;

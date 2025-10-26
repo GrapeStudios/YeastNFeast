@@ -1,15 +1,15 @@
 {
   "type": "yeastnfeast:keg",
-  "brewtime": 7200,
+  "brewtime": 3600,
   "experience": 0.3,
   "ingredients": [
-    { "item": "hexalia:chillberries" },
-    { "item": "hexalia:chillberries" },
-    { "item": "hexalia:chillberries" }
+    { "item": "farm_and_charm:strawberry" },
+    { "item": "farm_and_charm:strawberry" },
+    { "item": "farm_and_charm:strawberry" }
   ],
   "result": {
     "count": 1,
-    "id": "yeastnfeast:chillberries_jam"
+    "id": "yeastnfeast:strawberries_jam"
   },
   "tankard_slot": {
     "item": "yeastnfeast:jar"
@@ -20,7 +20,7 @@
   "conditions": [
     {
       "type": "neoforge:mod_loaded",
-      "modid": "hexalia"
+      "modid": "farm_and_charm"
     }
   ]
 }

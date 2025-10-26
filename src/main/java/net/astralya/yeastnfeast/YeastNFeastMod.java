@@ -95,6 +95,13 @@ public class YeastNFeastMod {
                 event.accept(ModItems.SPICED_FLATBREAD);
             }
         }
+        if (event.getTab() == ModCreativeModeTabs.YEASTNFEAST_TAB.get()) {
+            if (ModList.get().isLoaded("farm_and_charm")) {
+                event.accept(ModItems.STRAWBERRIES_JAM);
+                event.accept(ModItems.MAPLE_RYE_PANCAKES);
+                event.accept(ModItems.ELDERBERRIES_OATMEAL);
+            }
+        }
     }
 
     @SubscribeEvent

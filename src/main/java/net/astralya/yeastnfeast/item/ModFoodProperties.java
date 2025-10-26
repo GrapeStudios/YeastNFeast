@@ -67,4 +67,7 @@ public class ModFoodProperties {
     public static final FoodProperties GINGER_TEA = new FoodProperties.Builder().nutrition(6).saturationModifier(0.1f).build();
     public static final FoodProperties SPICED_FLATBREAD = new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f).build();
 
+    public static final FoodProperties STRAWBERRIES_JAM = new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).build();
+    public static final FoodProperties ELDERBERRIES_OATMEAL = new FoodProperties.Builder().nutrition(12).saturationModifier(0.8f).build();
+    public static final FoodProperties MAPLE_RYE_PANCAKES = new FoodProperties.Builder().nutrition(12).saturationModifier(0.8f).build();
 }

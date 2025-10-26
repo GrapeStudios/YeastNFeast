@@ -18,6 +18,8 @@ import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import static net.astralya.yeastnfeast.block.ModBlocks.MAPLE_SYRUP_CAULDRON;
+
 public class ModItems {
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(YeastNFeastMod.MODID);
@@ -25,7 +27,7 @@ public class ModItems {
     // Resources
     public static final DeferredItem<Item> YEAST = ITEMS.registerSimpleItem("yeast");
     public static final DeferredItem<Item> MAPLE_SYRUP = ITEMS.registerItem("maple_syrup",
-            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.MAPLE_SYRUP));
+            MapleSyrupItem::new, new Item.Properties().food(ModFoodProperties.MAPLE_SYRUP));
     public static final DeferredItem<Item> MOLASSES = ITEMS.registerItem("molasses",
             ConsumableItem::new, new Item.Properties().food(ModFoodProperties.MOLASSES));
     public static final DeferredItem<Item> MILK_BOTTLE = ITEMS.registerItem("milk_bottle",
@@ -85,7 +87,7 @@ public class ModItems {
             () -> new FeastItem(new Item.Properties().food(ModFoodProperties.MAPLE_GLAZED_RABBIT), () -> ModMobEffects.VIGOROUS, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
 
-    // 0ther Food Items
+    // Other Food Items
     public static final DeferredItem<Item> BARLEY_BREAD = ITEMS.registerItem("barley_bread",
             Item::new, new Item.Properties().food(ModFoodProperties.BARLEY_BREAD));
     public static final DeferredItem<Item> RYE_BREAD = ITEMS.registerItem("rye_bread",
@@ -158,6 +160,8 @@ public class ModItems {
     // Block Items
     public static final DeferredItem<Item> KEG = ITEMS.register("keg",
             () -> new BlockItem(ModBlocks.KEG.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> MAPLE_SYRUP_CAULDRON_ITEM =
+            ITEMS.register("maple_syrup_cauldron", () -> new BlockItem(MAPLE_SYRUP_CAULDRON.get(), new Item.Properties()));
 
     // Addon or Compat Items
     public static DeferredItem<Item> CHILLBERRIES_JAM;
@@ -184,6 +188,19 @@ public class ModItems {
                     () -> ModMobEffects.OVERFED, 4800, 0, Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
             GINGER_TEA =  ITEMS.register("ginger_tea", () -> new MilkBottleItem(new Item.Properties().food(ModFoodProperties.GINGER_TEA)));
             SPICED_FLATBREAD = ITEMS.register("spiced_flatbread", () -> new Item(new Item.Properties().food(ModFoodProperties.SPICED_FLATBREAD)));
+        }
+    }
+
+    public static DeferredItem<Item> STRAWBERRIES_JAM;
+    public static DeferredItem<Item> MAPLE_RYE_PANCAKES;
+    public static DeferredItem<Item> ELDERBERRIES_OATMEAL;
+    static {
+        if (ModList.get().isLoaded("farm_and_charm")) {
+            STRAWBERRIES_JAM = ITEMS.register("strawberries_jam", () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.STRAWBERRIES_JAM)));
+            MAPLE_RYE_PANCAKES =  ITEMS.register("maple_rye_pancakes",  () -> new FeastItem(new Item.Properties().food(ModFoodProperties.MAPLE_RYE_PANCAKES),
+                    () -> ModMobEffects.VIGOROUS, 4800, 0, Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
+            ELDERBERRIES_OATMEAL = ITEMS.register("elderberries_oatmeal", () -> new FeastItem(new Item.Properties().food(ModFoodProperties.ELDERBERRIES_OATMEAL),
+                    () -> ModMobEffects.OVERFED, 4800, 0, Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
         }
     }
 

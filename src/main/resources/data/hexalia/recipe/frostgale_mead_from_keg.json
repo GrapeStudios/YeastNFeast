@@ -15,7 +15,7 @@
     "item": "yeastnfeast:tankard"
   },
   "yeast_slot": {
-    "item": "minecraft:yeast"
+    "item": "yeastnfeast:yeast"
   },
   "conditions": [
     {
