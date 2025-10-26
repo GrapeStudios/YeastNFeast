@@ -34,16 +34,18 @@ public class ModBlocks {
             () -> new GarlicCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POTATOES)));
     public static final DeferredBlock<Block> MINT_CROP = BLOCKS.register("mint_crop",
             () -> new MintCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POTATOES)));
-    public static final DeferredBlock<Block> ROSE_HIPS_BUSH = registerBlock("rose_hips_bush",
-            () -> new RoseHipsBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
-    public static final DeferredBlock<Block> ELDERBERRY_BUSH = registerBlock("elderberry_bush",
-            () -> new ElderberryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
+    public static final DeferredBlock<Block> ROSE_HIPS_BUSH = BLOCKS.register("rose_hips_bush",
+            () -> new RoseHipsBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH).randomTicks()));
+    public static final DeferredBlock<Block> ELDERBERRY_BUSH = BLOCKS.register("elderberry_bush",
+            () -> new ElderberryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH).randomTicks()));
 
     // Functional Blocks
     public static final DeferredBlock<Block> TREE_TAP = registerBlock("tree_tap",
             () -> new TreeTapBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
     public static final DeferredBlock<Block> KEG = BLOCKS.register("keg",
             () -> new KegBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final DeferredBlock<Block> MAPLE_SYRUP_CAULDRON = BLOCKS.register("maple_syrup_cauldron",
+            () -> new MapleSyrupCauldronBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAULDRON).noOcclusion()));
 
     // Storage Blocks
     public static final DeferredBlock<Block> BAG_OF_ELDERBERRIES = registerBlock("bag_of_elderberries",
