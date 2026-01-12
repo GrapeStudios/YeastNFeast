@@ -1,14 +1,16 @@
-// 1.21.1	2025-08-04T11:54:56.7394447	Tags for minecraft:item mod id yeastnfeast
+// 1.21.1	2025-12-30T19:33:57.6494058	Tags for minecraft:item mod id yeastnfeast
 592b64252b55c491072c52bd7e0e82b853c37b1c data/c/tags/item/berry.json
 2cea0f5c60eb556d298813c263ba3bbe3eb3f322 data/c/tags/item/crops.json
 569148d8dfb89ae2eca3a1cdb122e312fc67c86e data/c/tags/item/crops/grain.json
 0cb440d38efc1b96a7237a9c3c6ecbb0e87aaa4d data/c/tags/item/foods.json
 592b64252b55c491072c52bd7e0e82b853c37b1c data/c/tags/item/foods/berry.json
 28a0153a0fd507dab7e7b6d1928162661d2c3c4c data/c/tags/item/foods/bread.json
+2b7d4ff8f44436921b27d5ecbed19d596d349342 data/c/tags/item/foods/cheese.json
 6ddb26f62487e2f1691999b5c3549e4a5bf5e8fb data/c/tags/item/foods/cooked_beef.json
-80521738680cda63bd7c936117d98bf9fe2f7ecf data/c/tags/item/foods/cooked_chicken.json
+c3c27458abd0552603e7efa5057e67df2cdca0e5 data/c/tags/item/foods/cooked_chicken.json
 e2dd92f6b67f2992b259b3435fba67ac775aba2e data/c/tags/item/foods/cooked_cod.json
-0790a443a736ef214afb92868c4bbab064b5d429 data/c/tags/item/foods/cooked_meat.json
+95a8625fc8a6618fc6786044e1799e8896826400 data/c/tags/item/foods/cooked_meat.json
+c18b5cb2923eb4955572b2bb32cbbee4445bb993 data/c/tags/item/foods/cooked_mutton.json
 359a8ac419cfc593711e538736c103d75390f62b data/c/tags/item/foods/cooked_pork.json
 606f7f87c60718be3fdbf8a3491ad3fb2edf83b4 data/c/tags/item/foods/cooked_salmon.json
 5e28004a1601ac63f38b712f255d40a76acf94e1 data/c/tags/item/foods/fruit.json

@@ -6,6 +6,7 @@ import net.astralya.yeastnfeast.recipe.KegRecipe;
 import net.astralya.yeastnfeast.recipe.ModRecipes;
 import net.astralya.yeastnfeast.screen.custom.KegMenu;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -31,6 +32,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.wrapper.RecipeWrapper;
 import org.jetbrains.annotations.Nullable;
@@ -51,6 +53,18 @@ public class KegBlockEntity extends SyncBlockEntity implements MenuProvider {
             }
         }
     };
+
+    private final IItemHandler southInputHandler = new SlotsView(inventory,
+            new int[] { INPUT_SLOT_1, INPUT_SLOT_2, INPUT_SLOT_3, YEAST_SLOT, TANKARD_SLOT },
+            true,
+            false
+    );
+
+    private final IItemHandler bottomOutputHandler = new SlotsView(inventory,
+            new int[] { OUTPUT_SLOT },
+            false,
+            true
+    );
 
     public static final int INPUT_SLOT_1 = 0;
     public static final int INPUT_SLOT_2 = 1;
@@ -83,6 +97,18 @@ public class KegBlockEntity extends SyncBlockEntity implements MenuProvider {
             }
             @Override public int getCount() { return 2; }
         };
+    }
+
+    public IItemHandler getItemHandler(Direction direction) {
+
+        if (direction == Direction.SOUTH) {
+            return southInputHandler;
+        }
+        if (direction == Direction.DOWN) {
+            return bottomOutputHandler;
+        }
+
+        return EmptyHandler.INSTANCE;
     }
 
     public void tick(Level level, BlockPos pos, BlockState state) {
@@ -257,4 +283,66 @@ public class KegBlockEntity extends SyncBlockEntity implements MenuProvider {
     }
 
     public void setLastInteractedPlayer(Player p) { lastInteractedPlayer = p; }
+
+    private static final class SlotsView implements IItemHandler {
+        private final ItemStackHandler backing;
+        private final int[] slots;
+        private final boolean allowInsert;
+        private final boolean allowExtract;
+
+        private SlotsView(ItemStackHandler backing, int[] slots, boolean allowInsert, boolean allowExtract) {
+            this.backing = backing;
+            this.slots = slots;
+            this.allowInsert = allowInsert;
+            this.allowExtract = allowExtract;
+        }
+
+        @Override
+        public int getSlots() {
+            return slots.length;
+        }
+
+        @Override
+        public ItemStack getStackInSlot(int slot) {
+            return backing.getStackInSlot(map(slot));
+        }
+
+        @Override
+        public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+            if (!allowInsert) return stack;
+            return backing.insertItem(map(slot), stack, simulate);
+        }
+
+        @Override
+        public ItemStack extractItem(int slot, int amount, boolean simulate) {
+            if (!allowExtract) return ItemStack.EMPTY;
+            return backing.extractItem(map(slot), amount, simulate);
+        }
+
+        @Override
+        public int getSlotLimit(int slot) {
+            return backing.getSlotLimit(map(slot));
+        }
+
+        @Override
+        public boolean isItemValid(int slot, ItemStack stack) {
+            if (!allowInsert) return false;
+            return backing.isItemValid(map(slot), stack);
+        }
+
+        private int map(int localSlot) {
+            return slots[localSlot];
+        }
+    }
+
+    private enum EmptyHandler implements IItemHandler {
+        INSTANCE;
+
+        @Override public int getSlots() { return 0; }
+        @Override public ItemStack getStackInSlot(int slot) { return ItemStack.EMPTY; }
+        @Override public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) { return stack; }
+        @Override public ItemStack extractItem(int slot, int amount, boolean simulate) { return ItemStack.EMPTY; }
+        @Override public int getSlotLimit(int slot) { return 0; }
+        @Override public boolean isItemValid(int slot, ItemStack stack) { return false; }
+    }
 }

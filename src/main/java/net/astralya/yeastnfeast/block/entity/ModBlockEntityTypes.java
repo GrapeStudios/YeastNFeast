@@ -2,6 +2,7 @@ package net.astralya.yeastnfeast.block.entity;
 
 import net.astralya.yeastnfeast.YeastNFeastMod;
 import net.astralya.yeastnfeast.block.ModBlocks;
+import net.astralya.yeastnfeast.block.entity.custom.CheesePressBlockEntity;
 import net.astralya.yeastnfeast.block.entity.custom.KegBlockEntity;
 import net.astralya.yeastnfeast.block.entity.custom.TreeTapBlockEntity;
 import net.astralya.yeastnfeast.block.entity.wood.ModHangingSignBlockEntity;
@@ -23,6 +24,9 @@ public class ModBlockEntityTypes {
 
     public static final Supplier<BlockEntityType<TreeTapBlockEntity>> TREE_TAP = BLOCK_ENTITY_TYPE.register("tree_tap",
             () -> BlockEntityType.Builder.of(TreeTapBlockEntity::new, ModBlocks.TREE_TAP.get()).build(null));
+
+    public static final Supplier<BlockEntityType<CheesePressBlockEntity>> CHEESE_PRESS = BLOCK_ENTITY_TYPE.register("cheese_press",
+            () -> BlockEntityType.Builder.of(CheesePressBlockEntity::new, ModBlocks.CHEESE_PRESS.get()).build(null));
 
     // Mod Signs
     public static final Supplier<BlockEntityType<ModSignBlockEntity>> MOD_SIGN = BLOCK_ENTITY_TYPE.register(

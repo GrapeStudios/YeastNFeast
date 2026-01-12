@@ -23,6 +23,7 @@ public class ModBiomeModifier {
     public static final ResourceKey<BiomeModifier> ADD_WILD_RYE = registerKey("add_wild_rye");
     public static final ResourceKey<BiomeModifier> ADD_WILD_GARLIC = registerKey("add_wild_garlic");
     public static final ResourceKey<BiomeModifier> ADD_WILD_GINGER = registerKey("add_wild_ginger");
+    public static final ResourceKey<BiomeModifier> ADD_THISTLE = registerKey("add_thistle");
 
     public static final ResourceKey<BiomeModifier> ADD_ELDERBERRIES_BUSH = registerKey("add_elderberries_bush");
     public static final ResourceKey<BiomeModifier> ADD_ROSE_HIPS = registerKey("add_rose_hips");
@@ -52,6 +53,10 @@ public class ModBiomeModifier {
         context.register(ADD_WILD_GINGER, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_TAIGA),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WILD_GINGER_PLACED)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(ADD_THISTLE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_FOREST),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.THISTLE_PLACED)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         // Bushes

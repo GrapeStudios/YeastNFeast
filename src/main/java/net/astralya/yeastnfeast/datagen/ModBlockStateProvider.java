@@ -47,6 +47,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleCrossBlock(ModBlocks.WILD_RYE.get());
         simpleCrossBlock(ModBlocks.WILD_GINGER.get());
         simpleCrossBlock(ModBlocks.WILD_GARLIC.get());
+        simplePottedCrossBlockWithItemTexture(ModBlocks.THISTLE.get(), ModBlocks.POTTED_THISTLE.get());
 
         leavesBlock(ModBlocks.LEMON_TREE_LEAVES);
         leavesBlock(ModBlocks.MAPLE_LEAVES);
@@ -59,6 +60,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         bagBlock(ModBlocks.BAG_OF_LEMON.get(), "bag_lemon");
         bagBlock(ModBlocks.BAG_OF_MINT.get(), "bag_mint");
         bagBlock(ModBlocks.BAG_OF_ROSE_HIPS.get(), "bag_rose_hips");
+        bagBlock(ModBlocks.BAG_OF_THISTLE.get(), "bag_thistle");
 
         grainBlockWithAxis(ModBlocks.BARLEY_BLOCK.get(), "barley_block_side", "grain_top");
         grainBlockWithAxis(ModBlocks.RYE_BLOCK.get(), "rye_block_side", "grain_top");
@@ -117,6 +119,35 @@ public class ModBlockStateProvider extends BlockStateProvider {
         itemModels().getBuilder(name)
                 .parent(models().getExistingFile(mcLoc("item/generated")))
                 .texture("layer0", resourceBlock(name));
+    }
+
+    public void simpleCrossBlockWithItemTexture(Block block) {
+        String name = blockName(block);
+
+        ModelFile model = models().cross(name, resourceBlock(name)).renderType("cutout");
+        simpleBlock(block, model);
+
+        itemModels().getBuilder(name)
+                .parent(models().getExistingFile(mcLoc("item/generated")))
+                .texture("layer0", resourceItem(name));
+    }
+
+    public void simplePottedCrossBlockWithItemTexture(Block flower, Block flowerPot) {
+        String flowerName = blockName(flower);
+        String flowerPotName = blockName(flowerPot);
+
+        ModelFile flowerModel = models().cross(flowerName, resourceBlock(flowerName)).renderType("cutout");
+
+        this.simpleBlock(flower, flowerModel);
+
+        itemModels().getBuilder(flowerName)
+                .parent(models().getExistingFile(mcLoc("item/generated")))
+                .texture("layer0", resourceItem(flowerName));
+
+        this.simpleBlock(flowerPot,
+                models().withExistingParent(flowerPotName, mcLoc("block/flower_pot_cross"))
+                        .texture("plant", resourceBlock(flowerName))
+                        .renderType("cutout"));
     }
 
     private void leavesBlock(DeferredBlock<Block> deferredBlock) {
@@ -184,5 +215,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockItem(DeferredBlock<Block> deferredBlock, String appendix) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("yeastnfeast:block/" + deferredBlock.getId().getPath() + appendix));
+    }
+
+    private ResourceLocation resourceItem(String path) {
+        return modLoc("item/" + path);
     }
 }

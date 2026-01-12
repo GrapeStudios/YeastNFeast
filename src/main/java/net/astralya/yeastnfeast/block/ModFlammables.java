@@ -27,6 +27,7 @@ public final class ModFlammables {
         fire.setFlammable(ModBlocks.WILD_RYE.get(), 60, 100);
         fire.setFlammable(ModBlocks.WILD_GINGER.get(), 60, 100);
         fire.setFlammable(ModBlocks.WILD_GARLIC.get(), 60, 100);
+        fire.setFlammable(ModBlocks.THISTLE.get(), 60, 100);
 
         fire.setFlammable(ModBlocks.FLOWERING_LEMON_TREE_LEAVES.get(), 30, 60);
         fire.setFlammable(ModBlocks.LEMON_TREE_LEAVES.get(), 30, 60);

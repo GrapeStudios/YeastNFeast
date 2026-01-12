@@ -29,6 +29,9 @@ public class ModFoodProperties {
     public static final FoodProperties ROSE_TART = new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f).build();
     public static final FoodProperties ELDERBERRY_PIE = new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f).build();
     public static final FoodProperties APPLE_PIE = new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f).build();
+    public static final FoodProperties MINTED_CHEESE_TART = new FoodProperties.Builder().nutrition(11).saturationModifier(0.85f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 120, 0), 1.0f).build();
+    public static final FoodProperties QUICHE = new FoodProperties.Builder().nutrition(12).saturationModifier(0.8f).build();
 
     // Feasts
     public static final FoodProperties SWEET_PORRIDGE = new FoodProperties.Builder().nutrition(10).saturationModifier(0.6f).build();
@@ -40,6 +43,11 @@ public class ModFoodProperties {
     public static final FoodProperties LEMON_GLAZED_CHICKEN = new FoodProperties.Builder().nutrition(14).saturationModifier(0.75f).build();
     public static final FoodProperties FORAGER_FEAST = new FoodProperties.Builder().nutrition(12).saturationModifier(0.8f).build();
     public static final FoodProperties MAPLE_GLAZED_RABBIT = new FoodProperties.Builder().nutrition(10).saturationModifier(0.6f).build();
+    public static final FoodProperties DUSKWHEEL_SKEWER = new FoodProperties.Builder().nutrition(12).saturationModifier(0.75f)
+            .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300, 0), 1.0f).build();
+    public static final FoodProperties STUFFED_RYE_DUMPLINGS = new FoodProperties.Builder().nutrition(11).saturationModifier(0.8f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 0), 1.0f).build();
+    public static final FoodProperties CHEESE_SOUP = new FoodProperties.Builder().nutrition(12).saturationModifier(0.8f).build();
 
     // Jams
     public static final FoodProperties APPLE_JAM = new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).build();
@@ -55,6 +63,15 @@ public class ModFoodProperties {
     public static final FoodProperties ROSE_HIPS_JAM = new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).build();
     public static final FoodProperties SWEET_BERRIES_JAM = new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).build();
     public static final FoodProperties MELON_JAM = new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).build();
+
+    // Cheese Slices
+    public static final FoodProperties CHEESE_SLICE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.6f).build();
+    public static final FoodProperties DUSKWHEEL_SLICE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.6f)
+                    .effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 200, 0), 1.0f).build();
+    public static final FoodProperties SHARPWHEEL_SLICE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.6f)
+                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 120, 0), 1.0f).build();
+    public static final FoodProperties FRESHWHEEL_SLICE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.6f)
+                    .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 80, 0), 1.0f).build();
 
     // Compat Foods
     public static final FoodProperties CHILLBERRIES_JAM = new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).build();

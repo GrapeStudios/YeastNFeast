@@ -8,7 +8,9 @@ import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.astralya.yeastnfeast.YeastNFeastMod;
 import net.astralya.yeastnfeast.block.ModBlocks;
+import net.astralya.yeastnfeast.compat.jei.category.CheesePressRecipeCategory;
 import net.astralya.yeastnfeast.compat.jei.category.KegRecipeCategory;
+import net.astralya.yeastnfeast.recipe.CheesePressRecipe;
 import net.astralya.yeastnfeast.recipe.KegRecipe;
 import net.astralya.yeastnfeast.recipe.ModRecipes;
 import net.minecraft.MethodsReturnNonnullByDefault;
@@ -38,11 +40,13 @@ public class JEIPlugin implements IModPlugin {
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(new KegRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new CheesePressRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.KEG.get()), KegRecipeCategory.KEG_RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.CHEESE_PRESS.get()), CheesePressRecipeCategory.CHEESE_PRESS_RECIPE_TYPE);
     }
 
     @Override
@@ -52,6 +56,10 @@ public class JEIPlugin implements IModPlugin {
         List<KegRecipe> kegRecipes = recipeManager
                 .getAllRecipesFor(ModRecipes.KEG_TYPE.get()).stream().map(RecipeHolder::value).toList();
         registration.addRecipes(KegRecipeCategory.KEG_RECIPE_TYPE, kegRecipes);
+
+        List<CheesePressRecipe> cheeseRecipes = recipeManager
+                .getAllRecipesFor(ModRecipes.CHEESE_PRESS_TYPE.get()).stream().map(RecipeHolder::value).toList();
+        registration.addRecipes(CheesePressRecipeCategory.CHEESE_PRESS_RECIPE_TYPE, cheeseRecipes);
     }
 
     @Override

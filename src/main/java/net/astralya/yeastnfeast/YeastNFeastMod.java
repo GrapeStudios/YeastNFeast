@@ -3,6 +3,7 @@ package net.astralya.yeastnfeast;
 import net.astralya.yeastnfeast.block.ModBlocks;
 import net.astralya.yeastnfeast.block.ModFlammables;
 import net.astralya.yeastnfeast.block.entity.ModBlockEntityTypes;
+import net.astralya.yeastnfeast.block.entity.renderer.CheesePressBlockEntityRenderer;
 import net.astralya.yeastnfeast.effect.ModMobEffects;
 import net.astralya.yeastnfeast.entity.ModEntities;
 import net.astralya.yeastnfeast.entity.boat.ModBoatRenderer;
@@ -70,6 +71,7 @@ public class YeastNFeastMod {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.LEMON_SAPLING.getId(), ModBlocks.POTTED_LEMON_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.HAWTHORN_SAPLING.getId(), ModBlocks.POTTED_HAWTHORN_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.MAPLE_SAPLING.getId(), ModBlocks.POTTED_MAPLE_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.THISTLE.getId(), ModBlocks.POTTED_THISTLE);
             event.enqueueWork(ModFlammables::register);
         });
     }
@@ -123,6 +125,7 @@ public class YeastNFeastMod {
         public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
             event.registerBlockEntityRenderer(ModBlockEntityTypes.MOD_SIGN.get(), SignRenderer::new);
             event.registerBlockEntityRenderer(ModBlockEntityTypes.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntityTypes.CHEESE_PRESS.get(), CheesePressBlockEntityRenderer::new);
         }
 
         @SubscribeEvent

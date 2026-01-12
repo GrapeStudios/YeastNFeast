@@ -22,6 +22,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> WILD_RYE_PLACED = registerKey("wild_rye_placed");
     public static final ResourceKey<PlacedFeature> WILD_GINGER_PLACED = registerKey("wild_ginger_placed");
     public static final ResourceKey<PlacedFeature> WILD_GARLIC_PLACED = registerKey("wild_garlic_placed");
+    public static final ResourceKey<PlacedFeature> THISTLE_PLACED = registerKey("thistle_placed");
     public static final ResourceKey<PlacedFeature> ELDERBERRIES_PLACED = registerKey("elderberries_placed");
     public static final ResourceKey<PlacedFeature> ROSE_HIPS_PLACED = registerKey("rose_hips_placed");
     public static final ResourceKey<PlacedFeature> MAPLE_PLACED = registerKey("maple_placed");
@@ -36,6 +37,7 @@ public class ModPlacedFeatures {
         register(context, WILD_RYE_PLACED, configured.getOrThrow(ModConfiguredFeatures.WILD_RYE), rarityPatch(10));
         register(context, WILD_GINGER_PLACED, configured.getOrThrow(ModConfiguredFeatures.WILD_GINGER), rarityPatch(10));
         register(context, WILD_GARLIC_PLACED, configured.getOrThrow(ModConfiguredFeatures.WILD_GARLIC), rarityPatch(10));
+        register(context, THISTLE_PLACED, configured.getOrThrow(ModConfiguredFeatures.THISTLE), rarityPatch(10));
 
         // Bushes
         register(context, ELDERBERRIES_PLACED, configured.getOrThrow(ModConfiguredFeatures.ELDERBERRIES), rarityPatch(10));

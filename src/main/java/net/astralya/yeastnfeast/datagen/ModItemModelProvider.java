@@ -23,6 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.MAPLE_SYRUP.get());
         basicItem(ModItems.MOLASSES.get());
         basicItem(ModItems.MILK_BOTTLE.get());
+        basicItem(ModItems.RENNET.get());
 
         basicItem(ModItems.MINT_SEEDS.get());
         basicItem(ModItems.BARLEY_SEEDS.get());
@@ -53,6 +54,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.ROSE_TART.get());
         basicItem(ModItems.ELDERBERRY_PIE.get());
         basicItem(ModItems.APPLE_PIE.get());
+        basicItem(ModItems.STUFFED_RYE_DUMPLINGS.get());
+        basicItem(ModItems.MINTED_CHEESE_TART.get());
+        basicItem(ModItems.DUSKWHEEL_SKEWER.get());
+        basicItem(ModItems.QUICHE.get());
+        basicItem(ModItems.CHEESE_SOUP.get());
 
         basicItem(ModItems.TANKARD.get());
         basicItem(ModItems.HONEY_MEAD.get());
@@ -73,6 +79,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.MELON_JAM.get());
         basicItem(ModItems.ROSE_HIPS_JAM.get());
         basicItem(ModItems.SWEET_BERRIES_JAM.get());
+
+        basicItem(ModItems.CHEESE_WHEEL.get());
+        basicItem(ModItems.CHEESE_SLICE.get());
+        basicItem(ModItems.DUSKWHEEL.get());
+        basicItem(ModItems.DUSKWHEEL_SLICE.get());
+        basicItem(ModItems.SHARPWHEEL.get());
+        basicItem(ModItems.SHARPWHEEL_SLICE.get());
+        basicItem(ModItems.FRESHWHEEL.get());
+        basicItem(ModItems.FRESHWHEEL_SLICE.get());
 
         buttonItem(ModBlocks.MAPLE_BUTTON, ModBlocks.MAPLE_PLANKS);
         fenceItem(ModBlocks.MAPLE_FENCE, ModBlocks.MAPLE_PLANKS);

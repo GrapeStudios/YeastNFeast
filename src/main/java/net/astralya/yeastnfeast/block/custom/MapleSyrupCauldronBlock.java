@@ -41,7 +41,7 @@ public class MapleSyrupCauldronBlock extends LayeredCauldronBlock {
 
     @Override
     public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
-        return new ItemStack(this.asItem());
+        return new ItemStack(Items.CAULDRON);
     }
 
     @Override

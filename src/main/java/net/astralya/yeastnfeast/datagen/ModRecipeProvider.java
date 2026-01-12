@@ -2,6 +2,7 @@ package net.astralya.yeastnfeast.datagen;
 
 import net.astralya.yeastnfeast.YeastNFeastMod;
 import net.astralya.yeastnfeast.block.ModBlocks;
+import net.astralya.yeastnfeast.datagen.custom.CheesePressRecipeBuilder;
 import net.astralya.yeastnfeast.datagen.custom.KegRecipeBuilder;
 import net.astralya.yeastnfeast.item.ModItems;
 import net.astralya.yeastnfeast.util.ModTags;
@@ -84,6 +85,32 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModItems.HAWTHORN_BERRIES.get()).build()))
                 .save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.MINTED_CHEESE_TART.get())
+                .pattern(" R ")
+                .pattern("STS")
+                .pattern("PHP")
+                .define('P', ModTags.Items.CROPS_GRAIN)
+                .define('S', ModItems.FRESHWHEEL_SLICE.get())
+                .define('R', ModItems.MINT.get())
+                .define('T', Items.SUGAR)
+                .define('H', ModTags.Items.FOODS_MILK)
+                .unlockedBy("has_freshwheel_slice", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.FRESHWHEEL_SLICE.get()).build()))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.QUICHE.get())
+                .pattern(" R ")
+                .pattern("STS")
+                .pattern("PHP")
+                .define('P', ModTags.Items.CROPS_GRAIN)
+                .define('S', ModTags.Items.FOODS_CHEESE)
+                .define('R', ModItems.GARLIC.get())
+                .define('T', Items.EGG)
+                .define('H', ModTags.Items.FOODS_MILK)
+                .unlockedBy("has_freshwheel_slice", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.FRESHWHEEL_SLICE.get()).build()))
+                .save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TREE_TAP.get())
                 .pattern(" H")
                 .pattern("PS")
@@ -137,6 +164,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.MILK_BOTTLE.get())
                 .unlockedBy("has_milk_bottle", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.MILK_BOTTLE.get()).build()))
+                .save(recipeOutput);
+        
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RENNET.get())
+                .requires(ModBlocks.THISTLE)
+                .requires(Items.ROTTEN_FLESH)
+                .requires(Items.GLASS_BOTTLE)
+                .unlockedBy("has_thistle", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.THISTLE).build()))
                 .save(recipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SWEET_PORRIDGE.get())
@@ -229,6 +264,38 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.COOKED_SALMON).build()))
                 .save(recipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STUFFED_RYE_DUMPLINGS.get())
+                .requires(Items.BOWL)
+                .requires(ModItems.RYE)
+                .requires(ModItems.RYE)
+                .requires(ModItems.RYE)
+                .requires(ModItems.SHARPWHEEL_SLICE.get())
+                .requires(ModItems.SHARPWHEEL_SLICE.get())
+                .unlockedBy("has_sharpwheel_slice", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.SHARPWHEEL_SLICE.get()).build()))
+                .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.DUSKWHEEL_SKEWER.get())
+                .requires(Items.STICK)
+                .requires(ModItems.GARLIC)
+                .requires(ModTags.Items.COOKED_CHICKEN)
+                .requires(ModItems.DUSKWHEEL_SLICE.get())
+                .requires(ModItems.DUSKWHEEL_SLICE.get())
+                .unlockedBy("has_duskwheel_slice", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.DUSKWHEEL_SLICE.get()).build()))
+                .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CHEESE_SOUP.get())
+                .requires(Items.BOWL)
+                .requires(ModTags.Items.FOODS_CHEESE)
+                .requires(ModTags.Items.FOODS_CHEESE)
+                .requires(ModTags.Items.FOODS_BREAD)
+                .requires(ModItems.RYE.get())
+                .requires(ModItems.GARLIC.get())
+                .unlockedBy("has_cheese_slice", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.CHEESE_SLICE.get()).build()))
+                .save(recipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BARLEY_BREAD.get())
                 .requires(ModItems.BARLEY.get())
                 .requires(ModItems.BARLEY.get())
@@ -313,6 +380,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 "yeastnfeast:mint", "mint","yeastnfeast:bag_of_mint", "mint");
         nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, ModItems.ROSE_HIPS.get(), RecipeCategory.MISC, ModBlocks.BAG_OF_ROSE_HIPS.get(),
                 "yeastnfeast:rose_hips", "rose_hips","yeastnfeast:bag_of_rose_hips", "rose_hips");
+        nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, ModBlocks.THISTLE.get(), RecipeCategory.MISC, ModBlocks.BAG_OF_THISTLE.get(),
+                "yeastnfeast:thistle", "thistle","yeastnfeast:bag_of_thistle", "thistle");
         nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, ModItems.BARLEY.get(), RecipeCategory.MISC, ModBlocks.BARLEY_BLOCK.get(),
                 "yeastnfeast:barley", "barley","yeastnfeast:barley_block", "barley");
         nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, ModItems.RYE.get(), RecipeCategory.MISC, ModBlocks.RYE_BLOCK.get(),
@@ -495,6 +564,46 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .brewTime(3600)
                 .unlockedByItems("has_jar", ModItems.JAR.get())
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(YeastNFeastMod.MODID, "melon_jam_from_keg"));
+
+        // Cheese Press
+        CheesePressRecipeBuilder.cheesePress(new ItemStack(ModItems.CHEESE_WHEEL.get()))
+                .addIngredient(ModTags.Items.FOODS_MILK)
+                .addIngredient(ModItems.RENNET.get())
+                .experience(0.2f)
+                .pressTime(120)
+                .unlockedByItems("has_rennet", ModItems.RENNET.get())
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath("yeastnfeast",
+                        ModItems.CHEESE_WHEEL.getId().getPath() + "_from_cheese_press"));
+
+        CheesePressRecipeBuilder.cheesePress(new ItemStack(ModItems.DUSKWHEEL.get()))
+                .addIngredient(ModTags.Items.FOODS_MILK)
+                .addIngredient(ModItems.RENNET.get())
+                .flavor(ModItems.ELDERBERRIES.get())
+                .experience(0.2f)
+                .pressTime(7200)
+                .unlockedByItems("has_rennet", ModItems.RENNET.get())
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath("yeastnfeast",
+                        ModItems.DUSKWHEEL.getId().getPath() + "_from_cheese_press"));
+
+        CheesePressRecipeBuilder.cheesePress(new ItemStack(ModItems.SHARPWHEEL.get()))
+                .addIngredient(ModTags.Items.FOODS_MILK)
+                .addIngredient(ModItems.RENNET.get())
+                .flavor(ModItems.GARLIC.get())
+                .experience(0.2f)
+                .pressTime(7200)
+                .unlockedByItems("has_rennet", ModItems.RENNET.get())
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath("yeastnfeast",
+                        ModItems.SHARPWHEEL.getId().getPath() + "_from_cheese_press"));
+
+        CheesePressRecipeBuilder.cheesePress(new ItemStack(ModItems.FRESHWHEEL.get()))
+                .addIngredient(ModTags.Items.FOODS_MILK)
+                .addIngredient(ModItems.RENNET.get())
+                .flavor(ModItems.MINT.get())
+                .experience(0.2f)
+                .pressTime(7200)
+                .unlockedByItems("has_rennet", ModItems.RENNET.get())
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath("yeastnfeast",
+                        ModItems.FRESHWHEEL.getId().getPath() + "_from_cheese_press"));
 
         // Recipes for Wood-related Blocks & Items
         planksFromLog(recipeOutput, ModBlocks.MAPLE_PLANKS.get(), ModTags.Items.MAPLE_LOGS, 4);

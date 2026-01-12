@@ -9,16 +9,11 @@ import net.astralya.yeastnfeast.item.custom.wood.ModBoatItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.SignItem;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import static net.astralya.yeastnfeast.block.ModBlocks.MAPLE_SYRUP_CAULDRON;
 
 public class ModItems {
 
@@ -32,27 +27,29 @@ public class ModItems {
             ConsumableItem::new, new Item.Properties().food(ModFoodProperties.MOLASSES));
     public static final DeferredItem<Item> MILK_BOTTLE = ITEMS.registerItem("milk_bottle",
             MilkBottleItem::new, new Item.Properties().craftRemainder(Items.GLASS_BOTTLE));
+    public static final DeferredItem<Item> RENNET = ITEMS.registerItem("rennet",
+            Item::new, new Item.Properties().craftRemainder(Items.GLASS_BOTTLE));
     
     // Crops & Seeds
     public static final DeferredItem<Item> MINT_SEEDS = ITEMS.register("mint_seeds",
-            () -> new BlockItem(ModBlocks.MINT_CROP.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.MINT_CROP.get(), new Item.Properties()));
     public static final DeferredItem<Item> BARLEY_SEEDS = ITEMS.register("barley_seeds",
-            () -> new BlockItem(ModBlocks.BARLEY_CROP.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.BARLEY_CROP.get(), new Item.Properties()));
     public static final DeferredItem<Item> RYE_SEEDS = ITEMS.register("rye_seeds",
-            () -> new BlockItem(ModBlocks.RYE_CROP.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.RYE_CROP.get(), new Item.Properties()));
     public static final DeferredItem<Item> ELDERBERRIES = ITEMS.register("elderberries",
-            () -> new BlockItem(ModBlocks.ELDERBERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.ELDERBERRIES)));
+            () -> new ItemNameBlockItem(ModBlocks.ELDERBERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.ELDERBERRIES)));
     public static final DeferredItem<Item> ROSE_HIPS = ITEMS.register("rose_hips",
-            () -> new BlockItem(ModBlocks.ROSE_HIPS_BUSH.get(), new Item.Properties().food(ModFoodProperties.ROSE_HIPS)));
+            () -> new ItemNameBlockItem(ModBlocks.ROSE_HIPS_BUSH.get(), new Item.Properties().food(ModFoodProperties.ROSE_HIPS)));
     public static final DeferredItem<Item> LEMON = ITEMS.registerItem("lemon",
             Item::new, new Item.Properties().food(ModFoodProperties.LEMON));
     public static final DeferredItem<Item> HAWTHORN_BERRIES = ITEMS.registerItem("hawthorn_berries",
             Item::new, new Item.Properties().food(ModFoodProperties.HAWTHORN_BERRIES));
     public static final DeferredItem<Item> MINT = ITEMS.registerSimpleItem("mint");
     public static final DeferredItem<Item> GINGER = ITEMS.register("ginger",
-            () -> new BlockItem(ModBlocks.GINGER_CROP.get(), new Item.Properties().food(ModFoodProperties.GINGER)));
+            () -> new ItemNameBlockItem(ModBlocks.GINGER_CROP.get(), new Item.Properties().food(ModFoodProperties.GINGER)));
     public static final DeferredItem<Item> GARLIC = ITEMS.register("garlic",
-            () -> new BlockItem(ModBlocks.GARLIC_CROP.get(), new Item.Properties().food(ModFoodProperties.GARLIC)));
+            () -> new ItemNameBlockItem(ModBlocks.GARLIC_CROP.get(), new Item.Properties().food(ModFoodProperties.GARLIC)));
     public static final DeferredItem<Item> BARLEY = ITEMS.registerSimpleItem("barley");
     public static final DeferredItem<Item> RYE = ITEMS.registerSimpleItem("rye");
 
@@ -68,6 +65,9 @@ public class ModItems {
                     Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
     public static final DeferredItem<Item> SALMON_CHOWDER = ITEMS.register("salmon_chowder",
             () -> new FeastItem(new Item.Properties().food(ModFoodProperties.SALMON_CHOWDER), () -> ModMobEffects.OVERFED, 4800, 0,
+                    Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
+    public static final DeferredItem<Item> CHEESE_SOUP = ITEMS.register("cheese_soup",
+            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.CHEESE_SOUP), () -> ModMobEffects.OVERFED, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.bowl").withStyle(ChatFormatting.BLUE)));
     
     // Plated Food Items
@@ -86,6 +86,9 @@ public class ModItems {
     public static final DeferredItem<Item> MAPLE_GLAZED_RABBIT = ITEMS.register("maple_glazed_rabbit",
             () -> new FeastItem(new Item.Properties().food(ModFoodProperties.MAPLE_GLAZED_RABBIT), () -> ModMobEffects.VIGOROUS, 4800, 0,
                     Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
+    public static final DeferredItem<Item> STUFFED_RYE_DUMPLINGS = ITEMS.register("stuffed_rye_dumplings",
+            () -> new FeastItem(new Item.Properties().food(ModFoodProperties.STUFFED_RYE_DUMPLINGS), () -> ModMobEffects.VIGOROUS, 4800, 0,
+                    Component.translatable("tooltip.yeastnfeast.feast_item.plate").withStyle(ChatFormatting.BLUE)));
 
     // Other Food Items
     public static final DeferredItem<Item> BARLEY_BREAD = ITEMS.registerItem("barley_bread",
@@ -102,6 +105,12 @@ public class ModItems {
             Item::new, new Item.Properties().food(ModFoodProperties.ELDERBERRY_PIE));
     public static final DeferredItem<Item> APPLE_PIE = ITEMS.registerItem("apple_pie",
             Item::new, new Item.Properties().food(ModFoodProperties.APPLE_PIE));
+    public static final DeferredItem<Item> MINTED_CHEESE_TART = ITEMS.registerItem("minted_cheese_tart",
+            Item::new, new Item.Properties().food(ModFoodProperties.MINTED_CHEESE_TART));
+    public static final DeferredItem<Item> DUSKWHEEL_SKEWER = ITEMS.registerItem("duskwheel_skewer",
+            SkewerItem::new, new Item.Properties().food(ModFoodProperties.DUSKWHEEL_SKEWER).stacksTo(16).craftRemainder(Items.STICK));
+    public static final DeferredItem<Item> QUICHE = ITEMS.registerItem("quiche",
+            Item::new, new Item.Properties().food(ModFoodProperties.QUICHE));
 
     // Mead Items
     public static final DeferredItem<Item> TANKARD = ITEMS.registerSimpleItem("tankard");
@@ -147,6 +156,24 @@ public class ModItems {
     public static final DeferredItem<Item> SWEET_BERRIES_JAM = ITEMS.registerItem("sweet_berries_jam",
             ConsumableItem::new, new Item.Properties().food(ModFoodProperties.SWEET_BERRIES_JAM));
 
+    // Cheeses
+    public static final DeferredItem<Item> CHEESE_WHEEL = ITEMS.register("cheese_wheel",
+            () -> new BlockItem(ModBlocks.CHEESE_WHEEL.get(), new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> CHEESE_SLICE = ITEMS.registerItem("cheese_slice",
+            Item::new, new Item.Properties().food(ModFoodProperties.CHEESE_SLICE));
+    public static final DeferredItem<Item> DUSKWHEEL = ITEMS.register("duskwheel",
+            () -> new BlockItem(ModBlocks.DUSKWHEEL.get(), new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> DUSKWHEEL_SLICE = ITEMS.registerItem("duskwheel_slice",
+            Item::new, new Item.Properties().food(ModFoodProperties.DUSKWHEEL_SLICE));
+    public static final DeferredItem<Item> SHARPWHEEL = ITEMS.register("sharpwheel",
+            () -> new BlockItem(ModBlocks.SHARPWHEEL.get(), new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> SHARPWHEEL_SLICE = ITEMS.registerItem("sharpwheel_slice",
+            Item::new, new Item.Properties().food(ModFoodProperties.SHARPWHEEL_SLICE));
+    public static final DeferredItem<Item> FRESHWHEEL = ITEMS.register("freshwheel",
+            () -> new BlockItem(ModBlocks.FRESHWHEEL.get(), new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> FRESHWHEEL_SLICE = ITEMS.registerItem("freshwheel_slice",
+            Item::new, new Item.Properties().food(ModFoodProperties.FRESHWHEEL_SLICE));
+
     // Wood-Related Items
     public static final DeferredItem<Item> MAPLE_BOAT = ITEMS.register("maple_boat",
             () -> new ModBoatItem(false, ModBoatEntity.Type.MAPLE, new Item.Properties()));
@@ -160,8 +187,8 @@ public class ModItems {
     // Block Items
     public static final DeferredItem<Item> KEG = ITEMS.register("keg",
             () -> new BlockItem(ModBlocks.KEG.get(), new Item.Properties()));
-    public static final DeferredItem<BlockItem> MAPLE_SYRUP_CAULDRON_ITEM =
-            ITEMS.register("maple_syrup_cauldron", () -> new BlockItem(MAPLE_SYRUP_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CHEESE_PRESS = ITEMS.register("cheese_press",
+            () -> new BlockItem(ModBlocks.CHEESE_PRESS.get(), new Item.Properties()));
 
     // Addon or Compat Items
     public static DeferredItem<Item> CHILLBERRIES_JAM;

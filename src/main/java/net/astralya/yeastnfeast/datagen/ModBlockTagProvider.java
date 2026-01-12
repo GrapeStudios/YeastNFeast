@@ -32,6 +32,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         // Axe mineable blocks
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.TREE_TAP.get())
+                .add(ModBlocks.CHEESE_PRESS.get())
                 .add(ModBlocks.KEG.get());
 
         // Hoe mineable blocks
@@ -42,6 +43,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .addTag(ModTags.Blocks.STORAGE_BLOCKS)
                 .add(ModBlocks.TREE_TAP.get())
+                .add(ModBlocks.CHEESE_PRESS.get())
                 .add(ModBlocks.KEG.get());
     }
 
@@ -79,6 +81,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BAG_OF_LEMON.get())
                 .add(ModBlocks.BAG_OF_MINT.get())
                 .add(ModBlocks.BAG_OF_ROSE_HIPS.get())
+                .add(ModBlocks.BAG_OF_THISTLE.get())
                 .add(ModBlocks.RYE_BLOCK.get())
                 .add(ModBlocks.BARLEY_BLOCK.get());
     }

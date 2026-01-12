@@ -121,6 +121,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.ROSE_HIPS.get())
                 .add(ModItems.HAWTHORN_BERRIES.get());
 
+        tag(ModTags.Items.FOODS_CHEESE)
+                .add(ModItems.CHEESE_SLICE.get())
+                .add(ModItems.SHARPWHEEL_SLICE.get())
+                .add(ModItems.FRESHWHEEL_SLICE.get())
+                .add(ModItems.DUSKWHEEL_SLICE.get());
+
         // Cooked Meat
         tag(ModTags.Items.FOODS_COOKED_MEAT)
                 .addTag(ModTags.Items.COOKED_BEEF)

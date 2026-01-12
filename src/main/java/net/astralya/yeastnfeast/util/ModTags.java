@@ -22,11 +22,12 @@ public class ModTags {
         public static final TagKey<Item> FOODS_BERRY = createCommonItemTag("foods/berry");
         public static final TagKey<Item> FOODS_BREAD = createCommonItemTag("foods/bread");
         public static final TagKey<Item> FOODS_COOKED_MEAT = createCommonItemTag("foods/cooked_meat");
+        public static final TagKey<Item> FOODS_CHEESE = createCommonItemTag("foods/cheese");
 
         public static final TagKey<Item> COOKED_CHICKEN = createCommonItemTag("foods/cooked_chicken");
         public static final TagKey<Item> COOKED_PORK = createCommonItemTag("foods/cooked_pork");
         public static final TagKey<Item> COOKED_BEEF = createCommonItemTag("foods/cooked_beef");
-        public static final TagKey<Item> COOKED_MUTTON = createCommonItemTag("foods/cooked_chicken");
+        public static final TagKey<Item> COOKED_MUTTON = createCommonItemTag("foods/cooked_mutton");
         public static final TagKey<Item> COOKED_COD = createCommonItemTag("foods/cooked_cod");
         public static final TagKey<Item> COOKED_SALMON = createCommonItemTag("foods/cooked_salmon");
 

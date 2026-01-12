@@ -16,6 +16,7 @@ public class ModRecipes {
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS =
             DeferredRegister.create(Registries.RECIPE_SERIALIZER, YeastNFeastMod.MODID);
 
+    // Keg Recipe
     public static final Supplier<RecipeType<KegRecipe>> KEG_TYPE =
             RECIPE_TYPES.register("keg", () -> new RecipeType<KegRecipe>() {
                 @Override
@@ -26,6 +27,18 @@ public class ModRecipes {
 
     public static final Supplier<RecipeSerializer<KegRecipe>> KEG_SERIALIZER =
             RECIPE_SERIALIZERS.register("keg", KegRecipe.Serializer::new);
+
+    // Cheese Press Recipe
+    public static final Supplier<RecipeType<CheesePressRecipe>> CHEESE_PRESS_TYPE =
+            RECIPE_TYPES.register("cheese_press", () -> new RecipeType<CheesePressRecipe>() {
+                @Override
+                public String toString() {
+                    return "cheese_press";
+                }
+            });
+
+    public static final Supplier<RecipeSerializer<CheesePressRecipe>> CHEESE_PRESS_SERIALIZER =
+            RECIPE_SERIALIZERS.register("cheese_press", CheesePressRecipe.Serializer::new);
 
     public static void register(IEventBus eventBus) {
         RECIPE_TYPES.register(eventBus);

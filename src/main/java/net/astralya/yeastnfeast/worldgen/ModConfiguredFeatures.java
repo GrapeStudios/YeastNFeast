@@ -41,6 +41,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_RYE = registerKey("wild_rye");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_GINGER = registerKey("wild_ginger");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WILD_GARLIC = registerKey("wild_garlic");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> THISTLE = registerKey("thistle");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> ELDERBERRIES = registerKey("elderberries");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_HIPS = registerKey("rose_hips");
@@ -62,6 +63,7 @@ public class ModConfiguredFeatures {
         register(context, WILD_RYE, Feature.FLOWER, patchConfig(ModBlocks.WILD_RYE.get(), 2, 3, 1));
         register(context, WILD_GINGER, Feature.FLOWER, patchConfig(ModBlocks.WILD_GINGER.get(), 2, 3, 1));
         register(context, WILD_GARLIC, Feature.FLOWER, patchConfig(ModBlocks.WILD_GARLIC.get(), 3, 7, 3));
+        register(context, THISTLE, Feature.FLOWER, patchConfig(ModBlocks.THISTLE.get(), 3, 7, 3));
     }
 
     private static void registerBushes(BootstrapContext<ConfiguredFeature<?, ?>> context) {

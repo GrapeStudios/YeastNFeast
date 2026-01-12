@@ -45,7 +45,6 @@ public class MapleLeavesParticle extends TextureSheetParticle {
             return;
         }
 
-        // apply drifting motion
         float progress = 1.0F - ((float) this.lifetime / 300.0F);
         double driftStrength = Math.sin(progress * Math.PI) * 0.0025F;
         this.xd += Math.cos(this.fallingDriftAngle) * driftStrength;

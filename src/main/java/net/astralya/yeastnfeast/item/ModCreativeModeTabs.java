@@ -23,12 +23,14 @@ public class ModCreativeModeTabs {
                 // Functional Blocks
                 output.accept(ModBlocks.KEG.get());
                 output.accept(ModBlocks.TREE_TAP.get());
+                output.accept(ModBlocks.CHEESE_PRESS.get());
 
                 // Resources
                 output.accept(ModItems.YEAST.get());
                 output.accept(ModItems.MAPLE_SYRUP.get());
                 output.accept(ModItems.MOLASSES.get());
                 output.accept(ModItems.MILK_BOTTLE.get());
+                output.accept(ModItems.RENNET.get());
 
                 // Seeds
                 output.accept(ModItems.BARLEY_SEEDS.get());
@@ -45,6 +47,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.ROSE_HIPS.get());
                 output.accept(ModItems.BARLEY.get());
                 output.accept(ModItems.RYE.get());
+                output.accept(ModBlocks.THISTLE.get());
 
                 // Storage Bags
                 output.accept(ModBlocks.BAG_OF_ELDERBERRIES.get());
@@ -54,6 +57,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModBlocks.BAG_OF_LEMON.get());
                 output.accept(ModBlocks.BAG_OF_MINT.get());
                 output.accept(ModBlocks.BAG_OF_ROSE_HIPS.get());
+                output.accept(ModBlocks.BAG_OF_THISTLE.get());
                 output.accept(ModBlocks.BARLEY_BLOCK.get());
                 output.accept(ModBlocks.RYE_BLOCK.get());
 
@@ -63,6 +67,8 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.MOLASSES_BREAD.get());
                 output.accept(ModItems.BERRY_ROLL.get());
                 output.accept(ModItems.ROSE_TART.get());
+                output.accept(ModItems.MINTED_CHEESE_TART.get());
+                output.accept(ModItems.QUICHE.get());
                 output.accept(ModItems.ELDERBERRY_PIE.get());
                 output.accept(ModItems.APPLE_PIE.get());
 
@@ -71,11 +77,14 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.SPICED_PORRIDGE.get());
                 output.accept(ModItems.BARLEY_AND_BEEF_STEW.get());
                 output.accept(ModItems.SALMON_CHOWDER.get());
+                output.accept(ModItems.CHEESE_SOUP.get());
                 output.accept(ModItems.MEAD_BRAISED_PORK.get());
                 output.accept(ModItems.HERBAL_COD.get());
                 output.accept(ModItems.LEMON_GLAZED_CHICKEN.get());
                 output.accept(ModItems.FORAGER_FEAST.get());
                 output.accept(ModItems.MAPLE_GLAZED_RABBIT.get());
+                output.accept(ModItems.STUFFED_RYE_DUMPLINGS.get());
+                output.accept(ModItems.DUSKWHEEL_SKEWER.get());
 
                 // Mead
                 output.accept(ModItems.TANKARD.get());
@@ -98,6 +107,16 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.MELON_JAM.get());
                 output.accept(ModItems.ROSE_HIPS_JAM.get());
                 output.accept(ModItems.SWEET_BERRIES_JAM.get());
+
+                // Cheese
+                output.accept(ModItems.CHEESE_WHEEL.get());
+                output.accept(ModItems.CHEESE_SLICE.get());
+                output.accept(ModItems.DUSKWHEEL.get());
+                output.accept(ModItems.DUSKWHEEL_SLICE.get());
+                output.accept(ModItems.SHARPWHEEL.get());
+                output.accept(ModItems.SHARPWHEEL_SLICE.get());
+                output.accept(ModItems.FRESHWHEEL.get());
+                output.accept(ModItems.FRESHWHEEL_SLICE.get());
 
                 // Wood-Related Items
                 output.accept(ModBlocks.MAPLE_LEAVES.get());

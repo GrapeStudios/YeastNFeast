@@ -13,9 +13,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.AlternativesEntry;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
@@ -44,12 +46,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.POTTED_MAPLE_SAPLING.get(), createPotFlowerItemTable(ModBlocks.MAPLE_SAPLING.get()));
         this.add(ModBlocks.POTTED_LEMON_SAPLING.get(), createPotFlowerItemTable(ModBlocks.LEMON_SAPLING.get()));
         this.add(ModBlocks.POTTED_HAWTHORN_SAPLING.get(), createPotFlowerItemTable(ModBlocks.HAWTHORN_SAPLING.get()));
+        this.add(ModBlocks.POTTED_HAWTHORN_SAPLING.get(), createPotFlowerItemTable(ModBlocks.HAWTHORN_SAPLING.get()));
+        this.add(ModBlocks.POTTED_THISTLE.get(), createPotFlowerItemTable(ModBlocks.THISTLE.get()));
     }
 
     private void generateFunctionalBlocks() {
         // Simple drops
         this.dropSelf(ModBlocks.KEG.get());
         this.dropSelf(ModBlocks.TREE_TAP.get());
+        this.dropSelf(ModBlocks.CHEESE_PRESS.get());
         this.dropSelf(ModBlocks.BAG_OF_ELDERBERRIES.get());
         this.dropSelf(ModBlocks.BAG_OF_GARLIC.get());
         this.dropSelf(ModBlocks.BAG_OF_GINGER.get());
@@ -57,8 +62,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BAG_OF_LEMON.get());
         this.dropSelf(ModBlocks.BAG_OF_MINT.get());
         this.dropSelf(ModBlocks.BAG_OF_ROSE_HIPS.get());
+        this.dropSelf(ModBlocks.BAG_OF_THISTLE.get());
         this.dropSelf(ModBlocks.BARLEY_BLOCK.get());
         this.dropSelf(ModBlocks.RYE_BLOCK.get());
+        this.dropSelf(ModBlocks.THISTLE.get());
+        this.add(ModBlocks.MAPLE_SYRUP_CAULDRON.get(), this.createSingleItemTable(Blocks.CAULDRON));
+        this.add(ModBlocks.CHEESE_WHEEL.get(), cheeseWheelSlicesByCuts(ModBlocks.CHEESE_WHEEL.get(), ModItems.CHEESE_SLICE.get(), BaseCheeseWheelBlock.CUTS));
+        this.add(ModBlocks.FRESHWHEEL.get(), cheeseWheelSlicesByCuts(ModBlocks.FRESHWHEEL.get(), ModItems.FRESHWHEEL_SLICE.get(), BaseCheeseWheelBlock.CUTS));
+        this.add(ModBlocks.DUSKWHEEL.get(), cheeseWheelSlicesByCuts(ModBlocks.DUSKWHEEL.get(), ModItems.DUSKWHEEL_SLICE.get(), BaseCheeseWheelBlock.CUTS));
+        this.add(ModBlocks.SHARPWHEEL.get(), cheeseWheelSlicesByCuts(ModBlocks.SHARPWHEEL.get(), ModItems.SHARPWHEEL_SLICE.get(), BaseCheeseWheelBlock.CUTS));
     }
 
     private void generateCrops() {
@@ -241,6 +253,40 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                         .withPool(fruitPool));
     }
 
+    protected LootTable.Builder cheeseWheelSlicesByCuts(Block wheelBlock, Item sliceItem, IntegerProperty cutsProp) {
+        LootItemBlockStatePropertyCondition.Builder cuts0 =
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(wheelBlock)
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(cutsProp, 0));
+
+        LootItemBlockStatePropertyCondition.Builder cuts1 =
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(wheelBlock)
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(cutsProp, 1));
+
+        LootItemBlockStatePropertyCondition.Builder cuts2 =
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(wheelBlock)
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(cutsProp, 2));
+
+        LootItemBlockStatePropertyCondition.Builder cuts3 =
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(wheelBlock)
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(cutsProp, 3));
+
+        LootPool.Builder pool = LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1))
+                .add(AlternativesEntry.alternatives(
+                        LootItem.lootTableItem(wheelBlock).when(cuts0),
+                        LootItem.lootTableItem(sliceItem)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(3)))
+                                .when(cuts1),
+                        LootItem.lootTableItem(sliceItem)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2)))
+                                .when(cuts2),
+                        LootItem.lootTableItem(sliceItem)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))
+                                .when(cuts3)
+                ));
+
+        return applyExplosionDecay(wheelBlock, LootTable.lootTable().withPool(pool));
+    }
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
