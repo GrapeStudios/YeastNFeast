@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-08T12:10:23.604533	Yeast 'n Feast/Tags for minecraft:item
+// 1.21.1	2026-01-17T11:57:55.385439	Yeast 'n Feast/Tags for minecraft:item
 5e1f7cec82f737c80960dcc7faedc24f5aeed9ed data\c\tags\item\foods.json
 569148d8dfb89ae2eca3a1cdb122e312fc67c86e data\c\tags\item\crops\wheat.json
 d22c51d31c8f2586deabe4db82a6f77935345b5a data\c\tags\item\foods\golden.json
@@ -8,6 +8,7 @@ d9521ce20df19e5a120821ae94ee09b1123fb608 data\sereneseasons\tags\item\autumn_cro
 0da9c997b710d76c09d2a63a0e7014b6950d5ac7 data\sereneseasons\tags\item\winter_crops.json
 f3a6d04f427c3e9ae86c0ead27148d554dfef5e0 data\minecraft\tags\item\boats.json
 24d07bcf32104988c1b17737f2612e8f109d5d7b data\minecraft\tags\item\wooden_fences.json
+9af774e2143877d6580b4b82d319c7428fefa022 data\c\tags\item\foods\cheese.json
 befe966db843e8563c4d70114a01015adcd73717 data\yeastnfeast\tags\item\jams.json
 e2dd92f6b67f2992b259b3435fba67ac775aba2e data\c\tags\item\foods\cooked_cod.json
 b7ba14e9c2b40b4c186f5f354f49d07740f0e5d6 data\minecraft\tags\item\wooden_stairs.json
@@ -37,8 +38,8 @@ b50cf1e6ad4dafe98c1a9cc5bf50b031b95bf881 data\minecraft\tags\item\hanging_signs.
 5687c9ab57b3718afa141f98105e5a2a51e6c764 data\minecraft\tags\item\wooden_buttons.json
 f75a6cd9bdaa58b97fc4d2c2d60d7afeac649873 data\minecraft\tags\item\wooden_doors.json
 359a8ac419cfc593711e538736c103d75390f62b data\c\tags\item\foods\cooked_pork.json
-d08bbc8463b6c96016a35e62ed44b4a855212d8b data\c\tags\item\foods\soup.json
 22341f32a621d44569c064fafc96e66197dca9a8 data\c\tags\item\foods\bread.json
+d08bbc8463b6c96016a35e62ed44b4a855212d8b data\c\tags\item\foods\soup.json
 606f7f87c60718be3fdbf8a3491ad3fb2edf83b4 data\c\tags\item\foods\cooked_salmon.json
 8f8e17291ee9ffbb47f6b922c9f8e2d683fcfeed data\minecraft\tags\item\logs_that_burn.json
 95a8625fc8a6618fc6786044e1799e8896826400 data\c\tags\item\foods\cooked_meat.json

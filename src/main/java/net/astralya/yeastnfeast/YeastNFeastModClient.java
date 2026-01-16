@@ -3,6 +3,7 @@ package net.astralya.yeastnfeast;
 import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.astralya.yeastnfeast.block.ModBlocks;
 import net.astralya.yeastnfeast.block.entity.ModBlockEntityTypes;
+import net.astralya.yeastnfeast.block.entity.renderer.CheesePressBlockEntityRenderer;
 import net.astralya.yeastnfeast.entity.boat.ModBoats;
 import net.astralya.yeastnfeast.particle.ModParticleType;
 import net.astralya.yeastnfeast.particle.custom.DrippingSyrupParticle;
@@ -44,7 +45,9 @@ public class YeastNFeastModClient implements ClientModInitializer {
                 ModBlocks.LEMON_SAPLING, ModBlocks.POTTED_LEMON_SAPLING,
                 ModBlocks.LEMON_TREE_LEAVES, ModBlocks.FLOWERING_LEMON_TREE_LEAVES,
                 ModBlocks.HAWTHORN_SAPLING, ModBlocks.POTTED_HAWTHORN_SAPLING,
-                ModBlocks.HAWTHORN_TREE_LEAVES, ModBlocks.FLOWERING_HAWTHORN_TREE_LEAVES
+                ModBlocks.HAWTHORN_TREE_LEAVES, ModBlocks.FLOWERING_HAWTHORN_TREE_LEAVES,
+                ModBlocks.THISTLE, ModBlocks.POTTED_THISTLE,
+                ModBlocks.CHEESE_PRESS
         );
     }
 
@@ -56,6 +59,7 @@ public class YeastNFeastModClient implements ClientModInitializer {
     private void registerBlockEntityRenderers() {
         BlockEntityRendererFactories.register(ModBlockEntityTypes.MOD_SIGN, SignBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(ModBlockEntityTypes.MOD_HANGING_SIGN, HangingSignBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(ModBlockEntityTypes.CHEESE_PRESS, CheesePressBlockEntityRenderer::new);
     }
 
     private void registerWoodTypes() {

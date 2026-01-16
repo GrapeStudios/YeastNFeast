@@ -1,0 +1,21 @@
+{
+  "type": "farm_and_charm:crafting_bowl",
+  "ingredients": [
+    {
+      "tag": "c:foods/milk"
+    },
+    {
+      "tag": "farm_and_charm:oat"
+    },
+    {
+      "item": "yeastnfeast:elderberries"
+    }
+  ],
+  "result": {
+    "id": "yeastnfeast:elderberries_oatmeal",
+    "count": 1
+  },
+  "conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "farm_and_charm" }
+  ]
+}

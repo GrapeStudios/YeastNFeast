@@ -1,8 +1,10 @@
-// 1.21.1	2025-09-08T12:10:23.6004454	Yeast 'n Feast/World Gen
+// 1.21.1	2026-01-17T11:57:55.3799303	Yeast 'n Feast/World Gen
 42361e68d4adfc7779b099ff8a53cc74143ac351 data\yeastnfeast\worldgen\placed_feature\elderberries_placed.json
 2a63ccf747086a34387fc37abb2240ec924909d2 data\yeastnfeast\worldgen\configured_feature\rose_hips.json
+18203a28532da9d4a51a6c4e6af133b0b6126e75 data\yeastnfeast\worldgen\configured_feature\thistle.json
 66149130956db6ef44c16fe1cf5e0171794718b5 data\yeastnfeast\worldgen\configured_feature\wild_barley.json
 43d4723f05f5e1fce9e6313f1d37678596887765 data\yeastnfeast\worldgen\placed_feature\wild_barley_placed.json
+3af09363add53a0bdddcc39fd197caefa0bac6e7 data\yeastnfeast\worldgen\placed_feature\thistle_placed.json
 4720dc4265505ea73fbb6651ff326d6f5abbb2e8 data\yeastnfeast\worldgen\placed_feature\hawthorn_placed.json
 9966105f9a4edc4a2575275f02ca8438d13c4518 data\yeastnfeast\worldgen\configured_feature\wild_rye.json
 f4806bbd923f0c6263bfc17a32efe4b5dbb862e7 data\yeastnfeast\worldgen\placed_feature\wild_ginger_placed.json

@@ -6,6 +6,7 @@ import net.astralya.yeastnfeast.block.custom.wood.ModHangingSignBlock;
 import net.astralya.yeastnfeast.block.custom.wood.ModSignBlock;
 import net.astralya.yeastnfeast.block.custom.wood.ModWallHangingSignBlock;
 import net.astralya.yeastnfeast.block.custom.wood.ModWallSignBlock;
+import net.astralya.yeastnfeast.item.ModItems;
 import net.astralya.yeastnfeast.util.ModWoodTypes;
 import net.astralya.yeastnfeast.worldgen.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
@@ -38,7 +39,21 @@ public class ModBlocks {
     public static final Block TREE_TAP = registerBlock("tree_tap",
             new TreeTapBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
     public static final Block KEG = registerBlockWithoutBlockItem("keg",
-            new KegBlock(AbstractBlock.Settings.copy(Blocks.BARREL).nonOpaque()));
+            new KegBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block MAPLE_SYRUP_CAULDRON = registerBlockWithoutBlockItem("maple_syrup_cauldron",
+            new MapleSyrupCauldronBlock(AbstractBlock.Settings.copy(Blocks.CAULDRON).nonOpaque()));
+    public static final Block CHEESE_PRESS = registerBlockWithoutBlockItem("cheese_press",
+            new CheesePressBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+
+    // Food Blocks
+    public static final Block CHEESE_WHEEL = registerBlockWithoutBlockItem("cheese_wheel",
+            new LCheeseWheelBlock(AbstractBlock.Settings.copy(Blocks.CAKE).nonOpaque(), () -> ModItems.CHEESE_SLICE));
+    public static final Block FRESHWHEEL = registerBlockWithoutBlockItem("freshwheel",
+            new MCheeseWheelBlock(AbstractBlock.Settings.copy(Blocks.CAKE).nonOpaque(), () -> ModItems.FRESHWHEEL_SLICE));
+    public static final Block DUSKWHEEL = registerBlockWithoutBlockItem("duskwheel",
+            new LCheeseWheelBlock(AbstractBlock.Settings.copy(Blocks.CAKE).nonOpaque(), () -> ModItems.DUSKWHEEL_SLICE));
+    public static final Block SHARPWHEEL = registerBlockWithoutBlockItem("sharpwheel",
+            new MCheeseWheelBlock(AbstractBlock.Settings.copy(Blocks.CAKE).nonOpaque(), () -> ModItems.SHARPWHEEL_SLICE));
 
     // Storage Blocks
     public static final Block BAG_OF_ELDERBERRIES = registerBlock("bag_of_elderberries",
@@ -55,6 +70,8 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.copy(Blocks.WHITE_WOOL)));
     public static final Block BAG_OF_ROSE_HIPS = registerBlock("bag_of_rose_hips",
             new Block(AbstractBlock.Settings.copy(Blocks.WHITE_WOOL)));
+    public static final Block BAG_OF_THISTLE = registerBlock("bag_of_thistle",
+            new Block(AbstractBlock.Settings.copy(Blocks.WHITE_WOOL)));
     public static final Block BARLEY_BLOCK = registerBlock("barley_block",
             new HayBlock(AbstractBlock.Settings.copy(Blocks.HAY_BLOCK)));
     public static final Block RYE_BLOCK = registerBlock("rye_block",
@@ -69,6 +86,10 @@ public class ModBlocks {
             new FlowerBlock(StatusEffects.LUCK, 6, AbstractBlock.Settings.copy(Blocks.POPPY)));
     public static final Block WILD_GARLIC = registerBlock("wild_garlic",
             new FlowerBlock(StatusEffects.LUCK, 6, AbstractBlock.Settings.copy(Blocks.POPPY)));
+    public static final Block THISTLE = registerBlock("thistle",
+            new RenewablePlantBlock(StatusEffects.LUCK, 6, AbstractBlock.Settings.copy(Blocks.POPPY)));
+    public static final Block POTTED_THISTLE = registerBlockWithoutBlockItem("potted_thistle",
+            new FlowerPotBlock(THISTLE, AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)));
 
     //Flowering Trees
     public static final Block FLOWERING_LEMON_TREE_LEAVES = registerBlock("flowering_lemon_tree_leaves",

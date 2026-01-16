@@ -1,6 +1,7 @@
 package net.astralya.yeastnfeast;
 
 import net.astralya.yeastnfeast.block.ModBlocks;
+import net.astralya.yeastnfeast.block.ModFlammables;
 import net.astralya.yeastnfeast.block.entity.ModBlockEntityTypes;
 import net.astralya.yeastnfeast.effect.ModEffects;
 import net.astralya.yeastnfeast.entity.boat.ModBoats;
@@ -27,6 +28,7 @@ public class YeastNFeastMod implements ModInitializer {
 	public void onInitialize() {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        ModFlammables.registerFlammables();
         ModBlockEntityTypes.registerBlockEntities();
         ModItemGroups.registerItemGroups();
         ModRegistries.registerModStuff();
