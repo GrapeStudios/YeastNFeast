@@ -77,11 +77,12 @@ public class YeastNFeastMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTab() == ModCreativeModeTabs.YEASTNFEAST_TAB.get()) {
+        /*if (event.getTab() == ModCreativeModeTabs.YEASTNFEAST_TAB.get()) {
             if (ModList.get().isLoaded("patchouli")) {
                 event.accept(ModItems.HOMESTEADERS_HANDBOOK);
             }
-        }
+        }*/
+
         if (event.getTab() == ModCreativeModeTabs.YEASTNFEAST_TAB.get()) {
             if (ModList.get().isLoaded("hexalia")) {
                 event.accept(ModItems.CHILLBERRIES_JAM);

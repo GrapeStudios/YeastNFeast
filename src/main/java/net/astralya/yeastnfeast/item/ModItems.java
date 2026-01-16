@@ -22,13 +22,13 @@ public class ModItems {
     // Resources
     public static final DeferredItem<Item> YEAST = ITEMS.registerSimpleItem("yeast");
     public static final DeferredItem<Item> MAPLE_SYRUP = ITEMS.registerItem("maple_syrup",
-            MapleSyrupItem::new, new Item.Properties().food(ModFoodProperties.MAPLE_SYRUP));
+            MapleSyrupItem::new, new Item.Properties().food(ModFoodProperties.MAPLE_SYRUP).stacksTo(16));
     public static final DeferredItem<Item> MOLASSES = ITEMS.registerItem("molasses",
-            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.MOLASSES));
+            ConsumableItem::new, new Item.Properties().food(ModFoodProperties.MOLASSES).stacksTo(16));
     public static final DeferredItem<Item> MILK_BOTTLE = ITEMS.registerItem("milk_bottle",
-            MilkBottleItem::new, new Item.Properties().craftRemainder(Items.GLASS_BOTTLE));
+            MilkBottleItem::new, new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16));
     public static final DeferredItem<Item> RENNET = ITEMS.registerItem("rennet",
-            Item::new, new Item.Properties().craftRemainder(Items.GLASS_BOTTLE));
+            Item::new, new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16));
     
     // Crops & Seeds
     public static final DeferredItem<Item> MINT_SEEDS = ITEMS.register("mint_seeds",
@@ -159,20 +159,20 @@ public class ModItems {
     // Cheeses
     public static final DeferredItem<Item> CHEESE_WHEEL = ITEMS.register("cheese_wheel",
             () -> new BlockItem(ModBlocks.CHEESE_WHEEL.get(), new Item.Properties().stacksTo(1)));
-    public static final DeferredItem<Item> CHEESE_SLICE = ITEMS.registerItem("cheese_slice",
-            Item::new, new Item.Properties().food(ModFoodProperties.CHEESE_SLICE));
-    public static final DeferredItem<Item> DUSKWHEEL = ITEMS.register("duskwheel",
-            () -> new BlockItem(ModBlocks.DUSKWHEEL.get(), new Item.Properties().stacksTo(1)));
-    public static final DeferredItem<Item> DUSKWHEEL_SLICE = ITEMS.registerItem("duskwheel_slice",
-            Item::new, new Item.Properties().food(ModFoodProperties.DUSKWHEEL_SLICE));
-    public static final DeferredItem<Item> SHARPWHEEL = ITEMS.register("sharpwheel",
-            () -> new BlockItem(ModBlocks.SHARPWHEEL.get(), new Item.Properties().stacksTo(1)));
-    public static final DeferredItem<Item> SHARPWHEEL_SLICE = ITEMS.registerItem("sharpwheel_slice",
-            Item::new, new Item.Properties().food(ModFoodProperties.SHARPWHEEL_SLICE));
     public static final DeferredItem<Item> FRESHWHEEL = ITEMS.register("freshwheel",
             () -> new BlockItem(ModBlocks.FRESHWHEEL.get(), new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> DUSKWHEEL = ITEMS.register("duskwheel",
+            () -> new BlockItem(ModBlocks.DUSKWHEEL.get(), new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> SHARPWHEEL = ITEMS.register("sharpwheel",
+            () -> new BlockItem(ModBlocks.SHARPWHEEL.get(), new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> CHEESE_SLICE = ITEMS.registerItem("cheese_slice",
+            Item::new, new Item.Properties().food(ModFoodProperties.CHEESE_SLICE));
     public static final DeferredItem<Item> FRESHWHEEL_SLICE = ITEMS.registerItem("freshwheel_slice",
             Item::new, new Item.Properties().food(ModFoodProperties.FRESHWHEEL_SLICE));
+    public static final DeferredItem<Item> DUSKWHEEL_SLICE = ITEMS.registerItem("duskwheel_slice",
+            Item::new, new Item.Properties().food(ModFoodProperties.DUSKWHEEL_SLICE));
+    public static final DeferredItem<Item> SHARPWHEEL_SLICE = ITEMS.registerItem("sharpwheel_slice",
+            Item::new, new Item.Properties().food(ModFoodProperties.SHARPWHEEL_SLICE));
 
     // Wood-Related Items
     public static final DeferredItem<Item> MAPLE_BOAT = ITEMS.register("maple_boat",
@@ -231,13 +231,13 @@ public class ModItems {
         }
     }
 
-    public static DeferredItem<Item> HOMESTEADERS_HANDBOOK;
+    /*public static DeferredItem<Item> HOMESTEADERS_HANDBOOK;
     static {
         if (ModList.get().isLoaded("patchouli")) {
             HOMESTEADERS_HANDBOOK = ITEMS.register("homesteaders_handbook",
                     () -> new GuideBookItem(new Item.Properties()));
         }
-    }
+    }*/
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

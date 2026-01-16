@@ -1,4 +1,4 @@
-// 1.21.1	2025-12-30T19:33:57.6514047	Item Models: yeastnfeast
+// 1.21.1	2026-01-13T21:28:28.0438016	Item Models: yeastnfeast
 82dcbd35f819bb26a30ee5ad0303e1f99f241d21 assets/yeastnfeast/models/item/amber_mead.json
 69a51696fb1625f18a15c018c63d32e27cf74051 assets/yeastnfeast/models/item/apple_jam.json
 22988afad0c0ba028af263dbd2bd49208a200ed7 assets/yeastnfeast/models/item/apple_pie.json
@@ -28,7 +28,6 @@ a0f2f5c424fd937a267d765942f67869f104ae87 assets/yeastnfeast/models/item/golden_a
 114c1b35e6d3adc2f798c904969fed977c4124f6 assets/yeastnfeast/models/item/hawthorn_berries.json
 8ad2e9fb2a37b83ce0bc01ba4503a1fbbeda2ed1 assets/yeastnfeast/models/item/hawthorn_berries_jam.json
 bc732293f3b521baa7634828d6be54da846a9fba assets/yeastnfeast/models/item/herbal_cod.json
-95fab35d10b05ff8896e29398df67350b2a069b2 assets/yeastnfeast/models/item/homesteaders_handbook.json
 5b78667d9b371854f385631a761f95c4a39884a8 assets/yeastnfeast/models/item/honey_mead.json
 f0e8686e9be25793a7e6f4a26d03ecc1c833b8f0 assets/yeastnfeast/models/item/jar.json
 0ed775120afb8eb9709193cce86f781356cbbfac assets/yeastnfeast/models/item/lemon.json

@@ -9,7 +9,7 @@
       "item": "yeastnfeast:rennet"
     }
   ],
-  "presstime": 120,
+  "pressTime": 7200,
   "result": {
     "count": 1,
     "id": "yeastnfeast:cheese_wheel"

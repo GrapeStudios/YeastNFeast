@@ -150,7 +150,7 @@ public class CheesePressRecipe implements Recipe<RecipeWrapper> {
                 Ingredient.CODEC.optionalFieldOf("flavor_slot", Ingredient.EMPTY).forGetter(CheesePressRecipe::getFlavorSlot),
                 ItemStack.STRICT_CODEC.fieldOf("result").forGetter(r -> r.output),
                 Codec.FLOAT.optionalFieldOf("experience", 0.0F).forGetter(CheesePressRecipe::getExperience),
-                Codec.INT.optionalFieldOf("presstime", 1200).forGetter(CheesePressRecipe::getPressTime)
+                Codec.INT.optionalFieldOf("pressTime", 1200).forGetter(CheesePressRecipe::getPressTime)
         ).apply(inst, CheesePressRecipe::new));
 
         public static final StreamCodec<RegistryFriendlyByteBuf, CheesePressRecipe> STREAM_CODEC = StreamCodec.of(

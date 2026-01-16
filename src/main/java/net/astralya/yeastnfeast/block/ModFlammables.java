@@ -11,6 +11,7 @@ public final class ModFlammables {
 
         fire.setFlammable(ModBlocks.TREE_TAP.get(), 5, 20);
         fire.setFlammable(ModBlocks.KEG.get(), 5, 20);
+        fire.setFlammable(ModBlocks.CHEESE_PRESS.get(), 5, 20);
 
         fire.setFlammable(ModBlocks.BAG_OF_ELDERBERRIES.get(), 30, 60);
         fire.setFlammable(ModBlocks.BAG_OF_GARLIC.get(), 30, 60);
@@ -19,6 +20,7 @@ public final class ModFlammables {
         fire.setFlammable(ModBlocks.BAG_OF_LEMON.get(), 30, 60);
         fire.setFlammable(ModBlocks.BAG_OF_MINT.get(), 30, 60);
         fire.setFlammable(ModBlocks.BAG_OF_ROSE_HIPS.get(), 30, 60);
+        fire.setFlammable(ModBlocks.BAG_OF_THISTLE.get(), 30, 60);
 
         fire.setFlammable(ModBlocks.BARLEY_BLOCK.get(), 60, 20);
         fire.setFlammable(ModBlocks.RYE_BLOCK.get(), 60, 20);

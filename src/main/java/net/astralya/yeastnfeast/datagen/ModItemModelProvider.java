@@ -95,7 +95,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.MAPLE_BOAT.get());
         basicItem(ModItems.MAPLE_CHEST_BOAT.get());
 
-        basicItem(ModItems.HOMESTEADERS_HANDBOOK.get());
+        // basicItem(ModItems.HOMESTEADERS_HANDBOOK.get());
     }
 
     public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {

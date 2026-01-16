@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_book": {
+    "has_chains": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:book"
+            "items": "minecraft:chain"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "yeastnfeast:homesteaders_handbook"
+        "recipe": "yeastnfeast:cheese_press"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_book"
+      "has_chains"
     ]
   ],
   "rewards": {
     "recipes": [
-      "yeastnfeast:homesteaders_handbook"
+      "yeastnfeast:cheese_press"
     ]
   }
 }

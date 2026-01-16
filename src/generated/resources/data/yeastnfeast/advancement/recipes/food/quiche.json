@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_freshwheel_slice": {
+    "has_cheese_slice": {
       "conditions": {
         "items": [
           {
-            "items": "yeastnfeast:freshwheel_slice"
+            "items": "yeastnfeast:cheese_slice"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_freshwheel_slice"
+      "has_cheese_slice"
     ]
   ],
   "rewards": {

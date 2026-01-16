@@ -36,15 +36,14 @@ public class DataMapGenerator extends DataMapProvider {
                 .add(ModBlocks.HAWTHORN_TREE_LEAVES.get().asItem().builtInRegistryHolder(), new Compostable(0.3f), false)
 
                 // 50%
-                .add(ModItems.GARLIC.get().asItem().builtInRegistryHolder(), new Compostable(0.5f), false)
-                .add(ModItems.MINT.get().asItem().builtInRegistryHolder(), new Compostable(0.5f), false)
-
-                // 60%
+                .add(ModItems.GARLIC.get().asItem().builtInRegistryHolder(), new Compostable(0.6f), false)
+                .add(ModItems.MINT.get().asItem().builtInRegistryHolder(), new Compostable(0.6f), false)
                 .add(ModItems.GINGER.get().asItem().builtInRegistryHolder(), new Compostable(0.6f), false)
                 .add(ModItems.BARLEY.get().asItem().builtInRegistryHolder(), new Compostable(0.6f), false)
                 .add(ModItems.RYE.get().asItem().builtInRegistryHolder(), new Compostable(0.6f), false)
+                .add(ModBlocks.THISTLE.get().asItem().builtInRegistryHolder(), new Compostable(0.6f), false)
 
-                // 80% (originally listed as 0.85f, assume this maps to 0.8f rounded for this structure)
+                // 80%
                 .add(ModBlocks.BARLEY_BLOCK.get().asItem().builtInRegistryHolder(), new Compostable(0.8f), false)
                 .add(ModBlocks.RYE_BLOCK.get().asItem().builtInRegistryHolder(), new Compostable(0.8f), false)
                 .add(ModItems.BARLEY_BREAD.get().asItem().builtInRegistryHolder(), new Compostable(0.8f), false)
@@ -55,7 +54,9 @@ public class DataMapGenerator extends DataMapProvider {
                 .add(ModItems.BERRY_ROLL.get().asItem().builtInRegistryHolder(), new Compostable(1.0f), false)
                 .add(ModItems.ROSE_TART.get().asItem().builtInRegistryHolder(), new Compostable(1.0f), false)
                 .add(ModItems.ELDERBERRY_PIE.get().asItem().builtInRegistryHolder(), new Compostable(1.0f), false)
-                .add(ModItems.APPLE_PIE.get().asItem().builtInRegistryHolder(), new Compostable(1.0f), false);
+                .add(ModItems.APPLE_PIE.get().asItem().builtInRegistryHolder(), new Compostable(1.0f), false)
+                .add(ModItems.MINTED_CHEESE_TART.get().asItem().builtInRegistryHolder(), new Compostable(1.0f), false)
+                .add(ModItems.QUICHE.get().asItem().builtInRegistryHolder(), new Compostable(1.0f), false);
     }
 
 }

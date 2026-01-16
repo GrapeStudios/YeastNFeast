@@ -107,8 +107,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('R', ModItems.GARLIC.get())
                 .define('T', Items.EGG)
                 .define('H', ModTags.Items.FOODS_MILK)
-                .unlockedBy("has_freshwheel_slice", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(ModItems.FRESHWHEEL_SLICE.get()).build()))
+                .unlockedBy("has_cheese_slice", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.CHEESE_SLICE.get()).build()))
                 .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TREE_TAP.get())
@@ -129,13 +129,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Blocks.BARREL).build()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.JAR.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.JAR.get(), 3)
                 .pattern("PSP")
                 .pattern(" P ")
                 .define('P', Blocks.GLASS)
                 .define('S', ItemTags.PLANKS)
                 .unlockedBy("has_glass", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Blocks.GLASS).build()))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModBlocks.CHEESE_PRESS)
+                .pattern(" P ")
+                .pattern("PSP")
+                .pattern("HHH")
+                .define('P', Items.STICK)
+                .define('S', Items.CHAIN)
+                .define('H', ItemTags.PLANKS)
+                .unlockedBy("has_chains", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.CHAIN).build()))
                 .save(recipeOutput);
 
         // Shapeless Recipe
@@ -174,7 +185,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModBlocks.THISTLE).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SWEET_PORRIDGE.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SWEET_PORRIDGE.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.MOLASSES.get())
                 .requires(ModTags.Items.FOODS_MILK)
@@ -184,7 +195,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModItems.MOLASSES.get()).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SPICED_PORRIDGE.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SPICED_PORRIDGE.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.GARLIC.get())
                 .requires(ModTags.Items.FOODS_MILK)
@@ -194,7 +205,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModItems.RYE.get()).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BARLEY_AND_BEEF_STEW.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BARLEY_AND_BEEF_STEW.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.BARLEY.get())
                 .requires(ModTags.Items.FOODS_VEGETABLE)
@@ -204,7 +215,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.COOKED_BEEF).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MEAD_BRAISED_PORK.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.MEAD_BRAISED_PORK.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.HONEY_MEAD.get())
                 .requires(ModTags.Items.FOODS_VEGETABLE)
@@ -214,7 +225,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.COOKED_PORKCHOP).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HERBAL_COD.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.HERBAL_COD.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.MINT.get())
                 .requires(ModItems.GINGER.get())
@@ -224,7 +235,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.COOKED_COD).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LEMON_GLAZED_CHICKEN.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.LEMON_GLAZED_CHICKEN.get())
                 .requires(Items.BOWL)
                 .requires(Items.HONEY_BOTTLE)
                 .requires(ModItems.GARLIC.get())
@@ -234,7 +245,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.COOKED_CHICKEN).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.FORAGER_FEAST.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.FORAGER_FEAST.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.RYE.get())
                 .requires(ModItems.MINT.get())
@@ -244,7 +255,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.COOKED_MUTTON).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MAPLE_GLAZED_RABBIT.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.MAPLE_GLAZED_RABBIT.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.MAPLE_SYRUP.get())
                 .requires(ModItems.BARLEY.get())
@@ -254,7 +265,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.COOKED_RABBIT).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SALMON_CHOWDER.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SALMON_CHOWDER.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.LEMON.get())
                 .requires(ModTags.Items.FOODS_MILK)
@@ -264,18 +275,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.COOKED_SALMON).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STUFFED_RYE_DUMPLINGS.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.STUFFED_RYE_DUMPLINGS.get())
                 .requires(Items.BOWL)
                 .requires(ModItems.RYE)
                 .requires(ModItems.RYE)
-                .requires(ModItems.RYE)
+                .requires(ModItems.GINGER)
                 .requires(ModItems.SHARPWHEEL_SLICE.get())
                 .requires(ModItems.SHARPWHEEL_SLICE.get())
                 .unlockedBy("has_sharpwheel_slice", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.SHARPWHEEL_SLICE.get()).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.DUSKWHEEL_SKEWER.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.DUSKWHEEL_SKEWER.get())
                 .requires(Items.STICK)
                 .requires(ModItems.GARLIC)
                 .requires(ModTags.Items.COOKED_CHICKEN)
@@ -285,7 +296,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModItems.DUSKWHEEL_SLICE.get()).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CHEESE_SOUP.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.CHEESE_SOUP.get())
                 .requires(Items.BOWL)
                 .requires(ModTags.Items.FOODS_CHEESE)
                 .requires(ModTags.Items.FOODS_CHEESE)
@@ -296,7 +307,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModItems.CHEESE_SLICE.get()).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BARLEY_BREAD.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BARLEY_BREAD.get())
                 .requires(ModItems.BARLEY.get())
                 .requires(ModItems.BARLEY.get())
                 .requires(ModTags.Items.FOODS_MILK)
@@ -305,7 +316,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModItems.BARLEY.get()).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RYE_BREAD.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.RYE_BREAD.get())
                 .requires(ModItems.RYE.get())
                 .requires(ModItems.RYE.get())
                 .requires(ModTags.Items.FOODS_MILK)
@@ -314,7 +325,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModItems.RYE.get()).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MOLASSES_BREAD.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.MOLASSES_BREAD.get())
                 .requires(ModTags.Items.CROPS_GRAIN)
                 .requires(ModTags.Items.CROPS_GRAIN)
                 .requires(ModItems.MOLASSES.get())
@@ -358,12 +369,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.SUGAR_CANE).build()))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HOMESTEADERS_HANDBOOK.get())
+        /*ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HOMESTEADERS_HANDBOOK.get())
                 .requires(Items.BOOK)
                 .requires(Items.WHEAT)
                 .unlockedBy("has_book",
                         inventoryTrigger(ItemPredicate.Builder.item().of(Items.BOOK).build()))
-                .save(recipeOutput);
+                .save(recipeOutput);*/
 
         // Convertible for Storage Bags
         nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, ModItems.ELDERBERRIES.get(), RecipeCategory.MISC, ModBlocks.BAG_OF_ELDERBERRIES.get(),
@@ -570,7 +581,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .addIngredient(ModTags.Items.FOODS_MILK)
                 .addIngredient(ModItems.RENNET.get())
                 .experience(0.2f)
-                .pressTime(120)
+                .pressTime(7200)
                 .unlockedByItems("has_rennet", ModItems.RENNET.get())
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath("yeastnfeast",
                         ModItems.CHEESE_WHEEL.getId().getPath() + "_from_cheese_press"));
