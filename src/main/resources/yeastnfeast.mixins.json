@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "net.astralya.yeastnfeast.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"HealingMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
