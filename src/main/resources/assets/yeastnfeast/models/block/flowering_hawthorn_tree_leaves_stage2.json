@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
-  "render_type": "cutout",
+  "render_type": "minecraft:cutout",
   "textures": {
     "all": "yeastnfeast:block/flowering_hawthorn_tree_leaves_stage2"
   }

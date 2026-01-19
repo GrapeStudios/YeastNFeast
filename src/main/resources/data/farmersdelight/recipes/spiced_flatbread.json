@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "tag": "forge:dough" },
+    { "item": "yeastnfeast:ginger" },
+    { "item": "yeastnfeast:garlic" },
+    { "tag": "c:seeds" }
+  ],
+  "result": {
+    "item": "yeastnfeast:spiced_flatbread",
+    "count": 1
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "forge:mod_loaded",
+      "values": ["farmersdelight"]
+    }
+  ]
+}

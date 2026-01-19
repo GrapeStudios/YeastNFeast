@@ -1,0 +1,25 @@
+{
+  "type": "yeastnfeast:keg",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "hexalia"
+    }
+  ],
+  "brew_time": 7200,
+  "ingredients": [
+    { "item": "hexalia:chillberries" },
+    { "item": "hexalia:chillberries" },
+    { "item": "hexalia:chillberries" }
+  ],
+  "output": {
+    "item": "yeastnfeast:chillberries_jam",
+    "count": 1
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:jar"
+  },
+  "yeast_slot": {
+    "item": "minecraft:sugar"
+  }
+}

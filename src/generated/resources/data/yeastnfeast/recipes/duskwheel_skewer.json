@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "yeastnfeast:garlic"
+    },
+    {
+      "tag": "forge:cooked_chicken"
+    },
+    {
+      "item": "yeastnfeast:duskwheel_slice"
+    },
+    {
+      "item": "yeastnfeast:duskwheel_slice"
+    }
+  ],
+  "result": {
+    "item": "yeastnfeast:duskwheel_skewer"
+  }
+}

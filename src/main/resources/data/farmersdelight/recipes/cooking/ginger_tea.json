@@ -1,0 +1,25 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        { "type": "forge:mod_loaded", "modid": "farmersdelight" }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": { "item": "minecraft:glass_bottle" },
+        "experience": 1.0,
+        "ingredients": [
+          { "tag": "forge:milk" },
+          { "item": "yeastnfeast:lemon" },
+          { "item": "yeastnfeast:ginger" }
+        ],
+        "recipe_book_tab": "drinks",
+        "result": {
+          "item": "yeastnfeast:ginger_tea",
+          "count": 1
+        }
+      }
+    }
+  ]
+}

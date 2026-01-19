@@ -1,0 +1,25 @@
+{
+  "type": "yeastnfeast:keg",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "hexalia"
+    }
+  ],
+  "brew_time": 7200,
+  "ingredients": [
+    { "item": "hexalia:chillberries" },
+    { "item": "hexalia:galeberries" },
+    { "item": "yeastnfeast:lemon" }
+  ],
+  "output": {
+    "item": "yeastnfeast:frostgale_mead",
+    "count": 1
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:tankard"
+  },
+  "yeast_slot": {
+    "item": "yeastnfeast:yeast"
+  }
+}

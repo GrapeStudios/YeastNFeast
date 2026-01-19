@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "hexalia"
+    }
+  ],
+  "category": "food",
+  "ingredients": [
+    { "item": "forge:bread" },
+    { "item": "hexalia:sunfire_tomato" },
+    { "item": "yeastnfeast:garlic" }
+  ],
+  "result": {
+    "item": "yeastnfeast:sunfire_tomato_bruschetta"
+  }
+}

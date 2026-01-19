@@ -1,7 +1,8 @@
 {
   "values": [
-    "yeastnfeast:keg",
+    "#yeastnfeast:storage_blocks",
     "yeastnfeast:tree_tap",
-    "#yeastnfeast:storage_blocks"
+    "yeastnfeast:cheese_press",
+    "yeastnfeast:keg"
   ]
 }

@@ -1,6 +1,5 @@
 {
   "parent": "minecraft:block/door_top_left",
-  "render_type": "cutout",
   "textures": {
     "bottom": "yeastnfeast:block/maple_door_bottom",
     "top": "yeastnfeast:block/maple_door_top"

@@ -1,0 +1,19 @@
+{
+  "type": "yeastnfeast:cheese_press",
+  "experience": 0.2,
+  "flavor_slot": {
+    "item": "yeastnfeast:garlic"
+  },
+  "ingredients": [
+    {
+      "tag": "forge:milk/milk_bottle"
+    },
+    {
+      "item": "yeastnfeast:rennet"
+    }
+  ],
+  "pressTime": 7200,
+  "result": {
+    "item": "yeastnfeast:sharpwheel"
+  }
+}

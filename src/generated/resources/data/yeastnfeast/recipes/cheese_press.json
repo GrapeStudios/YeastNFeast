@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "minecraft:planks"
+    },
+    "P": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "minecraft:chain"
+    }
+  },
+  "pattern": [
+    " P ",
+    "PSP",
+    "HHH"
+  ],
+  "result": {
+    "item": "yeastnfeast:cheese_press"
+  },
+  "show_notification": true
+}

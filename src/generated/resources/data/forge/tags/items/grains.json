@@ -1,7 +1,7 @@
 {
   "values": [
-    "yeastnfeast:rye",
     "yeastnfeast:barley",
-    "minecraft:wheat"
+    "minecraft:wheat",
+    "yeastnfeast:rye"
   ]
 }

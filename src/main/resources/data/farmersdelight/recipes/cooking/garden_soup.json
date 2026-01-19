@@ -1,0 +1,26 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        { "type": "forge:mod_loaded", "modid": "farmersdelight" }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": { "item": "minecraft:bowl" },
+        "experience": 1.0,
+        "ingredients": [
+          { "tag": "c:crops/cabbage" },
+          { "tag": "c:crops/onion" },
+          { "item": "yeastnfeast:rye" },
+          { "item": "minecraft:carrot" }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "yeastnfeast:garden_soup",
+          "count": 1
+        }
+      }
+    }
+  ]
+}
