@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "c:grains/wheats"
+      "tag": "c:crops/wheat"
     },
     {
-      "tag": "c:grains/wheats"
+      "tag": "c:crops/wheat"
     },
     {
       "item": "yeastnfeast:molasses"

@@ -1,0 +1,15 @@
+{
+  "type": "yeastnfeast:cheese_press",
+  "ingredients": [
+    {
+      "item": "yeastnfeast:rennet"
+    },
+    {
+      "tag": "c:foods/milk"
+    }
+  ],
+  "pressTime": 7200,
+  "result": {
+    "item": "yeastnfeast:cheese_wheel"
+  }
+}

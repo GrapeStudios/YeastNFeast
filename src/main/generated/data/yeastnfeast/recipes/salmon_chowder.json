@@ -9,13 +9,13 @@
       "item": "yeastnfeast:lemon"
     },
     {
-      "tag": "c:milks"
+      "tag": "c:foods/milk"
     },
     {
       "item": "minecraft:kelp"
     },
     {
-      "tag": "c:foods/cooked_fishes/salmon"
+      "tag": "c:foods/cooked_salmon"
     }
   ],
   "result": {

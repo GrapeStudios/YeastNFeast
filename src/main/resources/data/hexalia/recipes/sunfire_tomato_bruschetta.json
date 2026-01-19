@@ -1,0 +1,15 @@
+{
+  "fabric:load_conditions": [
+    { "condition": "fabric:all_mods_loaded", "values": ["hexalia", "yeastnfeast"] }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    { "item": "minecraft:bread" },
+    { "item": "hexalia:sunfire_tomato" },
+    { "item": "yeastnfeast:garlic" }
+  ],
+  "result": {
+    "item": "yeastnfeast:sunfire_tomato_bruschetta"
+  }
+}

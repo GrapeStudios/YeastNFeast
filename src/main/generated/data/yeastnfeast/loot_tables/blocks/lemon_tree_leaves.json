@@ -37,7 +37,7 @@
                   ]
                 }
               ],
-              "name": "yeastnfeast:lemon_tree_leaves"
+              "name": "yeastnfeast:maple_leaves"
             },
             {
               "type": "minecraft:item",
@@ -56,7 +56,7 @@
                   "enchantment": "minecraft:fortune"
                 }
               ],
-              "name": "yeastnfeast:lemon_sapling"
+              "name": "yeastnfeast:maple_sapling"
             }
           ]
         }

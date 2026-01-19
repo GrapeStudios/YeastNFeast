@@ -12,10 +12,10 @@
       "item": "yeastnfeast:barley"
     },
     {
-      "tag": "c:foods/vegetables"
+      "tag": "c:foods/vegetable"
     },
     {
-      "tag": "c:foods/cooked_meats/cooked_pork"
+      "tag": "c:foods/cooked_pork"
     }
   ],
   "result": {

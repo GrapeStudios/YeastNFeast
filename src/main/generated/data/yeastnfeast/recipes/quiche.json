@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "c:foods/milk"
+    },
+    "P": {
+      "tag": "c:crops/wheat"
+    },
+    "R": {
+      "item": "yeastnfeast:garlic"
+    },
+    "S": {
+      "tag": "c:foods/cheese"
+    },
+    "T": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    " R ",
+    "STS",
+    "PHP"
+  ],
+  "result": {
+    "item": "yeastnfeast:quiche"
+  },
+  "show_notification": true
+}

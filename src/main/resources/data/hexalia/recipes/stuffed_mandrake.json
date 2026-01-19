@@ -1,0 +1,17 @@
+{
+  "fabric:load_conditions": [
+    { "condition": "fabric:all_mods_loaded", "values": ["hexalia", "yeastnfeast"] }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    { "item": "hexalia:mandrake" },
+    { "item": "minecraft:carrot" },
+    { "item": "yeastnfeast:barley" },
+    { "item": "yeastnfeast:garlic" },
+    { "item": "minecraft:bowl" }
+  ],
+  "result": {
+    "item": "yeastnfeast:stuffed_mandrake"
+  }
+}

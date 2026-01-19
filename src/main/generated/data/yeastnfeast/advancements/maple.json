@@ -27,7 +27,7 @@
     },
     "show_toast": true,
     "title": {
-      "translate": "advancements.yeastnfeast.maple.tile"
+      "translate": "advancements.yeastnfeast.maple.title"
     }
   },
   "requirements": [

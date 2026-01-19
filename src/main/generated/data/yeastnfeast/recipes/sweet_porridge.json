@@ -9,13 +9,13 @@
       "item": "yeastnfeast:molasses"
     },
     {
-      "tag": "c:milks"
+      "tag": "c:foods/milk"
     },
     {
       "item": "minecraft:wheat"
     },
     {
-      "tag": "c:foods/berries"
+      "tag": "c:foods/berry"
     }
   ],
   "result": {

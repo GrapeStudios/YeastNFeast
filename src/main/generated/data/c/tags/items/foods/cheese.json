@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "yeastnfeast:cheese_slice",
+    "yeastnfeast:sharpwheel_slice",
+    "yeastnfeast:freshwheel_slice",
+    "yeastnfeast:duskwheel_slice"
+  ]
+}

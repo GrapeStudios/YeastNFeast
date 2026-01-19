@@ -1,0 +1,18 @@
+{
+  "type": "yeastnfeast:cheese_press",
+  "flavor_slot": {
+    "item": "yeastnfeast:elderberries"
+  },
+  "ingredients": [
+    {
+      "item": "yeastnfeast:rennet"
+    },
+    {
+      "tag": "c:foods/milk"
+    }
+  ],
+  "pressTime": 7200,
+  "result": {
+    "item": "yeastnfeast:duskwheel"
+  }
+}

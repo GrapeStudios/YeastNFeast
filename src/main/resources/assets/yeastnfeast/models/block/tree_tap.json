@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "cutout",
 	"textures": {
 		"0": "yeastnfeast:block/tree_tap",
 		"particle": "yeastnfeast:block/tree_tap"

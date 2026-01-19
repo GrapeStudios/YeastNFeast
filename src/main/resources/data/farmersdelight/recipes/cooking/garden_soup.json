@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    { "tag": "c:crops/cabbage" },
+    { "tag": "c:crops/onion" },
+    { "item": "yeastnfeast:rye" },
+    { "item": "minecraft:carrot" },
+    { "item": "minecraft:bowl" }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "yeastnfeast:garden_soup",
+    "count": 1
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": ["farmersdelight"]
+    }
+  ]
+}

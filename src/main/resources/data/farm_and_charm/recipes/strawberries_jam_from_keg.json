@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    { "condition": "fabric:all_mods_loaded", "values": ["farm_and_charm"] }
+  ],
+  "type": "yeastnfeast:keg",
+  "brew_time": 3600,
+  "ingredients": [
+    { "item": "farm_and_charm:strawberry" },
+    { "item": "farm_and_charm:strawberry" },
+    { "item": "farm_and_charm:strawberry" }
+  ],
+  "output": {
+    "item": "yeastnfeast:strawberries_jam",
+    "count": 1
+  },
+  "tankard_slot": {
+    "item": "yeastnfeast:jar"
+  },
+  "yeast_slot": {
+    "item": "minecraft:sugar"
+  }
+}

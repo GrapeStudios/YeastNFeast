@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "yeastnfeast:rye"
+    },
+    {
+      "item": "yeastnfeast:rye"
+    },
+    {
+      "item": "yeastnfeast:ginger"
+    },
+    {
+      "item": "yeastnfeast:sharpwheel_slice"
+    },
+    {
+      "item": "yeastnfeast:sharpwheel_slice"
+    }
+  ],
+  "result": {
+    "item": "yeastnfeast:stuffed_rye_dumplings"
+  }
+}

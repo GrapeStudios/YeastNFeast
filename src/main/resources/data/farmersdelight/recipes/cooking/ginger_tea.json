@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    { "tag": "c:foods/milk" },
+    { "item": "yeastnfeast:lemon" },
+    { "item": "yeastnfeast:ginger" },
+    { "item": "minecraft:glass_bottle" }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "yeastnfeast:ginger_tea",
+    "count": 1
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": ["farmersdelight"]
+    }
+  ]
+}
